@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	type="module_sound">
+
+	<module_sounds>
+
+		<module_sound name="sotor_dart_explosion" sound_category="mission_combat" path="../ModuleSounds/dart_explosion.ogg" />
+		<module_sound name="sotor_blood_explosion" sound_category="mission_combat" path="../ModuleSounds/blood_explosion.ogg" />
+		<module_sound name="sotor_fireball_explosion" sound_category="mission_combat" path="../ModuleSounds/fireball_explosion.wav" />
+		<module_sound name="sotor_shards_explosion" sound_category="mission_combat" path="../ModuleSounds/shards_explosion.ogg" />
+		<module_sound name="sotor_lightning_strike" sound_category="mission_combat" path="../ModuleSounds/lightningstrike.ogg" />
+
+		<module_sound name="sotor_fireball" sound_category="mission_foley" path="../ModuleSounds/fireball.wav" />
+		<module_sound name="sotor_dart" sound_category="mission_foley" path="../ModuleSounds/sotor_dart.ogg" />
+		<module_sound name="sotor_fire_cast" sound_category="mission_combat" path="../ModuleSounds/fire_cast.ogg" />
+		<module_sound name="sotor_dust_storm" sound_category="mission_foley" path="../ModuleSounds/dust_storm.ogg" />
+			<module_sound name="sotor_scream" sound_category="mission_foley" path="../ModuleSounds/scream.ogg" />
+		<module_sound name="sotor_electric_buzz" sound_category="mission_foley" path="../ModuleSounds/electric_buzz.ogg" />
+		<module_sound name="sotor_hailstorm" sound_category="mission_foley" path="../ModuleSounds/hailstorm.ogg" />
+		<module_sound name="sotor_flamestorm" sound_category="mission_foley" path="../ModuleSounds/flamestorm.ogg" />
+		<module_sound name="sotor_sear" sound_category="mission_foley" path="../ModuleSounds/sear.ogg" />
+		<module_sound name="sotor_passing_fire" sound_category="mission_foley" path="../ModuleSounds/passing_fire.ogg" />
+		<module_sound name="sotor_rocks_grinding" sound_category="mission_foley" path="../ModuleSounds/rocks_grinding.ogg" />
+		<module_sound name="sotor_radiance_pillar" sound_category="mission_siege_loud" path="../ModuleSounds/radiance_pillar.ogg" />
+		<module_sound name="sotor_shards_loop" sound_category="mission_foley" path="../ModuleSounds/shards_loop.ogg" />
+
+		<module_sound name="sotor_dwellers_below" sound_category="mission_foley" path="../ModuleSounds/dwellers_below.ogg" />
+
+		<module_sound name="sotor_empire_heal" sound_category="mission_foley" path="../ModuleSounds/empire_heal.ogg" />
+		<module_sound name="sotor_windofdeath_whispers" sound_category="mission_foley" path="../ModuleSounds/windsofdeath_whispers.ogg" />
+
+		<module_sound name="sotor_evilbolt_cast" sound_category="mission_combat" path="../ModuleSounds/evilbolt_cast.ogg" />
+
+		<module_sound name="sotor_bjuna_laugh" sound_category="mission_foley" path="../ModuleSounds/bjuna_evil_laugh.ogg" />
+
+		<module_sound name="sotor_skeleton_bonerattle" sound_category="mission_voice_shout" min_pitch_multiplier="0.90" max_pitch_multiplier="1.10">
+			<variation path="../ModuleSounds/skeleton_bonerattle_1.ogg" weight="1.00" />
+			<variation path="../ModuleSounds/skeleton_bonerattle_2.ogg" weight="1.00" />
+		</module_sound>
+
+		<module_sound name="sotor_create_amber_spear" sound_category="mission_combat" path="../ModuleSounds/sotor_create_amber_spear.ogg" />
+		<module_sound name="sotor_throw_amber_spear" sound_category="mission_combat" path="../ModuleSounds/sotor_throw_amber_spear.ogg" />
+	</module_sounds>
+</base>

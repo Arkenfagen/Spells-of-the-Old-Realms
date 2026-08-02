@@ -1,0 +1,314 @@
+<Prefab>
+  <VisualDefinitions>
+    <VisualDefinition Name="BottomMenu" EaseIn="true" TransitionDuration="0.45">
+      <VisualState PositionYOffset="6" State="Default" />
+    </VisualDefinition>
+    <VisualDefinition Name="TopPanel" EaseIn="true" TransitionDuration="0.45">
+      <VisualState PositionYOffset="-6" State="Default" />
+    </VisualDefinition>
+    <VisualDefinition Name="LeftPanel" EaseIn="true" TransitionDuration="0.9">
+      <VisualState PositionXOffset="-280" State="Default" />
+    </VisualDefinition>
+  </VisualDefinitions>
+  <Window>
+    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent">
+      <Children>
+        <Standard.Background />
+
+        <CharacterTableauWidget DataSource="{CharacterPortrait}" DoNotAcceptEvents="true" IsEnabled="false"
+                                WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="550" SuggestedHeight="1000"
+                                HorizontalAlignment="Right" VerticalAlignment="Center" MarginRight="40" PositionYOffset="180"
+                                Brush.GlobalAlphaFactor="0.65" Brush.GlobalColor="#B0B0B0FF" DoNotUseCustomScale="true"
+                                BannerCodeText="@BannerCodeText" BodyProperties="@BodyProperties" CharStringId="@CharStringId"
+                                EquipmentCode="@EquipmentCode" IsFemale="@IsFemale" MountCreationKey="@MountCreationKey"
+                                Race="@Race" StanceIndex="@StanceIndex" ArmorColor1="@ArmorColor1" ArmorColor2="@ArmorColor2" />
+
+        <Widget VisualDefinition="TopPanel" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="755" SuggestedHeight="182" HorizontalAlignment="Center" PositionXOffset="60" PositionYOffset="-182" Sprite="StdAssets\tabbar_standart" ValueFactor="-30">
+          <Children>
+            <RichTextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" MarginTop="18" Brush="SotorSpellBook.BannerTitle" Brush.FontSize="45" Text="@TitleText" />
+          </Children>
+        </Widget>
+
+        <ListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" VerticalAlignment="Top" MarginTop="30" MarginRight="45" StackLayout.LayoutMethod="HorizontalLeftToRight">
+          <Children>
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="32" SuggestedHeight="32" VerticalAlignment="Center" Sprite="General\Icons\Coin@2x" />
+            <RichTextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" VerticalAlignment="Center" MarginLeft="8" Brush="SotorSpellBook.BannerTitle" Brush.FontSize="28" Text="@GoldText" />
+          </Children>
+        </ListPanel>
+
+        <ListPanel DataSource="{SpellcraftBar}" WidthSizePolicy="CoverChildren" HeightSizePolicy="Fixed" SuggestedHeight="240" StackLayout.LayoutMethod="HorizontalLeftToRight" HorizontalAlignment="Center" VerticalAlignment="Top" PositionYOffset="170">
+          <Children>
+
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="1000" SuggestedHeight="185" VerticalAlignment="Center" PositionYOffset="-30">
+              <Children>
+                <PerkSelectionBarWidget WidthSizePolicy="Fixed" SuggestedWidth="1000" HeightSizePolicy="Fixed" SuggestedHeight="185" FullLearningRateClip="FullLearningRateClipParent" FullLearningRateClipInnerContent="FullLearningRateClipParent\FullLearningRateClip\FullLearningRateClipInnerContent" FullLearningRateLevel="@FullLearningRateLevel" Level="@SkillLevel" MaxLevel="300" PercentageIndicatorTextWidget="PercentageIndicatorWidget\PercentageIndicatorTextWidget" PercentageIndicatorWidget="PercentageIndicatorWidget" PerksList="PerksList" ProgressClip="ProgressClip" SeperatorContainer="SeperatorContainer">
+              <Children>
+                <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="CharacterDeveloper\progress_bar_empty" IsEnabled="false" />
+                <Widget Id="ProgressClip" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="1000" ClipContents="true" IsEnabled="false">
+                  <Children>
+                    <BrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="1000" Brush="ProgressBarFillBrush" />
+                  </Children>
+                </Widget>
+
+                <Widget Id="FullLearningRateClipParent" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" IsEnabled="false">
+                  <Children>
+                    <Widget Id="FullLearningRateClip" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" ClipContents="true">
+                      <Children>
+                        <BrushWidget Id="FullLearningRateClipInnerContent" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="1000" Brush="ProgressBar.LearningRate.FillBrush" />
+                      </Children>
+                    </Widget>
+                    <ValueBasedVisibilityWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="40" SuggestedHeight="70" Sprite="CharacterDeveloper\indicator" Brush.Color="#ADAD49FF" IndexToBeVisibleFloat="1" WatchType="BiggerThanEqual" IndexToWatchFloat="@LearningRate" PositionXOffset="19" PositionYOffset="46" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                      <Children>
+                        <TextWidget MarginLeft="40" MarginTop="10" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" PositionYOffset="10" Brush="HeroAdminRecord.FocusLevel.Text" IntText="@CurrentFocusLevel" />
+                      </Children>
+                    </ValueBasedVisibilityWidget>
+                  </Children>
+                </Widget>
+
+                <ListPanel Id="PercentageIndicatorWidget" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" PositionYOffset="-97" IsEnabled="false" LayoutImp.LayoutMethod="VerticalBottomToTop">
+                  <Children>
+                    <TextWidget Id="PercentageIndicatorTextWidget" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Top" PositionYOffset="10" Brush="CharacterDeveloper.CurrentSkill.Value.Text" IntText="@SkillLevel" IsEnabled="@CanLearnSkill" />
+                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="31" SuggestedHeight="240" HorizontalAlignment="Center" VerticalAlignment="Center" Sprite="CharacterDeveloper\progress_bar_stick" Brush.ColorFactor="1.5" />
+                  </Children>
+                </ListPanel>
+                <Widget Id="SeperatorContainer" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" IsEnabled="false">
+                  <Children>
+                    <CharacterDeveloperSkillVerticalSeperatorWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="1" Sprite="BlankWhiteSquare" AlphaFactor="0.2" SkillValue="50" />
+                    <CharacterDeveloperSkillVerticalSeperatorWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="1" Sprite="BlankWhiteSquare" AlphaFactor="0.2" SkillValue="100" />
+                    <CharacterDeveloperSkillVerticalSeperatorWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="1" Sprite="BlankWhiteSquare" AlphaFactor="0.2" SkillValue="150" />
+                    <CharacterDeveloperSkillVerticalSeperatorWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="1" Sprite="BlankWhiteSquare" AlphaFactor="0.2" SkillValue="200" />
+                    <CharacterDeveloperSkillVerticalSeperatorWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="1" Sprite="BlankWhiteSquare" AlphaFactor="0.2" SkillValue="250" />
+                    <CharacterDeveloperSkillVerticalSeperatorWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="1" Sprite="BlankWhiteSquare" AlphaFactor="0.2" SkillValue="300" />
+                  </Children>
+                </Widget>
+                <CharacterDeveloperPerksContainerWidget Id="PerksList" DataSource="{Perks}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" DoNotAcceptEvents="true" FirstScopeID="SotorPerksFirstScope" UpScopeID="None" RightScopeID="None" DownScopeID="None" LeftScopeID="None">
+                  <ItemTemplate>
+                    <PerkItemButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="86" AlternativeType="@AlternativeType" Command.Click="ExecuteStartSelection" Command.AlternateClick="ExecuteShowPerkConcept" PerkState="@PerkState" Level="@Level" PerkVisualWidgetParent="PerkVisualWidgetParent" PerkVisualWidget="PerkVisualWidgetParent\PerkVisualWidget" NotEarnedPerkBrush="CharacterDeveloper.NotEarnedPerkBrush" EarnedNotSelectedPerkBrush="CharacterDeveloper.EarnedNotSelectedPerkBrush" InSelectionPerkBrush="CharacterDeveloper.InSelectionPerkBrush" EarnedActivePerkBrush="CharacterDeveloper.EarnedActivePerkBrush" EarnedNotActivePerkBrush="CharacterDeveloper.EarnedNotActivePerkBrush" EarnedPreviousPerkNotSelectedPerkBrush="CharacterDeveloper.EarnedNotSelectedFollowingPerk.Brush" UpdateChildrenStates="true" UseGlobalTimeForAnimation="true">
+                      <Children>
+                        <BrushWidget Id="PerkVisualWidgetParent" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="80" SuggestedHeight="86" HorizontalAlignment="Center" VerticalAlignment="Center" UseGlobalTimeForAnimation="true">
+                          <Children>
+                            <Widget Id="PerkVisualWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="30" HorizontalAlignment="Center" MarginTop="23" Sprite="@PerkId" />
+                          </Children>
+                        </BrushWidget>
+                        <HintWidget DataSource="{Hint}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+                      </Children>
+                    </PerkItemButtonWidget>
+                  </ItemTemplate>
+                </CharacterDeveloperPerksContainerWidget>
+              </Children>
+            </PerkSelectionBarWidget>
+              </Children>
+            </Widget>
+
+            <ListPanel WidthSizePolicy="Fixed" SuggestedWidth="320" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" HorizontalAlignment="Center" VerticalAlignment="Center" MarginLeft="30" PositionXOffset="130" PositionYOffset="-45">
+              <Children>
+
+                <ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="120" SuggestedHeight="60" HorizontalAlignment="Center" Command.Click="ExecuteAddFocus" IsEnabled="@CanAddFocus" Brush="AddFocusButton.SoundBrush" UpdateChildrenStates="true">
+                  <Children>
+                    <BrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="160" SuggestedHeight="76" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="AddFocusButtonBrush" />
+                    <BrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="50" SuggestedHeight="50" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="CharacterDeveloper.AddFocus.Icon.Brush" />
+                  </Children>
+                </ButtonWidget>
+
+                <SkillPointsContainerListPanel WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" MarginTop="8" CurrentFocusLevel="@CurrentFocusLevel" IsEnabled="false">
+                  <Children>
+                    <BrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="16" SuggestedHeight="50" Brush="Skill.Point.Big" MarginRight="4" MarginLeft="4" ForcePixelPerfectRenderPlacement="true" />
+                    <BrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="16" SuggestedHeight="50" Brush="Skill.Point.Big" MarginRight="4" MarginLeft="4" ForcePixelPerfectRenderPlacement="true" />
+                    <BrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="16" SuggestedHeight="50" Brush="Skill.Point.Big" MarginRight="4" MarginLeft="4" ForcePixelPerfectRenderPlacement="true" />
+                    <BrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="16" SuggestedHeight="50" Brush="Skill.Point.Big" MarginRight="4" MarginLeft="4" ForcePixelPerfectRenderPlacement="true" />
+                    <BrushWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="16" SuggestedHeight="50" Brush="Skill.Point.Big" MarginRight="4" MarginLeft="4" ForcePixelPerfectRenderPlacement="true" />
+                  </Children>
+                </SkillPointsContainerListPanel>
+
+                <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" MarginTop="8" Brush="CharacterDeveloper.LearningRate.Text" Brush.FontColor="#F4E1C4FF" Brush.FontSize="20" Text="@FocusPointsText" />
+
+                <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" MarginTop="9" Brush="CharacterDeveloper.LearningRate.Text" Brush.FontSize="24" Text="@CurrentLearningRateText" />
+
+                <FillBarWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="304" SuggestedHeight="17" HorizontalAlignment="Center" MarginTop="9" Sprite="little_progressbar_frame_9" AlphaFactor="0.5" FillWidget="FillBarParent\FillWidget" InitialAmount="@CurrentSkillXP" MaxAmount="@XpRequiredForNextLevel">
+                  <Children>
+                    <Widget Id="FillBarParent" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="290" SuggestedHeight="9" HorizontalAlignment="Center" VerticalAlignment="Center" MarginLeft="13" MarginRight="14">
+                      <Children>
+                        <Widget Id="FillWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="290" SuggestedHeight="9" HorizontalAlignment="Left" VerticalAlignment="Center" Sprite="little_progressbar_fill_9" AlphaFactor="0.5" />
+                      </Children>
+                    </Widget>
+                  </Children>
+                </FillBarWidget>
+
+                <TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" MarginTop="5" Brush="CharacterDeveloper.GridSkillName.Text" Brush.FontSize="16" Brush.TextAlphaFactor="0.6" Text="@ProgressText" />
+
+              </Children>
+            </ListPanel>
+
+          </Children>
+        </ListPanel>
+
+        <Widget WidthSizePolicy="Fixed" SuggestedWidth="360" HeightSizePolicy="Fixed" SuggestedHeight="45" HorizontalAlignment="Center" VerticalAlignment="Center" PositionXOffset="640" PositionYOffset="-110">
+          <Children>
+            <RichTextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" MarginLeft="34" MarginRight="34" Brush="SotorSpellBook.BannerTitle" Brush.FontSize="22" Brush.TextHorizontalAlignment="Center" Text="@HeroName" />
+            <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="41" HorizontalAlignment="Left" VerticalAlignment="Center" Brush="PreviousCharacterButtonBrush" Command.Click="ExecuteSelectPreviousHero" IsEnabled="@CanCycleHeroes" />
+            <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="30" SuggestedHeight="41" HorizontalAlignment="Right" VerticalAlignment="Center" Brush="NextCharacterButtonBrush" Command.Click="ExecuteSelectNextHero" IsEnabled="@CanCycleHeroes" />
+          </Children>
+        </Widget>
+
+        <Widget WidthSizePolicy="Fixed" SuggestedWidth="500" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" PositionXOffset="640" PositionYOffset="150">
+          <Children>
+            <ListPanel DataSource="{SpellcraftBar}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" HorizontalAlignment="Center" VerticalAlignment="Center">
+          <Children>
+            <ListPanel DataSource="{DerivedStats}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" HorizontalAlignment="Center" VerticalAlignment="Center">
+              <ItemTemplate>
+                <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight" HorizontalAlignment="Left" VerticalAlignment="Top" MarginTop="7">
+                  <Children>
+                    <RichTextWidget WidthSizePolicy="Fixed" SuggestedWidth="240" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Center" Brush="CharacterDeveloper.LearningRate.Text" Brush.TextHorizontalAlignment="Left" Brush.FontColor="#F4E1C4FF" Brush.FontSize="18" Text="@Label" />
+                    <RichTextWidget WidthSizePolicy="Fixed" SuggestedWidth="230" HeightSizePolicy="CoverChildren" HorizontalAlignment="Right" VerticalAlignment="Center" Brush="CharacterDeveloper.LearningRate.Text" Brush.TextHorizontalAlignment="Right" Brush.FontColor="#FFFFFFFF" Brush.FontSize="18" Text="@Value" />
+                    <Widget WidthSizePolicy="Fixed" SuggestedWidth="30" HeightSizePolicy="Fixed" SuggestedHeight="22" HorizontalAlignment="Left" VerticalAlignment="Center" MarginLeft="6" Sprite="@IconSprite" IsVisible="@HasIcon" />
+                  </Children>
+                </ListPanel>
+              </ItemTemplate>
+            </ListPanel>
+          </Children>
+        </ListPanel>
+          </Children>
+        </Widget>
+
+        <Widget VisualDefinition="LeftPanel" WidthSizePolicy="Fixed" SuggestedWidth="1240" HeightSizePolicy="Fixed" SuggestedHeight="680" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+          <Children>
+
+            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="Fixed" SuggestedHeight="600" HorizontalAlignment="Center" VerticalAlignment="Bottom" MarginBottom="80">
+              <Children>
+
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="76" HorizontalAlignment="Left" VerticalAlignment="Center" Sprite="spellbook_leftside">
+                  <Children>
+                    <ListPanel DataSource="{LoreObjectsLeft}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" StackLayout.LayoutMethod="VerticalBottomToTop" HorizontalAlignment="Right" VerticalAlignment="Center" MarginTop="40">
+                      <ItemTemplate>
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="60" SuggestedWidth="60" MarginTop="6">
+                          <Children>
+                            <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="115" HorizontalAlignment="Left" VerticalAlignment="Center" Command.Click="ExecuteSelectLoreObject" Sprite="@SpriteName" IsVisible="@IsVisible"/>
+                            <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="115" HorizontalAlignment="Left" VerticalAlignment="Center" Command.Click="ExecuteSelectLoreObject" PositionXOffset="-20" Sprite="@SpriteName" IsVisible="@IsSelected"/>
+                          </Children>
+                        </Widget>
+                      </ItemTemplate>
+                    </ListPanel>
+                  </Children>
+                </Widget>
+
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="37" HorizontalAlignment="Right" VerticalAlignment="Center" PositionXOffset="-43" PositionYOffset="-2" Sprite="spellbook_rightside_edge" />
+
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="115" HorizontalAlignment="Right" VerticalAlignment="Center" PositionXOffset="-7">
+                  <Children>
+                    <ListPanel DataSource="{LoreObjectsRight}" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" StackLayout.LayoutMethod="VerticalBottomToTop" HorizontalAlignment="Left" VerticalAlignment="Center" MarginTop="40">
+                      <ItemTemplate>
+
+                        <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="60" SuggestedWidth="115" MarginTop="6">
+                          <Children>
+                            <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="115" HorizontalAlignment="Right" VerticalAlignment="Center" PositionXOffset="0" Command.Click="ExecuteSelectLoreObject" Sprite="@SpriteName" IsVisible="@IsVisible"/>
+                            <ButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="115" HorizontalAlignment="Right" VerticalAlignment="Center" PositionXOffset="20" Command.Click="ExecuteSelectLoreObject" Sprite="@SpriteName" IsVisible="@IsSelected"/>
+                          </Children>
+                        </Widget>
+                      </ItemTemplate>
+                    </ListPanel>
+                  </Children>
+                </Widget>
+
+                <Widget DataSource="{CurrentLore}" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="1084" HorizontalAlignment="Right" VerticalAlignment="Center" PositionXOffset="-80" Sprite="spellbook_rightside">
+                  <Children>
+                    <RichTextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" PositionXOffset="-285" PositionYOffset="40" VerticalAlignment="Top" Brush="SotorSpellBook.Title" Brush.FontSize="24" Text="@Name" />
+                    <GridWidget DataSource="{SpellList}" WidthSizePolicy="Fixed" SuggestedWidth="1074" HeightSizePolicy="StretchToParent" ColumnCount="2" RowCount="4" DefaultCellWidth="537" DefaultCellHeight="100" LayoutImp="GridLayout" MarginTop="100" MarginLeft="20" MarginRight="30" MarginBottom="30">
+                      <ItemTemplate>
+                        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" MarginTop="10" MarginRight="30" MarginBottom="10">
+                          <Children>
+                                <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" StackLayout.LayoutMethod="HorizontalLeftToRight">
+                                  <Children>
+
+                                    <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedHeight="100" SuggestedWidth="100" MarginLeft="10" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                      <Children>
+                                        <ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="@AbilitySpriteName" Command.Click="ExecuteSelectAbility">
+                                          <Children>
+                                            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" VerticalAlignment="Center" HorizontalAlignment="Center" SuggestedHeight="112" SuggestedWidth="112" MarginBottom="-2" MarginLeft="-2" MarginRight="-2" MarginTop="-2" Sprite="frame" ColorFactor="1" IsNotVisible="@IsSelected"/>
+                                            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" VerticalAlignment="Center" HorizontalAlignment="Center" SuggestedHeight="112" SuggestedWidth="112" MarginBottom="-2" MarginLeft="-2" MarginRight="-2" MarginTop="-2" Sprite="selectionframe" ColorFactor="1" IsVisible="@IsSelected" />
+
+                                            <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="BlankWhiteSquare" Color="#0A0806FF" AlphaFactor="0.72" IsVisible="@ShowBuyOverlay">
+                                              <Children>
+                                                <RichTextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SotorSpellBook.ButtonText" Brush.FontSize="13" Text="@BuyText" />
+                                              </Children>
+                                            </Widget>
+                                          </Children>
+                                        </ButtonWidget>
+                                      </Children>
+                                    </Widget>
+
+                                    <HintWidget DataSource="{AbilityHint}" WidthSizePolicy="Fixed" HeightSizePolicy="StretchToParent" SuggestedWidth="330" MarginLeft="8" HorizontalAlignment="Left" VerticalAlignment="Center" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" IsDisabled="true">
+                                      <Children>
+
+                                        <Widget DataSource="{..}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                          <Children>
+
+                                            <ListPanel DataSource="{AbilityStatItems}" WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalTopToBottom" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                              <ItemTemplate>
+                                                <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="HorizontalLeftToRight" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                                  <Children>
+                                                    <RichTextWidget WidthSizePolicy="Fixed" SuggestedWidth="200" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Top" Brush="SotorSpellBook.Stat" Text="@Label" />
+                                                    <RichTextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" HorizontalAlignment="Left" VerticalAlignment="Top" Brush="SotorSpellBook.Stat" Text="@Value" />
+                                                  </Children>
+                                                </ListPanel>
+                                              </ItemTemplate>
+                                            </ListPanel>
+                                          </Children>
+                                        </Widget>
+                                      </Children>
+                                    </HintWidget>
+                                  </Children>
+                                </ListPanel>
+                          </Children>
+                        </Widget>
+                      </ItemTemplate>
+                    </GridWidget>
+
+                    <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" IsVisible="@IsLocked">
+                      <Children>
+                        <Widget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Sprite="BlankWhiteSquare" Color="#0A0806FF" AlphaFactor="0.82" />
+
+                        <ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="400" SuggestedHeight="100" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="ButtonBrush1" Command.Click="ExecuteUnlockLore" IsEnabled="@IsUnlockable">
+                          <Children>
+                            <RichTextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" HorizontalAlignment="Center" VerticalAlignment="Center" Brush="SotorSpellBook.ButtonText" Text="@UnlockText" />
+                          </Children>
+                        </ButtonWidget>
+                      </Children>
+                    </Widget>
+                  </Children>
+                </Widget>
+
+              </Children>
+            </Widget>
+          </Children>
+        </Widget>
+
+        <Standard.TripleDialogCloseButtons VisualDefinition="BottomMenu" HorizontalAlignment="Center" VerticalAlignment="Bottom" PositionYOffset="100" Parameter.DoneButtonAction="ExecuteDone" Parameter.DoneButtonText="Done" Parameter.CancelButtonAction="ExecuteCancel" Parameter.CancelButtonText="Cancel" Parameter.ResetButtonAction="ExecuteReset" />
+
+        <NavigationForcedScopeCollectionTargeter DataSource="{SpellcraftBar}" CollectionParent="..\PerkSelectionContainer" />
+        <NavigationScopeTargeter DataSource="{SpellcraftBar}" ScopeID="SotorPerkSelectionPopupScope" ScopeParent="..\PerkSelectionContainer\PerksContainerListPanel" ScopeMovements="Vertical" HasCircularMovement="true" />
+        <CharacterDeveloperPerkSelectionWidget DataSource="{SpellcraftBar\PerkSelection}" Id="PerkSelectionContainer" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" IsActive="@IsActive" Command.Deactivate="ExecuteDeactivate" PerksContainerListPanel="PerksContainerListPanel">
+          <Children>
+            <NavigatableListPanel Id="PerksContainerListPanel" DataSource="{AvailablePerks}" WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren" StackLayout.LayoutMethod="VerticalBottomToTop">
+              <ItemTemplate>
+                <CharacterDeveloperPerkSelectionItemButtonWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="250" SuggestedHeight="340" Command.Click="ExecuteSelection" Brush="CharacterDeveloper.PerkSelection.Button" MarginTop="0" MarginBottom="0" DoNotPassEventsToChildren="true" UpdateChildrenStates="true" PerkSelectionIndicatorWidget="PerkSelectionIndicatorWidget">
+                  <Children>
+
+                    <BrushWidget Id="PerkSelectionIndicatorWidget" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="0" SuggestedHeight="0" IsHidden="true" />
+                    <ListPanel WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" StackLayout.LayoutMethod="VerticalBottomToTop" MarginTop="5" MarginBottom="5" MarginRight="10" MarginLeft="10">
+                      <Children>
+                        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" Brush="CharacterDeveloper.PerkSelection.Pick.Text" MarginTop="15" Text="@PickText" />
+                        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" Brush="CharacterDeveloper.PerkSelection.PerkName.Text" MarginTop="5" Text="@PerkName" />
+                        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="CharacterDeveloper.PerkSelection.Description.Text" MarginTop="5" Text="@PerkDescription" />
+                        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="CoverChildren" Brush="CharacterDeveloper.PerkSelection.Description.Text" MarginTop="5" MarginBottom="15" Text="@PerkRole" />
+                      </Children>
+                    </ListPanel>
+                  </Children>
+                </CharacterDeveloperPerkSelectionItemButtonWidget>
+              </ItemTemplate>
+            </NavigatableListPanel>
+          </Children>
+        </CharacterDeveloperPerkSelectionWidget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>

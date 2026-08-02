@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<SPCultures>
+  <Culture
+    id="sotor_skeleton"
+    name="Skeleton"
+    color="0xFF303030"
+    color2="0xFF1c0d14"
+    is_bandit="false"
+    can_have_settlement="false"
+    elite_basic_troop="NPCCharacter.sotor_grave_guardian"
+    basic_troop="NPCCharacter.sotor_skeleton"
+    encounter_background_mesh="encounter_empire"
+    default_battle_equipment_roster="EquipmentRoster.default_battle_equipment_roster_neutral"
+    default_civilian_equipment_roster="EquipmentRoster.default_civilian_equipment_roster_neutral"
+    default_stealth_equipment_roster="EquipmentRoster.default_stealth_equipment_roster"
+    text="The restless dead, bound to a necromancer's will.">
+    <banner_bearer_replacement_weapons>
+      <item id="Item.sotor_vc_weapon_sword_grave_guard_001" />
+    </banner_bearer_replacement_weapons>
+  </Culture>
+</SPCultures>

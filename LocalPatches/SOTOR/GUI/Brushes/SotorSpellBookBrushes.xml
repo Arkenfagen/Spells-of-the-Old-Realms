@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Brushes>
+
+  <Brush Name="SotorSpellBook.BannerTitle" Font="FiraSansExtraCondensed-Regular" TextHorizontalAlignment="Center">
+    <Styles>
+      <Style Name="Default" FontColor="#FAF4DEFF" FontSize="30" TextGlowColor="#000000FF" TextGlowRadius="1.2" TextBlur="0.5" TextOutlineColor="#000000FF" TextOutlineAmount="1" />
+    </Styles>
+  </Brush>
+
+  <Brush Name="SotorSpellBook.Title" Font="FiraSansExtraCondensed-Regular" TextHorizontalAlignment="Center">
+    <Styles>
+      <Style Name="Default" FontColor="#000000FF" FontSize="26" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" />
+    </Styles>
+  </Brush>
+
+  <Brush Name="SotorSpellBook.SpellName" Font="FiraSansExtraCondensed-Regular" TextHorizontalAlignment="Left">
+    <Styles>
+      <Style Name="Default" FontColor="#000000FF" FontSize="18" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" />
+    </Styles>
+  </Brush>
+
+  <Brush Name="SotorSpellBook.Stat" Font="FiraSansExtraCondensed-Regular" TextHorizontalAlignment="Left">
+    <Styles>
+      <Style Name="Default" FontColor="#000000FF" FontSize="14" TextOutlineAmount="0" TextGlowRadius="0" TextBlur="0" />
+    </Styles>
+  </Brush>
+
+  <Brush Name="SotorSpellBook.Disabled" Font="FiraSansExtraCondensed-Regular" TextHorizontalAlignment="Left">
+    <Styles>
+      <Style Name="Default" FontColor="#5A5A5AFF" FontSize="14" TextOutlineColor="#FFFFFF40" TextOutlineAmount="1" TextGlowRadius="0" TextBlur="0" />
+    </Styles>
+  </Brush>
+
+  <Brush Name="SotorSpellBook.ButtonText" Font="FiraSansExtraCondensed-Regular" TextHorizontalAlignment="Center">
+    <Styles>
+      <Style Name="Default" FontColor="#FAF4DEFF" FontSize="18" TextGlowColor="#000000FF" TextGlowRadius="0.5" TextBlur="0" TextOutlineColor="#000000A0" TextOutlineAmount="0.5" />
+    </Styles>
+  </Brush>
+</Brushes>

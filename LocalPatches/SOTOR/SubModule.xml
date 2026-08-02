@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+  <Name value="Spells of the Old Realms"/>
+  <Id value="SOTOR"/>
+  <Version value="v0.1.0"/>
+  <SingleplayerModule value="true"/>
+  <ModuleType value="Community"/>
+  <DependedModules>
+    <DependedModule Id="Bannerlord.Harmony"/>
+    <DependedModule Id="Bannerlord.UIExtenderEx" DependentVersion="v2.12.0.0"/>
+
+    <DependedModule Id="Bannerlord.MBOptionScreen"/>
+    <DependedModule Id="Native"/>
+    <DependedModule Id="SandBoxCore"/>
+    <DependedModule Id="Sandbox"/>
+    <DependedModule Id="CustomBattle"/>
+
+    <DependedModule Id="NavalDLC" Optional="true"/>
+  </DependedModules>
+  <SubModules>
+    <SubModule>
+      <Name value="SOTOR"/>
+      <DLLName value="SOTOR.dll"/>
+      <SubModuleClassType value="SOTOR.SubModule"/>
+      <Tags>
+        <Tag key="DedicatedServerType" value="none"/>
+        <Tag key="IsNoRenderModeElement" value="false"/>
+      </Tags>
+    </SubModule>
+  </SubModules>
+  <Xmls>
+
+    <XmlNode>
+      <XmlName id="GameText" path="module_strings"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="SPCultures" path="sotor_cultures"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="WeaponDescriptions" path="sotor_weapon_descriptions_full"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="CraftingTemplates" path="sotor_crafting_templates_full"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="CraftingPieces" path="sotor_crafting_pieces_full"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="Items" path="items/sotor_skeleton_weapons_full"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="Items" path="items/sotor_amber_javelin"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="Items" path="items/sotor_skeleton_warrior_armors"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="Items" path="items/sotor_skeleton_armors_tiers"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="Items" path="items/sotor_skeleton_mounts"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="NPCCharacters" path="sotor_skeleton_troops"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="NPCCharacters" path="sotor_skeleton_troops_tree"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+  </Xmls>
+</Module>

@@ -1,0 +1,2 @@
+UseThrownAmberSpear=true
+JavelinAttackStateTest=-1

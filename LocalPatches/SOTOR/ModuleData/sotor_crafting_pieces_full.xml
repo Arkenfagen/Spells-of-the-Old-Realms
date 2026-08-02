@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CraftingPieces>
+  <CraftingPiece id="sotor_black_knight_lance_001_blade" name="{=str_black_knight_lance_001_blade}Black Knight Lance Blade" tier="5" piece_type="Blade" culture="Culture.khuzait" length="64.42" weight="2" is_default="true" is_hidden="false" excluded_item_usage_features="swing" mesh="blackknight_lance_001_blade">
+    <BuildData previous_piece_offset="0.1" />
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_blackknight_lance_001_blade">
+      <Thrust damage_type="Pierce" damage_factor="2.6" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron4" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_black_knight_lance_001_guard" name="{=str_black_knight_lance_001_guard}Black Knight Lance Guard" tier="5" piece_type="Guard" culture="Culture.khuzait" length="157.33" weight="5" is_hidden="false" mesh="blackknight_lance_001_guard">
+    <BuildData next_piece_offset="9.85" />
+    <Materials>
+      <Material id="Iron4" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_black_knight_lance_001_handle" name="{=str_black_knight_lance_001_handle}Black Knight Lance Handle" tier="4" piece_type="Handle" culture="Culture.khuzait" length="42.07" weight="1" is_hidden="false" mesh="blackknight_lance_001_handle">
+    <BuildData piece_offset="5" next_piece_offset="2" previous_piece_offset="0.5" />
+    <Materials>
+      <Material id="Iron4" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_black_knight_lance_001_pommel" name="{=str_black_knight_lance_001_pommel}Black Knight Lance Pommel" tier="3" piece_type="Pommel" culture="Culture.khuzait" length="43.56" weight="1" is_hidden="false" mesh="blackknight_lance_001_pommel">
+    <Materials>
+      <Material id="Iron4" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_default_weapon_guard" name="{=str_default_weapon_guard}None" tier="1" piece_type="Guard" culture="Culture.neutral_culture" length="0" weight="0" is_default="true" is_hidden="false" mesh="" />
+  <CraftingPiece id="default_weapon_pommel" name="{=str_default_weapon_pommel}None" tier="1" piece_type="Pommel" culture="Culture.neutral_culture" length="0" weight="0" is_default="true" is_hidden="false" mesh="" />
+  <CraftingPiece id="runefang_001_blade" name="{=str_runefang_001_blade}Runefang Blade" tier="6" piece_type="Blade" culture="Culture.empire" length="96.2" weight="1.35" is_hidden="true" mesh="runefang_001_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_runefang_001_blade">
+      <Thrust damage_type="Pierce" damage_factor="3.0" />
+      <Swing damage_type="Cut" damage_factor="4.0" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron5" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_default_weapon_pommel" name="{=str_default_weapon_pommel}None" tier="1" piece_type="Pommel" culture="Culture.neutral_culture" length="0" weight="0" is_default="true" is_hidden="false" mesh="" />
+  <CraftingPiece id="runefang_001_blade" name="{=str_runefang_001_blade}Runefang Blade" tier="6" piece_type="Blade" culture="Culture.empire" length="96.2" weight="1.35" is_hidden="true" mesh="runefang_001_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_runefang_001_blade">
+      <Thrust damage_type="Pierce" damage_factor="3.0" />
+      <Swing damage_type="Cut" damage_factor="4.0" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron5" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_empire_halberd_005_shaft" name="{=str_empire_halberd_005_shaft}Empire Halberd Shaft" tier="5" piece_type="Handle" culture="Culture.empire" length="232.89" weight="1.7" is_hidden="false" mesh="empire_halberd_005_pole">
+    <BuildData piece_offset="0" next_piece_offset="0.5" />
+    <Materials>
+      <Material id="Wood" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_grave_guard_greataxe_001_blade" name="{=str_grave_guard_greataxe_001_blade}Grave Guard Greataxe Blade" tier="1" piece_type="Blade" culture="Culture.khuzait" length="59.81" weight="1.750" is_hidden="true" distance_to_next_piece="24.13" distance_to_previous_piece="35.67" mesh="grave_guard_greataxe_001_blade">
+    <BuildData previous_piece_offset="15.37" />
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_grave_guard_greataxe_001_blade" blade_width="26.73">
+      <Swing damage_type="Cut" damage_factor="3.2" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron2" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_grave_guard_greataxe_001_handle" name="{=str_grave_guard_greataxe_001_handle}Grave Guard Greataxe Handle" tier="1" piece_type="Handle" culture="Culture.khuzait" length="107.24" weight="1.100" is_hidden="true" mesh="grave_guard_greataxe_001_handle">
+    <BuildData piece_offset="11" next_piece_offset="1" />
+    <Materials>
+      <Material id="Iron2" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_grave_guard_greatsword_001_blade" name="{=str_grave_guard_greatsword_001_blade}Grave Guard Greatsword Blade" tier="1" piece_type="Blade" culture="Culture.khuzait" length="91.68" weight="1.35" is_hidden="true" mesh="grave_guard_greatsword_001_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_grave_guard_greatsword_001_blade">
+      <Thrust damage_type="Pierce" damage_factor="3.3" />
+      <Swing damage_type="Cut" damage_factor="3.5" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron4" count="4" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_grave_guard_greatsword_001_guard" name="{=str_grave_guard_greatsword_001_guard}Grave Guard Greatsword Guard" tier="1" piece_type="Guard" culture="Culture.khuzait" length="4.7" weight="0.15" is_hidden="true" mesh="grave_guard_greatsword_001_guard">
+    <BuildData next_piece_offset="0.3" previous_piece_offset="0.2" />
+    <Materials>
+      <Material id="Iron5" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_grave_guard_greatsword_001_handle" name="{=str_grave_guard_greatsword_001_handle}Grave Guard Greatsword Handle" tier="1" piece_type="Handle" culture="Culture.khuzait" length="35.23" weight="0.13" is_hidden="true" mesh="grave_guard_greatsword_001_handle">
+    <BuildData piece_offset="0" next_piece_offset="0.2" />
+    <Materials>
+      <Material id="Iron3" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_grave_guard_greatsword_001_pommel" name="{=str_grave_guard_greatsword_001_pommel}Grave Guard Greatsword Pommel" tier="1" piece_type="Pommel" culture="Culture.khuzait" length="8.16" weight="0.2" is_hidden="true" mesh="grave_guard_greatsword_001_pommel">
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_grave_guard_sword_001_blade" name="{=str_grave_guard_sword_001_blade}Grave Guard Blade" tier="1" piece_type="Blade" culture="Culture.khuzait" length="83.19" weight="0.93" is_hidden="true" mesh="grave_guard_sword_001_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_grave_guard_sword_001_blade">
+      <Thrust damage_type="Pierce" damage_factor="3" />
+      <Swing damage_type="Cut" damage_factor="4.2" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron5" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_grave_guard_sword_001_guard" name="{=str_grave_guard_sword_001_guard}Grave Guard Guard" tier="1" piece_type="Guard" culture="Culture.khuzait" length="1.84" weight="0.9" is_hidden="true" mesh="grave_guard_sword_001_guard">
+    <BuildData next_piece_offset="0.3" previous_piece_offset="0.1" />
+    <Materials>
+      <Material id="Iron5" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_grave_guard_sword_001_hilt" name="{=str_grave_guard_sword_001_hilt}Grave Guard Hilt" tier="1" piece_type="Handle" culture="Culture.khuzait" length="17.41" weight="0.2" is_hidden="true" mesh="grave_guard_sword_001_hilt">
+    <BuildData piece_offset="0" next_piece_offset="0.1" previous_piece_offset="0.1" />
+    <Materials>
+      <Material id="Iron4" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_grave_guard_sword_001_pommel" name="{=str_grave_guard_sword_001_pommel}Grave Guard Pommel" tier="1" piece_type="Pommel" culture="Culture.khuzait" length="5.82" weight="0.1" is_hidden="true" mesh="grave_guard_sword_001_pommel">
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_spear_guard" name="{=str_skeleton_spear_guard}Old Spearguard" tier="1" piece_type="Guard" culture="Culture.khuzait" length="4.71" weight="0.0" is_hidden="true" mesh="skele_warr_spear_guard_001">
+    <BuildData next_piece_offset="0.1" previous_piece_offset="0.1" />
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_spear_head" name="{=str_skeleton_spear_head}Old Spearhead" tier="1" piece_type="Blade" culture="Culture.khuzait" length="29.70" weight="0.3384" is_hidden="true" excluded_item_usage_features="swing" mesh="skele_warr_spear_blade_001">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_skele_warr_spear_001_blade">
+      <Thrust damage_type="Pierce" damage_factor="3.0" />
+      <Swing damage_type="Cut" damage_factor="1.2" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_spear_pommel" name="{=str_skeleton_spear_pommel}Old Spearpommel" tier="1" piece_type="Pommel" culture="Culture.khuzait" length="10.31" weight="0.0" is_hidden="true" mesh="skele_warr_spear_pommel_001">
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_spear_shaft" name="{=str_skeleton_spear_shaft}Old Spearshaft" tier="1" piece_type="Handle" culture="Culture.khuzait" length="166.66" weight="1.3" is_hidden="true" excluded_item_usage_features="long" mesh="skele_warr_spear_handle_001">
+    <BuildData piece_offset="0" next_piece_offset="0.1" previous_piece_offset="0.1" />
+    <Materials>
+      <Material id="Wood" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_001_blade" name="{=str_skeleton_warrior_sword_001_blade}Skeleton Warrior Sword Blade" tier="1" piece_type="Blade" culture="Culture.khuzait" length="73.53" weight="1.0" is_hidden="true" mesh="skele_warr_sword_001_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_skele_warr_sword_001">
+      <Thrust damage_type="Pierce" damage_factor="1.9" />
+      <Swing damage_type="Cut" damage_factor="2.4" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron5" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_001_guard" name="{=str_skeleton_warrior_sword_001_guard}Skeleton Warrior Sword Guard" tier="1" piece_type="Guard" culture="Culture.khuzait" length="1.21" weight="0.15" is_hidden="true" mesh="skele_warr_sword_001_guard">
+    <BuildData next_piece_offset="0.3" previous_piece_offset="0.3" />
+    <Materials>
+      <Material id="Iron5" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_001_hilt" name="{=str_skeleton_warrior_sword_001_hilt}Skeleton Warrior Sword Hilt" tier="1" piece_type="Handle" culture="Culture.khuzait" length="19.89" weight="0.1" is_hidden="true" mesh="skele_warr_sword_001_hilt">
+    <BuildData piece_offset="0" next_piece_offset="0.3" previous_piece_offset="0.3" />
+    <Materials>
+      <Material id="Iron4" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_001_pommel" name="{=str_skeleton_warrior_sword_001_pommel}Skeleton Warrior Sword Pommel" tier="1" piece_type="Pommel" culture="Culture.khuzait" length="1.83" weight="0.2" is_hidden="true" mesh="skele_warr_sword_001_pommel">
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_002_blade" name="{=str_skeleton_warrior_sword_002_blade}Skeleton Warrior Sword Blade" tier="1" piece_type="Blade" culture="Culture.khuzait" length="86.50" weight="1.2" is_hidden="true" mesh="skele_warr_sword_002_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_skele_warr_sword_002">
+      <Thrust damage_type="Pierce" damage_factor="1.9" />
+      <Swing damage_type="Cut" damage_factor="2.4" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron5" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_002_guard" name="{=str_skeleton_warrior_sword_002_guard}Skeleton Warrior Sword Guard" tier="1" piece_type="Guard" culture="Culture.khuzait" length="3.25" weight="0.15" is_hidden="true" mesh="skele_warr_sword_002_guard">
+    <BuildData next_piece_offset="0.2" previous_piece_offset="0.1" />
+    <Materials>
+      <Material id="Iron5" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_002_hilt" name="{=str_skeleton_warrior_sword_002_hilt}Skeleton Warrior Sword Hilt" tier="1" piece_type="Handle" culture="Culture.khuzait" length="21.01" weight="0.1" is_hidden="true" mesh="skele_warr_sword_002_hilt">
+    <BuildData piece_offset="0" next_piece_offset="0.2" previous_piece_offset="0.2" />
+    <Materials>
+      <Material id="Iron4" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_002_pommel" name="{=str_skeleton_warrior_sword_002_pommel}Skeleton Warrior Sword Pommel" tier="1" piece_type="Pommel" culture="Culture.khuzait" length="2.86" weight="0.2" is_hidden="true" mesh="skele_warr_sword_002_pommel">
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_003_blade" name="{=str_skeleton_warrior_sword_003_blade}Skeleton Warrior Sword Blade" tier="1" piece_type="Blade" culture="Culture.khuzait" length="77.62" weight="1.4" is_hidden="true" mesh="skele_warr_sword_003_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_skele_warr_sword_003">
+      <Thrust damage_type="Pierce" damage_factor="1.9" />
+      <Swing damage_type="Cut" damage_factor="2.4" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron5" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_003_hilt" name="{=str_skeleton_warrior_sword_003_hilt}Skeleton Warrior Sword Hilt" tier="1" piece_type="Handle" culture="Culture.khuzait" length="16.75" weight="0.1" is_hidden="true" mesh="skele_warr_sword_003_hilt">
+    <BuildData piece_offset="0" next_piece_offset="0.5" previous_piece_offset="0.2" />
+    <Materials>
+      <Material id="Iron4" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_003_pommel" name="{=str_skeleton_warrior_sword_003_pommel}Skeleton Warrior Sword Pommel" tier="1" piece_type="Pommel" culture="Culture.khuzait" length="5.49" weight="0.2" is_hidden="true" mesh="skele_warr_sword_003_pommel">
+    <BuildData next_piece_offset="0.45" />
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_004_blade" name="{=str_skeleton_warrior_sword_004_blade}Skeleton Warrior Sword Blade" tier="1" piece_type="Blade" culture="Culture.khuzait" length="39.36" weight="0.54" is_hidden="true" mesh="skele_warr_sword_004_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_skele_warr_sword_004">
+      <Thrust damage_type="Pierce" damage_factor="1.9" />
+      <Swing damage_type="Cut" damage_factor="2.4" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron5" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_004_guard" name="{=str_skeleton_warrior_sword_004_guard}Skeleton Warrior Sword Guard" tier="1" piece_type="Guard" culture="Culture.khuzait" length="2.47" weight="0.15" is_hidden="true" mesh="skele_warr_sword_004_guard">
+    <BuildData next_piece_offset="0.3" previous_piece_offset="0.2" />
+    <Materials>
+      <Material id="Iron5" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_004_hilt" name="{=str_skeleton_warrior_sword_004_hilt}Skeleton Warrior Sword Hilt" tier="1" piece_type="Handle" culture="Culture.khuzait" length="18.04" weight="0.1" is_hidden="true" mesh="skele_warr_sword_004_hilt">
+    <BuildData piece_offset="0" next_piece_offset="0.2" previous_piece_offset="0.2" />
+    <Materials>
+      <Material id="Iron4" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_004_pommel" name="{=str_skeleton_warrior_sword_004_pommel}Skeleton Warrior Sword Pommel" tier="1" piece_type="Pommel" culture="Culture.khuzait" length="2.52" weight="0.2" is_hidden="true" mesh="skele_warr_sword_004_pommel">
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_005_blade" name="{=str_skeleton_warrior_sword_005_blade}Skeleton Warrior Sword Blade" tier="1" piece_type="Blade" culture="Culture.khuzait" length="66.90" weight="1.2" is_hidden="true" mesh="skele_warr_sword_005_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_skele_warr_sword_005">
+      <Thrust damage_type="Pierce" damage_factor="1.9" />
+      <Swing damage_type="Cut" damage_factor="2.4" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron5" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_skeleton_warrior_sword_005_hilt" name="{=str_skeleton_warrior_sword_005_hilt}Skeleton Warrior Sword Hilt" tier="1" piece_type="Handle" culture="Culture.khuzait" length="30.79" weight="0.1" is_hidden="true" mesh="skele_warr_sword_005_hilt">
+    <BuildData piece_offset="0" next_piece_offset="1" previous_piece_offset="2.5" />
+    <Materials>
+      <Material id="Iron4" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vampire_sword_005_blade" name="{=str_vampire_sword_005_blade}Vampire Sword Blade" tier="4" piece_type="Blade" culture="Culture.khuzait" length="83.13" weight="0.9" is_hidden="false" mesh="vampire_sword_005_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_vampire_sword_005">
+      <Thrust damage_type="Pierce" damage_factor="3.1" />
+      <Swing damage_type="Cut" damage_factor="4.3" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron5" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vampire_sword_005_guard" name="{=str_vampire_sword_005_guard}Vampire Sword Guard" tier="5" piece_type="Guard" culture="Culture.khuzait" length="8.16" weight="0.15" is_hidden="false" mesh="vampire_sword_005_guard">
+    <BuildData next_piece_offset="0.1" previous_piece_offset="0.1" />
+    <Materials>
+      <Material id="Iron5" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vampire_sword_005_handle" name="{=str_vampire_sword_005_handle}Vampire Sword Handle" tier="4" piece_type="Handle" culture="Culture.khuzait" length="11.77" weight="0.1" is_hidden="false" mesh="vampire_sword_005_handle">
+    <BuildData piece_offset="0" next_piece_offset="0.1" previous_piece_offset="0.1" />
+    <Materials>
+      <Material id="Iron4" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vampire_sword_005_pommel" name="{=str_vampire_sword_005_pommel}Vampire Sword Pommel" tier="2" piece_type="Pommel" culture="Culture.khuzait" length="6.50" weight="0.2" is_hidden="false" mesh="vampire_sword_005_pommel">
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vampire_sword_008_blade" name="{=str_vampire_sword_008_blade}Vampire Sword Blade" tier="4" piece_type="Blade" culture="Culture.khuzait" length="92.47" weight="0.9" is_hidden="false" mesh="vampire_sword_008_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_vampire_sword_008">
+      <Thrust damage_type="Pierce" damage_factor="3.1" />
+      <Swing damage_type="Cut" damage_factor="4.3" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron5" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vampire_sword_008_guard" name="{=str_vampire_sword_008_guard}Vampire Sword Guard" tier="5" piece_type="Guard" culture="Culture.khuzait" length="3.56" weight="0.15" is_hidden="false" mesh="vampire_sword_008_guard">
+    <BuildData next_piece_offset="0.2" previous_piece_offset="0.1" />
+    <Materials>
+      <Material id="Iron5" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vampire_sword_008_handle" name="{=str_vampire_sword_008_handle}Vampire Sword Handle" tier="4" piece_type="Handle" culture="Culture.khuzait" length="14.99" weight="0.1" is_hidden="false" mesh="vampire_sword_008_handle">
+    <BuildData piece_offset="0" next_piece_offset="0.1" previous_piece_offset="0.1" />
+    <Materials>
+      <Material id="Iron4" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vampire_sword_008_pommel" name="{=str_vampire_sword_008_pommel}Vampire Sword Pommel" tier="2" piece_type="Pommel" culture="Culture.khuzait" length="11.57" weight="0.2" is_hidden="false" mesh="vampire_sword_008_pommel">
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vc_halberd_001_head" name="{=str_vc_halberd_001_head}Old Halberdhead" tier="1" piece_type="Blade" culture="Culture.khuzait" length="35.42" weight="0.43" is_hidden="true" mesh="vc_halberd_001_head">
+    <BuildData previous_piece_offset="0.9" />
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_vc_halberd_001_head">
+      <Thrust damage_type="Pierce" damage_factor="4.5" />
+      <Swing damage_type="Cut" damage_factor="2.6" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vc_halberd_002_head" name="{=str_vc_halberd_002_head}Old Halberdhead" tier="1" piece_type="Blade" culture="Culture.khuzait" length="35.80" weight="0.43" is_hidden="true" mesh="vc_halberd_002_head">
+    <BuildData previous_piece_offset="2.71" />
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_vc_halberd_002_head">
+      <Thrust damage_type="Pierce" damage_factor="4.5" />
+      <Swing damage_type="Cut" damage_factor="2.6" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vc_halberd_003_head" name="{=str_vc_halberd_003_head}Old Halberdhead" tier="1" piece_type="Blade" culture="Culture.khuzait" length="34.05" weight="0.43" is_hidden="true" mesh="vc_halberd_003_head">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_vc_halberd_003_head">
+      <Thrust damage_type="Pierce" damage_factor="4.5" />
+      <Swing damage_type="Cut" damage_factor="2.6" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron2" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vc_skeleton_warrior_mace_001_blade" name="{=str_vc_skeleton_warrior_mace_001_blade}Skeleton Warrior Mace Head" tier="1" piece_type="Blade" culture="Culture.khuzait" length="25.30" weight="0.8" is_hidden="true" mesh="vc_skeleton_warrior_mace_001_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_vc_skeleton_warrior_mace_001_blade">
+      <Swing damage_type="Blunt" damage_factor="1.9" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron2" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vc_skeleton_warrior_mace_001_handle" name="{=str_vc_skeleton_warrior_mace_001_handle}Skeleton Warrior Mace Handle" tier="1" piece_type="Handle" culture="Culture.khuzait" length="78.71" weight="1.100" is_hidden="true" mesh="vc_skeleton_warrior_mace_001_handle">
+    <BuildData piece_offset="20" next_piece_offset="0.5" />
+    <Materials>
+      <Material id="Iron4" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vc_skeleton_warrior_mace_002_blade" name="{=str_vc_skeleton_warrior_mace_002_blade}Skeleton Warrior Mace Head" tier="1" piece_type="Blade" culture="Culture.khuzait" length="25.75" weight="0.8" is_hidden="true" mesh="vc_skeleton_warrior_mace_002_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_vc_skeleton_warrior_mace_002_blade">
+      <Swing damage_type="Blunt" damage_factor="1.9" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron2" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vc_skeleton_warrior_mace_002_handle" name="{=str_vc_skeleton_warrior_mace_002_handle}Skeleton Warrior Mace Handle" tier="1" piece_type="Handle" culture="Culture.khuzait" length="69.36" weight="1.100" is_hidden="true" mesh="vc_skeleton_warrior_mace_002_handle">
+    <BuildData piece_offset="20" next_piece_offset="0.5" />
+    <Materials>
+      <Material id="Iron4" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vc_skeleton_warrior_mace_003_blade" name="{=str_vc_skeleton_warrior_mace_003_blade}Skeleton Warrior Mace Head" tier="1" piece_type="Blade" culture="Culture.khuzait" length="18.56" weight="0.8" is_hidden="true" mesh="vc_skeleton_warrior_mace_003_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_vc_skeleton_warrior_mace_003_blade">
+      <Swing damage_type="Blunt" damage_factor="1.9" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron2" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vc_skeleton_warrior_mace_003_handle" name="{=str_vc_skeleton_warrior_mace_003_handle}Skeleton Warrior Mace Handle" tier="1" piece_type="Handle" culture="Culture.khuzait" length="62.05" weight="1.100" is_hidden="true" mesh="vc_skeleton_warrior_mace_003_handle">
+    <BuildData piece_offset="27.5" next_piece_offset="0.5" />
+    <Materials>
+      <Material id="Iron4" count="3" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vc_skeleton_warrior_mace_004_blade" name="{=str_vc_skeleton_warrior_mace_004_blade}Skeleton Warrior Mace Head" tier="1" piece_type="Blade" culture="Culture.khuzait" length="17.26" weight="0.8" is_hidden="true" mesh="vc_skeleton_warrior_mace_004_blade">
+    <BladeData stack_amount="1" physics_material="metal_weapon" body_name="bo_vc_skeleton_warrior_mace_004_blade">
+      <Swing damage_type="Blunt" damage_factor="1.9" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron2" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_vc_skeleton_warrior_mace_004_handle" name="{=str_vc_skeleton_warrior_mace_004_handle}Skeleton Warrior Mace Handle" tier="1" piece_type="Handle" culture="Culture.khuzait" length="60.72" weight="1.100" is_hidden="true" mesh="vc_skeleton_warrior_mace_004_handle">
+    <BuildData piece_offset="24.5" next_piece_offset="0.5" />
+    <Materials>
+      <Material id="Iron4" count="3" />
+    </Materials>
+  </CraftingPiece>
+
+  <CraftingPiece id="sotor_amber_spear_blade" name="{=sotor_amber_spear_blade}Amber Spear Head" tier="5" piece_type="Blade" culture="Culture.aserai" length="69.5" weight="0.5" is_default="true" is_hidden="false" excluded_item_usage_features="swing" mesh="sotor_amber_spear_blade_27">
+    <BladeData stack_amount="5" physics_material="wood_weapon" body_name="bo_spear_b" holster_mesh="throwing_spear_quiver_2" holster_body_name="bo_throwing_spear_quiver_2" holster_mesh_length="94.6">
+      <Thrust damage_type="Pierce" damage_factor="2.8" />
+    </BladeData>
+    <Materials>
+      <Material id="Iron5" count="2" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_amber_spear_handle" name="{=sotor_amber_spear_handle}Amber Spear Shaft" tier="3" piece_type="Handle" culture="Culture.aserai" length="86.7" weight="0.7" is_default="true" is_hidden="false" excluded_item_usage_features="long" mesh="sotor_amber_spear_handle_10">
+    <Materials>
+      <Material id="Wood" count="1" />
+    </Materials>
+  </CraftingPiece>
+  <CraftingPiece id="sotor_amber_spear_pommel" name="{=sotor_amber_spear_pommel}Amber Spear Pommel" tier="5" piece_type="Pommel" culture="Culture.empire" length="14.8" weight="0" is_default="true" is_hidden="false" mesh="sotor_amber_spear_pommel_12">
+    <Materials>
+      <Material id="Iron5" count="1" />
+    </Materials>
+  </CraftingPiece>
+</CraftingPieces>

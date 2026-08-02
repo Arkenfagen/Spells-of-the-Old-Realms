@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Items>
+
+  <Item id="sotor_skeleton_warrior_helmet_001" name="Skeleton Warrior Helm" mesh="sotor_skeleton_warrior_helmet_001" weight="2.2" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="130">
+    <ItemComponent><Armor modifier_group="plate" material_type="Plate" head_armor="13" hair_cover_type="all" beard_cover_type="all" covers_head="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_helmet_002" name="Skeleton Warrior Helm" mesh="sotor_skeleton_warrior_helmet_002" weight="2.3" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="150">
+    <ItemComponent><Armor modifier_group="plate" material_type="Plate" head_armor="15" hair_cover_type="all" beard_cover_type="all" covers_head="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+
+  <Item id="sotor_skeleton_warrior_armor_001" name="Skeleton Warrior Armor" mesh="sotor_skeleton_warrior_armor_001" weight="6.5" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="9100">
+    <ItemComponent><Armor body_armor="12" arm_armor="1" modifier_group="leather" material_type="Leather" covers_body="true" body_mesh_type="upperbody" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_armor_002" name="Skeleton Warrior Armor" mesh="sotor_skeleton_warrior_armor_002" weight="8.6" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="16000">
+    <ItemComponent><Armor body_armor="14" arm_armor="2" modifier_group="plate" material_type="Plate" covers_body="true" body_mesh_type="upperbody" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_armor_003" name="Skeleton Warrior Armor" mesh="sotor_skeleton_warrior_armor_003" weight="3.5" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="3850">
+    <ItemComponent><Armor body_armor="10" arm_armor="1" modifier_group="cloth" material_type="Cloth" covers_body="true" body_mesh_type="upperbody" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+
+  <Item id="sotor_skeleton_warrior_bracers_001" name="Skeleton Warrior Bracer" mesh="sotor_skeleton_warrior_bracers_001" weight="1" appearance="3" item_category="heavy_armor" Type="HandArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="hand_armor" value="12000">
+    <ItemComponent><Armor arm_armor="12" modifier_group="plate" material_type="Plate" covers_hands="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_bracers_002" name="Skeleton Warrior Bracer" mesh="sotor_skeleton_warrior_bracers_002" weight="1" appearance="3" item_category="heavy_armor" Type="HandArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="hand_armor" value="12000">
+    <ItemComponent><Armor arm_armor="12" modifier_group="plate" material_type="Plate" covers_hands="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_bracers_003" name="Skeleton Warrior Bracer" mesh="sotor_skeleton_warrior_bracers_003" weight="1" appearance="3" item_category="heavy_armor" Type="HandArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="hand_armor" value="12000">
+    <ItemComponent><Armor arm_armor="12" modifier_group="plate" material_type="Plate" covers_hands="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+
+  <Item id="sotor_skeleton_warrior_boots_001" name="Skeleton Warrior Boots" mesh="sotor_skeleton_warrior_boots_001" weight="4.0" item_category="heavy_armor" Type="LegArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="leg_armor" value="10000">
+    <ItemComponent><Armor leg_armor="10" modifier_group="plate" material_type="Plate" covers_legs="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_boots_002" name="Skeleton Warrior Boots" mesh="sotor_skeleton_warrior_boots_002" weight="3.0" item_category="heavy_armor" Type="LegArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="leg_armor" value="10000">
+    <ItemComponent><Armor leg_armor="10" modifier_group="plate" material_type="Plate" covers_legs="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_boots_003" name="Skeleton Warrior Boots" mesh="sotor_skeleton_warrior_boots_003" weight="3.0" item_category="heavy_armor" Type="LegArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="leg_armor" value="10000">
+    <ItemComponent><Armor leg_armor="10" modifier_group="plate" material_type="Plate" covers_legs="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_boots_004" name="Skeleton Warrior Boots" mesh="sotor_skeleton_warrior_boots_004" weight="2.0" item_category="heavy_armor" Type="LegArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="leg_armor" value="10000">
+    <ItemComponent><Armor leg_armor="10" modifier_group="plate" material_type="Plate" covers_legs="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_boots_005" name="Skeleton Warrior Boots" mesh="sotor_skeleton_warrior_boots_005" weight="3.5" item_category="heavy_armor" Type="LegArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="leg_armor" value="10000">
+    <ItemComponent><Armor leg_armor="10" modifier_group="plate" material_type="Plate" covers_legs="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_boots_006" name="Skeleton Warrior Boots" mesh="sotor_skeleton_warrior_boots_006" weight="0.5" item_category="heavy_armor" Type="LegArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="leg_armor" value="10000">
+    <ItemComponent><Armor leg_armor="10" modifier_group="plate" material_type="Plate" covers_legs="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_boots_007" name="Skeleton Warrior Boots" mesh="sotor_skeleton_warrior_boots_007" weight="0.9" item_category="heavy_armor" Type="LegArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="leg_armor" value="7000">
+    <ItemComponent><Armor leg_armor="10" modifier_group="leather" material_type="Leather" covers_legs="true" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+
+  <Item id="sotor_skeleton_warrior_shoulder_001" name="Skeleton Warrior Pauldrons" mesh="skeleton_warrior_shoulder_001" weight="3.8" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="6000">
+    <ItemComponent><Armor body_armor="6" modifier_group="plate" material_type="Plate" body_mesh_type="shoulders" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_shoulder_002" name="Skeleton Warrior Pauldrons" mesh="skeleton_warrior_shoulder_002" weight="3.8" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="6000">
+    <ItemComponent><Armor body_armor="6" modifier_group="plate" material_type="Plate" body_mesh_type="shoulders" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+  <Item id="sotor_skeleton_warrior_shoulder_003" name="Skeleton Warrior Pauldrons" mesh="skeleton_warrior_shoulder_003" weight="3.8" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="12000">
+    <ItemComponent><Armor body_armor="10" arm_armor="2" modifier_group="plate" material_type="Plate" body_mesh_type="shoulders" /></ItemComponent>
+    <Flags UseTeamColor="false" />
+  </Item>
+
+</Items>

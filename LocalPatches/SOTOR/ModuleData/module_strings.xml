@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<strings>
+
+  <string id="str_crafting_template.sotor_tor_lance_template"           text="Skeleton Lance" />
+  <string id="str_crafting_template.sotor_tor_mace_template"            text="Skeleton Mace" />
+  <string id="str_crafting_template.sotor_tor_polearm_template"         text="Skeleton Polearm" />
+  <string id="str_crafting_template.sotor_tor_sword_template"           text="Skeleton Sword" />
+  <string id="str_crafting_template.sotor_tor_twohandedaxe"             text="Skeleton Two Handed Axe" />
+  <string id="str_crafting_template.sotor_tor_twohandedswords_template" text="Skeleton Two Handed Sword" />
+  <string id="str_crafting_template.sotor_amber_javelin_template"       text="Amber Spear" />
+
+  <string id="str_weapon_usage.sotor_TorLance"                    text="Lance" />
+  <string id="str_weapon_usage.sotor_TorLance_Couchable"          text="Couched Lance" />
+  <string id="str_weapon_usage.sotor_TorMace"                     text="Mace" />
+  <string id="str_weapon_usage.sotor_TorOneHandedPolearm"         text="One Handed Polearm" />
+  <string id="str_weapon_usage.sotor_TorTwoHandedPolearm"         text="Two Handed Polearm" />
+  <string id="str_weapon_usage.sotor_TorTwoHandedPolearm_Bracing" text="Braced Polearm" />
+  <string id="str_weapon_usage.sotor_TorOneHandedSword"           text="One Handed Sword" />
+  <string id="str_weapon_usage.sotor_TorTwoHandedSword"           text="Two Handed Sword" />
+  <string id="str_weapon_usage.sotor_TorTwoHandedAxe"             text="Two Handed Axe" />
+  <string id="str_weapon_usage.sotor_amber_javelin_desc"          text="Thrown" />
+</strings>

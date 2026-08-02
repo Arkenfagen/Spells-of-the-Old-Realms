@@ -1,0 +1,160 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <BannerlordDir Condition="'$(BannerlordDir)'==''">C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</BannerlordDir>
+    <Bannerlord1315Dir Condition="'$(Bannerlord1315Dir)'==''">$(BannerlordDir)</Bannerlord1315Dir>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <Deterministic>true</Deterministic>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\Win64_Shipping_Client\</OutputPath>
+    <AssemblyName>SOTOR</AssemblyName>
+    <RootNamespace>SOTOR</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <DefaultItemExcludes>$(DefaultItemExcludes);_tor_decompile_ref\**;tools\**</DefaultItemExcludes>
+
+    <DefineConstants Condition="'$(GameVersion)'=='1315'">$(DefineConstants);BL13</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GameBin>$(BannerlordDir)\bin\Win64_Shipping_Client</GameBin>
+    <NativeBin>$(BannerlordDir)\Modules\Native\bin\Win64_Shipping_Client</NativeBin>
+    <SandBoxBin>$(BannerlordDir)\Modules\SandBox\bin\Win64_Shipping_Client</SandBoxBin>
+    <HarmonyBin>$(BannerlordDir)\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client</HarmonyBin>
+    <UiExtenderBin>$(BannerlordDir)\Modules\Bannerlord.UIExtenderEx\bin\Win64_Shipping_Client</UiExtenderBin>
+    <McmBin>$(BannerlordDir)\Modules\Bannerlord.MBOptionScreen\bin\Win64_Shipping_Client</McmBin>
+    <NavalBin>$(BannerlordDir)\Modules\NavalDLC\bin\Win64_Shipping_Client</NavalBin>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GameVersion)'=='1315'">
+    <GameBin>$(Bannerlord1315Dir)\1.3.15\GameBin</GameBin>
+    <NativeBin>$(Bannerlord1315Dir)\1.3.15\NativeBin</NativeBin>
+    <SandBoxBin>$(Bannerlord1315Dir)\1.3.15\SandBoxBin</SandBoxBin>
+    <HarmonyBin>$(Bannerlord1315Dir)\1.3.15\HarmonyBin</HarmonyBin>
+    <UiExtenderBin>$(Bannerlord1315Dir)\1.3.15\UiExtenderBin</UiExtenderBin>
+    <McmBin>$(Bannerlord1315Dir)\1.3.15\McmBin</McmBin>
+    <NavalBin>$(Bannerlord1315Dir)\1.3.15\NavalBin</NavalBin>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(EditorBuild)'=='true'">
+    <OutputPath>bin\Win64_Shipping_wEditor\</OutputPath>
+    <GameBin>$(BannerlordDir)\bin\Win64_Shipping_wEditor</GameBin>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Bannerlord.UIExtenderEx">
+      <HintPath>$(UiExtenderBin)\Bannerlord.UIExtenderEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MCMv5">
+      <HintPath>$(McmBin)\MCMv5.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Core">
+      <HintPath>$(GameBin)\TaleWorlds.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.ObjectSystem">
+      <HintPath>$(GameBin)\TaleWorlds.ObjectSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Library">
+      <HintPath>$(GameBin)\TaleWorlds.Library.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.CampaignSystem">
+      <HintPath>$(GameBin)\TaleWorlds.CampaignSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Core.ViewModelCollection">
+      <HintPath>$(GameBin)\TaleWorlds.Core.ViewModelCollection.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.CampaignSystem.ViewModelCollection">
+      <HintPath>$(GameBin)\TaleWorlds.CampaignSystem.ViewModelCollection.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade">
+      <HintPath>$(GameBin)\TaleWorlds.MountAndBlade.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.View">
+      <HintPath>$(NativeBin)\TaleWorlds.MountAndBlade.View.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.ScreenSystem">
+      <HintPath>$(GameBin)\TaleWorlds.ScreenSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Engine">
+      <HintPath>$(GameBin)\TaleWorlds.Engine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Engine.GauntletUI">
+      <HintPath>$(GameBin)\TaleWorlds.Engine.GauntletUI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.GauntletUI">
+      <HintPath>$(GameBin)\TaleWorlds.GauntletUI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.TwoDimension">
+      <HintPath>$(GameBin)\TaleWorlds.TwoDimension.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.InputSystem">
+      <HintPath>$(GameBin)\TaleWorlds.InputSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Localization">
+      <HintPath>$(GameBin)\TaleWorlds.Localization.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.DotNet">
+      <HintPath>$(GameBin)\TaleWorlds.DotNet.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.SaveSystem">
+      <HintPath>$(GameBin)\TaleWorlds.SaveSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.ModuleManager">
+      <HintPath>$(GameBin)\TaleWorlds.ModuleManager.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyBin)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SandBox">
+      <HintPath>$(SandBoxBin)\SandBox.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SandBox.View">
+      <HintPath>$(SandBoxBin)\SandBox.View.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SandBox.ViewModelCollection">
+      <HintPath>$(SandBoxBin)\SandBox.ViewModelCollection.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.ViewModelCollection">
+      <HintPath>$(GameBin)\TaleWorlds.MountAndBlade.ViewModelCollection.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <Reference Include="NavalDLC" Condition="Exists('$(NavalBin)\NavalDLC.dll')">
+      <HintPath>$(NavalBin)\NavalDLC.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="GUI\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="ModuleData\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

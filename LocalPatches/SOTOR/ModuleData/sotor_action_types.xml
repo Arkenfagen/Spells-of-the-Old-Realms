@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<action_types>
+    <action name="act_spellcasting_idle" type="actt_other" />
+
+    <action name="act_raisefromground" type="actt_other" />
+</action_types>

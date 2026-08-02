@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Items>
+  <CraftedItem
+    id="sotor_amber_javelin"
+    name="{=sotor_amber_javelin}Amber Spear"
+    crafting_template="sotor_amber_javelin_template"
+    is_merchandise="false"
+    culture="Culture.aserai"
+    modifier_group="spear_dart_throwing">
+    <Pieces>
+      <Piece id="sotor_amber_spear_blade" Type="Blade" scale_factor="100" />
+      <Piece id="default_polearm_guard" Type="Guard" scale_factor="100" />
+      <Piece id="sotor_amber_spear_handle" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_amber_spear_pommel" Type="Pommel" scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+</Items>

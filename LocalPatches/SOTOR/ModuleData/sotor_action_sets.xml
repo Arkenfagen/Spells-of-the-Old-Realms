@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<action_sets>
+    <action_set id="as_human_warrior" skeleton="human_skeleton" movement_system="bipedal">
+        <action type="act_spellcasting_idle" animation="spellcasting_stance_idle" />
+
+        <action type="act_raisefromground" animation="spellcasting_raisefromground" />
+    </action_set>
+</action_sets>

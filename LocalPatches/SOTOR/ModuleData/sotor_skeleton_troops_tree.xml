@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<NPCCharacters>
+  <NPCCharacter id="sotor_skeleton" default_group="Infantry" level="1" name="Skeleton" occupation="Soldier" culture="Culture.sotor_skeleton" is_basic_troop="true">
+    <face><face_key_template value="BodyProperty.fighter_empire" /></face>
+    <skills>
+      <skill id="Athletics" value="20" />
+      <skill id="Riding" value="20" />
+      <skill id="OneHanded" value="20" />
+      <skill id="TwoHanded" value="20" />
+      <skill id="Polearm" value="20" />
+      <skill id="Bow" value="20" />
+      <skill id="Crossbow" value="20" />
+      <skill id="Throwing" value="20" />
+    </skills>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.sotor_skeleton_swordsman" />
+      <upgrade_target id="NPCCharacter.sotor_skeleton_spearman" />
+    </upgrade_targets>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_sword_skeleton_002" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_001" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_003" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_007" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_sword_skeleton_005" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_001" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_003" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_007" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_sword_skeleton_004" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_001" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_003" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_007" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <NPCCharacter id="sotor_skeleton_swordsman" default_group="Infantry" level="6" name="Skeleton Swordsman" occupation="Soldier" culture="Culture.sotor_skeleton">
+    <face><face_key_template value="BodyProperty.fighter_empire" /></face>
+    <skills>
+      <skill id="Athletics" value="30" />
+      <skill id="Riding" value="30" />
+      <skill id="OneHanded" value="30" />
+      <skill id="TwoHanded" value="30" />
+      <skill id="Polearm" value="30" />
+      <skill id="Bow" value="30" />
+      <skill id="Crossbow" value="30" />
+      <skill id="Throwing" value="30" />
+    </skills>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.sotor_skeleton_warrior" />
+    </upgrade_targets>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_sword_skeleton_002" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_002" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_001" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_003" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_007" />
+        <equipment slot="Cape" id="Item.sotor_skeleton_warrior_shoulder_001" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_sword_skeleton_005" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_001" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_002" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_001" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_004" />
+        <equipment slot="Cape" id="Item.sotor_skeleton_warrior_shoulder_003" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_sword_skeleton_003" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_006" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_002" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_001" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_003" />
+        <equipment slot="Cape" id="Item.sotor_skeleton_warrior_shoulder_002" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <NPCCharacter id="sotor_crypt_warrior" default_group="Infantry" level="16" name="Crypt Warrior" occupation="Soldier" culture="Culture.sotor_skeleton">
+    <face><face_key_template value="BodyProperty.fighter_empire" /></face>
+    <skills>
+      <skill id="Athletics" value="90" />
+      <skill id="Riding" value="90" />
+      <skill id="OneHanded" value="90" />
+      <skill id="TwoHanded" value="90" />
+      <skill id="Polearm" value="90" />
+      <skill id="Bow" value="90" />
+      <skill id="Crossbow" value="90" />
+      <skill id="Throwing" value="90" />
+    </skills>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.sotor_grave_guard_warrior" />
+    </upgrade_targets>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_sword_skeleton_002" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_002" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_001" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_002" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_001" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_sword_skeleton_003" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_003" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_002" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_002" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_skeleton_warrior_shoulder_003" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_mace_skeleton_004" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_006" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_003" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_002" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_002" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_001" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <NPCCharacter id="sotor_grave_guard_seneschal" default_group="Infantry" level="31" name="Grave Guard Seneschal" occupation="Soldier" culture="Culture.sotor_skeleton">
+    <face><face_key_template value="BodyProperty.fighter_empire" /></face>
+    <skills>
+      <skill id="Athletics" value="180" />
+      <skill id="Riding" value="180" />
+      <skill id="OneHanded" value="180" />
+      <skill id="TwoHanded" value="180" />
+      <skill id="Polearm" value="180" />
+      <skill id="Bow" value="180" />
+      <skill id="Crossbow" value="180" />
+      <skill id="Throwing" value="180" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_thsword_grave_guard_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_grave_guard_001" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_sword_grave_guard_001" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_002" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_003" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_003" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_thaxe_graveguard_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_grave_guard_002" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_sword_grave_guard_001" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_001" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_003" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_004" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_thsword_grave_guard_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_grave_guard_002" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_sword_grave_guard_001" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_001" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_004" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_003" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <NPCCharacter id="sotor_skeleton_spearman" default_group="Infantry" level="6" name="Skeleton Spearman" occupation="Soldier" culture="Culture.sotor_skeleton">
+    <face><face_key_template value="BodyProperty.fighter_empire" /></face>
+    <skills>
+      <skill id="Athletics" value="30" />
+      <skill id="Riding" value="30" />
+      <skill id="OneHanded" value="30" />
+      <skill id="TwoHanded" value="30" />
+      <skill id="Polearm" value="30" />
+      <skill id="Bow" value="30" />
+      <skill id="Crossbow" value="30" />
+      <skill id="Throwing" value="30" />
+    </skills>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.sotor_skeleton_guard" />
+    </upgrade_targets>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_spear_skeleton_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_003" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_001" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_003" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_004" />
+        <equipment slot="Cape" id="Item.sotor_skeleton_warrior_shoulder_001" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_spear_skeleton_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_002" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_002" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_001" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_007" />
+        <equipment slot="Cape" id="Item.sotor_skeleton_warrior_shoulder_001" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_003" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_004" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_002" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_001" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_003" />
+        <equipment slot="Cape" id="Item.sotor_skeleton_warrior_shoulder_003" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <NPCCharacter id="sotor_skeleton_guard" default_group="Infantry" level="11" name="Skeleton Guard" occupation="Soldier" culture="Culture.sotor_skeleton">
+    <face><face_key_template value="BodyProperty.fighter_empire" /></face>
+    <skills>
+      <skill id="Athletics" value="60" />
+      <skill id="Riding" value="60" />
+      <skill id="OneHanded" value="60" />
+      <skill id="TwoHanded" value="60" />
+      <skill id="Polearm" value="60" />
+      <skill id="Bow" value="60" />
+      <skill id="Crossbow" value="60" />
+      <skill id="Throwing" value="60" />
+    </skills>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.sotor_crypt_guard" />
+    </upgrade_targets>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_spear_skeleton_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_007" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_002" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_002" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_005" />
+        <equipment slot="Cape" id="Item.sotor_skeleton_warrior_shoulder_003" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_003" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_003" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_001" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_002" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_003" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_005" />
+        <equipment slot="Cape" id="Item.sotor_skeleton_warrior_shoulder_003" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_005" />
+        <equipment slot="Head" id="Item.sotor_skeleton_warrior_helmet_001" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_002" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_002" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_003" />
+        <equipment slot="Cape" id="Item.sotor_skeleton_warrior_shoulder_002" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <NPCCharacter id="sotor_crypt_guard" default_group="Infantry" level="16" name="Crypt Guard" occupation="Soldier" culture="Culture.sotor_skeleton">
+    <face><face_key_template value="BodyProperty.fighter_empire" /></face>
+    <skills>
+      <skill id="Athletics" value="90" />
+      <skill id="Riding" value="90" />
+      <skill id="OneHanded" value="90" />
+      <skill id="TwoHanded" value="90" />
+      <skill id="Polearm" value="90" />
+      <skill id="Bow" value="90" />
+      <skill id="Crossbow" value="90" />
+      <skill id="Throwing" value="90" />
+    </skills>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.sotor_grave_guard_spearman" />
+      <upgrade_target id="NPCCharacter.sotor_black_knight" />
+    </upgrade_targets>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_003" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_002" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_001" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_002" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_001" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_003" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_002" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_002" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_skeleton_warrior_shoulder_003" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_002" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_skeleton_006" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_003" />
+        <equipment slot="Body" id="Item.sotor_skeleton_warrior_armor_002" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_002" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_001" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <NPCCharacter id="sotor_grave_guard_spearman" default_group="Infantry" level="21" name="Grave Guard Spearman" occupation="Soldier" culture="Culture.sotor_skeleton">
+    <face><face_key_template value="BodyProperty.fighter_empire" /></face>
+    <skills>
+      <skill id="Athletics" value="120" />
+      <skill id="Riding" value="120" />
+      <skill id="OneHanded" value="120" />
+      <skill id="TwoHanded" value="120" />
+      <skill id="Polearm" value="120" />
+      <skill id="Bow" value="120" />
+      <skill id="Crossbow" value="120" />
+      <skill id="Throwing" value="120" />
+    </skills>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.sotor_grave_guardian" />
+    </upgrade_targets>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_003" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_grave_guard_001" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_002" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_001" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_001" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_grave_guard_002" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_001" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_001" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_002" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_002" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_grave_guard_002" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_001" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_002" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_002" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <NPCCharacter id="sotor_grave_guardian" default_group="Infantry" level="31" name="Grave Guardian" occupation="Soldier" culture="Culture.sotor_skeleton">
+    <face><face_key_template value="BodyProperty.fighter_empire" /></face>
+    <skills>
+      <skill id="Athletics" value="180" />
+      <skill id="Riding" value="180" />
+      <skill id="OneHanded" value="180" />
+      <skill id="TwoHanded" value="180" />
+      <skill id="Polearm" value="180" />
+      <skill id="Bow" value="180" />
+      <skill id="Crossbow" value="180" />
+      <skill id="Throwing" value="180" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_003" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_grave_guard_001" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_sword_grave_guard_001" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_002" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_003" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_003" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_grave_guard_002" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_sword_grave_guard_001" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_001" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_003" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_004" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_halberd_002" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_shield_grave_guard_002" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_sword_grave_guard_001" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_001" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_004" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_003" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <NPCCharacter id="sotor_black_knight" default_group="Cavalry" level="21" name="Black Knight" occupation="Soldier" culture="Culture.sotor_skeleton">
+    <face><face_key_template value="BodyProperty.fighter_empire" /></face>
+    <skills>
+      <skill id="Athletics" value="120" />
+      <skill id="Riding" value="120" />
+      <skill id="OneHanded" value="120" />
+      <skill id="TwoHanded" value="120" />
+      <skill id="Polearm" value="120" />
+      <skill id="Bow" value="120" />
+      <skill id="Crossbow" value="120" />
+      <skill id="Throwing" value="120" />
+    </skills>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.sotor_hell_knight" />
+    </upgrade_targets>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_lance_black_knight_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_sword_skeleton_002" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_shield_skeleton_007" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_002" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_001" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_001" />
+        <equipment slot="Horse" id="Item.sotor_vc_mount_horse_skeleton_horse_001" />
+        <equipment slot="HorseHarness" id="Item.sotor_vc_mountarmor_horsearmor_black_knight_001" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_lance_black_knight_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_sword_skeleton_003" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_shield_skeleton_007" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_001" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_001" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_002" />
+        <equipment slot="Horse" id="Item.sotor_vc_mount_horse_skeleton_horse_002" />
+        <equipment slot="HorseHarness" id="Item.sotor_vc_mountarmor_horsearmor_black_knight_001" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_lance_black_knight_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_sword_skeleton_001" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_shield_skeleton_003" />
+        <equipment slot="Head" id="Item.sotor_grave_guard_helm_001" />
+        <equipment slot="Body" id="Item.sotor_grave_guard_armor_002" />
+        <equipment slot="Gloves" id="Item.sotor_skeleton_warrior_bracers_001" />
+        <equipment slot="Leg" id="Item.sotor_skeleton_warrior_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_grave_guard_shoulder_002" />
+        <equipment slot="Horse" id="Item.sotor_vc_mount_horse_skeleton_horse_001" />
+        <equipment slot="HorseHarness" id="Item.sotor_vc_mountarmor_horsearmor_black_knight_001" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+  <NPCCharacter id="sotor_hell_knight" default_group="Cavalry" level="31" name="Hell Knight" occupation="Soldier" culture="Culture.sotor_skeleton">
+    <face><face_key_template value="BodyProperty.fighter_empire" /></face>
+    <skills>
+      <skill id="Athletics" value="180" />
+      <skill id="Riding" value="180" />
+      <skill id="OneHanded" value="180" />
+      <skill id="TwoHanded" value="180" />
+      <skill id="Polearm" value="180" />
+      <skill id="Bow" value="180" />
+      <skill id="Crossbow" value="180" />
+      <skill id="Throwing" value="180" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_lance_black_knight_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_sword_grave_guard_001" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_shield_grave_guard_001" />
+        <equipment slot="Head" id="Item.sotor_hell_knight_helm_001" />
+        <equipment slot="Body" id="Item.sotor_hell_knight_armor_001" />
+        <equipment slot="Gloves" id="Item.sotor_hell_knight_gauntlet_001" />
+        <equipment slot="Leg" id="Item.sotor_hell_knight_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_hell_knight_pauldron_001" />
+        <equipment slot="Horse" id="Item.sotor_vc_mount_horse_skeleton_horse_001" />
+        <equipment slot="HorseHarness" id="Item.sotor_vc_mountarmor_horsearmor_black_knight_001" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_lance_black_knight_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_sword_vampire_008" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_shield_grave_guard_002" />
+        <equipment slot="Head" id="Item.sotor_hell_knight_helm_002" />
+        <equipment slot="Body" id="Item.sotor_hell_knight_armor_001" />
+        <equipment slot="Gloves" id="Item.sotor_hell_knight_gauntlet_001" />
+        <equipment slot="Leg" id="Item.sotor_hell_knight_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_hell_knight_pauldron_001" />
+        <equipment slot="Horse" id="Item.sotor_vc_mount_horse_skeleton_horse_002" />
+        <equipment slot="HorseHarness" id="Item.sotor_vc_mountarmor_horsearmor_black_knight_001" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sotor_vc_weapon_lance_black_knight_001" />
+        <equipment slot="Item1" id="Item.sotor_vc_weapon_sword_vampire_005" />
+        <equipment slot="Item2" id="Item.sotor_vc_weapon_shield_grave_guard_001" />
+        <equipment slot="Head" id="Item.sotor_hell_knight_helm_003" />
+        <equipment slot="Body" id="Item.sotor_hell_knight_armor_001" />
+        <equipment slot="Gloves" id="Item.sotor_hell_knight_gauntlet_001" />
+        <equipment slot="Leg" id="Item.sotor_hell_knight_boots_001" />
+        <equipment slot="Cape" id="Item.sotor_hell_knight_pauldron_001" />
+        <equipment slot="Horse" id="Item.sotor_vc_mount_horse_skeleton_horse_001" />
+        <equipment slot="HorseHarness" id="Item.sotor_vc_mountarmor_horsearmor_black_knight_001" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+
+</NPCCharacters>

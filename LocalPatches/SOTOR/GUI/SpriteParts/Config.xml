@@ -1,0 +1,11 @@
+<Config>
+  <SpriteCategory Name="ui_sotor">
+    <AlwaysLoad/>
+  </SpriteCategory>
+  <SpriteCategory Name="ui_sotor_perks">
+    <AlwaysLoad/>
+  </SpriteCategory>
+  <SpriteCategory Name="ui_sotor_flipped">
+    <AlwaysLoad/>
+  </SpriteCategory>
+</Config>

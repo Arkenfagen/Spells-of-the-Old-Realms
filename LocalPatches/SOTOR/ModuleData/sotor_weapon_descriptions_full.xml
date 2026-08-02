@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<WeaponDescriptions>
+
+  <WeaponDescription id="sotor_amber_javelin_desc" weapon_class="Javelin" item_usage_features="throwing:javelin" rotated_in_hand="true" use_center_of_mass_as_hand_base="true">
+
+    <WeaponFlags>
+      <WeaponFlag value="RangedWeapon" />
+      <WeaponFlag value="Consumable" />
+      <WeaponFlag value="AmmoSticksWhenShot" />
+      <WeaponFlag value="UseHandAsThrowBase" />
+      <WeaponFlag value="AutoReload" />
+      <WeaponFlag value="UnloadWhenSheathed" />
+    </WeaponFlags>
+    <AvailablePieces>
+      <AvailablePiece id="sotor_amber_spear_blade" />
+      <AvailablePiece id="sotor_amber_spear_handle" />
+      <AvailablePiece id="sotor_amber_spear_pommel" />
+      <AvailablePiece id="default_polearm_guard" />
+    </AvailablePieces>
+  </WeaponDescription>
+  <WeaponDescription id="sotor_TorLance" weapon_class="OneHandedPolearm" item_usage_features="onehanded_polearm:block:shield:thrust">
+        <WeaponFlags>
+            <WeaponFlag value="MeleeWeapon" />
+            <WeaponFlag value="WideGrip" />
+        </WeaponFlags>
+        <AvailablePieces>
+      <AvailablePiece id="sotor_black_knight_lance_001_blade" />
+      <AvailablePiece id="sotor_black_knight_lance_001_guard" />
+      <AvailablePiece id="sotor_black_knight_lance_001_handle" />
+      <AvailablePiece id="sotor_black_knight_lance_001_pommel" />
+      <AvailablePiece id="sotor_default_weapon_guard" />
+      <AvailablePiece id="sotor_default_weapon_pommel" />
+      <AvailablePiece id="sotor_empire_halberd_005_shaft" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_pommel" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_hilt" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_guard" />
+      <AvailablePiece id="sotor_skeleton_spear_head" />
+      <AvailablePiece id="sotor_skeleton_spear_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_shaft" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_hilt" />
+      <AvailablePiece id="sotor_vampire_sword_005_blade" />
+      <AvailablePiece id="sotor_vampire_sword_005_guard" />
+      <AvailablePiece id="sotor_vampire_sword_005_handle" />
+      <AvailablePiece id="sotor_vampire_sword_005_pommel" />
+      <AvailablePiece id="sotor_vampire_sword_008_blade" />
+      <AvailablePiece id="sotor_vampire_sword_008_guard" />
+      <AvailablePiece id="sotor_vampire_sword_008_handle" />
+      <AvailablePiece id="sotor_vampire_sword_008_pommel" />
+      <AvailablePiece id="sotor_vc_halberd_001_head" />
+      <AvailablePiece id="sotor_vc_halberd_002_head" />
+      <AvailablePiece id="sotor_vc_halberd_003_head" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_handle" />
+    </AvailablePieces>
+    </WeaponDescription>
+  <WeaponDescription id="sotor_TorLance_Couchable" weapon_class="TwoHandedPolearm" item_usage_features="polearm:couch">
+        <WeaponFlags>
+            <WeaponFlag value="MeleeWeapon" />
+            <WeaponFlag value="WideGrip" />
+        </WeaponFlags>
+        <AvailablePieces>
+      <AvailablePiece id="sotor_black_knight_lance_001_blade" />
+      <AvailablePiece id="sotor_black_knight_lance_001_guard" />
+      <AvailablePiece id="sotor_black_knight_lance_001_handle" />
+      <AvailablePiece id="sotor_black_knight_lance_001_pommel" />
+      <AvailablePiece id="sotor_default_weapon_guard" />
+      <AvailablePiece id="sotor_default_weapon_pommel" />
+      <AvailablePiece id="sotor_empire_halberd_005_shaft" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_pommel" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_hilt" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_guard" />
+      <AvailablePiece id="sotor_skeleton_spear_head" />
+      <AvailablePiece id="sotor_skeleton_spear_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_shaft" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_hilt" />
+      <AvailablePiece id="sotor_vampire_sword_005_blade" />
+      <AvailablePiece id="sotor_vampire_sword_005_guard" />
+      <AvailablePiece id="sotor_vampire_sword_005_handle" />
+      <AvailablePiece id="sotor_vampire_sword_005_pommel" />
+      <AvailablePiece id="sotor_vampire_sword_008_blade" />
+      <AvailablePiece id="sotor_vampire_sword_008_guard" />
+      <AvailablePiece id="sotor_vampire_sword_008_handle" />
+      <AvailablePiece id="sotor_vampire_sword_008_pommel" />
+      <AvailablePiece id="sotor_vc_halberd_001_head" />
+      <AvailablePiece id="sotor_vc_halberd_002_head" />
+      <AvailablePiece id="sotor_vc_halberd_003_head" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_handle" />
+    </AvailablePieces>
+    </WeaponDescription>
+  <WeaponDescription id="sotor_TorMace" weapon_class="Mace" item_usage_features="onehanded:block:shield:tipdraw:swing">
+        <WeaponFlags>
+            <WeaponFlag value="MeleeWeapon" />
+            <WeaponFlag value="CanKnockDown" />
+        </WeaponFlags>
+        <AvailablePieces>
+      <AvailablePiece id="sotor_black_knight_lance_001_blade" />
+      <AvailablePiece id="sotor_black_knight_lance_001_guard" />
+      <AvailablePiece id="sotor_black_knight_lance_001_handle" />
+      <AvailablePiece id="sotor_black_knight_lance_001_pommel" />
+      <AvailablePiece id="sotor_default_weapon_guard" />
+      <AvailablePiece id="sotor_default_weapon_pommel" />
+      <AvailablePiece id="sotor_empire_halberd_005_shaft" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_pommel" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_hilt" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_guard" />
+      <AvailablePiece id="sotor_skeleton_spear_head" />
+      <AvailablePiece id="sotor_skeleton_spear_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_shaft" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_hilt" />
+      <AvailablePiece id="sotor_vampire_sword_005_blade" />
+      <AvailablePiece id="sotor_vampire_sword_005_guard" />
+      <AvailablePiece id="sotor_vampire_sword_005_handle" />
+      <AvailablePiece id="sotor_vampire_sword_005_pommel" />
+      <AvailablePiece id="sotor_vampire_sword_008_blade" />
+      <AvailablePiece id="sotor_vampire_sword_008_guard" />
+      <AvailablePiece id="sotor_vampire_sword_008_handle" />
+      <AvailablePiece id="sotor_vampire_sword_008_pommel" />
+      <AvailablePiece id="sotor_vc_halberd_001_head" />
+      <AvailablePiece id="sotor_vc_halberd_002_head" />
+      <AvailablePiece id="sotor_vc_halberd_003_head" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_handle" />
+    </AvailablePieces>
+    </WeaponDescription>
+  <WeaponDescription id="sotor_TorOneHandedPolearm" weapon_class="OneHandedPolearm" item_usage_features="onehanded_polearm:block:long:rshield:thrust">
+        <WeaponFlags>
+            <WeaponFlag value="MeleeWeapon" />
+            <WeaponFlag value="WideGrip" />
+        </WeaponFlags>
+        <AvailablePieces>
+      <AvailablePiece id="sotor_black_knight_lance_001_blade" />
+      <AvailablePiece id="sotor_black_knight_lance_001_guard" />
+      <AvailablePiece id="sotor_black_knight_lance_001_handle" />
+      <AvailablePiece id="sotor_black_knight_lance_001_pommel" />
+      <AvailablePiece id="sotor_default_weapon_guard" />
+      <AvailablePiece id="sotor_default_weapon_pommel" />
+      <AvailablePiece id="sotor_empire_halberd_005_shaft" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_pommel" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_hilt" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_guard" />
+      <AvailablePiece id="sotor_skeleton_spear_head" />
+      <AvailablePiece id="sotor_skeleton_spear_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_shaft" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_hilt" />
+      <AvailablePiece id="sotor_vampire_sword_005_blade" />
+      <AvailablePiece id="sotor_vampire_sword_005_guard" />
+      <AvailablePiece id="sotor_vampire_sword_005_handle" />
+      <AvailablePiece id="sotor_vampire_sword_005_pommel" />
+      <AvailablePiece id="sotor_vampire_sword_008_blade" />
+      <AvailablePiece id="sotor_vampire_sword_008_guard" />
+      <AvailablePiece id="sotor_vampire_sword_008_handle" />
+      <AvailablePiece id="sotor_vampire_sword_008_pommel" />
+      <AvailablePiece id="sotor_vc_halberd_001_head" />
+      <AvailablePiece id="sotor_vc_halberd_002_head" />
+      <AvailablePiece id="sotor_vc_halberd_003_head" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_handle" />
+    </AvailablePieces>
+    </WeaponDescription>
+  <WeaponDescription id="sotor_TorOneHandedSword" weapon_class="OneHandedSword" item_usage_features="onehanded:block:shield:swing:thrust">
+        <WeaponFlags>
+            <WeaponFlag value="MeleeWeapon" />
+        </WeaponFlags>
+        <AvailablePieces>
+      <AvailablePiece id="sotor_black_knight_lance_001_blade" />
+      <AvailablePiece id="sotor_black_knight_lance_001_guard" />
+      <AvailablePiece id="sotor_black_knight_lance_001_handle" />
+      <AvailablePiece id="sotor_black_knight_lance_001_pommel" />
+      <AvailablePiece id="sotor_default_weapon_guard" />
+      <AvailablePiece id="sotor_default_weapon_pommel" />
+      <AvailablePiece id="sotor_empire_halberd_005_shaft" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_pommel" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_hilt" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_guard" />
+      <AvailablePiece id="sotor_skeleton_spear_head" />
+      <AvailablePiece id="sotor_skeleton_spear_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_shaft" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_hilt" />
+      <AvailablePiece id="sotor_vampire_sword_005_blade" />
+      <AvailablePiece id="sotor_vampire_sword_005_guard" />
+      <AvailablePiece id="sotor_vampire_sword_005_handle" />
+      <AvailablePiece id="sotor_vampire_sword_005_pommel" />
+      <AvailablePiece id="sotor_vampire_sword_008_blade" />
+      <AvailablePiece id="sotor_vampire_sword_008_guard" />
+      <AvailablePiece id="sotor_vampire_sword_008_handle" />
+      <AvailablePiece id="sotor_vampire_sword_008_pommel" />
+      <AvailablePiece id="sotor_vc_halberd_001_head" />
+      <AvailablePiece id="sotor_vc_halberd_002_head" />
+      <AvailablePiece id="sotor_vc_halberd_003_head" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_handle" />
+    </AvailablePieces>
+    </WeaponDescription>
+  <WeaponDescription id="sotor_TorTwoHandedAxe" weapon_class="TwoHandedAxe" item_usage_features="twohanded:widegrip:axe">
+        <WeaponFlags>
+            <WeaponFlag value="MeleeWeapon" />
+            <WeaponFlag value="NotUsableWithOneHand" />
+            <WeaponFlag value="BonusAgainstShield" />
+            <WeaponFlag value="TwoHandIdleOnMount" />
+        </WeaponFlags>
+        <AvailablePieces>
+      <AvailablePiece id="sotor_black_knight_lance_001_blade" />
+      <AvailablePiece id="sotor_black_knight_lance_001_guard" />
+      <AvailablePiece id="sotor_black_knight_lance_001_handle" />
+      <AvailablePiece id="sotor_black_knight_lance_001_pommel" />
+      <AvailablePiece id="sotor_default_weapon_guard" />
+      <AvailablePiece id="sotor_default_weapon_pommel" />
+      <AvailablePiece id="sotor_empire_halberd_005_shaft" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_pommel" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_hilt" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_guard" />
+      <AvailablePiece id="sotor_skeleton_spear_head" />
+      <AvailablePiece id="sotor_skeleton_spear_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_shaft" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_hilt" />
+      <AvailablePiece id="sotor_vampire_sword_005_blade" />
+      <AvailablePiece id="sotor_vampire_sword_005_guard" />
+      <AvailablePiece id="sotor_vampire_sword_005_handle" />
+      <AvailablePiece id="sotor_vampire_sword_005_pommel" />
+      <AvailablePiece id="sotor_vampire_sword_008_blade" />
+      <AvailablePiece id="sotor_vampire_sword_008_guard" />
+      <AvailablePiece id="sotor_vampire_sword_008_handle" />
+      <AvailablePiece id="sotor_vampire_sword_008_pommel" />
+      <AvailablePiece id="sotor_vc_halberd_001_head" />
+      <AvailablePiece id="sotor_vc_halberd_002_head" />
+      <AvailablePiece id="sotor_vc_halberd_003_head" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_handle" />
+    </AvailablePieces>
+    </WeaponDescription>
+  <WeaponDescription id="sotor_TorTwoHandedPolearm" weapon_class="TwoHandedPolearm" item_usage_features="polearm:block:long:shield:swing:thrust">
+        <WeaponFlags>
+            <WeaponFlag value="MeleeWeapon" />
+            <WeaponFlag value="NotUsableWithOneHand" />
+            <WeaponFlag value="WideGrip" />
+            <WeaponFlag value="TwoHandIdleOnMount" />
+        </WeaponFlags>
+        <AvailablePieces>
+      <AvailablePiece id="sotor_black_knight_lance_001_blade" />
+      <AvailablePiece id="sotor_black_knight_lance_001_guard" />
+      <AvailablePiece id="sotor_black_knight_lance_001_handle" />
+      <AvailablePiece id="sotor_black_knight_lance_001_pommel" />
+      <AvailablePiece id="sotor_default_weapon_guard" />
+      <AvailablePiece id="sotor_default_weapon_pommel" />
+      <AvailablePiece id="sotor_empire_halberd_005_shaft" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_pommel" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_hilt" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_guard" />
+      <AvailablePiece id="sotor_skeleton_spear_head" />
+      <AvailablePiece id="sotor_skeleton_spear_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_shaft" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_hilt" />
+      <AvailablePiece id="sotor_vampire_sword_005_blade" />
+      <AvailablePiece id="sotor_vampire_sword_005_guard" />
+      <AvailablePiece id="sotor_vampire_sword_005_handle" />
+      <AvailablePiece id="sotor_vampire_sword_005_pommel" />
+      <AvailablePiece id="sotor_vampire_sword_008_blade" />
+      <AvailablePiece id="sotor_vampire_sword_008_guard" />
+      <AvailablePiece id="sotor_vampire_sword_008_handle" />
+      <AvailablePiece id="sotor_vampire_sword_008_pommel" />
+      <AvailablePiece id="sotor_vc_halberd_001_head" />
+      <AvailablePiece id="sotor_vc_halberd_002_head" />
+      <AvailablePiece id="sotor_vc_halberd_003_head" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_handle" />
+    </AvailablePieces>
+    </WeaponDescription>
+  <WeaponDescription id="sotor_TorTwoHandedPolearm_Bracing" weapon_class="TwoHandedPolearm" item_usage_features="polearm:bracing">
+        <WeaponFlags>
+            <WeaponFlag value="MeleeWeapon" />
+            <WeaponFlag value="NotUsableWithOneHand" />
+            <WeaponFlag value="WideGrip" />
+            <WeaponFlag value="TwoHandIdleOnMount" />
+        </WeaponFlags>
+        <AvailablePieces>
+      <AvailablePiece id="sotor_black_knight_lance_001_blade" />
+      <AvailablePiece id="sotor_black_knight_lance_001_guard" />
+      <AvailablePiece id="sotor_black_knight_lance_001_handle" />
+      <AvailablePiece id="sotor_black_knight_lance_001_pommel" />
+      <AvailablePiece id="sotor_default_weapon_guard" />
+      <AvailablePiece id="sotor_default_weapon_pommel" />
+      <AvailablePiece id="sotor_empire_halberd_005_shaft" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_pommel" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_hilt" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_guard" />
+      <AvailablePiece id="sotor_skeleton_spear_head" />
+      <AvailablePiece id="sotor_skeleton_spear_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_shaft" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_hilt" />
+      <AvailablePiece id="sotor_vampire_sword_005_blade" />
+      <AvailablePiece id="sotor_vampire_sword_005_guard" />
+      <AvailablePiece id="sotor_vampire_sword_005_handle" />
+      <AvailablePiece id="sotor_vampire_sword_005_pommel" />
+      <AvailablePiece id="sotor_vampire_sword_008_blade" />
+      <AvailablePiece id="sotor_vampire_sword_008_guard" />
+      <AvailablePiece id="sotor_vampire_sword_008_handle" />
+      <AvailablePiece id="sotor_vampire_sword_008_pommel" />
+      <AvailablePiece id="sotor_vc_halberd_001_head" />
+      <AvailablePiece id="sotor_vc_halberd_002_head" />
+      <AvailablePiece id="sotor_vc_halberd_003_head" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_handle" />
+    </AvailablePieces>
+    </WeaponDescription>
+  <WeaponDescription id="sotor_TorTwoHandedSword" weapon_class="TwoHandedSword" item_usage_features="twohanded:block:swing:thrust">
+        <WeaponFlags>
+            <WeaponFlag value="MeleeWeapon" />
+            <WeaponFlag value="NotUsableWithOneHand" />
+        </WeaponFlags>
+        <AvailablePieces>
+      <AvailablePiece id="sotor_black_knight_lance_001_blade" />
+      <AvailablePiece id="sotor_black_knight_lance_001_guard" />
+      <AvailablePiece id="sotor_black_knight_lance_001_handle" />
+      <AvailablePiece id="sotor_black_knight_lance_001_pommel" />
+      <AvailablePiece id="sotor_default_weapon_guard" />
+      <AvailablePiece id="sotor_default_weapon_pommel" />
+      <AvailablePiece id="sotor_empire_halberd_005_shaft" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greataxe_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_handle" />
+      <AvailablePiece id="sotor_grave_guard_greatsword_001_pommel" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_blade" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_guard" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_hilt" />
+      <AvailablePiece id="sotor_grave_guard_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_guard" />
+      <AvailablePiece id="sotor_skeleton_spear_head" />
+      <AvailablePiece id="sotor_skeleton_spear_pommel" />
+      <AvailablePiece id="sotor_skeleton_spear_shaft" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_001_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_002_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_003_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_guard" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_hilt" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_004_pommel" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_blade" />
+      <AvailablePiece id="sotor_skeleton_warrior_sword_005_hilt" />
+      <AvailablePiece id="sotor_vampire_sword_005_blade" />
+      <AvailablePiece id="sotor_vampire_sword_005_guard" />
+      <AvailablePiece id="sotor_vampire_sword_005_handle" />
+      <AvailablePiece id="sotor_vampire_sword_005_pommel" />
+      <AvailablePiece id="sotor_vampire_sword_008_blade" />
+      <AvailablePiece id="sotor_vampire_sword_008_guard" />
+      <AvailablePiece id="sotor_vampire_sword_008_handle" />
+      <AvailablePiece id="sotor_vampire_sword_008_pommel" />
+      <AvailablePiece id="sotor_vc_halberd_001_head" />
+      <AvailablePiece id="sotor_vc_halberd_002_head" />
+      <AvailablePiece id="sotor_vc_halberd_003_head" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_001_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_002_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_003_handle" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_blade" />
+      <AvailablePiece id="sotor_vc_skeleton_warrior_mace_004_handle" />
+    </AvailablePieces>
+    </WeaponDescription>
+</WeaponDescriptions>

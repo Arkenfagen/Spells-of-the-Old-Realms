@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Items>
+  <CraftedItem id="sotor_vc_weapon_sword_skeleton_001" name="{=str_tor_vc_weapon_sword_skeleton_001}Skeleton Warrior Sword" crafting_template="sotor_tor_sword_template" is_merchandise="false" culture="Culture.neutral_culture" value="200">
+    <Pieces>
+      <Piece id="sotor_skeleton_warrior_sword_001_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_skeleton_warrior_sword_001_hilt" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_skeleton_warrior_sword_001_guard" Type="Guard" />
+      <Piece id="sotor_skeleton_warrior_sword_001_pommel" Type="Pommel" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_sword_skeleton_002" name="{=str_tor_vc_weapon_sword_skeleton_002}Skeleton Warrior Sword" crafting_template="sotor_tor_sword_template" is_merchandise="false" culture="Culture.neutral_culture" value="200">
+    <Pieces>
+      <Piece id="sotor_skeleton_warrior_sword_002_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_skeleton_warrior_sword_002_hilt" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_skeleton_warrior_sword_002_guard" Type="Guard" />
+      <Piece id="sotor_skeleton_warrior_sword_002_pommel" Type="Pommel" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_sword_skeleton_003" name="{=str_tor_vc_weapon_sword_skeleton_003}Skeleton Warrior Sword" crafting_template="sotor_tor_sword_template" is_merchandise="false" culture="Culture.neutral_culture" value="200">
+    <Pieces>
+      <Piece id="sotor_skeleton_warrior_sword_003_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_skeleton_warrior_sword_003_hilt" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_default_weapon_guard" Type="Guard" />
+      <Piece id="sotor_skeleton_warrior_sword_003_pommel" Type="Pommel" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_sword_skeleton_004" name="{=str_tor_vc_weapon_sword_skeleton_004}Skeleton Warrior Sword" crafting_template="sotor_tor_sword_template" is_merchandise="false" culture="Culture.neutral_culture" value="200">
+    <Pieces>
+      <Piece id="sotor_skeleton_warrior_sword_004_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_skeleton_warrior_sword_004_hilt" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_skeleton_warrior_sword_004_guard" Type="Guard" />
+      <Piece id="sotor_skeleton_warrior_sword_004_pommel" Type="Pommel" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_sword_skeleton_005" name="{=str_tor_vc_weapon_sword_skeleton_005}Skeleton Warrior Sword" crafting_template="sotor_tor_sword_template" is_merchandise="false" culture="Culture.neutral_culture" value="200">
+    <Pieces>
+      <Piece id="sotor_skeleton_warrior_sword_005_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_skeleton_warrior_sword_005_hilt" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_default_weapon_guard" Type="Guard" />
+      <Piece id="sotor_default_weapon_pommel" Type="Pommel" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_mace_skeleton_001" name="{=str_tor_vc_weapon_mace_skeleton_001}Skeleton Warrior Mace" crafting_template="sotor_tor_mace_template" is_merchandise="false" culture="Culture.neutral_culture" value="200">
+    <Pieces>
+      <Piece id="sotor_vc_skeleton_warrior_mace_001_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_vc_skeleton_warrior_mace_001_handle" Type="Handle" scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_mace_skeleton_002" name="{=str_tor_vc_weapon_mace_skeleton_002}Skeleton Warrior Mace" crafting_template="sotor_tor_mace_template" is_merchandise="false" culture="Culture.neutral_culture" value="200">
+    <Pieces>
+      <Piece id="sotor_vc_skeleton_warrior_mace_002_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_vc_skeleton_warrior_mace_002_handle" Type="Handle" scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_mace_skeleton_003" name="{=str_tor_vc_weapon_mace_skeleton_003}Skeleton Warrior Mace" crafting_template="sotor_tor_mace_template" is_merchandise="false" culture="Culture.neutral_culture" value="200">
+    <Pieces>
+      <Piece id="sotor_vc_skeleton_warrior_mace_003_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_vc_skeleton_warrior_mace_003_handle" Type="Handle" scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_mace_skeleton_004" name="{=str_tor_vc_weapon_mace_skeleton_004}Skeleton Warrior Mace" crafting_template="sotor_tor_mace_template" is_merchandise="false" culture="Culture.neutral_culture" value="200">
+    <Pieces>
+      <Piece id="sotor_vc_skeleton_warrior_mace_004_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_vc_skeleton_warrior_mace_004_handle" Type="Handle" scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_spear_skeleton_001" name="{=str_tor_vc_weapon_spear_skeleton_001}Old Spear" crafting_template="sotor_tor_polearm_template" is_merchandise="false" culture="Culture.neutral_culture" value="500">
+    <Pieces>
+      <Piece id="sotor_skeleton_spear_head" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_skeleton_spear_shaft" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_skeleton_spear_guard" Type="Guard" />
+      <Piece id="sotor_skeleton_spear_pommel" Type="Pommel" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_halberd_001" name="{=str_tor_vc_weapon_halberd_001}Old Halberd" crafting_template="sotor_tor_polearm_template" is_merchandise="false" culture="Culture.neutral_culture" value="140">
+    <Pieces>
+      <Piece id="sotor_vc_halberd_001_head" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_empire_halberd_005_shaft" Type="Handle" scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_halberd_002" name="{=str_tor_vc_weapon_halberd_002}Old Halberd" crafting_template="sotor_tor_polearm_template" is_merchandise="false" culture="Culture.neutral_culture" value="140">
+    <Pieces>
+      <Piece id="sotor_vc_halberd_002_head" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_empire_halberd_005_shaft" Type="Handle" scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_halberd_003" name="{=str_tor_vc_weapon_halberd_003}Old Halberd" crafting_template="sotor_tor_polearm_template" is_merchandise="false" culture="Culture.neutral_culture" value="140">
+    <Pieces>
+      <Piece id="sotor_vc_halberd_003_head" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_empire_halberd_005_shaft" Type="Handle" scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_sword_grave_guard_001" name="{=str_tor_vc_weapon_sword_grave_guard_001}Grave Guard Sword" crafting_template="sotor_tor_sword_template" is_merchandise="false" culture="Culture.neutral_culture" value="8400">
+    <Pieces>
+      <Piece id="sotor_grave_guard_sword_001_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_grave_guard_sword_001_hilt" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_grave_guard_sword_001_guard" Type="Guard" />
+      <Piece id="sotor_grave_guard_sword_001_pommel" Type="Pommel" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_thsword_grave_guard_001" name="{=str_tor_vc_weapon_thsword_grave_guard_001}Grave Guard Greatsword" crafting_template="sotor_tor_twohandedswords_template" is_merchandise="false" culture="Culture.neutral_culture" value="29000">
+    <Pieces>
+      <Piece id="sotor_grave_guard_greatsword_001_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_grave_guard_greatsword_001_handle" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_grave_guard_greatsword_001_guard" Type="Guard" />
+      <Piece id="sotor_grave_guard_greatsword_001_pommel" Type="Pommel" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_thaxe_graveguard_001" name="{=str_tor_vc_weapon_thaxe_graveguard_001}Grave Guard Greataxe" crafting_template="sotor_tor_twohandedaxe" is_merchandise="false" culture="Culture.neutral_culture" value="7500">
+    <Pieces>
+      <Piece id="sotor_grave_guard_greataxe_001_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_grave_guard_greataxe_001_handle" Type="Handle" scale_factor="100" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_lance_black_knight_001" name="{=str_tor_vc_weapon_lance_black_knight_001}Black Knight Lance" crafting_template="sotor_tor_lance_template" is_merchandise="false" culture="Culture.neutral_culture" value="16000">
+    <Pieces>
+      <Piece id="sotor_black_knight_lance_001_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_black_knight_lance_001_handle" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_black_knight_lance_001_guard" Type="Guard" />
+      <Piece id="sotor_black_knight_lance_001_pommel" Type="Pommel" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_sword_vampire_005" name="{=str_tor_vc_weapon_sword_vampire_005}Vampire Sword" crafting_template="sotor_tor_sword_template" is_merchandise="false" culture="Culture.neutral_culture" value="23200">
+    <Pieces>
+      <Piece id="sotor_vampire_sword_005_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_vampire_sword_005_handle" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_vampire_sword_005_guard" Type="Guard" />
+      <Piece id="sotor_vampire_sword_005_pommel" Type="Pommel" />
+    </Pieces>
+  </CraftedItem>
+  <CraftedItem id="sotor_vc_weapon_sword_vampire_008" name="{=str_tor_vc_weapon_sword_vampire_008}Vampire Sword" crafting_template="sotor_tor_sword_template" is_merchandise="false" culture="Culture.neutral_culture" value="23200">
+    <Pieces>
+      <Piece id="sotor_vampire_sword_008_blade" Type="Blade" scale_factor="100" />
+      <Piece id="sotor_vampire_sword_008_handle" Type="Handle" scale_factor="100" />
+      <Piece id="sotor_vampire_sword_008_guard" Type="Guard" />
+      <Piece id="sotor_vampire_sword_008_pommel" Type="Pommel" />
+    </Pieces>
+  </CraftedItem>
+  <Item id="sotor_vc_weapon_shield_skeleton_001" name="{=str_tor_vc_weapon_shield_skeleton_001}Skeleton Warrior Shield" body_name="bo_cap_skele_warr_shield_001" shield_body_name="bo_skele_warr_shield_001" recalculate_body="false" mesh="skele_warr_shield_001" using_tableau="false" weight="4.8" appearance="0.8" value="500" Type="Shield" is_merchandise="false" culture="Culture.neutral_culture" item_holsters="shield_kite:shield_2:shield_3:shield_4" has_lower_holster_priority="true" holster_position_shift="-0.1,0.0,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield" body_armor="2" thrust_damage="2" thrust_speed="82" thrust_damage_type="Blunt" speed_rating="82" item_usage="hand_shield" position="0.25,0.0,0.0" rotation="0.0,10.0,30.0" physics_material="wood_shield" weapon_length="110" center_of_mass="0.0,0.0,0.0" modifier_group="shield" hit_points="80">
+        <WeaponFlags CanBlockRanged="true" HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true" HeldInOffHand="true" ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  <Item id="sotor_vc_weapon_shield_skeleton_002" name="{=str_tor_vc_weapon_shield_skeleton_002}Skeleton Warrior Shield" body_name="bo_cap_skele_warr_shield_002" shield_body_name="bo_skele_warr_shield_002" recalculate_body="false" mesh="skele_warr_shield_002" using_tableau="false" weight="5.0" appearance="0.8" value="500" Type="Shield" is_merchandise="false" culture="Culture.neutral_culture" item_holsters="shield_kite:shield_2:shield_3:shield_4" has_lower_holster_priority="true" holster_position_shift="-0.1,0.0,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield" body_armor="2" thrust_damage="2" thrust_speed="82" thrust_damage_type="Blunt" speed_rating="82" item_usage="hand_shield" position="0.25,0.0,0.0" rotation="0.0,10.0,30.0" physics_material="wood_shield" weapon_length="110" center_of_mass="0.0,0.0,0.0" modifier_group="shield" hit_points="80">
+        <WeaponFlags CanBlockRanged="true" HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true" HeldInOffHand="true" ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  <Item id="sotor_vc_weapon_shield_skeleton_003" name="{=str_tor_vc_weapon_shield_skeleton_003}Skeleton Warrior Shield" body_name="bo_cap_skele_warr_shield_003" shield_body_name="bo_skele_warr_shield_003" recalculate_body="false" mesh="skele_warr_shield_003" using_tableau="false" weight="5.5" appearance="0.8" value="500" Type="Shield" is_merchandise="false" culture="Culture.neutral_culture" item_holsters="shield_kite:shield_2:shield_3:shield_4" has_lower_holster_priority="true" holster_position_shift="-0.1,0.0,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield" body_armor="2" thrust_damage="2" thrust_speed="82" thrust_damage_type="Blunt" speed_rating="82" item_usage="shield" position="0.0,-0.05,0.0" rotation="-5.0,10.0,45.0" physics_material="wood_shield" weapon_length="110" center_of_mass="0.0,0.0,0.0" modifier_group="shield" hit_points="80">
+        <WeaponFlags CanBlockRanged="true" HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true" HeldInOffHand="true" ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  <Item id="sotor_vc_weapon_shield_skeleton_004" name="{=str_tor_vc_weapon_shield_skeleton_004}Skeleton Warrior Shield" body_name="bo_cap_skele_warr_shield_004" shield_body_name="bo_skele_warr_shield_004" recalculate_body="false" mesh="skele_warr_shield_004" using_tableau="false" weight="4.9" appearance="0.8" value="500" Type="Shield" is_merchandise="false" culture="Culture.neutral_culture" item_holsters="shield_kite:shield_2:shield_3:shield_4" has_lower_holster_priority="true" holster_position_shift="-0.1,0.0,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield" body_armor="2" thrust_damage="2" thrust_speed="82" thrust_damage_type="Blunt" speed_rating="82" item_usage="shield" position="0.0,-0.05,0.0" rotation="0.0,10.0,45.0" physics_material="wood_shield" weapon_length="110" center_of_mass="0.0,0.0,0.0" modifier_group="shield" hit_points="85">
+        <WeaponFlags CanBlockRanged="true" HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true" HeldInOffHand="true" ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  <Item id="sotor_vc_weapon_shield_skeleton_005" name="{=str_tor_vc_weapon_shield_skeleton_005}Skeleton Warrior Shield" body_name="bo_cap_skele_warr_shield_005" shield_body_name="bo_skele_warr_shield_005" recalculate_body="false" mesh="skele_warr_shield_005" using_tableau="false" weight="4.9" appearance="0.8" value="500" Type="Shield" is_merchandise="false" culture="Culture.neutral_culture" item_holsters="shield_kite:shield_2:shield_3:shield_4" has_lower_holster_priority="true" holster_position_shift="-0.1,0.0,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield" body_armor="2" thrust_damage="2" thrust_speed="82" thrust_damage_type="Blunt" speed_rating="82" item_usage="shield" position="0.0,-0.05,0.0" rotation="0.0,10.0,45.0" physics_material="wood_shield" weapon_length="110" center_of_mass="0.0,0.0,0.0" modifier_group="shield" hit_points="85">
+        <WeaponFlags CanBlockRanged="true" HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true" HeldInOffHand="true" ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  <Item id="sotor_vc_weapon_shield_skeleton_006" name="{=str_tor_vc_weapon_shield_skeleton_006}Skeleton Warrior Shield" body_name="bo_cap_skele_warr_shield_006" shield_body_name="bo_skele_warr_shield_006" recalculate_body="false" mesh="skele_warr_shield_006" using_tableau="false" weight="4.6" appearance="0.8" value="500" Type="Shield" is_merchandise="false" culture="Culture.neutral_culture" item_holsters="shield_kite:shield_2:shield_3:shield_4" has_lower_holster_priority="true" holster_position_shift="-0.1,0.0,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield" body_armor="2" thrust_damage="2" thrust_speed="82" thrust_damage_type="Blunt" speed_rating="82" item_usage="shield" position="0.0,-0.05,0.0" rotation="-5.0,5.0,45.0" physics_material="wood_shield" weapon_length="110" center_of_mass="0.0,0.0,0.0" modifier_group="shield" hit_points="80">
+        <WeaponFlags CanBlockRanged="true" HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true" HeldInOffHand="true" ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  <Item id="sotor_vc_weapon_shield_skeleton_007" name="{=str_tor_vc_weapon_shield_skeleton_007}Skeleton Warrior Shield" body_name="bo_cap_skele_warr_shield_007" shield_body_name="bo_skele_warr_shield_007" recalculate_body="false" mesh="skele_warr_shield_007" using_tableau="false" weight="5.7" appearance="0.8" value="800" Type="Shield" is_merchandise="false" culture="Culture.neutral_culture" item_holsters="shield_kite:shield_2:shield_3:shield_4" has_lower_holster_priority="true" holster_position_shift="-0.1,0.0,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield" body_armor="2" thrust_damage="2" thrust_speed="82" thrust_damage_type="Blunt" speed_rating="82" item_usage="shield" position="0.0,-0.05,0.0" rotation="-5.0,5.0,45.0" physics_material="wood_shield" weapon_length="110" center_of_mass="0.0,0.0,0.0" modifier_group="shield" hit_points="96">
+        <WeaponFlags CanBlockRanged="true" HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true" HeldInOffHand="true" ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  <Item id="sotor_vc_weapon_shield_grave_guard_001" name="{=str_tor_vc_weapon_shield_grave_guard_001}Grave Guard Shield" body_name="bo_cap_grave_guard_shield_001" shield_body_name="bo_grave_guard_shield_001" recalculate_body="false" mesh="grave_guard_shield_001" using_tableau="false" weight="6.1" appearance="1" value="1500" Type="Shield" is_merchandise="false" culture="Culture.neutral_culture" item_holsters="shield_kite:shield_2:shield_3:shield_4" has_lower_holster_priority="true" holster_position_shift="-0.1,0.0,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield" body_armor="3" thrust_damage="2" thrust_speed="82" thrust_damage_type="Blunt" speed_rating="82" item_usage="shield" position="0.0,0.0,0.0" rotation="0.0,10.0,45.0" physics_material="wood_shield" weapon_length="110" center_of_mass="0.0,0.0,0.0" modifier_group="shield" hit_points="140">
+        <WeaponFlags CanBlockRanged="true" HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true" HeldInOffHand="true" ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  <Item id="sotor_vc_weapon_shield_grave_guard_002" name="{=str_tor_vc_weapon_shield_grave_guard_002}Grave Guard Shield" body_name="bo_cap_grave_guard_shield_002" shield_body_name="bo_grave_guard_shield_002" recalculate_body="false" mesh="grave_guard_shield_002" using_tableau="false" weight="6.4" appearance="1" value="1500" Type="Shield" is_merchandise="false" culture="Culture.neutral_culture" item_holsters="shield_kite:shield_2:shield_3:shield_4" has_lower_holster_priority="true" holster_position_shift="-0.1,0.0,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield" body_armor="3" thrust_damage="2" thrust_speed="82" thrust_damage_type="Blunt" speed_rating="82" item_usage="shield" position="0.0,0.0,0.0" rotation="0.0,10.0,45.0" physics_material="wood_shield" weapon_length="110" center_of_mass="0.0,0.0,0.0" modifier_group="shield" hit_points="140">
+        <WeaponFlags CanBlockRanged="true" HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true" HeldInOffHand="true" ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+  <Item id="sotor_vc_weapon_shield_vampire_007" name="{=str_tor_vc_weapon_shield_vampire_007}Vampire Shield" body_name="bo_cap_vampire_shield_007" shield_body_name="bo_vampire_shield_007" recalculate_body="false" mesh="vampire_shield_007" using_tableau="false" weight="7.1" appearance="1.2" value="1500" Type="Shield" is_merchandise="false" culture="Culture.neutral_culture" item_holsters="shield_kite:shield_2:shield_3:shield_4" has_lower_holster_priority="true" holster_position_shift="-0.1,0.0,-0.025">
+    <ItemComponent>
+      <Weapon weapon_class="LargeShield" body_armor="5" thrust_damage="2" thrust_speed="82" thrust_damage_type="Blunt" speed_rating="82" item_usage="shield" position="-0.05,-0.07,0.02" rotation="0.0,10.0,45.0" physics_material="metal_shield" weapon_length="110" center_of_mass="0.0,0.0,0.0" modifier_group="shield" hit_points="350">
+        <WeaponFlags CanBlockRanged="true" HasHitPoints="true" />
+      </Weapon>
+    </ItemComponent>
+    <Flags WoodenParry="true" HeldInOffHand="true" ForceAttachOffHandSecondaryItemBone="true" />
+  </Item>
+</Items>

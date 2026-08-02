@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Module>
+  <Name value="Spells of the Old Realms"/>
+  <Id value="SOTOR"/>
+  <Version value="v0.1.0"/>
+  <SingleplayerModule value="true"/>
+  <ModuleType value="Community"/>
+  <DependedModules>
+    <DependedModule Id="Native"/>
+    <DependedModule Id="SandBoxCore"/>
+    <DependedModule Id="Sandbox"/>
+    <DependedModule Id="CustomBattle"/>
+  </DependedModules>
+  <SubModules/>
+  <Xmls/>
+</Module>
