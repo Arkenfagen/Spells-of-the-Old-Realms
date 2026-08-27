@@ -75,6 +75,13 @@ namespace SOTOR.Extensions
 
         public static List<string> GetSelectedAbilities(this Agent agent)
         {
+
+            var apprenticeAbilities = SOTOR.AbilitySystem.Missions.SotorApprenticeCaster.AbilitiesFor(agent);
+            if (apprenticeAbilities != null)
+            {
+                return apprenticeAbilities;
+            }
+
             var hero = agent?.GetHero();
             if (hero != null)
             {
@@ -96,6 +103,13 @@ namespace SOTOR.Extensions
 
         public static List<string> GetAttributes(this Agent agent)
         {
+
+            var apprenticeAttributes = SOTOR.AbilitySystem.Missions.SotorApprenticeCaster.AttributesFor(agent);
+            if (apprenticeAttributes != null)
+            {
+                return apprenticeAttributes;
+            }
+
             var list = new List<string>();
             var hero = agent?.GetHero();
             if (hero != null)

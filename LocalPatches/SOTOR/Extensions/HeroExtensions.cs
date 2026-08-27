@@ -55,6 +55,12 @@ namespace SOTOR.Extensions
             }
         }
 
+        public static void RemoveAttribute(this Hero hero, string attribute)
+        {
+            var info = hero.GetExtendedInfo();
+            info?.AcquiredAttributes.Remove(attribute);
+        }
+
         public static bool HasAttribute(this Hero hero, string attribute)
         {
             var info = hero.GetExtendedInfo();

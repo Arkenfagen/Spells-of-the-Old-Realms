@@ -49,50 +49,58 @@ namespace SOTOR.CampaignBehaviors
         public override void RegisterEvents()
         {
             CampaignEvents.OnSessionLaunchedEvent.AddNonSerializedListener(this, Initialize);
+
+            CampaignEvents.OnAfterSessionLaunchedEvent.AddNonSerializedListener(this, AddMenuOptions);
             CampaignEvents.HourlyTickPartyEvent.AddNonSerializedListener(this, HourlyPartyTick);
             CampaignEvents.OnPlayerBattleEndEvent.AddNonSerializedListener(this, OnBattleEnded);
         }
 
         public override void SyncData(IDataStore dataStore) { }
 
-        private void Initialize(CampaignGameStarter starter)
+        private void AddMenuOptions(CampaignGameStarter starter)
         {
             starter.AddGameMenuOption("town", "sotor_graveyard",
-                new TextObject("Go to the graveyard").ToString(),
+                SotorText.Rendered("sotor_graveyard_menu_goto"),
                 GraveyardAccessCondition,
                 args => GameMenu.SwitchToMenu("sotor_graveyard"),
-                false, 4, false);
+
+                false, SotorMenuOrder.After("town", SotorMenuOrder.TownRecruitTroops), false);
 
             starter.AddGameMenuOption("village", "sotor_graveyard",
-                new TextObject("Go to the graveyard").ToString(),
+                SotorText.Rendered("sotor_graveyard_menu_goto"),
                 GraveyardAccessCondition,
                 args => GameMenu.SwitchToMenu("sotor_graveyard"),
-                false, 4, false);
 
+                false, SotorMenuOrder.After("village", SotorMenuOrder.TownRecruitTroops), false);
+        }
+
+        private void Initialize(CampaignGameStarter starter)
+        {
             starter.AddGameMenu("sotor_graveyard", "{SOTOR_GRAVEYARD_INTRODUCTION}",
                 args =>
                 {
-                    args.MenuTitle = new TextObject("Graveyard");
-                    var intro = new TextObject("You have arrived at {SETTLEMENT_NAME}'s graveyard. Graves, tombstones and family crypts litter the peaceful hillside.");
-                    intro.SetTextVariable("SETTLEMENT_NAME", Settlement.CurrentSettlement?.Name ?? new TextObject("the town"));
+                    args.MenuTitle = SotorText.GetObject("sotor_graveyard_title");
+                    var intro = SotorText.GetObject("sotor_graveyard_intro");
+                    intro.SetTextVariable("SETTLEMENT_NAME", Settlement.CurrentSettlement?.Name
+                                          ?? SotorText.GetObject("sotor_graveyard_settlement_fallback"));
                     MBTextManager.SetTextVariable("SOTOR_GRAVEYARD_INTRODUCTION", intro, false);
                 },
                 GameMenu.MenuOverlayType.SettlementWithCharacters);
 
             starter.AddGameMenuOption("sotor_graveyard", "sotor_raise_dead_attempt",
-                new TextObject("Raise dead from the corpses in the ground (wait 8 hours).").ToString(),
+                SotorText.Rendered("sotor_graveyard_opt_raise"),
                 RaiseDeadAttemptCondition,
                 args => GameMenu.SwitchToMenu("sotor_raising_dead"),
                 false, -1, false);
 
             starter.AddGameMenuOption("sotor_graveyard", "sotor_graveyard_leave",
-                new TextObject("Leave").ToString(),
+                SotorText.Rendered("sotor_graveyard_opt_leave"),
                 args => { args.optionLeaveType = GameMenuOption.LeaveType.Leave; return true; },
                 args => GameMenu.SwitchToMenu(ParentSettlementMenu()),
                 true, -1, false);
 
             starter.AddWaitGameMenu("sotor_raising_dead",
-                new TextObject("The common folk's graves are ripe for the taking. You spend the night hours dragging corpses from the ground and binding them to your will.").ToString(),
+                SotorText.Rendered("sotor_graveyard_raise_result"),
                 args =>
                 {
                     _startWaitTime = CampaignTime.Now;
@@ -107,7 +115,7 @@ namespace SOTOR.CampaignBehaviors
                 8f);
 
             starter.AddGameMenuOption("sotor_raising_dead", "sotor_raising_dead_leave",
-                new TextObject("Leave").ToString(),
+                SotorText.Rendered("sotor_graveyard_opt_leave"),
                 args => { args.optionLeaveType = GameMenuOption.LeaveType.Leave; return true; },
                 args =>
                 {
@@ -119,15 +127,15 @@ namespace SOTOR.CampaignBehaviors
             starter.AddGameMenu("sotor_graveyard_interrupt", "{SOTOR_GRAVEYARD_INTERRUPT}",
                 args =>
                 {
-                    args.MenuTitle = new TextObject("Caught in the act");
+                    args.MenuTitle = SotorText.GetObject("sotor_graveyard_caught_title");
                     MBTextManager.SetTextVariable("SOTOR_GRAVEYARD_INTERRUPT",
-                        new TextObject("The local nightwatch is onto you. Face the consequences of your vile actions."), false);
+                        SotorText.GetObject("sotor_graveyard_caught_body"), false);
                     CalculateAndApplyCrimeRatingChange();
                 },
                 GameMenu.MenuOverlayType.SettlementWithCharacters);
 
             starter.AddGameMenuOption("sotor_graveyard_interrupt", "sotor_interrupt_battle",
-                new TextObject("Defend yourself").ToString(),
+                SotorText.Rendered("sotor_graveyard_opt_defend"),
                 args =>
                 {
                     if (!Hero.MainHero.IsWounded) { args.optionLeaveType = GameMenuOption.LeaveType.DefendAction; return true; }
@@ -137,7 +145,7 @@ namespace SOTOR.CampaignBehaviors
                 false, -1, false);
 
             starter.AddGameMenuOption("sotor_graveyard_interrupt", "sotor_interrupt_surrender",
-                new TextObject("Surrender").ToString(),
+                SotorText.Rendered("sotor_graveyard_opt_surrender"),
                 args => { args.optionLeaveType = GameMenuOption.LeaveType.LeaveTroopsAndFlee; return true; },
                 args =>
                 {
@@ -154,14 +162,15 @@ namespace SOTOR.CampaignBehaviors
 
         private bool GraveyardAccessCondition(MenuCallbackArgs args)
         {
-            args.optionLeaveType = GameMenuOption.LeaveType.Submenu;
+
+            args.optionLeaveType = GameMenuOption.LeaveType.Mission;
             if (!SotorSettings.EnableSkeletonArmies) return false;
             var settlement = Settlement.CurrentSettlement;
             if (settlement == null) return false;
             if (!settlement.IsTown && !settlement.IsVillage) return false;
 
             bool disabled = false;
-            TextObject disabledText = new TextObject("The graveyard's massive iron gates are closed shut.");
+            TextObject disabledText = SotorText.GetObject("sotor_graveyard_gates_closed");
 
             bool canAccess = settlement.IsVillage
                 || Campaign.Current.Models.SettlementAccessModel.CanMainHeroAccessLocation(
@@ -424,7 +433,7 @@ namespace SOTOR.CampaignBehaviors
         private void NotifyRaised(Hero raiser, int count)
         {
             if (count <= 0) return;
-            var msg = new TextObject("You drag {COUNT} more from the earth to serve you.");
+            var msg = SotorText.GetObject("sotor_graveyard_raised_more");
             msg.SetTextVariable("COUNT", count);
             InformationManager.DisplayMessage(new InformationMessage(msg.ToString()));
 

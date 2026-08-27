@@ -65,6 +65,41 @@ namespace SOTOR.Extensions.ExtendedInfoSystem
         [SaveableField(7)]
         public List<string> AcquiredSpells = new List<string>();
 
+        [SaveableField(8)]
+        public double WindsCreditedHours;
+
+        [SaveableField(9)]
+        public List<string> KnownBlueprints = new List<string>();
+
+        private void EnsureBlueprints()
+        {
+            if (KnownBlueprints == null) KnownBlueprints = new List<string>();
+        }
+
+        public bool HasBlueprint(string traitId)
+        {
+            EnsureBlueprints();
+            return traitId != null && KnownBlueprints.Contains(traitId);
+        }
+
+        public void AddBlueprint(string traitId)
+        {
+            EnsureBlueprints();
+            if (traitId != null && !KnownBlueprints.Contains(traitId))
+            {
+                KnownBlueprints.Add(traitId);
+            }
+        }
+
+        public List<string> AllKnownBlueprints
+        {
+            get
+            {
+                EnsureBlueprints();
+                return KnownBlueprints;
+            }
+        }
+
         private void EnsureSpells()
         {
             if (AcquiredSpells == null) AcquiredSpells = new List<string>();

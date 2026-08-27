@@ -28,7 +28,7 @@ namespace SOTOR.CampaignBehaviors
 
                     string wantName =
 #if BL13
-                        "forceDismounted";   // 1.3.15: the gate-bypass lever (true = dismount)
+                        "forceDismounted";
 #else
                         "spawnWithHorse";
 #endif

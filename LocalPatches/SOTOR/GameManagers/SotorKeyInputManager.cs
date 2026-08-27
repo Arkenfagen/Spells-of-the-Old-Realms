@@ -42,22 +42,34 @@ namespace SOTOR.GameManagers
                     new TextObject("{=sotor_key_category_name}Spells of the Old Realms"),
                     new List<GameTextManager.ChoiceTag>());
 
-                string keyId = context + "_" + ((GameKeyDefinition)SotorGameKeyContext.QuickCastSelectionMenu).ToString();
-
-                tm.GetGameText("str_key_name").AddVariationWithId(
-                    keyId,
+                RegisterKeyStrings(tm, context, SotorGameKeyContext.QuickCastSelectionMenu,
                     new TextObject("{=sotor_quickcast_key_name}Spellcasting Mode"),
-                    new List<GameTextManager.ChoiceTag>());
+                    new TextObject("{=sotor_quickcast_key_desc}Opens the spell selection menu in battle. Hold to pick a spell, release to enter aiming mode; left-click casts, right-click cancels."));
 
-                tm.GetGameText("str_key_description").AddVariationWithId(
-                    keyId,
-                    new TextObject("{=sotor_quickcast_key_desc}Opens the spell selection menu in battle. Hold to pick a spell, release to enter aiming mode; left-click casts, right-click cancels."),
-                    new List<GameTextManager.ChoiceTag>());
+                RegisterKeyStrings(tm, context, SotorGameKeyContext.OpenSpellbook,
+                    new TextObject("{=sotor_spellbook_key_name}Open Spellbook"),
+                    new TextObject("{=sotor_spellbook_key_desc}Opens the spellbook from the campaign map. Unbound by default; useful when another mod covers the character-panel button. While rebinding, press Delete to clear the key."));
+
+                for (int slot = 0; slot < SotorGameKeyContext.CastSlotCount; slot++)
+                {
+                    var name = new TextObject("{=sotor_castslot_key_name}Cast Spell {SLOT}");
+                    name.SetTextVariable("SLOT", slot + 1);
+                    var desc = new TextObject("{=sotor_castslot_key_desc}Readies spell {SLOT} from your casting wheel as if picked with the spell menu: aimed spells enter aiming mode, instant spells cast at once. Unbound by default. While rebinding, press Delete to clear the key.");
+                    desc.SetTextVariable("SLOT", slot + 1);
+                    RegisterKeyStrings(tm, context, SotorGameKeyContext.CastSpellSlot1 + slot, name, desc);
+                }
             }
             catch (System.Exception ex)
             {
                 SotorLog.Warn($"SotorKeyInputManager.RegisterKeybindStrings failed: {ex.Message}");
             }
+        }
+
+        private static void RegisterKeyStrings(GameTextManager tm, string context, int keyId, TextObject name, TextObject description)
+        {
+            string id = context + "_" + ((GameKeyDefinition)keyId).ToString();
+            tm.GetGameText("str_key_name").AddVariationWithId(id, name, new List<GameTextManager.ChoiceTag>());
+            tm.GetGameText("str_key_description").AddVariationWithId(id, description, new List<GameTextManager.ChoiceTag>());
         }
     }
 }

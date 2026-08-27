@@ -23,7 +23,7 @@
 	</values>
 	<global_ambient fog_ambient_color="0.442, 0.730, 1.000"/>
 	<fog>
-		<value name="fog_density" value="5.000"/>
+		<value name="fog_density" value="2.000"/>
 		<value name="fog_falloff" value="0.200"/>
 		<value name="fog_color" value="0.499, 0.864, 0.989"/>
 		<value name="cloud_shadow_color" value="0.250, 0.250, 0.400"/>
@@ -103,3 +103,4 @@
 	<cubemap_texture env_map_name="default_cubemap"/>
 	<flags/>
 </atmosphere>
+

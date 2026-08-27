@@ -110,11 +110,11 @@ namespace SOTOR.AbilitySystem.StatusEffects
             return Agent != null && !Agent.IsFadingOut() && Agent.AgentVisuals != null && Agent.AgentVisuals.IsValid();
         }
 
-        public bool RunStatusEffect(string effectId, Agent applierAgent, float duration, bool append, string originSpellName = null)
+        public bool RunStatusEffect(string effectId, Agent applierAgent, float duration, bool append, string originSpellName = null, bool stack = false)
         {
             if (Agent == null || _disabled) return false;
 
-            var existing = _currentEffects.Keys.FirstOrDefault(e => e.Template.StringID == effectId);
+            var existing = stack ? null : _currentEffects.Keys.FirstOrDefault(e => e.Template.StringID == effectId);
             if (existing != null)
             {
                 existing.CurrentDuration = append ? existing.CurrentDuration + duration : duration;
@@ -138,7 +138,8 @@ namespace SOTOR.AbilitySystem.StatusEffects
             ApplyArcaneConduitScaling(effect, effectId, applierAgent);
 
             AddEffect(effect);
-            SotorLog.Info($"StatusEffect '{effectId}' applied to '{Agent?.Name}' for {duration}s (type={effect.Template.Type}).");
+
+            SotorLog.Debug($"StatusEffect '{effectId}' applied to '{Agent?.Name}' for {duration}s (type={effect.Template.Type}).");
             return true;
         }
 
@@ -295,7 +296,6 @@ namespace SOTOR.AbilitySystem.StatusEffects
                 float before = Agent.Health;
                 Agent.Health = Math.Min(Agent.Health + heal, Agent.HealthLimit);
                 float healed = Agent.Health - before;
-                SotorLog.Info($"StatusEffect heal tick: '{Agent?.Name}' +{heal} HP ({before:0} -> {Agent.Health:0} / {Agent.HealthLimit:0}).");
 
                 if (healed > 0f)
                 {
@@ -308,6 +308,9 @@ namespace SOTOR.AbilitySystem.StatusEffects
                     }
 
                     SotorSpellDamageLog.BookHeal(healApplier, Agent, (int)healed, healEffect?.OriginSpellName);
+
+                    AbilitySystem.Rivals.SotorPracticeTracker.NoteHealed(
+                        healApplier, healEffect?.OriginSpellName, (int)healed);
                 }
             }
         }
@@ -326,6 +329,12 @@ namespace SOTOR.AbilitySystem.StatusEffects
             if ((hasSpeedModifier || _hadSpeedModifier) && Agent != null && Agent.IsActive())
             {
                 Agent.UpdateAgentProperties();
+
+                var mount = Agent.MountAgent;
+                if (mount != null && mount.IsActive())
+                {
+                    mount.UpdateAgentProperties();
+                }
             }
             _hadSpeedModifier = hasSpeedModifier;
         }
@@ -336,6 +345,18 @@ namespace SOTOR.AbilitySystem.StatusEffects
         public float GetAttackSpeedModifier() => (_aggregate ?? (_aggregate = new Aggregate())).AttackSpeedProperties;
 
         public float GetThorns() => (_aggregate ?? (_aggregate = new Aggregate())).Thorns;
+
+        public int GetActiveEffectCount(string effectId)
+        {
+            int n = 0;
+            foreach (var e in _currentEffects.Keys)
+            {
+                if (e.Template.StringID == effectId) n++;
+            }
+            return n;
+        }
+
+        public float GetDamageOverTimeAggregate() => (_aggregate ?? (_aggregate = new Aggregate())).DamageOverTime;
 
         private static bool IsMeleeWeaponClass(WeaponClass wc)
         {
@@ -491,7 +512,8 @@ namespace SOTOR.AbilitySystem.StatusEffects
             if (!_currentEffects.TryGetValue(effect, out var data)) return;
             RemoveVisuals(data);
             _currentEffects.Remove(effect);
-            SotorLog.Info($"StatusEffect '{effect.Template.StringID}' expired on '{Agent?.Name}'.");
+
+            SotorLog.Debug($"StatusEffect '{effect.Template.StringID}' expired on '{Agent?.Name}'.");
         }
 
         private void RemoveVisuals(EffectData data)

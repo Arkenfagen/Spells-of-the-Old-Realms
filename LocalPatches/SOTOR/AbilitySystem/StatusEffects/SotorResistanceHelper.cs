@@ -49,7 +49,7 @@ namespace SOTOR.AbilitySystem.StatusEffects
                 return 1f;
             }
 
-            float factor = (1f + amp) * (1f - Math.Min(resist, 1f)) * (1f - Math.Min(ward, 1f));
+            float factor = (1f + amp) * (1f - Math.Min(resist, 1f));
             return factor < 0f ? 0f : factor;
         }
 

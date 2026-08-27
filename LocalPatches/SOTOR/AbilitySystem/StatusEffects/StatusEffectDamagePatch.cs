@@ -70,7 +70,8 @@ namespace SOTOR.AbilitySystem.StatusEffects
                         int reflected = (int)(__result * thorns);
                         if (reflected > 0)
                         {
-                            SotorDamageHelper.ApplyReflectedDamage(attacker, reflected, victim);
+
+                            SotorDamageHelper.QueueReflectedDamage(attacker, reflected, victim);
                             SotorLog.Debug(
                                 $"Fire-Cloak thorns: '{victim.Name}' reflects {thorns:0.00}x -> {reflected} Fire to '{attacker.Name}'.");
                         }

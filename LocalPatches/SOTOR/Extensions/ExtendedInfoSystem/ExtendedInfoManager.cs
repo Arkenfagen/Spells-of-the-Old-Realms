@@ -3,6 +3,7 @@ using SOTOR.AbilitySystem;
 using SOTOR;
 using SOTOR.Extensions;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.Core;
 using TaleWorlds.ObjectSystem;
 using TaleWorlds.SaveSystem;
@@ -55,7 +56,8 @@ namespace SOTOR.Extensions.ExtendedInfoSystem
                     float factor = GetArmorRechargeFactor(hero, out float armorWeight);
 
                     float rate = (WindsRechargePerHour + SOTOR.AbilitySystem.SotorSpellcraftHelper.GetWindsRechargeSkillBonus(hero)) * factor * GetCatalystTownFactor(hero);
-                    info.AddWindsOfMagic(rate);
+
+                    CreditWindsUpTo(hero, CampaignTime.Now);
 
                     if (hero.IsHumanPlayerCharacter && System.Math.Abs(rate - _lastLoggedPlayerRate) > 0.001f)
                     {
@@ -70,6 +72,15 @@ namespace SOTOR.Extensions.ExtendedInfoSystem
             }
         }
 
+        public static bool IsPlayerSideCaster(Hero hero)
+        {
+            if (hero == null) return false;
+            if (hero.IsHumanPlayerCharacter) return true;
+            if (hero.Clan != null && hero.Clan == Clan.PlayerClan) return true;
+            if (hero.PartyBelongedTo != null && hero.PartyBelongedTo == MobileParty.MainParty) return true;
+            return false;
+        }
+
         private static float GetArmorRechargeFactor(Hero hero, out float armorWeight)
         {
             armorWeight = 0f;
@@ -80,6 +91,12 @@ namespace SOTOR.Extensions.ExtendedInfoSystem
             }
 
             armorWeight = equipment.GetTotalWeightOfArmor(true);
+
+            if (!IsPlayerSideCaster(hero))
+            {
+                return 1f;
+            }
+
             float penalty = System.Math.Max(0f, (armorWeight - 5f) / 15f);
 
             penalty *= SOTOR.SotorSettings.ArmorWomRechargeEffectMultiplier;
@@ -90,6 +107,40 @@ namespace SOTOR.Extensions.ExtendedInfoSystem
         {
             return (WindsRechargePerHour + SOTOR.AbilitySystem.SotorSpellcraftHelper.GetWindsRechargeSkillBonus(hero))
                    * GetArmorRechargeFactor(hero, out _) * GetCatalystTownFactor(hero);
+        }
+
+        public static float CreditWindsUpTo(Hero hero, CampaignTime now)
+        {
+            var info = hero?.GetExtendedInfo();
+            if (info == null || !info.AllAttributes.Contains("SpellCaster")) return 0f;
+
+            double nowHours = now.ToHours;
+            double last = info.WindsCreditedHours;
+
+            if (last <= 0.0 || last > nowHours)
+            {
+
+                info.WindsCreditedHours = nowHours;
+                return 0f;
+            }
+
+            float hours = (float)(nowHours - last);
+            if (hours <= 0f)
+            {
+                return 0f;
+            }
+
+            float rate = GetWindsRechargePerHour(hero);
+            info.WindsCreditedHours = nowHours;
+            if (rate <= 0f)
+            {
+
+                return 0f;
+            }
+
+            float before = info.WindsOfMagic;
+            info.AddWindsOfMagic(rate * hours);
+            return info.WindsOfMagic - before;
         }
 
         private static float GetCatalystTownFactor(Hero hero)

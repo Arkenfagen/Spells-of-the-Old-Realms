@@ -11,6 +11,13 @@ namespace SOTOR.AbilitySystem.TriggeredScripts
     {
         public void OnTrigger(Vec3 position, Agent triggeredByAgent, IEnumerable<Agent> triggeredAgents, float duration, TriggeredEffectTemplate template, string originSpell)
         {
+
+            if (AbilityMissionModeHelper.IsArenaOrTournamentMission(Mission.Current))
+            {
+                SotorLog.Info($"Summon '{originSpell}': BLOCKED — arena/tournament mission (unregistered agents crash the tournament controller).");
+                return;
+            }
+
             if (triggeredByAgent == null || !triggeredByAgent.IsActive() || triggeredByAgent.Team == null)
             {
                 return;

@@ -77,6 +77,13 @@ namespace SOTOR.AbilitySystem.StatusEffects
 
         public override void OnMissionTick(float dt)
         {
+
+            SotorDamageHelper.TickBlowBudget();
+
+            SotorSpellGoreMissionLogic.TickGoreBudget();
+
+            SotorDamageHelper.DeliverPendingReflects();
+
             var all = Mission.Current?.AllAgents;
             if (all == null) return;
 
