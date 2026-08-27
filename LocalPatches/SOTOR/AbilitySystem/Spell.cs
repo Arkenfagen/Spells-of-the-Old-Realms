@@ -36,17 +36,11 @@ namespace SOTOR.AbilitySystem
             if (StringID == SotorArcaneConduitHelper.AbilityId)
             {
 
-                if (casterAgent != null && !casterAgent.IsPlayerControlled)
-                {
-                    disabledReason = new TextObject("{=sotor_ac_player_only}Only you can channel Arcane Conduit");
-                    return true;
-                }
-
                 var acHero = casterAgent?.GetHero();
                 if (acHero != null)
                 {
                     int max = SotorArcaneConduitHelper.GetUsesPerBattle(acHero);
-                    if (SotorArcaneConduitMissionLogic.UsesThisBattle >= max)
+                    if (SotorArcaneConduitMissionLogic.GetUses(casterAgent) >= max)
                     {
                         disabledReason = new TextObject("{=sotor_ac_no_uses}No Arcane Conduit uses left this battle");
                         return true;
@@ -71,6 +65,16 @@ namespace SOTOR.AbilitySystem
                 }
             }
 
+            else if (Missions.SotorApprenticeWinds.IsTracked(casterAgent))
+            {
+                if (Missions.SotorApprenticeWinds.Get(casterAgent) < Template.WindsOfMagicCost)
+                {
+                    Missions.SotorApprenticeWinds.NoteCannotAfford(casterAgent, StringID, Template.WindsOfMagicCost);
+                    disabledReason = new TextObject("{=sotor_spell_not_enough_wom}Not enough Winds of Magic");
+                    return true;
+                }
+            }
+
             return false;
         }
 
@@ -89,10 +93,15 @@ namespace SOTOR.AbilitySystem
 
                 GrantSpellcraftXp(hero);
             }
+            else if (Missions.SotorApprenticeWinds.IsTracked(casterAgent))
+            {
+
+                Missions.SotorApprenticeWinds.Spend(casterAgent, Template.WindsOfMagicCost);
+            }
 
             if (StringID == SotorArcaneConduitHelper.AbilityId)
             {
-                SotorArcaneConduitMissionLogic.UsesThisBattle++;
+                SotorArcaneConduitMissionLogic.RegisterUse(casterAgent);
                 var acHero = casterAgent?.GetHero();
                 if (acHero != null)
                 {

@@ -25,6 +25,8 @@ namespace SOTOR.AbilitySystem
 
         private const float HeadZoneBelowEye = 0.25f;
 
+        private static string D(float d) => d >= float.MaxValue * 0.5f ? "none" : d.ToString("0.0");
+
         protected override void OnAfterTick(float dt)
         {
             if (!CanCollide || IsFading || Ability.Template.TriggerType != TriggerType.OnCollision)
@@ -101,18 +103,21 @@ namespace SOTOR.AbilitySystem
             if (hasAgent && (!hasWorld || agentDist <= worldDist) && (!hasWater || agentDist <= waterDist))
             {
                 Vec3 pos = from + dir * agentDist;
-                SotorLog.Info($"MissileScript '{Ability.StringID}': agent hit '{agentHit.Name}' at {pos} (agentDist={agentDist:0.0}, worldDist={worldDist:0.0}, waterDist={waterDist:0.0}).");
+                SotorLog.Info($"MissileScript '{Ability.StringID}': agent hit '{agentHit.Name}' at {pos} (agentDist={D(agentDist)}, worldDist={D(worldDist)}, waterDist={D(waterDist)}).");
+                AI.SotorAimDiagnostics.LogImpact(CasterAgent, Ability, pos, agentHit, "agent");
                 HandleCollision(pos, -dir);
             }
             else if (hasWorld && (!hasWater || worldDist <= waterDist))
             {
                 Vec3 pos = worldPos.IsValid && worldPos.IsNonZero ? worldPos : from + dir * worldDist;
-                SotorLog.Info($"MissileScript '{Ability.StringID}': world/terrain hit at {pos} (worldDist={worldDist:0.0}, agentDist={agentDist:0.0}, waterDist={waterDist:0.0}).");
+                SotorLog.Info($"MissileScript '{Ability.StringID}': world/terrain hit at {pos} (worldDist={D(worldDist)}, agentDist={D(agentDist)}, waterDist={D(waterDist)}).");
+                AI.SotorAimDiagnostics.LogImpact(CasterAgent, Ability, pos, null, "world/terrain");
                 HandleCollision(pos, -dir);
             }
             else
             {
-                SotorLog.Info($"MissileScript '{Ability.StringID}': water-surface hit at {waterPos} (waterDist={waterDist:0.0}, agentDist={agentDist:0.0}, worldDist={worldDist:0.0}).");
+                SotorLog.Info($"MissileScript '{Ability.StringID}': water-surface hit at {waterPos} (waterDist={D(waterDist)}, agentDist={D(agentDist)}, worldDist={D(worldDist)}).");
+                AI.SotorAimDiagnostics.LogImpact(CasterAgent, Ability, waterPos, null, "water");
                 HandleCollision(waterPos, Vec3.Up);
             }
         }

@@ -23,8 +23,10 @@ namespace SOTOR.AbilitySystem
 
             _spellcraft = Game.Current.ObjectManager.RegisterPresumedObject(new SkillObject(SpellcraftId));
             _spellcraft.Initialize(
-                new TextObject("Spellcraft"),
-                new TextObject("Your mastery of the Winds of Magic. Higher Spellcraft increases spell damage and unlocks higher spell tiers."),
+
+                SotorText.GetObject("sotor_skill_spellcraft_name", "Spellcraft"),
+                SotorText.GetObject("sotor_skill_spellcraft_desc",
+                    "Your mastery of the Winds of Magic. Higher Spellcraft increases spell damage and unlocks higher spell tiers."),
                 new[] { attribute });
 
             SotorLog.Info($"SotorSkills: registered '{SpellcraftId}' (attr={resolvedId}).");

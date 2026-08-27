@@ -1,6 +1,8 @@
 using SOTOR;
+using SOTOR.AbilitySystem.Rivals;
 using SOTOR.Extensions;
 using SOTOR.GameManagers;
+using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.Engine;
 using TaleWorlds.InputSystem;
@@ -54,6 +56,18 @@ namespace SOTOR.AbilitySystem
 
         public override void OnRemoveBehavior()
         {
+
+            if (_loggedBattleRegenState && SotorSettings.EnableBattleWindsRegen && Campaign.Current != null)
+            {
+                double elapsed = CampaignTime.Now.ToHours - _battleRegenStartHours;
+                string what = elapsed <= 0.0001
+                    ? "clock frozen - no time-advancing mod active, so nothing was owed"
+                    : (_battleRegenGranted > 0.01f
+                        ? $"credited {_battleRegenGranted:0.##} Winds at the map rate"
+                        : "nothing credited - the recharge rate is zero, usually armour weight");
+                SotorLog.Info($"BattleWindsRegen: mission over, campaign time advanced {elapsed:0.00}h; {what}.");
+            }
+
             RemoveMissionOnlyPatches();
             base.OnRemoveBehavior();
         }
@@ -61,6 +75,8 @@ namespace SOTOR.AbilitySystem
         public override void OnMissionResultReady(MissionResult missionResult)
         {
             base.OnMissionResultReady(missionResult);
+
+            Rivals.SotorBattleAllyTally.NoteResult(missionResult != null && missionResult.PlayerVictory);
 
             if (missionResult == null || (!missionResult.PlayerDefeated && !missionResult.PlayerVictory))
             {
@@ -154,6 +170,12 @@ namespace SOTOR.AbilitySystem
                 }
 
                 _quickCastMenuKey = sotorCategory?.GetGameKey(SotorGameKeyContext.QuickCastSelectionMenu);
+
+                _castSlotKeys = new GameKey[SotorGameKeyContext.CastSlotCount];
+                for (int slot = 0; slot < SotorGameKeyContext.CastSlotCount; slot++)
+                {
+                    _castSlotKeys[slot] = sotorCategory?.GetGameKey(SotorGameKeyContext.CastSpellSlot1 + slot);
+                }
             }
             catch (System.Exception ex)
             {
@@ -185,10 +207,61 @@ namespace SOTOR.AbilitySystem
             }
         }
 
+        private const float BattleWindsRegenInterval = 1f;
+        private float _battleWindsRegenTimer;
+
+        private bool _loggedBattleRegenState;
+        private double _battleRegenStartHours;
+        private float _battleRegenGranted;
+
+        private void TickBattleWindsRegen(float dt)
+        {
+            if (Campaign.Current == null) return;
+
+            if (!_loggedBattleRegenState)
+            {
+                _loggedBattleRegenState = true;
+                _battleRegenStartHours = CampaignTime.Now.ToHours;
+            }
+
+            if (!SotorSettings.EnableBattleWindsRegen)
+            {
+                _battleWindsRegenTimer += dt;
+                if (_battleWindsRegenTimer < BattleWindsRegenInterval) return;
+                _battleWindsRegenTimer = 0f;
+
+                double nowHoursOff = CampaignTime.Now.ToHours;
+                foreach (var agent in Mission.Current.Agents)
+                {
+                    var offHero = (agent?.Character as CharacterObject)?.HeroObject;
+                    var offInfo = offHero?.GetExtendedInfo();
+                    if (offInfo != null) offInfo.WindsCreditedHours = nowHoursOff;
+                }
+                return;
+            }
+
+            _battleWindsRegenTimer += dt;
+            if (_battleWindsRegenTimer < BattleWindsRegenInterval) return;
+            _battleWindsRegenTimer = 0f;
+
+            var now = CampaignTime.Now;
+            foreach (var agent in Mission.Current.Agents)
+            {
+                var hero = (agent?.Character as CharacterObject)?.HeroObject;
+                if (hero == null) continue;
+
+                float granted = SOTOR.Extensions.ExtendedInfoSystem.ExtendedInfoManager.CreditWindsUpTo(hero, now);
+                if (hero.IsHumanPlayerCharacter) _battleRegenGranted += granted;
+
+            }
+        }
+
         public override void OnPreMissionTick(float dt)
         {
             Safe("OnPreMissionTick", () =>
             {
+                TickBattleWindsRegen(dt);
+
                 if (Agent.Main != null)
                 {
                     EnsureMainAgentAbilityComponent();
@@ -238,16 +311,96 @@ namespace SOTOR.AbilitySystem
         {
             Safe("OnAgentCreated", () =>
             {
-                if (!ShouldAttachAbilityComponent(agent))
-                {
-                    return;
-                }
-
-                if (agent.GetComponent<AbilityComponent>() == null)
-                {
-                    agent.AddComponent(new AbilityComponent(agent));
-                }
+                TryAttachAbilityComponent(agent, "OnAgentCreated");
             });
+        }
+
+        public override void OnAgentBuild(Agent agent, Banner banner)
+        {
+            base.OnAgentBuild(agent, banner);
+            Safe("OnAgentBuild", () =>
+            {
+                TryAttachAbilityComponent(agent, "OnAgentBuild");
+
+                TryTallyAllyCaster(agent);
+            });
+        }
+
+        private void TryAttachAbilityComponent(Agent agent, string phase)
+        {
+            if (agent == null || agent.GetComponent<AbilityComponent>() != null)
+            {
+                return;
+            }
+            if (!ShouldAttachAbilityComponent(agent))
+            {
+                return;
+            }
+
+            agent.AddComponent(new AbilityComponent(agent));
+
+            if (!agent.IsMainAgent)
+            {
+                SotorLog.Info(
+                    $"CasterAgent: attached AbilityComponent to '{agent.Name}' at {phase} " +
+                    $"(equipped={agent.GetSelectedAbilities().Count}, mode={(int)Mission.Mode}).");
+            }
+
+            TryRevealHiddenMaster(agent);
+            TryTallyAllyCaster(agent);
+        }
+
+        private void TryTallyAllyCaster(Agent agent)
+        {
+            try
+            {
+                if (agent == null || agent.IsMainAgent) return;
+                if (!SotorSettings.EnableRivalCasters) return;
+
+                if (agent.GetComponent<AbilityComponent>() == null) return;
+
+                if (Mission == null || Mission.PlayerTeam == null || agent.Team == null) return;
+                if (!agent.Team.IsFriendOf(Mission.PlayerTeam)) return;
+
+                var hero = (agent.Character as CharacterObject)?.HeroObject;
+                if (hero == null || hero == Hero.MainHero) return;
+                if (Extensions.ExtendedInfoSystem.ExtendedInfoManager.IsPlayerSideCaster(hero)) return;
+
+                var trad = SotorRivalSeeder.SocialTradition(hero);
+                if (trad == Trad.None) return;
+
+                SotorBattleAllyTally.Record(trad, hero.Name?.ToString());
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void TryRevealHiddenMaster(Agent agent)
+        {
+            try
+            {
+                if (agent == null || agent.IsMainAgent) return;
+                if (!SotorSettings.EnableRivalCasters) return;
+                if (!SotorRivalReveal.IsReady) return;
+
+                var hero = (agent.Character as CharacterObject)?.HeroObject;
+                if (hero == null || hero == Hero.MainHero) return;
+                if (!SotorRivalSeeder.IsHiddenMaster(hero)) return;
+
+                if (!SotorRivalReveal.Reveal(hero)) return;
+
+                var revealed = SotorRivalSeeder.SocialTradition(hero);
+                SotorRivalReveal.QueueAnnouncement(hero);
+                SotorLog.Info($"RivalReveal: battlefield revealed hidden master {hero.Name} as {revealed}, "
+                              + "queued a post-battle announcement.");
+            }
+            catch (System.Exception ex)
+            {
+
+                SotorLog.Error($"RivalReveal: TryRevealHiddenMaster failed: {ex.GetType().Name}: {ex.Message}");
+            }
         }
 
         private void EnsureMainAgentAbilityComponent()
@@ -308,36 +461,76 @@ namespace SOTOR.AbilitySystem
             return agent.IsMainAgent && hero != null && hero.GetExtendedInfo()?.SelectedAbilities.Count > 0;
         }
 
-        private bool IsQuickCastMenuKeyPressed()
+        private GameKey[] _castSlotKeys;
+
+        private int PressedCastSlotIndex()
         {
-            if (_quickCastMenuKey != null)
+            if (_castSlotKeys == null)
             {
-                if (Input.IsKeyPressed(_quickCastMenuKey.KeyboardKey.InputKey)
-                    || Input.IsKeyPressed(_quickCastMenuKey.ControllerKey.InputKey))
+                return -1;
+            }
+
+            for (int slot = 0; slot < _castSlotKeys.Length; slot++)
+            {
+                var key = _castSlotKeys[slot];
+                if (key == null)
                 {
-                    return true;
+                    continue;
+                }
+                if ((key.KeyboardKey != null && key.KeyboardKey.InputKey != InputKey.Invalid
+                        && Input.IsKeyPressed(key.KeyboardKey.InputKey))
+                    || (key.ControllerKey != null && key.ControllerKey.InputKey != InputKey.Invalid
+                        && Input.IsKeyPressed(key.ControllerKey.InputKey)))
+                {
+                    return slot;
                 }
             }
 
+            return -1;
+        }
+
+        private bool QuickCastMenuKeyBound()
+        {
+            var kb = _quickCastMenuKey?.KeyboardKey;
+            var ctrl = _quickCastMenuKey?.ControllerKey;
+            return (kb != null && kb.InputKey != InputKey.Invalid)
+                || (ctrl != null && ctrl.InputKey != InputKey.Invalid);
+        }
+
+        private bool IsQuickCastMenuKeyPressed()
+        {
+            if (QuickCastMenuKeyBound())
+            {
+                var kb = _quickCastMenuKey.KeyboardKey;
+                var ctrl = _quickCastMenuKey.ControllerKey;
+                return (kb != null && kb.InputKey != InputKey.Invalid && Input.IsKeyPressed(kb.InputKey))
+                    || (ctrl != null && ctrl.InputKey != InputKey.Invalid && Input.IsKeyPressed(ctrl.InputKey));
+            }
             return Input.IsKeyPressed(InputKey.Q);
         }
 
         private bool IsQuickCastMenuKeyDown()
         {
-            if (_quickCastMenuKey != null)
+            if (QuickCastMenuKeyBound())
             {
-                if (Input.IsKeyDown(_quickCastMenuKey.KeyboardKey.InputKey)
-                    || Input.IsKeyDown(_quickCastMenuKey.ControllerKey.InputKey))
-                {
-                    return true;
-                }
+                var kb = _quickCastMenuKey.KeyboardKey;
+                var ctrl = _quickCastMenuKey.ControllerKey;
+                return (kb != null && kb.InputKey != InputKey.Invalid && Input.IsKeyDown(kb.InputKey))
+                    || (ctrl != null && ctrl.InputKey != InputKey.Invalid && Input.IsKeyDown(ctrl.InputKey));
             }
-
             return Input.IsKeyDown(InputKey.Q);
         }
 
         private void HandleInput()
         {
+
+            var main = Agent.Main;
+            if (_currentState != AbilityModeState.Off && (main == null || !main.IsActive()))
+            {
+                DisableAbilityMode();
+                return;
+            }
+
             if (Input.IsKeyDown(InputKey.LeftAlt))
             {
                 return;
@@ -347,6 +540,11 @@ namespace SOTOR.AbilitySystem
                 && Input.IsKeyPressed(InputKey.RightMouseButton))
             {
                 DisableAbilityMode();
+                return;
+            }
+
+            if (_currentState != AbilityModeState.Casting && HandleCastSlotHotkeys())
+            {
                 return;
             }
 
@@ -366,38 +564,7 @@ namespace SOTOR.AbilitySystem
                         break;
                     }
 
-                    var ability = _abilityComponent?.CurrentAbility;
-                    if (ability == null)
-                    {
-                        DisableAbilityMode();
-                        break;
-                    }
-
-                    if (ability.IsDisabled(Agent.Main, out var disabledReason))
-                    {
-                        SotorLog.Info($"Q release: '{ability.StringID}' disabled: {disabledReason?.ToString() ?? "unknown"}");
-                        DisableAbilityMode();
-                        break;
-                    }
-
-                    if (ability.IsThrownWeapon)
-                    {
-                        TryQuickCastCurrentAbility();
-
-                        DisableAbilityMode(suppressWeaponRestore: true);
-                        break;
-                    }
-
-                    if (ability.RequiresTargeting)
-                    {
-                        EnableTargetingMode();
-                    }
-                    else
-                    {
-                        TryQuickCastCurrentAbility();
-                        DisableAbilityMode();
-                    }
-
+                    ArmOrCastCurrentAbility();
                     break;
 
                 case AbilityModeState.Targeting:
@@ -416,6 +583,78 @@ namespace SOTOR.AbilitySystem
 
                     break;
             }
+        }
+
+        private void ArmOrCastCurrentAbility()
+        {
+            var ability = _abilityComponent?.CurrentAbility;
+            if (ability == null)
+            {
+                DisableAbilityMode();
+                return;
+            }
+
+            if (ability.IsDisabled(Agent.Main, out var disabledReason))
+            {
+                SotorLog.Info($"Spell commit: '{ability.StringID}' disabled: {disabledReason?.ToString() ?? "unknown"}");
+                DisableAbilityMode();
+                return;
+            }
+
+            if (ability.IsThrownWeapon)
+            {
+                TryQuickCastCurrentAbility();
+
+                DisableAbilityMode(suppressWeaponRestore: true);
+                return;
+            }
+
+            if (ability.RequiresTargeting)
+            {
+                EnableTargetingMode();
+            }
+            else
+            {
+                TryQuickCastCurrentAbility();
+                DisableAbilityMode();
+            }
+        }
+
+        private bool HandleCastSlotHotkeys()
+        {
+            if (_abilityComponent == null)
+            {
+                return false;
+            }
+
+            int slot = PressedCastSlotIndex();
+            if (slot < 0)
+            {
+                return false;
+            }
+
+            var main = Agent.Main;
+            if (main == null || !main.IsActive())
+            {
+                return false;
+            }
+
+            var ability = main.GetAbility(slot);
+            if (ability == null)
+            {
+                SotorLog.Info($"Cast-slot hotkey {slot + 1}: no spell in that wheel slot.");
+                return false;
+            }
+
+            if (_currentState != AbilityModeState.Off)
+            {
+                DisableAbilityMode();
+            }
+
+            main.SelectAbility(slot);
+            SotorLog.Info($"Cast-slot hotkey {slot + 1}: '{ability.StringID}' selected.");
+            ArmOrCastCurrentAbility();
+            return true;
         }
 
         private void EnableTargetingMode()
@@ -480,7 +719,7 @@ namespace SOTOR.AbilitySystem
             missionScreen?.RegisterRadialMenuObject(_abilityView);
             _abilityView?.OnQuickMenuOpened();
             SlowDownTime(true);
-            SotorLog.Info("Radial menu opened (Q).");
+            SotorLog.Debug("Radial menu opened (Q).");
         }
 
         private void TryQuickCastCurrentAbility()
@@ -521,11 +760,6 @@ namespace SOTOR.AbilitySystem
                     if (Mission != null && !ability.IsThrownWeapon)
                     {
                         _postCastSuppressUntil = Mission.CurrentTime + PostCastSuppressDuration;
-                    }
-
-                    if (!ability.IsThrownWeapon)
-                    {
-                        PlayCastReleaseAnimation(main, ability.Template?.AnimationActionName);
                     }
 
                     SotorLog.Info($"Q quick-cast '{ability.StringID}' succeeded.");
@@ -577,7 +811,7 @@ namespace SOTOR.AbilitySystem
                 _abilityComponent.CurrentAbility.SetCrosshair(null);
             }
 
-            SotorLog.Info("Radial menu closed.");
+            SotorLog.Debug("Radial menu closed.");
         }
 
         private ActionIndexCache IdleCastAnimation
@@ -619,32 +853,6 @@ namespace SOTOR.AbilitySystem
 
                     Agent.Main.SetActionChannel(1, idle, false, (AnimFlags)0, 0f, 1f, -0.2f, 0.4f, 0f, false, -0.2f, 0, true);
                 }
-            }
-        }
-
-        private void PlayCastReleaseAnimation(Agent caster, string actionName)
-        {
-            if (caster == null || string.IsNullOrWhiteSpace(actionName)
-                || actionName.Equals("none", System.StringComparison.OrdinalIgnoreCase))
-            {
-                return;
-            }
-
-            try
-            {
-                var action = ActionIndexCache.Create(actionName);
-                if (action.Index == ActionIndexCache.act_none.Index)
-                {
-                    SotorLog.Debug($"CastRelease: action '{actionName}' unresolved (act_none); skipping.");
-                    return;
-                }
-
-                caster.SetActionChannel(1, action, false, (AnimFlags)0, 0f, 1f, -0.2f, 0.4f, 0f, false, -0.2f, 0, true);
-                SotorLog.Info($"CastRelease: played '{actionName}' (index={action.Index}) on '{caster.Name}'.");
-            }
-            catch (System.Exception ex)
-            {
-                SotorLog.Warn($"PlayCastReleaseAnimation('{actionName}') failed: {ex.Message}");
             }
         }
 
@@ -838,25 +1046,24 @@ namespace SOTOR.AbilitySystem
 
                 if (SotorPerks.Catalyst != null && hero.GetPerkValue(SotorPerks.Catalyst))
                 {
-                    int legendaryCount = 0;
+                    int enchantedCount = 0;
                     var eq = hero.BattleEquipment;
                     if (eq != null)
                     {
                         for (var slot = TaleWorlds.Core.EquipmentIndex.WeaponItemBeginSlot; slot < TaleWorlds.Core.EquipmentIndex.ArmorItemEndSlot; slot++)
                         {
                             var element = eq[slot];
-                            if (element.Item != null && element.ItemModifier != null
-                                && element.ItemModifier.ItemQuality == TaleWorlds.Core.ItemQuality.Legendary)
+                            if (element.Item != null && SOTOR.Items.SotorExtendedItemManager.HasTraits(element.Item))
                             {
-                                legendaryCount++;
+                                enchantedCount++;
                             }
                         }
                     }
 
-                    if (legendaryCount > 0)
+                    if (enchantedCount > 0)
                     {
-                        hero.AddWindsOfMagic(legendaryCount * 5f, allowOverMax: true);
-                        SotorLog.Info($"Catalyst: +{legendaryCount * 5} Winds at battle start ({legendaryCount} legendary item(s)).");
+                        hero.AddWindsOfMagic(enchantedCount * 5f, allowOverMax: true);
+                        SotorLog.Info($"Catalyst: +{enchantedCount * 5} Winds at battle start ({enchantedCount} enchanted item(s)).");
                     }
                 }
             }
@@ -894,9 +1101,19 @@ namespace SOTOR.AbilitySystem
 
         public bool IsCastingMission()
         {
-            return !Mission.IsFriendlyMission
-                && (int)Mission.CombatType != 1
-                && (int)Mission.CombatType != 2;
+            return AbilityMissionModeHelper.IsMagicAllowedInMission(Mission);
+        }
+
+        private bool _loggedSettledMode;
+
+        public override void OnMissionModeChange(MissionMode oldMissionMode, bool atStart)
+        {
+            base.OnMissionModeChange(oldMissionMode, atStart);
+            if (_loggedSettledMode || Mission == null) return;
+            _loggedSettledMode = true;
+            SotorLog.Info($"Mission mode settled: {(int)oldMissionMode} -> {(int)Mission.Mode} "
+                          + $"(friendly={Mission.IsFriendlyMission} combatType={(int)Mission.CombatType} "
+                          + $"castingMission={IsCastingMission()}).");
         }
 
         private bool IsAbilityModeAvailableForMainAgent()

@@ -71,10 +71,15 @@ namespace SOTOR.AbilitySystem
                 .OrderBy(_ => MBRandom.RandomFloat)
                 .Take(MaxTargets);
 
-            int tries = 0;
+            int tries = 0, converted = 0;
             foreach (var target in chosen)
             {
                 if (target == null || !target.IsActive() || target.IsFadingOut())
+                {
+                    continue;
+                }
+
+                if (target.IsMainAgent)
                 {
                     continue;
                 }
@@ -87,10 +92,13 @@ namespace SOTOR.AbilitySystem
                 if (MBRandom.RandomFloat < chance)
                 {
                     Convert(target, casterTeam, logic);
+                    converted++;
                 }
             }
 
-            SotorLog.Info($"MindControl: cast by '{caster.Name}' at {center}, {tries} target(s) rolled (radius {radius}).");
+            SotorLog.Info($"MindControl: cast by '{caster.Name}'{(caster.IsMainAgent ? " [PLAYER]" : " [AI]")} "
+                          + $"at {center}, radius {radius}, {nearby.Count} enemy(ies) in range, {tries} rolled, "
+                          + $"{converted} CONVERTED.");
         }
 
         private void Convert(Agent target, Team casterTeam, SotorMindControlMissionLogic logic)
@@ -98,7 +106,7 @@ namespace SOTOR.AbilitySystem
 
             target.SetTeam(casterTeam, false);
 
-            logic?.OnAgentConverted(target);
+            logic?.OnAgentConverted(target, CasterAgent);
 
             ApplyConvertMark(target);
         }

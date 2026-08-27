@@ -69,6 +69,8 @@ namespace SOTOR.AbilitySystem.AI
                 { typeof(SelectMultiTargetCastingBehavior), CreateBuffSpellAxis() },
                 { typeof(SelectSingleTargetCastingBehavior), CreateBuffSpellAxis() },
                 { typeof(SummoningCastingBehavior), CreateSummoningAxis() },
+
+                { typeof(ArcaneConduitCastingBehavior), _ => new List<Axis>() },
             };
 
         public static List<Target> FindTargets(Agent agent, AbilityTemplate abilityTemplate)
@@ -118,6 +120,7 @@ namespace SOTOR.AbilitySystem.AI
 
                     if (template != null && template.StringID == SotorArcaneConduitHelper.AbilityId)
                     {
+                        list.Add(new ArcaneConduitCastingBehavior(agent, template, index));
                         index++;
                         continue;
                     }
@@ -149,23 +152,109 @@ namespace SOTOR.AbilitySystem.AI
             };
         }
 
+        public const float ExtremeAllyShare = 0.8f;
+
+        private const float AllyDensityFloor = 0.15f;
+        private const float AllyDensityBite = 1.0f;
+
+        private static bool IsHexLike(AbstractAgentCastingBehavior behavior)
+        {
+            var t = behavior?.AbilityTemplate;
+            if (t == null) return false;
+            return t.AbilityEffectType == AbilityEffectType.Hex;
+        }
+
+        private static bool CanHarmAllies(AbstractAgentCastingBehavior behavior)
+        {
+            try
+            {
+                var t = behavior?.AbilityTemplate;
+                if (t == null || string.IsNullOrEmpty(t.TriggeredEffectID)) return false;
+                var eff = TriggeredEffectManager.GetTemplate(t.TriggeredEffectID);
+                if (eff == null) return false;
+                return eff.TargetType != TargetType.Enemy && eff.DamageAmount > 0;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private static List<Axis> CreateHexAxisList(AbstractAgentCastingBehavior behavior)
+        {
+            var axes = new List<Axis>
+            {
+                new Axis(0f, 120f, x => 1f - x, CommonAIDecisionFunctions.DistanceToTarget(() => behavior.Agent.Position)) { Name = "dist" },
+                new Axis(0f, CommonAIDecisionFunctions.CalculateEnemyTotalPower(behavior.Agent.Team), x => x, CommonAIDecisionFunctions.FormationPower()) { Name = "power" },
+                new Axis(0f, 1f, x => x + 0.3f, CommonAIDecisionFunctions.RangedUnitRatio()) { Name = "ranged" }
+            };
+
+            if (CanHarmAllies(behavior))
+            {
+                axes.Add(new Axis(0f, 1f, x => x > ExtremeAllyShare ? 0f : Math.Max(AllyDensityFloor, 1f - AllyDensityBite * x),
+                    CommonAIDecisionFunctions.AllyDensityInBlast(behavior.Agent, BlastRadiusOf(behavior))) { Name = "allyDens" });
+            }
+
+            if (BlastDamageOf(behavior) > 0f)
+            {
+                axes.Add(SpellWorthAxis(behavior));
+                axes.Add(BlastOccupancyAxis(behavior));
+            }
+
+            axes.Add(TargetMobilityAxis());
+
+            return axes;
+        }
+
+        private static bool IsMindControlSpell(AbstractAgentCastingBehavior behavior)
+        {
+            return behavior?.AbilityTemplate?.AbilityEffectType == AbilityEffectType.MindControl;
+        }
+
+        private static List<Axis> CreateMindControlAxisList(AbstractAgentCastingBehavior behavior)
+        {
+            float radius = behavior.AbilityTemplate.Radius > 0f ? behavior.AbilityTemplate.Radius : 5f;
+            return new List<Axis>
+            {
+                new Axis(0f, 120f, x => 1f - x, CommonAIDecisionFunctions.DistanceToTarget(() => behavior.Agent.Position)) { Name = "dist" },
+                new Axis(0f, CommonAIDecisionFunctions.CalculateEnemyTotalPower(behavior.Agent.Team), x => x, CommonAIDecisionFunctions.FormationPower()) { Name = "power" },
+                new Axis(0f, 1f, x => x + 0.3f, CommonAIDecisionFunctions.RangedUnitRatio()) { Name = "ranged" },
+                new Axis(0f, 1f, x => Math.Max(OccupancyFloor, x),
+                    CommonAIDecisionFunctions.BlastOccupancy(behavior.Agent, radius, 0f)) { Name = "occupancy" },
+                TargetMobilityAxis()
+            };
+        }
+
         public static Func<AbstractAgentCastingBehavior, List<Axis>> CreateAoETargetedOffensiveSpellAxis()
         {
-            return behavior => new List<Axis>
+            return behavior => IsMindControlSpell(behavior)
+                ? CreateMindControlAxisList(behavior)
+                : new List<Axis>
             {
-                new Axis(0f, 120f, x => 1f - x, CommonAIDecisionFunctions.DistanceToTarget(() => behavior.Agent.Position)),
-                new Axis(0f, CommonAIDecisionFunctions.CalculateEnemyTotalPower(behavior.Agent.Team) / 4f, x => x, CommonAIDecisionFunctions.FormationPower()),
-                new Axis(0f, 1f, x => x + 0.3f, CommonAIDecisionFunctions.RangedUnitRatio())
+                new Axis(0f, 120f, x => 1f - x, CommonAIDecisionFunctions.DistanceToTarget(() => behavior.Agent.Position)) { Name = "dist" },
+                new Axis(0f, CommonAIDecisionFunctions.CalculateEnemyTotalPower(behavior.Agent.Team), x => x, CommonAIDecisionFunctions.FormationPower()) { Name = "power" },
+                new Axis(0f, 1f, x => x + 0.3f, CommonAIDecisionFunctions.RangedUnitRatio()) { Name = "ranged" },
+
+                new Axis(0f, 1f, x => x > ExtremeAllyShare ? 0f : Math.Max(AllyDensityFloor, 1f - AllyDensityBite * x),
+                    CommonAIDecisionFunctions.AllyDensityInBlast(behavior.Agent, BlastRadiusOf(behavior))) { Name = "allyDens" },
+
+                SpellWorthAxis(behavior),
+
+                BlastOccupancyAxis(behavior),
+
+                TargetMobilityAxis()
             };
         }
 
         public static Func<AbstractAgentCastingBehavior, List<Axis>> CreateBuffSpellAxis()
         {
-            return behavior => new List<Axis>
+            return behavior => IsHexLike(behavior)
+                ? CreateHexAxisList(behavior)
+                : new List<Axis>
             {
-                new Axis(0f, 50f, x => ScoringFunctions.Logistic(0.4f, 1f, 20f)(1f - x), CommonAIDecisionFunctions.DistanceToTarget(() => behavior.Agent.Position)),
+                new Axis(0f, 50f, x => ScoringFunctions.Logistic(0.4f, 1f, 20f)(1f - x), CommonAIDecisionFunctions.DistanceToTarget(() => behavior.Agent.Position)) { Name = "dist" },
                 new Axis(0f, 20f, x => 1f - x, CommonAIDecisionFunctions.TargetDistanceToHostiles()),
-                new Axis(0f, CommonAIDecisionFunctions.CalculateTeamTotalPower(behavior.Agent.Team), x => x, CommonAIDecisionFunctions.FormationPower()),
+                new Axis(0f, CommonAIDecisionFunctions.CalculateTeamTotalPower(behavior.Agent.Team), x => x, CommonAIDecisionFunctions.FormationPower()) { Name = "power" },
                 new Axis(1f, 2.5f, x => 1f - x, CommonAIDecisionFunctions.Dispersedness())
             };
         }
@@ -174,9 +263,9 @@ namespace SOTOR.AbilitySystem.AI
         {
             return behavior => new List<Axis>
             {
-                new Axis(0f, 50f, x => ScoringFunctions.Logistic(0.4f, 1f, 20f)(1f - x), CommonAIDecisionFunctions.DistanceToTarget(() => behavior.Agent.Position)),
+                new Axis(0f, 50f, x => ScoringFunctions.Logistic(0.4f, 1f, 20f)(1f - x), CommonAIDecisionFunctions.DistanceToTarget(() => behavior.Agent.Position)) { Name = "dist" },
                 new Axis(0f, 15f, x => 1f - x, CommonAIDecisionFunctions.TargetDistanceToHostiles()),
-                new Axis(0f, CommonAIDecisionFunctions.CalculateEnemyTotalPower(behavior.Agent.Team), x => x, CommonAIDecisionFunctions.FormationPower()),
+                new Axis(0f, CommonAIDecisionFunctions.CalculateEnemyTotalPower(behavior.Agent.Team), x => x, CommonAIDecisionFunctions.FormationPower()) { Name = "power" },
                 new Axis(1f, 2.5f, x => 1f - x, CommonAIDecisionFunctions.Dispersedness()),
                 new Axis(0f, 1f, x => 1f - x, CommonAIDecisionFunctions.CavalryUnitRatio())
             };
@@ -203,6 +292,76 @@ namespace SOTOR.AbilitySystem.AI
             catch (NullReferenceException)
             {
                 return false;
+            }
+        }
+
+        public static float BlastDamageOf(AbstractAgentCastingBehavior behavior)
+        {
+            try
+            {
+                var t = behavior?.AbilityTemplate;
+                if (t == null || string.IsNullOrEmpty(t.TriggeredEffectID)) return 0f;
+                var eff = TriggeredEffectManager.GetTemplate(t.TriggeredEffectID);
+                return eff?.DamageAmount ?? 0f;
+            }
+            catch
+            {
+                return 0f;
+            }
+        }
+
+        private const float MobilityMax = 10f;
+        private const float MobilityFloor = 0.6f;
+        private const float MobilityBite = 0.4f;
+
+        private static Axis TargetMobilityAxis()
+        {
+            return new Axis(0f, MobilityMax,
+                x => Math.Max(MobilityFloor, 1f - MobilityBite * x),
+                CommonAIDecisionFunctions.TargetMobility()) { Name = "mobility" };
+        }
+
+        private const float SpellWorthMax = 250f;
+        private const float SpellWorthFloor = 0.2f;
+
+        private const float OccupancyFloor = 0.25f;
+
+        private static Axis BlastOccupancyAxis(AbstractAgentCastingBehavior behavior)
+        {
+            var t = behavior?.AbilityTemplate;
+            bool lingers = t != null && t.TriggerType == TriggerType.EveryTick && t.TickInterval > 0f;
+            return new Axis(0f, 1f, x => Math.Max(OccupancyFloor, x),
+                CommonAIDecisionFunctions.BlastOccupancy(
+                    behavior.Agent, BlastRadiusOf(behavior), lingers ? t.Duration : 0f)) { Name = "occupancy" };
+        }
+
+        private static Axis SpellWorthAxis(AbstractAgentCastingBehavior behavior)
+        {
+            var t = behavior?.AbilityTemplate;
+
+            bool lingers = t != null && t.TriggerType == TriggerType.EveryTick && t.TickInterval > 0f;
+
+            return new Axis(0f, SpellWorthMax,
+                x => Math.Max(SpellWorthFloor, (float)Math.Sqrt(x)),
+                CommonAIDecisionFunctions.SpellWorth(
+                    behavior.Agent, BlastRadiusOf(behavior), BlastDamageOf(behavior),
+                    t?.WindsOfMagicCost ?? 1f,
+                    lingers ? t.Duration : 0f,
+                    lingers ? t.TickInterval : 0f)) { Name = "worth" };
+        }
+
+        public static float BlastRadiusOf(AbstractAgentCastingBehavior behavior)
+        {
+            try
+            {
+                var t = behavior?.AbilityTemplate;
+                if (t == null || string.IsNullOrEmpty(t.TriggeredEffectID)) return 0f;
+                var eff = TriggeredEffectManager.GetTemplate(t.TriggeredEffectID);
+                return eff?.Radius ?? 0f;
+            }
+            catch
+            {
+                return 0f;
             }
         }
     }

@@ -64,24 +64,33 @@ namespace SOTOR.AbilitySystem
         public struct LoreDisplay
         {
             public string LoreId;
-            public string Title;
+
+            public string TitleId;
             public string SymbolSprite;
+        }
+
+        public static string TitleFor(string loreId)
+        {
+            if (loreId == null) return string.Empty;
+            return Display.TryGetValue(loreId, out var d) && d.TitleId != null
+                ? SotorText.Rendered(d.TitleId)
+                : loreId;
         }
 
         public static readonly Dictionary<string, LoreDisplay> Display = new Dictionary<string, LoreDisplay>
         {
-            [MinorMagic] = new LoreDisplay { LoreId = MinorMagic, Title = "Minor Magic", SymbolSprite = "minormagic_symbol" },
-            [LoreOfFire] = new LoreDisplay { LoreId = LoreOfFire, Title = "Lore of Fire", SymbolSprite = "firemagic_symbol" },
-            [LoreOfHeavens] = new LoreDisplay { LoreId = LoreOfHeavens, Title = "Lore of Heavens", SymbolSprite = "celestial_symbol" },
-            [LoreOfLight] = new LoreDisplay { LoreId = LoreOfLight, Title = "Lore of Light", SymbolSprite = "lightmagic_symbol" },
-            [LoreOfDeath] = new LoreDisplay { LoreId = LoreOfDeath, Title = "Lore of Death", SymbolSprite = "deathmagic_symbol" },
-            [LoreOfNecromancy] = new LoreDisplay { LoreId = LoreOfNecromancy, Title = "Lore of Necromancy", SymbolSprite = "necromancy_symbol" },
-            [LoreOfBeasts] = new LoreDisplay { LoreId = LoreOfBeasts, Title = "Lore of Beasts", SymbolSprite = "beastmagic_symbol" },
-            [LoreOfLife] = new LoreDisplay { LoreId = LoreOfLife, Title = "Lore of Life", SymbolSprite = "lifemagic_symbol" },
-            [LoreOfMetal] = new LoreDisplay { LoreId = LoreOfMetal, Title = "Lore of Metal", SymbolSprite = "metalmagic_symbol" },
+            [MinorMagic] = new LoreDisplay { LoreId = MinorMagic, TitleId = "sotor_lore_title_minormagic", SymbolSprite = "minormagic_symbol" },
+            [LoreOfFire] = new LoreDisplay { LoreId = LoreOfFire, TitleId = "sotor_lore_title_loreoffire", SymbolSprite = "firemagic_symbol" },
+            [LoreOfHeavens] = new LoreDisplay { LoreId = LoreOfHeavens, TitleId = "sotor_lore_title_loreofheavens", SymbolSprite = "celestial_symbol" },
+            [LoreOfLight] = new LoreDisplay { LoreId = LoreOfLight, TitleId = "sotor_lore_title_loreoflight", SymbolSprite = "lightmagic_symbol" },
+            [LoreOfDeath] = new LoreDisplay { LoreId = LoreOfDeath, TitleId = "sotor_lore_title_loreofdeath", SymbolSprite = "deathmagic_symbol" },
+            [LoreOfNecromancy] = new LoreDisplay { LoreId = LoreOfNecromancy, TitleId = "sotor_lore_title_loreofnecromancy", SymbolSprite = "necromancy_symbol" },
+            [LoreOfBeasts] = new LoreDisplay { LoreId = LoreOfBeasts, TitleId = "sotor_lore_title_loreofbeasts", SymbolSprite = "beastmagic_symbol" },
+            [LoreOfLife] = new LoreDisplay { LoreId = LoreOfLife, TitleId = "sotor_lore_title_loreoflife", SymbolSprite = "lifemagic_symbol" },
+            [LoreOfMetal] = new LoreDisplay { LoreId = LoreOfMetal, TitleId = "sotor_lore_title_loreofmetal", SymbolSprite = "metalmagic_symbol" },
 
-            [HighMagic] = new LoreDisplay { LoreId = HighMagic, Title = "High Magic", SymbolSprite = "highmagic_symbol" },
-            [DarkMagic] = new LoreDisplay { LoreId = DarkMagic, Title = "Dark Magic", SymbolSprite = "darkmagic_symbol" },
+            [HighMagic] = new LoreDisplay { LoreId = HighMagic, TitleId = "sotor_lore_title_highmagic", SymbolSprite = "highmagic_symbol" },
+            [DarkMagic] = new LoreDisplay { LoreId = DarkMagic, TitleId = "sotor_lore_title_darkmagic", SymbolSprite = "darkmagic_symbol" },
         };
     }
 }

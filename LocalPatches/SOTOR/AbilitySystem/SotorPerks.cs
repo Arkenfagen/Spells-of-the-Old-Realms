@@ -123,7 +123,7 @@ namespace SOTOR.AbilitySystem
                 (TroopUsageFlags)0, (TroopUsageFlags)0);
 
             _catalyst.Initialize("Catalyst", sc, 225, _improvision,
-                "For every legendary item in your equipment slots you gain +5 extra Winds of magic at the start of battle.", personal, 5f, add,
+                "For every enchanted item in your equipment slots you gain +5 extra Winds of magic at the start of battle.", personal, 5f, add,
                 "You gain +20% Winds of Magic regeneration while waiting in a town.", personal, 0.2f, factor,
                 (TroopUsageFlags)0, (TroopUsageFlags)0);
 
@@ -138,7 +138,7 @@ namespace SOTOR.AbilitySystem
                 (TroopUsageFlags)0, (TroopUsageFlags)0);
 
             _trueTransmutation.Initialize("Archmage", sc, 300, null,
-                "Become an Archmage. Unlocks the ability to learn the restricted High Magic and Dark Magic lores.", personal, 0f, none,
+                "Become an Archmage. Unlocks the restricted High Magic and Dark Magic lores, and lets you set two enchantments on a single item.", personal, 0f, none,
                 "", (PartyRole)0, 0f, none, (TroopUsageFlags)65535, (TroopUsageFlags)65535);
 
             SotorLog.Info("SotorPerks: registered 14 Spellcraft perks.");

@@ -73,7 +73,10 @@ namespace SOTOR.AbilitySystem
         private static int SpellcraftValue(Hero hero)
         {
             var skill = SotorSkills.Spellcraft;
-            return (hero != null && skill != null) ? hero.GetSkillValue(skill) : 0;
+            int value = (hero != null && skill != null) ? hero.GetSkillValue(skill) : 0;
+
+            value += (int)Items.SotorItemTraitCampaign.SumEquipmentStat(hero, Items.SotorItemTraitStatType.Skill, "Spellcraft");
+            return value;
         }
 
         public static float GetSpellDurationFactor(Hero hero)
@@ -88,7 +91,9 @@ namespace SOTOR.AbilitySystem
 
         public static float GetMaxWinds(Hero hero)
         {
-            return BaseMaxWinds + MaxWindsPerSpellcraftPoint * SpellcraftValue(hero);
+
+            return BaseMaxWinds + MaxWindsPerSpellcraftPoint * SpellcraftValue(hero)
+                 + Items.SotorItemTraitCampaign.SumEquipmentStat(hero, Items.SotorItemTraitStatType.WindsOfMagicMax);
         }
 
         public static float GetWindsRechargeSkillBonus(Hero hero)

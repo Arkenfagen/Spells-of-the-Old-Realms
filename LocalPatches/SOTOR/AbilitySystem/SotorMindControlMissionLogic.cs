@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 
@@ -10,37 +11,55 @@ namespace SOTOR.AbilitySystem
     public class SotorMindControlMissionLogic : MissionLogic
     {
 
-        private readonly List<Agent> _convertedAgents = new List<Agent>();
+        private class ConvertInfo
+        {
+            public MobileParty ControllerParty;
+            public bool PlayerControlled;
+            public PartyBase OriginParty;
+        }
 
-        private readonly Dictionary<CharacterObject, int> _recruitTally = new Dictionary<CharacterObject, int>();
+        private readonly Dictionary<Agent, ConvertInfo> _converts = new Dictionary<Agent, ConvertInfo>();
 
         private readonly HashSet<Agent> _freezeFixRemoved = new HashSet<Agent>();
         private bool _freezeFixDone;
 
-        public bool HasConverts => _convertedAgents.Count > 0;
+        public bool HasConverts => _converts.Count > 0;
 
-        public void OnAgentConverted(Agent agent)
+        public override void AfterStart()
+        {
+            base.AfterStart();
+            if (PendingAiClaims.Count > 0)
+            {
+                SotorLog.Warn($"MindControl: discarding {PendingAiClaims.Count} stale AI convert claim(s) from a previous battle.");
+                PendingAiClaims.Clear();
+            }
+        }
+
+        public void OnAgentConverted(Agent agent, Agent caster)
         {
             if (agent == null)
             {
                 return;
             }
-            if (!_convertedAgents.Contains(agent))
-            {
-                _convertedAgents.Add(agent);
-            }
 
-            if (!agent.IsHero && agent.Character is CharacterObject troop)
+            var controllerHero = SOTOR.Extensions.AgentExtensions.GetHero(caster);
+            var controllerParty = controllerHero?.PartyBelongedTo;
+            bool playerControlled = (caster != null && caster.IsMainAgent)
+                                    || (controllerParty != null && controllerParty == MobileParty.MainParty);
+
+            if (!_converts.TryGetValue(agent, out var info))
             {
-                _recruitTally.TryGetValue(troop, out int n);
-                _recruitTally[troop] = n + 1;
+                info = new ConvertInfo { OriginParty = agent.Origin?.BattleCombatant as PartyBase };
+                _converts[agent] = info;
             }
+            info.ControllerParty = controllerParty;
+            info.PlayerControlled = playerControlled;
         }
 
         public override void OnMissionTick(float dt)
         {
             base.OnMissionTick(dt);
-            if (_freezeFixDone || _convertedAgents.Count == 0)
+            if (_freezeFixDone || _converts.Count == 0)
             {
                 return;
             }
@@ -51,12 +70,12 @@ namespace SOTOR.AbilitySystem
                 return;
             }
 
-            var playerEnemy = mission.PlayerEnemyTeam;
-            if (playerEnemy == null)
+            var playerTeam = mission.PlayerTeam;
+            if (playerTeam == null)
             {
                 return;
             }
-            if (AnyActiveTrueEnemy(mission))
+            if (AnyTrueFighter(mission, enemySide: true) && AnyTrueFighter(mission, enemySide: false))
             {
                 return;
             }
@@ -65,17 +84,17 @@ namespace SOTOR.AbilitySystem
             _freezeFixDone = true;
         }
 
-        private bool AnyActiveTrueEnemy(Mission mission)
+        private bool AnyTrueFighter(Mission mission, bool enemySide)
         {
             foreach (var team in mission.Teams)
             {
-                if (team == null || !team.IsEnemyOf(mission.PlayerTeam))
+                if (team == null || team.IsEnemyOf(mission.PlayerTeam) != enemySide)
                 {
                     continue;
                 }
                 foreach (var agent in team.ActiveAgents)
                 {
-                    if (agent != null && agent.IsHuman)
+                    if (agent != null && agent.IsHuman && !_converts.ContainsKey(agent))
                     {
                         return true;
                     }
@@ -86,7 +105,7 @@ namespace SOTOR.AbilitySystem
 
         private void RemoveConvertsNonLethally()
         {
-            foreach (var agent in _convertedAgents)
+            foreach (var agent in _converts.Keys)
             {
                 try
                 {
@@ -109,49 +128,90 @@ namespace SOTOR.AbilitySystem
                     SotorLog.Warn($"MindControl freeze-fix: Die(TeamSwitch) failed: {ex.Message}");
                 }
             }
-            SotorLog.Info($"MindControl freeze-fix: removed {_convertedAgents.Count} leftover convert(s) non-lethally to end the battle.");
+            SotorLog.Info($"MindControl freeze-fix: removed {_converts.Count} leftover convert(s) non-lethally to end the battle.");
         }
 
         public static readonly Dictionary<CharacterObject, int> PendingRecruits = new Dictionary<CharacterObject, int>();
 
+        public class AiConvertClaim
+        {
+            public CharacterObject Troop;
+            public MobileParty ControllerParty;
+            public PartyBase OriginParty;
+            public int Count;
+        }
+
+        public static readonly List<AiConvertClaim> PendingAiClaims = new List<AiConvertClaim>();
+
         protected override void OnEndMission()
         {
             base.OnEndMission();
-            if (_recruitTally.Count == 0)
+            if (_converts.Count == 0)
             {
                 return;
             }
-            foreach (var kv in _recruitTally)
+
+            int playerStash = 0, aiStash = 0, reclaimed = 0;
+            foreach (var kv in _converts)
             {
-                CharacterObject troop = kv.Key;
-                int count = CountSurvivors(troop);
-                if (troop == null || count <= 0)
+                var agent = kv.Key;
+                var info = kv.Value;
+
+                if (agent == null || agent.IsHero || !(agent.Character is CharacterObject troop))
                 {
                     continue;
                 }
-                PendingRecruits.TryGetValue(troop, out int n);
-                PendingRecruits[troop] = n + count;
-            }
-            SotorLog.Info($"MindControl: stashed {PendingRecruits.Count} troop type(s) of surviving converts for post-battle recruit.");
-        }
-
-        private int CountSurvivors(CharacterObject troop)
-        {
-            int n = 0;
-            foreach (var agent in _convertedAgents)
-            {
-                if (agent == null || agent.IsHero || agent.Character != troop)
+                bool survived = _freezeFixRemoved.Contains(agent)
+                                || (agent.State != AgentState.Killed && agent.State != AgentState.Deleted);
+                if (!survived)
                 {
                     continue;
                 }
 
-                if (_freezeFixRemoved.Contains(agent)
-                    || (agent.State != AgentState.Killed && agent.State != AgentState.Deleted))
+                if (info.PlayerControlled)
                 {
-                    n++;
+
+                    if (info.OriginParty == PartyBase.MainParty)
+                    {
+                        reclaimed++;
+                        continue;
+                    }
+
+                    PendingRecruits.TryGetValue(troop, out int n);
+                    PendingRecruits[troop] = n + 1;
+                    playerStash++;
+                }
+                else if (info.ControllerParty != null)
+                {
+
+                    if (info.OriginParty == null)
+                    {
+                        continue;
+                    }
+                    var claim = PendingAiClaims.Find(c => c.Troop == troop
+                                                          && c.ControllerParty == info.ControllerParty
+                                                          && c.OriginParty == info.OriginParty);
+                    if (claim == null)
+                    {
+                        claim = new AiConvertClaim
+                        {
+                            Troop = troop,
+                            ControllerParty = info.ControllerParty,
+                            OriginParty = info.OriginParty,
+                        };
+                        PendingAiClaims.Add(claim);
+                    }
+                    claim.Count++;
+                    aiStash++;
                 }
             }
-            return n;
+
+            if (playerStash > 0 || aiStash > 0 || reclaimed > 0)
+            {
+                SotorLog.Info($"MindControl: stashed {playerStash} player-controlled and {aiStash} AI-controlled "
+                              + $"surviving convert(s) for post-battle settlement; {reclaimed} of the player's own "
+                              + "men were taken back and need no recruiting.");
+            }
         }
     }
 }

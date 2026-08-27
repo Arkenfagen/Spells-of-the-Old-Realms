@@ -62,13 +62,61 @@ namespace SOTOR.AbilitySystem.AI
             CurrentCastingBehavior = DetermineBehavior(AvailableCastingBehaviors, CurrentCastingBehavior);
         }
 
+        private const float SwitchMargin = 0.08f;
+
         private AbstractAgentCastingBehavior DetermineBehavior(List<IAgentBehavior> available, AbstractAgentCastingBehavior current)
         {
-            var option = DecisionManager.EvaluateCastingBehaviors(available);
-            if (option == null)
+
+            var ranked = DecisionManager.RankCastingBehaviors(available);
+            var best = ranked.Count > 0 ? ranked[0] : null;
+
+            if (best == null)
             {
+
+                SotorAimDiagnostics.LogBehaviorRanking(Agent, available, null);
                 return current;
             }
+
+            BehaviorOption option = null;
+            foreach (var candidate in ranked)
+            {
+                if (candidate?.Behavior is AbstractAgentCastingBehavior cast
+                    && cast.CanDeliverTo(candidate.Target))
+                {
+                    option = candidate;
+                    break;
+                }
+            }
+
+            if (option == null)
+            {
+                option = best;
+            }
+
+            if (current != null && option.Behavior != current)
+            {
+                BehaviorOption currentOption = null;
+                foreach (var candidate in ranked)
+                {
+                    if (candidate?.Behavior == current)
+                    {
+                        currentOption = candidate;
+                        break;
+                    }
+                }
+
+                bool currentStillDeliverable = currentOption != null && current.CanDeliverTo(current.CurrentTarget);
+                if (currentStillDeliverable
+                    && option.Target.UtilityValue < currentOption.Target.UtilityValue + SwitchMargin)
+                {
+
+                    SotorAimDiagnostics.LogBehaviorRanking(Agent, available, currentOption);
+                    return current;
+                }
+            }
+
+            SotorAimDiagnostics.LogBehaviorRanking(Agent, available, option);
+
             if (option.Behavior != current)
             {
                 current?.Terminate();

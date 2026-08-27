@@ -46,7 +46,12 @@ namespace SOTOR.AbilitySystem
         public static string GetSpellbookLabel(SpellCastingLevel stagedLevel)
         {
             int uses = 1 + CastingLevelToPieces(stagedLevel);
-            return "Arcane Conduit (" + uses + (uses == 1 ? " charge):" : " charges):");
+
+            var label = SotorText.GetObject(uses == 1
+                ? "sotor_sb_lbl_conduit_one"
+                : "sotor_sb_lbl_conduit_many");
+            label.SetTextVariable("COUNT", uses);
+            return label.ToString();
         }
 
         public static string GetSpellbookValue(Hero hero, SpellCastingLevel stagedLevel)

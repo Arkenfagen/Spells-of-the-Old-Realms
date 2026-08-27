@@ -5,6 +5,7 @@ using System.Xml.Serialization;
 using SOTOR;
 using SOTOR.AbilitySystem.Crosshairs;
 using TaleWorlds.ModuleManager;
+using SOTOR.Extensions;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.View.Screens;
 
@@ -59,9 +60,15 @@ namespace SOTOR.AbilitySystem
         public static Ability CreateNew(string id, Agent caster)
         {
 
-            if (id == "AmberSpear" && SotorSettings.UseThrownAmberSpear)
+            bool isPlayerCaster = caster != null
+                && (caster.IsMainAgent
+                    || (TaleWorlds.CampaignSystem.Hero.MainHero != null
+                        && caster.GetHero() == TaleWorlds.CampaignSystem.Hero.MainHero));
+
+            if (id == "AmberSpear" && SotorSettings.UseThrownAmberSpear && isPlayerCaster)
             {
                 id = "AmberSpearThrown";
+                SotorLog.Info("AbilityFactory: AmberSpear -> AmberSpearThrown for the player.");
             }
 
             if (!Templates.TryGetValue(id, out var template))

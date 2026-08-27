@@ -28,10 +28,7 @@ namespace SOTOR.AbilitySystem
                     }
                 }
 
-                if (removed > 0)
-                {
-                    SotorLog.Info($"HIDEDIAG: removed {removed} Spellcraft entr(ies) from skill grid ({skills.Count} remain).");
-                }
+                _ = removed;
             }
             catch (Exception ex)
             {

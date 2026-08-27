@@ -47,9 +47,27 @@ namespace SOTOR.AbilitySystem.AI
 
     public class KeepSafeAgentTacticalBehavior : AbstractAgentTacticalBehavior
     {
-        public KeepSafeAgentTacticalBehavior(Agent agent, HumanAIComponent aiComponent)
+
+        private const float StandoffFraction = 0.8f;
+
+        private const float MinUsefulRange = 5f;
+
+        private const float MaxChaseMultiple = 2f;
+        private const float MaxApproachDistance = 120f;
+
+        private const float ReleaseFraction = 0.9f;
+
+        private const float MinFlipSeconds = 0.5f;
+        private float _lastFlipTime;
+
+        private readonly AbstractAgentCastingBehavior _castingBehavior;
+        private bool _scripted;
+
+        public KeepSafeAgentTacticalBehavior(Agent agent, HumanAIComponent aiComponent,
+            AbstractAgentCastingBehavior castingBehavior = null)
             : base(agent, aiComponent)
         {
+            _castingBehavior = castingBehavior;
         }
 
         public override void Tick()
@@ -60,10 +78,92 @@ namespace SOTOR.AbilitySystem.AI
             {
                 Agent.Formation.AI.SetBehaviorWeight<BehaviorCharge>(0f);
             }
+
+            TickApproach();
+        }
+
+        private void TickApproach()
+        {
+            try
+            {
+                var template = _castingBehavior?.AbilityTemplate;
+                if (template == null || !CommonAIStateFunctions.CanAgentMoveFreely(Agent))
+                {
+                    return;
+                }
+
+                float maxRange = template.MaxDistance;
+                if (maxRange <= MinUsefulRange || float.IsInfinity(maxRange) || maxRange > 1000f)
+                {
+                    ReleaseScript();
+                    return;
+                }
+
+                var target = _castingBehavior.CurrentTarget;
+                var targetPos = target?.GetPositionPrioritizeCalculated() ?? Vec3.Invalid;
+                if (targetPos == Vec3.Invalid)
+                {
+                    ReleaseScript();
+                    return;
+                }
+
+                float dist = Agent.Position.Distance(targetPos);
+
+                float threshold = _scripted ? maxRange * ReleaseFraction : maxRange;
+                if (dist <= threshold)
+                {
+                    ReleaseScript();
+                    return;
+                }
+
+                if (dist > maxRange * MaxChaseMultiple || dist > MaxApproachDistance)
+                {
+
+                    ReleaseScript();
+                    return;
+                }
+
+                var toCaster = (Agent.Position - targetPos);
+                if (toCaster.Length < 0.01f)
+                {
+                    return;
+                }
+                var standoff = targetPos + toCaster.NormalizedCopy() * (maxRange * StandoffFraction);
+
+                float now = Mission.Current?.CurrentTime ?? 0f;
+                if (!_scripted && now - _lastFlipTime < MinFlipSeconds)
+                {
+                    return;
+                }
+
+                var worldPos = new WorldPosition(Mission.Current.Scene, standoff);
+                Agent.SetScriptedPosition(ref worldPos, false, (Agent.AIScriptedFrameFlags)0);
+                if (!_scripted)
+                {
+                    _lastFlipTime = now;
+                    SotorLog.Info($"CastApproach: {Agent.Name} closing for {template.StringID} "
+                                  + $"({dist:0}m > {maxRange:0}m), standoff {maxRange * StandoffFraction:0}m.");
+                    _scripted = true;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                SotorLog.Warn($"CastApproach failed harmlessly: {ex.GetType().Name}: {ex.Message}");
+            }
+        }
+
+        private void ReleaseScript()
+        {
+            if (!_scripted) return;
+            _scripted = false;
+            _lastFlipTime = Mission.Current?.CurrentTime ?? 0f;
+            Agent.DisableScriptedMovement();
+            SotorLog.Info($"CastApproach: {Agent.Name} in range, movement released.");
         }
 
         public override void Terminate()
         {
+            ReleaseScript();
         }
 
         public override void ApplyBehaviorParams()

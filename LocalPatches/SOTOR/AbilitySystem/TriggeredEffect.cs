@@ -19,6 +19,8 @@ namespace SOTOR.AbilitySystem
         public string OwnerShipTag { get; set; } = "untagged";
         public int OwnerSpellTier { get; set; }
 
+        public AbilityEffectType OwnerEffectType { get; set; } = AbilityEffectType.Missile;
+
         public TriggeredEffect(TriggeredEffectTemplate template)
         {
             _template = template;
@@ -26,12 +28,113 @@ namespace SOTOR.AbilitySystem
 
         public void Trigger(Vec3 position, Vec3 normal, Agent triggererAgent, MBList<Agent> targets = null, float damageMultiplier = 1f)
         {
+            try
+            {
+                TriggerCore(position, normal, triggererAgent, targets, damageMultiplier);
+            }
+            catch (Exception ex)
+            {
+                SotorLog.Warn($"TriggeredEffect.Trigger failed (effect='{_template?.StringID}', "
+                            + $"caster='{triggererAgent?.Name}', pos={position}): {ex.GetType().Name}: {ex.Message}");
+            }
+        }
+
+        private void LogBlastGeometry(Vec3 position, Agent triggererAgent,
+            TaleWorlds.CampaignSystem.Hero triggererHero,
+            MBList<Agent> targets, float radius, float radiusFactor, bool preTargeted)
+        {
+            try
+            {
+                if (radius <= 0f || _template == null || _template.DamageAmount <= 0) return;
+                if (triggererAgent == null || triggererAgent != Mission.Current?.MainAgent) return;
+
+                bool verbose = SotorLog.MinLevel <= SotorLog.Level.Debug;
+
+                int count = targets?.Count ?? 0;
+                float farthestFlat = 0f, farthest3d = 0f;
+                string farthestName = "none";
+                int beyond = 0;
+                if (targets != null)
+                {
+                    foreach (var a in targets)
+                    {
+                        if (a == null) continue;
+                        float flat = a.Position.AsVec2.Distance(position.AsVec2);
+                        float d3 = a.Position.Distance(position);
+                        if (flat > farthestFlat)
+                        {
+                            farthestFlat = flat;
+                            farthest3d = d3;
+                            farthestName = a.Name ?? "?";
+                        }
+                        if (flat > radius + 0.01f) beyond++;
+                    }
+                }
+
+                int missionAgents = Mission.Current?.Agents?.Count ?? -1;
+                if (verbose)
+                SotorLog.Debug(
+                    $"BLAST '{_template.StringID}' (spell='{OwnerSpellName ?? "?"}'): "
+                    + $"templateRadius={_template.Radius} gearFactor={radiusFactor:0.###} finalRadius={radius:0.##} "
+                    + $"targetType={_template.TargetType} preTargeted={preTargeted} "
+                    + $"hit={count}/{missionAgents} agents, beyondRadius={beyond}, "
+                    + $"farthest='{farthestName}' flat={farthestFlat:0.#}m true3d={farthest3d:0.#}m");
+
+                if (beyond > 0)
+                {
+                    SotorLog.Warn($"BLAST '{_template.StringID}': {beyond} target(s) are OUTSIDE the "
+                                  + $"{radius:0.##}m radius - the gather is not honouring it.");
+                }
+
+                if (!verbose) return;
+
+                float heroFactor = SOTOR.Items.SotorItemTraitCampaign.GetSpellRadiusFactor(triggererHero);
+                bool arena = AbilityMissionModeHelper.IsArenaOrTournamentMission(Mission.Current);
+                SotorLog.Debug(
+                    $"BLAST radius sources: arena={arena} appliedFromWornGear={radiusFactor:0.###} "
+                    + $"heroSavedLoadout={heroFactor:0.###}"
+                    + (Math.Abs(radiusFactor - heroFactor) > 0.001f
+                        ? "  (differs: loaner or changed kit - the worn factor wins by design)"
+                        : ""));
+                if (radiusFactor > 1.001f)
+                {
+                    SotorLog.Debug("BLAST worn gear says: "
+                                   + SOTOR.Items.SotorItemExtensions.DescribeWornStat(
+                                       triggererAgent, SOTOR.Items.SotorItemTraitStatType.SpellRadius));
+                }
+
+                float wornDmg = SOTOR.Items.SotorItemExtensions.SumArmorDamageBonus(
+                    triggererAgent, _template.DamageType);
+                SotorLog.Debug(
+                    $"BLAST damage sources: type={_template.DamageType} wornArmourBonus=+{wornDmg:0.###}"
+                    + (wornDmg != 0f ? "  (applies to every victim of this cast before their resists)" : ""));
+            }
+            catch (Exception ex)
+            {
+                SotorLog.Warn($"BLAST diagnostic failed: {ex.GetType().Name}: {ex.Message}");
+            }
+        }
+
+        private void TriggerCore(Vec3 position, Vec3 normal, Agent triggererAgent, MBList<Agent> targets, float damageMultiplier)
+        {
             if (_template == null || triggererAgent == null || !triggererAgent.IsActive())
             {
                 return;
             }
 
             float radius = _template.Radius;
+            float radiusFactor = 1f;
+
+            var triggererHero = SOTOR.Extensions.AgentExtensions.GetHero(triggererAgent);
+            if (triggererHero != null && radius > 0f)
+            {
+                float wornPct = SOTOR.Items.SotorItemExtensions.SumWornStat(
+                    triggererAgent, SOTOR.Items.SotorItemTraitStatType.SpellRadius);
+                radiusFactor = wornPct != 0f ? Math.Max(0.1f, 1f + wornPct / 100f) : 1f;
+                radius *= radiusFactor;
+            }
+
+            bool preTargeted = targets != null;
 
             if (targets == null)
             {
@@ -41,11 +144,16 @@ namespace SOTOR.AbilitySystem
                     case TargetType.Self:
                         targets.Add(triggererAgent);
                         break;
+
                     case TargetType.Enemy:
-                        targets = Mission.Current.GetNearbyEnemyAgents(position.AsVec2, radius, triggererAgent.Team, targets);
+                        targets = triggererAgent.Team != null
+                            ? Mission.Current.GetNearbyEnemyAgents(position.AsVec2, radius, triggererAgent.Team, targets)
+                            : Mission.Current.GetNearbyAgents(position.AsVec2, radius, targets);
                         break;
                     case TargetType.Friendly:
-                        targets = Mission.Current.GetNearbyAllyAgents(position.AsVec2, radius, triggererAgent.Team, targets);
+                        targets = triggererAgent.Team != null
+                            ? Mission.Current.GetNearbyAllyAgents(position.AsVec2, radius, triggererAgent.Team, targets)
+                            : Mission.Current.GetNearbyAgents(position.AsVec2, radius, targets);
                         break;
                     default:
                         targets = Mission.Current.GetNearbyAgents(position.AsVec2, radius, targets);
@@ -55,13 +163,18 @@ namespace SOTOR.AbilitySystem
 
             targets = NormalizeTriggeredTargets(targets);
 
+            LogBlastGeometry(position, triggererAgent, triggererHero, targets, radius, radiusFactor, preTargeted);
+
             PlaySound(position);
 
             if (_template.DamageAmount > 0)
             {
                 int min = (int)(_template.DamageAmount * (1f - _template.DamageVariance) * damageMultiplier);
                 int max = (int)(_template.DamageAmount * (1f + _template.DamageVariance) * damageMultiplier);
-                SotorDamageHelper.DamageAgents(targets, min, max, triggererAgent, _template, _template.HasShockWave, position, OwnerIsSingleTarget, OwnerSpellName);
+
+                SotorDamageHelper.DamageAgents(targets, min, max, triggererAgent, _template,
+                    _template.HasShockWave, position, OwnerIsSingleTarget, OwnerSpellName, radius,
+                    OwnerEffectType, OwnerSpellTier);
             }
 
             TryDamageShip(position, triggererAgent, targets, damageMultiplier);
@@ -75,9 +188,35 @@ namespace SOTOR.AbilitySystem
 
             ApplyStatusEffects(targets, triggererAgent, scaledDuration);
 
+            NotePracticeStatusEffects(targets, triggererAgent);
+
             RunTriggeredScript(position, triggererAgent, targets, scaledDuration);
 
             SpawnVisuals(position, normal);
+        }
+
+        private void NotePracticeStatusEffects(MBList<Agent> targets, Agent triggererAgent)
+        {
+            if (targets == null || targets.Count == 0 || triggererAgent == null) return;
+            if (string.IsNullOrEmpty(OwnerSpellName)) return;
+
+            try
+            {
+                int allies = 0, enemies = 0;
+                foreach (var a in targets)
+                {
+                    if (a == null || !a.IsHuman || !a.IsActive()) continue;
+                    if (a.IsEnemyOf(triggererAgent)) enemies++;
+                    else if (a != triggererAgent) allies++;
+                }
+
+                AbilitySystem.Rivals.SotorPracticeTracker.NoteAllyBuffed(triggererAgent, OwnerSpellName, allies);
+                AbilitySystem.Rivals.SotorPracticeTracker.NoteEnemyAfflicted(triggererAgent, OwnerSpellName, enemies);
+            }
+            catch (System.Exception ex)
+            {
+                SotorLog.Warn($"Practice: status-effect counting failed harmlessly: {ex.GetType().Name}: {ex.Message}");
+            }
         }
 
         private void TryDamageShip(Vec3 position, Agent triggererAgent, MBList<Agent> targets, float damageMultiplier)
@@ -240,7 +379,9 @@ namespace SOTOR.AbilitySystem
                 ParticleSystem.CreateParticleSystemAttachedToEntity(prefab, entity, ref identity);
 
                 Vec3 fwd = normal;
-                if (Math.Abs(fwd.x) + Math.Abs(fwd.y) + Math.Abs(fwd.z) < 0.0001f)
+                if (float.IsNaN(fwd.x) || float.IsNaN(fwd.y) || float.IsNaN(fwd.z)
+                    || float.IsInfinity(fwd.x) || float.IsInfinity(fwd.y) || float.IsInfinity(fwd.z)
+                    || Math.Abs(fwd.x) + Math.Abs(fwd.y) + Math.Abs(fwd.z) < 0.0001f)
                 {
                     fwd = Vec3.Forward;
                 }

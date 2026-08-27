@@ -42,6 +42,15 @@ namespace SOTOR.AbilitySystem
                 disabledReason = new TextObject("{=sotor_ability_on_cooldown}On cooldown");
                 return true;
             }
+
+            if (Template != null
+                && Template.AbilityEffectType == AbilityEffectType.Summoning
+                && AbilityMissionModeHelper.IsArenaOrTournamentMission(Mission.Current))
+            {
+                disabledReason = SotorText.GetObject("sotor_no_summons_in_arena");
+                return true;
+            }
+
             return false;
         }
 
@@ -82,6 +91,21 @@ namespace SOTOR.AbilitySystem
             _cooldownEndTime = Mission.Current.CurrentTime + _coolDownLeft + 0.8f;
         }
 
+        public void ReduceCooldown(float seconds)
+        {
+            if (Mission.Current == null || seconds <= 0f)
+            {
+                return;
+            }
+            float remaining = _cooldownEndTime - Mission.Current.CurrentTime;
+            if (remaining <= 0f)
+            {
+                return;
+            }
+            _cooldownEndTime -= Math.Min(seconds, remaining);
+            IsOnCooldown();
+        }
+
         public bool TryCast(Agent casterAgent, out TextObject failureReason)
         {
             return TryCast(casterAgent, null, out failureReason);
@@ -100,9 +124,18 @@ namespace SOTOR.AbilitySystem
 
             if (IsDisabled(casterAgent, out failureReason))
             {
-                SotorLog.Info($"TryCast {StringID}: blocked — {failureReason?.ToString() ?? "disabled"} (cooldown {GetCoolDownLeft()}s).");
+
+                SotorLog.Info($"TryCast {StringID}: blocked for {DescribeCaster(casterAgent)}: "
+                              + $"{failureReason?.ToString() ?? "disabled"} (cooldown {GetCoolDownLeft()}s).");
                 return false;
             }
+
+            if (!IsThrownWeapon)
+            {
+                SotorCastAnimation.PlayRelease(casterAgent, Template?.AnimationActionName);
+            }
+
+            Rivals.SotorPracticeTracker.NoteCast(casterAgent, StringID);
 
             try
             {
@@ -131,6 +164,8 @@ namespace SOTOR.AbilitySystem
                         $"lookForward={fwd} lookElevation={elevationDeg:0.0}deg " +
                         $"spawnZ-casterZ={frame.origin.z - casterFrame.origin.z:0.00} spawnZ-eyeZ={frame.origin.z - eye.z:0.00}");
                 }
+
+                AI.SotorAimDiagnostics.LogCastGeometry(casterAgent, this, frame);
 
                 string scriptTypeName = GetScriptTypeName();
                 parent.CreateAndAddScriptComponent(scriptTypeName, false);
@@ -169,13 +204,16 @@ namespace SOTOR.AbilitySystem
 
                 if (Template.SeekerParameters != null)
                 {
+
                     var target = (preferredTarget != null && preferredTarget.IsValid)
                         ? preferredTarget
-                        : FindNearestEnemyTarget(casterAgent);
+                        : (AiBrainTarget(casterAgent) ?? FindNearestEnemyTarget(casterAgent));
                     if (target != null)
                     {
                         script.SetTargetSeeking(target, Template.SeekerParameters);
                         SotorLog.Info($"TryCast {StringID}: homing at '{target.Agent?.Name}' (source={(preferredTarget != null ? "crosshair" : "auto")}).");
+
+                        AI.SotorAimDiagnostics.LogSeekerTarget(casterAgent, this, target.Agent);
                     }
                 }
 
@@ -195,8 +233,27 @@ namespace SOTOR.AbilitySystem
             SetCoolDown(Template.CoolDown);
 
             OnCastSucceeded(casterAgent);
-            SotorLog.Info($"TryCast {StringID}: cast OK; cooldown started ({Template.CoolDown}s).");
+
+            SotorLog.Info($"TryCast {StringID}: cast OK by {DescribeCaster(casterAgent)}; "
+                          + $"cooldown started ({Template.CoolDown}s).");
             return true;
+        }
+
+        private static string DescribeCaster(Agent casterAgent)
+        {
+            try
+            {
+                if (casterAgent == null) return "(null caster)";
+                string name = casterAgent.Name ?? "(unnamed)";
+                if (casterAgent.IsMainAgent) return name + " [PLAYER]";
+                var team = casterAgent.Team;
+                if (team == null) return name + " [AI, no team]";
+                return name + (team.IsPlayerTeam || team.IsPlayerAlly ? " [ALLY-AI]" : " [ENEMY-AI]");
+            }
+            catch
+            {
+                return "(caster describe failed)";
+            }
         }
 
         protected virtual void OnCastSucceeded(Agent casterAgent)
@@ -261,6 +318,11 @@ namespace SOTOR.AbilitySystem
         private MatrixFrame GetSpawnFrame(Agent casterAgent)
         {
             MatrixFrame frame = casterAgent.LookFrame;
+
+            if (!casterAgent.IsPlayerControlled && TryCalculateAiCastFrame(casterAgent, ref frame))
+            {
+                return frame;
+            }
 
             switch (Template.AbilityEffectType)
             {
@@ -353,6 +415,69 @@ namespace SOTOR.AbilitySystem
                     }
                     return frame;
             }
+        }
+
+        private static SotorTarget AiBrainTarget(Agent casterAgent)
+        {
+            if (casterAgent == null || casterAgent.IsPlayerControlled) return null;
+            var agent = casterAgent.GetComponent<AI.WizardAIComponent>()?.CurrentCastingBehavior?.CurrentTarget?.Agent;
+            if (agent == null) return null;
+            var target = new SotorTarget { Agent = agent };
+            return target.IsValid ? target : null;
+        }
+
+        private bool TryCalculateAiCastFrame(Agent casterAgent, ref MatrixFrame frame)
+        {
+            var behavior = casterAgent.GetComponent<AI.WizardAIComponent>()?.CurrentCastingBehavior;
+            var target = behavior?.CurrentTarget;
+            if (target == null)
+            {
+                return false;
+            }
+
+            Vec3 aim = target.GetPositionPrioritizeCalculated();
+            if (aim == Vec3.Invalid)
+            {
+                return false;
+            }
+
+            switch (Template.AbilityEffectType)
+            {
+                case AbilityEffectType.Missile:
+                case AbilityEffectType.SeekerMissile:
+
+                    frame = frame.Elevate(casterAgent.GetEyeGlobalHeight()).Advance(Template.Offset);
+                    frame.rotation = Mat3.CreateMat3WithForward((aim - frame.origin).NormalizedCopy());
+                    break;
+
+                case AbilityEffectType.Blast:
+
+                    frame = new MatrixFrame(frame.rotation, aim).Advance(-Template.Offset).Elevate(1f);
+                    break;
+
+                case AbilityEffectType.Wind:
+                case AbilityEffectType.Vortex:
+
+                    frame = new MatrixFrame(casterAgent.Frame.rotation, aim);
+                    break;
+
+                default:
+
+                    frame = new MatrixFrame(Mat3.Identity, aim);
+                    break;
+            }
+
+            if (Template.AbilityTargetType == AbilityTargetType.GroundAtPosition && Mission.Current?.Scene != null)
+            {
+                frame.origin.z = Mission.Current.Scene.GetGroundHeightAtPosition(frame.origin, (BodyFlags)544321929);
+                if (Template.AbilityEffectType == AbilityEffectType.Bombardment)
+                {
+
+                    frame.origin.z += Template.Offset;
+                }
+            }
+
+            return true;
         }
 
         private Agent ResolveExplicitTarget(Agent casterAgent, SotorTarget preferredTarget)

@@ -17,17 +17,83 @@ namespace SOTOR.AbilitySystem
 
         public static bool IsSkeletonChar(CharacterObject c)
             => c?.Culture != null && c.Culture.StringId == SkeletonCultureId;
+
+        public static bool PartyHasNecromancer(PartyBase party)
+        {
+            var roster = party?.MemberRoster;
+            if (roster == null) return false;
+            for (int i = 0; i < roster.Count; i++)
+            {
+                var hero = roster.GetElementCopyAtIndex(i).Character?.HeroObject;
+                if (hero == null) continue;
+                var info = hero.GetExtendedInfo();
+                if (info == null || !info.HasLore(SotorLores.LoreOfNecromancy)) continue;
+                if (info.HasSpell("SummonSkeleton") || info.HasSpell("GraveCall")) return true;
+            }
+            return false;
+        }
     }
 
-    [HarmonyPatch(typeof(DefaultPartyWageModel), nameof(DefaultPartyWageModel.GetCharacterWage))]
+    [HarmonyPatch(typeof(DefaultPartyWageModel), nameof(DefaultPartyWageModel.GetTotalWage))]
     public static class SotorSkeletonWagePatch
     {
-        private static void Postfix(CharacterObject character, ref int __result)
+        private static void Postfix(MobileParty mobileParty, TroopRoster troopRoster, ref ExplainedNumber __result)
         {
-            if (__result != 0 && SkeletonUpkeep.IsSkeletonChar(character))
+            try
             {
-                __result = 0;
+                if (troopRoster == null) return;
+
+                int skeletonWage = 0;
+                for (int i = 0; i < troopRoster.Count; i++)
+                {
+                    var e = troopRoster.GetElementCopyAtIndex(i);
+                    if (!SkeletonUpkeep.IsSkeletonChar(e.Character)) continue;
+
+                    skeletonWage += e.Character.TroopWage * e.Number;
+                }
+                if (skeletonWage <= 0) return;
+
+                __result.Add(-skeletonWage, new TaleWorlds.Localization.TextObject("Undead (no wages)"));
             }
+            catch (Exception ex)
+            {
+                SotorLog.Warn($"SkeletonWagePatch failed: {ex.Message}");
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(DefaultPrisonerRecruitmentCalculationModel),
+        nameof(DefaultPrisonerRecruitmentCalculationModel.IsPrisonerRecruitable))]
+    public static class SotorSkeletonNotRecruitablePatch
+    {
+        private static void Postfix(PartyBase party, CharacterObject character, ref bool __result, ref int conformityNeeded)
+        {
+            if (!__result || !SkeletonUpkeep.IsSkeletonChar(character)) return;
+            if (SkeletonUpkeep.PartyHasNecromancer(party)) return;
+            __result = false;
+            conformityNeeded = 0;
+        }
+    }
+
+    [HarmonyPatch(typeof(DefaultPrisonerRecruitmentCalculationModel),
+        nameof(DefaultPrisonerRecruitmentCalculationModel.CalculateRecruitableNumber))]
+    public static class SotorSkeletonRecruitableCountPatch
+    {
+        private static void Postfix(PartyBase party, CharacterObject character, ref int __result)
+        {
+            if (__result == 0 || !SkeletonUpkeep.IsSkeletonChar(character)) return;
+            if (SkeletonUpkeep.PartyHasNecromancer(party)) return;
+            __result = 0;
+        }
+    }
+
+    [HarmonyPatch(typeof(DefaultRansomValueCalculationModel),
+        nameof(DefaultRansomValueCalculationModel.PrisonerRansomValue))]
+    public static class SotorSkeletonNoRansomPatch
+    {
+        private static void Postfix(CharacterObject prisoner, ref int __result)
+        {
+            if (__result != 0 && SkeletonUpkeep.IsSkeletonChar(prisoner)) __result = 0;
         }
     }
 

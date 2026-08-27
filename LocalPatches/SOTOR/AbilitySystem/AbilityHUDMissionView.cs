@@ -68,7 +68,7 @@ namespace SOTOR.AbilitySystem
             EnsureMainAgentAbilitiesCached();
             _abilityRadialSelectionVm?.FillAbilities(Agent.Main);
             _abilityRadialSelectionVm?.RefreshValues();
-            SotorLog.Info($"Quick menu UI refresh. abilities={_countOfAbilities}");
+            SotorLog.Debug($"Quick menu UI refresh. abilities={_countOfAbilities}");
         }
 
         public override void OnMissionTick(float dt)
@@ -108,6 +108,12 @@ namespace SOTOR.AbilitySystem
             else
             {
                 _abilityHudVm.IsVisible = false;
+
+                var main = Agent.Main;
+                if (main == null || !main.IsActive())
+                {
+                    _abilityRadialSelectionVm.IsVisible = false;
+                }
             }
         }
 

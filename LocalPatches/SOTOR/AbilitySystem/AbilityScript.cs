@@ -15,6 +15,10 @@ namespace SOTOR.AbilitySystem
         private float _timeSinceLastTick;
         private bool _lifeTimeExpired;
         private bool _hasTickedOnce;
+
+        private bool _pendingDetonation;
+        private Vec3 _pendingPosition;
+        private Vec3 _pendingNormal;
         private bool _hasTriggered;
         private bool _hasCollided;
         private bool _canCollide;
@@ -208,6 +212,13 @@ namespace SOTOR.AbilitySystem
                 return;
             }
 
+            if (_pendingDetonation && _hasTickedOnce)
+            {
+                _pendingDetonation = false;
+                HandleCollision(_pendingPosition, _pendingNormal);
+                return;
+            }
+
             OnBeforeTick(dt);
             _timeSinceLastTick += dt;
             UpdateLifeTime(dt);
@@ -349,14 +360,20 @@ namespace SOTOR.AbilitySystem
                 return;
             }
 
-            SotorLog.Info($"OnPhysicsCollision '{_ability.StringID}' at {c.Position}.");
-            HandleCollision(c.Position, c.Normal);
+            SotorLog.Debug($"OnPhysicsCollision '{_ability.StringID}' at {c.Position} (detonation queued for next tick).");
+            _pendingDetonation = true;
+            _pendingPosition = c.Position;
+            _pendingNormal = c.Normal;
+            _canCollide = false;
         }
 
         protected virtual void HandleCollision(Vec3 position, Vec3 normal)
         {
             if (_hasTickedOnce && !_hasCollided && position.IsValid && position.IsNonZero)
             {
+
+                AI.SotorAimDiagnostics.LogImpact(CasterAgent, _ability, position, null, "detonated");
+
                 TriggerEffects(position, normal);
                 _hasCollided = true;
                 Stop();
@@ -440,6 +457,8 @@ namespace SOTOR.AbilitySystem
 
                     OwnerShipTag = _ability.Template.ShipTag,
                     OwnerSpellTier = _ability.Template.SpellTier,
+
+                    OwnerEffectType = _ability.Template.AbilityEffectType,
                 });
             }
             else if (!string.IsNullOrEmpty(_ability.Template.TriggeredEffectID))
@@ -463,6 +482,8 @@ namespace SOTOR.AbilitySystem
             if (_ability != null && _abilityLife > _ability.Template.Duration && !IsFading)
             {
                 _lifeTimeExpired = true;
+
+                AI.SotorAimDiagnostics.LogImpact(CasterAgent, _ability, CurrentGlobalPosition, null, "EXPIRED, hit nothing");
             }
 
             float armTime = (_ability != null && _ability.Template.Piercing) ? 0.001f : _minArmingTimeForCollision;
