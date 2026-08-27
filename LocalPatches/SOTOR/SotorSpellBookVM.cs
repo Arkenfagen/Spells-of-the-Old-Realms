@@ -88,7 +88,7 @@ namespace SOTOR
             {
                 if (IsLoreOwned(id))
                 {
-                    titles.Add(SotorLores.Display.TryGetValue(id, out var d) ? d.Title : id);
+                    titles.Add(SotorLores.TitleFor(id));
                 }
             }
             return titles;
@@ -143,8 +143,60 @@ namespace SOTOR
             return required == SpellCastingLevel.None || StagedCasterLevel() >= (int)required;
         }
 
+        private static bool GateEngaged(string loreId)
+        {
+            return SotorSettings.SpellbookPurchasesLocked && loreId != SotorLores.MinorMagic;
+        }
+
+        private IEnumerable<Hero> OtherClanCasters()
+        {
+            if (_cycleHeroes == null) yield break;
+            foreach (var h in _cycleHeroes)
+            {
+                if (h != null && h != _hero) yield return h;
+            }
+        }
+
+        private bool SomeoneElseKnowsLore(string loreId)
+        {
+            foreach (var h in OtherClanCasters())
+            {
+                if (h.GetExtendedInfo()?.HasLore(loreId) == true) return true;
+            }
+            return false;
+        }
+
+        private bool SomeoneElseKnowsSpell(string abilityId)
+        {
+            foreach (var h in OtherClanCasters())
+            {
+                if (h.GetExtendedInfo()?.HasSpell(abilityId) == true) return true;
+            }
+            return false;
+        }
+
+        public bool IsMasterGated(string loreId)
+        {
+            if (!GateEngaged(loreId)) return false;
+            return !SomeoneElseKnowsLore(loreId);
+        }
+
+        public bool IsSpellMasterGated(string abilityId, string loreId)
+        {
+            if (!GateEngaged(loreId)) return false;
+            return !SomeoneElseKnowsSpell(abilityId);
+        }
+
+        private bool MasterGateBlocks(string loreId) => IsMasterGated(loreId);
+
         public string LoreUnlockBlockReason(string loreId)
         {
+
+            if (MasterGateBlocks(loreId))
+            {
+                return SotorText.Rendered(_hero != Hero.MainHero
+                    ? "sotor_spellbook_needs_you_first" : "sotor_spellbook_needs_master");
+            }
             if (!MeetsCasterLevelForLore(loreId))
             {
                 return $"Requires {SotorLores.GetRequiredCasterLevel(loreId)} casting level";
@@ -156,6 +208,11 @@ namespace SOTOR
         public void StageUnlockLore(string loreId)
         {
             if (loreId == null || IsLoreOwned(loreId)) return;
+            if (MasterGateBlocks(loreId))
+            {
+                SotorLog.Info($"Spellbook: lore '{loreId}' is master-gated (Learn Magic From Masters is on); not staged.");
+                return;
+            }
             if (!CanAffordLore(loreId))
             {
                 SotorLog.Info($"Spellbook: cannot afford lore '{loreId}' ({LorePrice(loreId)} gold, have {HeroGold}, already staged {StagedSpend()}).");
@@ -185,6 +242,7 @@ namespace SOTOR
 
         public bool CanBuySpell(string abilityId, string loreId, int spellTier)
         {
+            if (IsSpellMasterGated(abilityId, loreId)) return false;
             if (IsLoreLocked(loreId) || IsSpellPurchased(abilityId)) return false;
             return StagedCasterLevel() >= spellTier;
         }
@@ -193,8 +251,10 @@ namespace SOTOR
 
         public string SpellBuyBlockReason(string abilityId, string loreId, int spellTier)
         {
-            if (IsLoreLocked(loreId)) return "Unlock the lore first";
             if (IsSpellPurchased(abilityId)) return "";
+
+            if (IsSpellMasterGated(abilityId, loreId)) return "";
+            if (IsLoreLocked(loreId)) return "Unlock the lore first";
             if (StagedCasterLevel() < spellTier) return "Caster level too low";
             if (!CanAffordSpell(abilityId)) return "Not enough gold";
             return "";
@@ -260,6 +320,7 @@ namespace SOTOR
                 int price = LorePrice(loreId);
                 if (price > 0) Hero.MainHero.ChangeHeroGold(-price);
                 info.AddLore(loreId);
+                AbilitySystem.Rivals.SotorPlayerInvestment.Record(_hero);
                 SotorLog.Info($"Spellbook: COMMITTED unlock lore '{loreId}' (−{price} gold).");
             }
 
@@ -269,6 +330,7 @@ namespace SOTOR
                 if (price > 0) Hero.MainHero.ChangeHeroGold(-price);
                 info.AddSpell(abilityId);
                 if (!_hero.HasAbility(abilityId)) _hero.AddAbility(abilityId);
+                AbilitySystem.Rivals.SotorPlayerInvestment.Record(_hero);
                 SotorLog.Info($"Spellbook: COMMITTED purchase spell '{abilityId}' (−{price} gold; now castable).");
             }
 
@@ -463,17 +525,17 @@ namespace SOTOR
 
                 var display = SotorLores.Display.TryGetValue(loreId, out var d)
                     ? d
-                    : new SotorLores.LoreDisplay { LoreId = loreId, Title = loreId, SymbolSprite = "minormagic_symbol" };
+                    : new SotorLores.LoreDisplay { LoreId = loreId, SymbolSprite = "minormagic_symbol" };
 
                 LoreObjects.Add(new SotorLoreObjectVM(
                     this,
                     SelectLoreObject,
-                    display.Title,
+                    SotorLores.TitleFor(loreId),
                     display.SymbolSprite,
                     spells,
                     loreId));
 
-                SotorLog.Info($"Spellbook tab built: '{display.Title}' ({loreId}) — {spells.Count} spell(s), locked={IsLoreLocked(loreId)}.");
+                SotorLog.Debug($"Spellbook tab built: '{SotorLores.TitleFor(loreId)}' ({loreId}) — {spells.Count} spell(s), locked={IsLoreLocked(loreId)}.");
             }
 
             LoreObjectsLeft = new MBBindingList<SotorLoreObjectVM>();

@@ -174,8 +174,10 @@ namespace SOTOR
             IsLocked = _parent.IsLoreLocked(_loreId);
 
             bool casterOk = _parent.MeetsCasterLevelForLore(_loreId);
-            IsUnlockable = casterOk;
-            if (!casterOk)
+
+            bool masterGated = _parent.IsMasterGated(_loreId);
+            IsUnlockable = casterOk && !masterGated;
+            if (!IsUnlockable)
             {
                 UnlockText = $"{_name}\n{_parent.LoreUnlockBlockReason(_loreId)}";
             }

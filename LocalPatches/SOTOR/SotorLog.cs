@@ -24,6 +24,8 @@ namespace SOTOR
         private static string _logFilePath;
         private static StreamWriter _writer;
         private static bool _initialized;
+        private static DateTime _lastFlushUtc = DateTime.UtcNow;
+        private const double FlushIntervalSeconds = 2.0;
 
         public static string LogDirectory
         {
@@ -60,7 +62,12 @@ namespace SOTOR
 
             EnsureInitialized();
             var line = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} [{level}] {message}";
-            TaleWorlds.Library.Debug.Print("[SOTOR] " + line);
+
+            bool important = level >= Level.Warn;
+            if (important)
+            {
+                TaleWorlds.Library.Debug.Print("[SOTOR] " + line);
+            }
 
             try
             {
@@ -70,6 +77,11 @@ namespace SOTOR
                     if (_writer != null)
                     {
                         _writer.WriteLine(line);
+                        if (important || (DateTime.UtcNow - _lastFlushUtc).TotalSeconds >= FlushIntervalSeconds)
+                        {
+                            _writer.Flush();
+                            _lastFlushUtc = DateTime.UtcNow;
+                        }
                     }
                     else
                     {
@@ -80,6 +92,21 @@ namespace SOTOR
             catch
             {
 
+            }
+        }
+
+        public static void Flush()
+        {
+            try
+            {
+                lock (WriteLock)
+                {
+                    _writer?.Flush();
+                    _lastFlushUtc = DateTime.UtcNow;
+                }
+            }
+            catch
+            {
             }
         }
 
@@ -111,7 +138,8 @@ namespace SOTOR
                     Path.Combine(documentsLogDir, "latest.txt"),
                     _logFilePath + Environment.NewLine);
 
-                _writer = new StreamWriter(_logFilePath, append: true) { AutoFlush = true };
+                _writer = new StreamWriter(_logFilePath, append: true) { AutoFlush = false };
+                AppDomain.CurrentDomain.ProcessExit += (s, e) => Flush();
 
                 PruneOldSessionFiles(documentsLogDir);
             }

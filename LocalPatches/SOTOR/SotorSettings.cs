@@ -33,6 +33,8 @@ namespace SOTOR
         public static float ArmorWomRechargeEffectMultiplier =>
             EnableArmorWomRechargeTweak ? 1f + ArmorWomRechargeEffectPercent / 100f : 1f;
 
+        public static bool EnableBattleWindsRegen = false;
+
         public static bool EnableSpellEffectivenessTweak = false;
         public static float SpellEffectivenessBonusPercent = 0f;
 
@@ -57,6 +59,77 @@ namespace SOTOR
         public static bool EnableCastSlowMotion = true;
 
         public static int JavelinAttackStateTest = -1;
+
+        public static bool EnableRivalCasters = false;
+
+        public static bool SpellbookRequiresMasters = true;
+        public static bool SpellbookPurchasesLocked => SpellbookRequiresMasters && EnableRivalCasters;
+
+        public static bool SpellsSpareCivilians = false;
+
+        public static bool EnableSpellGore = true;
+        public static float SpellGoreGibScale = 1.0f;
+
+        public static float SpellGoreShatterScale = 1.3f;
+
+        public static int SpellGoreAtOnce = 12;
+
+        public static int SpellDeathsAtOnce = 12;
+
+        public static bool EnableEnchanting = true;
+
+        public static bool EnableMagicItemLoot = true;
+
+        public static bool EnableEnchantShopMaterials = true;
+
+        public static bool EnableEnchantShopBooks = true;
+
+        public static int ReagentDropRatePercent = 100;
+
+        public static int RivalCasterLordShare = 20;
+
+        public static int RivalCasterWandererShare = 20;
+
+        public static int RivalMemberOnlyLoreClanChance = 8;
+
+        public static int RivalMinClanTierForCaster = 0;
+
+        public static bool RivalIncludeMinorFactions = true;
+
+        public static int RivalRaiseDeadPartyCapPercent = 50;
+
+        public static bool RivalStrongTraditionRelations = false;
+
+        public static bool RivalLoreByCulture = false;
+
+        public static bool RivalIncludeRulers = true;
+
+        public static int RivalPowerShift = 0;
+
+        public static int StandingLordSharePercent = 100;
+
+        public static int StandingLearnLore = 25;
+
+        public static int StandingLearnSpell = 5;
+
+        public static int StandingExecuteCaster = -25;
+
+        public static int StandingFreeCaster = 10;
+
+        public static int StandingAssistCaster = 3;
+
+        public static string RivalWorldSeed = "";
+
+        public static bool HasWorldSeed
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(RivalWorldSeed)) return false;
+                return !string.Equals(RivalWorldSeed.Trim(),
+                    AbilitySystem.Rivals.SotorRivalSeeder.CampaignSeedText(),
+                    System.StringComparison.OrdinalIgnoreCase);
+            }
+        }
 
         private const string FileName = "sotor_settings.txt";
         private static bool _loaded;

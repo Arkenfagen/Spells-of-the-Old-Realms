@@ -74,9 +74,9 @@ namespace SOTOR
         {
             return new List<TooltipProperty>
             {
-                new TooltipProperty("Winds of Magic", _winds.ToString(), 0, false, TooltipProperty.TooltipPropertyFlags.Title),
-                new TooltipProperty("Maximum:", _maxWinds.ToString(), 0),
-                new TooltipProperty("Recharge Rate:", $"{_rechargeRate:0.00} / hour", 0)
+                new TooltipProperty(SotorText.Rendered("sotor_mapbar_winds_title"), _winds.ToString(), 0, false, TooltipProperty.TooltipPropertyFlags.Title),
+                new TooltipProperty(SotorText.Rendered("sotor_mapbar_winds_max"), _maxWinds.ToString(), 0),
+                new TooltipProperty(SotorText.Rendered("sotor_mapbar_winds_recharge"), $"{_rechargeRate:0.00} / hour", 0)
             };
         }
     }

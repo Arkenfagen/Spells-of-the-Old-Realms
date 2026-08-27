@@ -24,9 +24,13 @@ namespace SOTOR
             SotorLog.Info($"SubModule load. Log file: {SotorLog.LogFilePath}");
             SotorSettings.Load();
             SotorPriceTable.Load();
+
+            AbilitySystem.Rivals.SotorRivalOverrides.Load();
             AbilityFactory.LoadTemplates();
             TriggeredEffectManager.LoadTemplates();
             StatusEffectManager.LoadTemplates();
+
+            Items.SotorItemTraitManager.LoadTemplates();
             SotorKeyInputManager.Initialize();
 
             try
@@ -64,6 +68,12 @@ namespace SOTOR
             }
         }
 
+        protected override void OnApplicationTick(float dt)
+        {
+            base.OnApplicationTick(dt);
+            SotorSpellbookHotkey.Tick();
+        }
+
         protected override void InitializeGameStarter(Game game, IGameStarter starterObject)
         {
             if (game.GameType is Campaign && starterObject is CampaignGameStarter campaignStarter)
@@ -71,7 +81,23 @@ namespace SOTOR
                 campaignStarter.AddBehavior(new ExtendedInfoManager());
                 campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorRaiseDeadBehavior());
                 campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorGraveyardBehavior());
-                SotorLog.Info("ExtendedInfoManager + SotorRaiseDeadBehavior + SotorGraveyardBehavior registered.");
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorRivalBehavior());
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorTeachingBehavior());
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorPrisonerTeachBehavior());
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorRumourBehavior());
+
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorApprenticeDuelBehavior());
+
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorAiRaiseDeadBehavior());
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorHiddenMasterHuntBehavior());
+
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorEnchantingBehavior());
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorBlueprintBookBehavior());
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorEnchantShopBehavior());
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorMagicLootBehavior());
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorRivalGearBehavior());
+                campaignStarter.AddBehavior(new SOTOR.CampaignBehaviors.SotorStorytellerBehavior());
+                SotorLog.Info("ExtendedInfoManager + SotorRaiseDeadBehavior + SotorGraveyardBehavior + SotorRivalBehavior + SotorTeachingBehavior + SotorPrisonerTeachBehavior + SotorRumourBehavior + SotorAiRaiseDeadBehavior + SotorHiddenMasterHuntBehavior registered.");
             }
         }
 
@@ -82,7 +108,11 @@ namespace SOTOR
             mission.AddMissionBehavior(new AbilityManagerMissionLogic());
             mission.AddMissionBehavior(new AbilityHUDMissionView());
             mission.AddMissionBehavior(new StatusEffectMissionLogic());
+
+            mission.AddMissionBehavior(new Items.SotorWeaponHitMissionLogic());
             mission.AddMissionBehavior(new AbilitySystem.SotorUndeadMoraleMissionLogic());
+
+            mission.AddMissionBehavior(new AbilitySystem.SotorSpellGoreMissionLogic());
             mission.AddMissionBehavior(new AbilitySystem.SotorThrownJavelinMissionLogic());
             mission.AddMissionBehavior(new AbilitySystem.SotorMindControlMissionLogic());
             mission.AddMissionBehavior(new AbilitySystem.SotorArcaneConduitMissionLogic());

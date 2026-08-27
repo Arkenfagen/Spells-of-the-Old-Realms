@@ -16,7 +16,7 @@ namespace SOTOR
     {
         private readonly Hero _hero;
 
-        private string _skillName = "Spellcraft";
+        private string _skillName = SotorText.Rendered("sotor_skill_spellcraft_name");
         private int _skillLevel;
         private int _focus;
         private int _maxFocus = 5;
@@ -177,20 +177,20 @@ namespace SOTOR
 
             var rows = new System.Collections.Generic.List<SotorStatItemVM>();
 
-            rows.Add(new SotorStatItemVM("Spell Casting Level:", GetStagedCastingLevelText()));
+            rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_casting_level"), GetStagedCastingLevelText()));
 
             float winds = _hero.GetWindsOfMagic();
             float maxWinds = _hero.GetMaxWindsOfMagic();
             float rechargeRate = SOTOR.Extensions.ExtendedInfoSystem.ExtendedInfoManager.GetWindsRechargePerHour(_hero);
-            rows.Add(new SotorStatItemVM("Current Winds of Magic:", ((int)Math.Round(winds)).ToString(), windsIcon));
-            rows.Add(new SotorStatItemVM("Maximum Winds of Magic:", ((int)Math.Round(maxWinds)).ToString(), windsIcon));
-            rows.Add(new SotorStatItemVM("Winds of Magic Recharge:", rechargeRate.ToString("0.00") + " / hour", windsIcon));
+            rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_winds_current"), ((int)Math.Round(winds)).ToString(), windsIcon));
+            rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_winds_max"), ((int)Math.Round(maxWinds)).ToString(), windsIcon));
+            rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_winds_recharge"), rechargeRate.ToString("0.00") + " / hour", windsIcon));
 
             float effFactor = SotorSpellcraftHelper.GetSpellDamageFactor(_hero) * GetStagedCasterPerkDamageFactor();
             int effPct = (int)Math.Round((effFactor - 1f) * 100f);
-            rows.Add(new SotorStatItemVM("Spell Effectiveness:", (effPct >= 0 ? "+" : "") + effPct + "%"));
+            rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_effectiveness"), (effPct >= 0 ? "+" : "") + effPct + "%"));
             int durPct = (int)Math.Round((SotorSpellcraftHelper.GetSpellDurationFactor(_hero) - 1f) * 100f);
-            rows.Add(new SotorStatItemVM("Spell Duration:", (durPct >= 0 ? "+" : "") + durPct + "%"));
+            rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_duration"), (durPct >= 0 ? "+" : "") + durPct + "%"));
 
             if (SOTOR.SotorSettings.EnableArcaneConduit)
             {
@@ -209,11 +209,13 @@ namespace SOTOR
             {
                 var owned = _hero.GetExtendedInfo()?.AcquiredLores ?? new System.Collections.Generic.List<string>();
                 loreTitles = owned
-                    .Select(id => SotorLores.Display.TryGetValue(id, out var d) ? d.Title : id)
+                    .Select(SotorLores.TitleFor)
                     .ToList();
             }
-            rows.Add(new SotorStatItemVM("Known Magic Lores:",
-                loreTitles.Count > 0 ? string.Join(", ", loreTitles) : "None"));
+            rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_known_lores"),
+                loreTitles.Count > 0
+                    ? string.Join(", ", loreTitles)
+                    : SotorText.Rendered("sotor_sb_val_none")));
 
             bool ownsMindControl = StagedOwnedSpellProvider != null
                 ? StagedOwnedSpellProvider("MindControl")
@@ -221,14 +223,14 @@ namespace SOTOR
             if (ownsMindControl)
             {
                 int mcPct = (int)System.Math.Round(AbilitySystem.SotorMindControlHelper.GetBaseChance(_hero) * 100f);
-                rows.Add(new SotorStatItemVM("Base Mind Control Chance:", mcPct + "%"));
+                rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_mind_control"), mcPct + "%"));
             }
-            string necroTitle = SotorLores.Display.TryGetValue(SotorLores.LoreOfNecromancy, out var nd) ? nd.Title : "Lore of Necromancy";
+            string necroTitle = SotorLores.TitleFor(SotorLores.LoreOfNecromancy);
             if (loreTitles.Contains(necroTitle))
             {
                 int levelsAboveEntry = (int)GetStagedCastingLevel() - (int)SpellCastingLevel.Entry;
                 int reductionPct = levelsAboveEntry > 0 ? levelsAboveEntry * 20 : 0;
-                rows.Add(new SotorStatItemVM("Skeleton Troop Weight:",
+                rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_skeleton_weight"),
                     reductionPct > 0 ? "-" + reductionPct + "%" : "0%"));
             }
 
@@ -249,16 +251,16 @@ namespace SOTOR
 
             if (AbilitySystem.SotorPerks.OverCaster != null && IsPerkSelected(AbilitySystem.SotorPerks.OverCaster))
             {
-                rows.Add(new SotorStatItemVM("Spell Winds Cost:", "+30%", windsIcon));
+                rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_spell_winds_cost"), "+30%", windsIcon));
             }
             else if (AbilitySystem.SotorPerks.EfficientSpellCaster != null && IsPerkSelected(AbilitySystem.SotorPerks.EfficientSpellCaster))
             {
-                rows.Add(new SotorStatItemVM("Spell Winds Cost:", "-30%", windsIcon));
+                rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_spell_winds_cost"), "-30%", windsIcon));
             }
 
             if (AbilitySystem.SotorPerks.Dampener != null && IsPerkSelected(AbilitySystem.SotorPerks.Dampener))
             {
-                rows.Add(new SotorStatItemVM("Ward Save:", "5%"));
+                rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_ward_save"), "5%"));
             }
         }
 
@@ -271,17 +273,17 @@ namespace SOTOR
 
             if (AbilitySystem.SotorPerks.Selfish != null && IsPerkSelected(AbilitySystem.SotorPerks.Selfish))
             {
-                rows.Add(new SotorStatItemVM("Self Spell Damage:", "-90%"));
+                rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_self_damage"), "-90%"));
             }
 
             if (AbilitySystem.SotorPerks.WellControlled != null && IsPerkSelected(AbilitySystem.SotorPerks.WellControlled))
             {
-                rows.Add(new SotorStatItemVM("Friendly Spell Damage:", "-30%"));
+                rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_friendly_damage"), "-30%"));
             }
 
             if (AbilitySystem.SotorPerks.Catalyst != null && IsPerkSelected(AbilitySystem.SotorPerks.Catalyst))
             {
-                rows.Add(new SotorStatItemVM("Catalyst (legendary gear):", "+5 / item", windsIcon));
+                rows.Add(new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_catalyst"), "+5 / item", windsIcon));
             }
         }
 
@@ -441,10 +443,18 @@ namespace SOTOR
         public int CurrentFocusLevel => _focus;
 
         [DataSourceProperty]
-        public string CurrentLearningRateText => "Learning Rate: x " + _learningRate.ToString("0.00");
+        public string CurrentLearningRateText
+        {
+            get
+            {
+                var t = SotorText.GetObject("sotor_sb_learning_rate");
+                t.SetTextVariable("RATE", _learningRate.ToString("0.00"));
+                return t.ToString();
+            }
+        }
 
         [DataSourceProperty]
-        public string FocusPointsText => "Focus Points";
+        public string FocusPointsText => SotorText.Rendered("sotor_sb_focus_points");
 
         [DataSourceProperty]
         public int CurrentSkillXP => _skillXpProgress;

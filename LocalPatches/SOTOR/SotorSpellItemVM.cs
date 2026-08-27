@@ -41,11 +41,11 @@ namespace SOTOR
 
             _statItems = new MBBindingList<SotorStatItemVM>
             {
-                new SotorStatItemVM("Cooldown:", template.CoolDown + " seconds"),
-                new SotorStatItemVM("Spell Type:", template.AbilityEffectType.ToString()),
-                new SotorStatItemVM("Spell Tier:", ((SpellCastingLevel)template.SpellTier).ToString()),
-                new SotorStatItemVM("Winds of Magic cost:", template.WindsOfMagicCost.ToString()),
-                new SotorStatItemVM("Spell Name:", template.Name),
+                new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_cooldown"), template.CoolDown + " seconds"),
+                new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_spell_type"), template.AbilityEffectType.ToString()),
+                new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_spell_tier"), ((SpellCastingLevel)template.SpellTier).ToString()),
+                new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_winds_cost"), template.WindsOfMagicCost.ToString()),
+                new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_spell_name"), template.Name),
             };
 
             _abilityHint = new BasicTooltipViewModel(() => _description);
@@ -251,10 +251,18 @@ namespace SOTOR
 
             if (!IsPurchased && _book.IsLoreOwned(_loreId))
             {
-                string reason = _book.SpellBuyBlockReason(_abilityId, _loreId, _spellTier);
-                BuyText = string.IsNullOrEmpty(reason)
-                    ? $"Learn\n{_book.SpellPriceById(_abilityId):N0} Gold"
-                    : reason;
+
+                if (_book.IsSpellMasterGated(_abilityId, _loreId))
+                {
+                    BuyText = "";
+                }
+                else
+                {
+                    string reason = _book.SpellBuyBlockReason(_abilityId, _loreId, _spellTier);
+                    BuyText = string.IsNullOrEmpty(reason)
+                        ? $"Learn\n{_book.SpellPriceById(_abilityId):N0} Gold"
+                        : reason;
+                }
             }
             else
             {

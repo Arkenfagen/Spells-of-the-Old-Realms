@@ -18,6 +18,9 @@ namespace SOTOR
         private SotorSpellBookVM _dataSource;
         private readonly SotorSpellBookState _state;
 
+        private SpriteCategory _charDevCategory;
+        private bool _charDevLoadedByUs;
+
         public SotorSpellBookScreen(SotorSpellBookState state)
         {
             _state = state;
@@ -44,6 +47,7 @@ namespace SOTOR
         {
             OnActivate();
             LoadSotorSprites();
+            EnsureCharacterDeveloperSprites();
             _dataSource = new SotorSpellBookVM(CloseScreen);
             _gauntletLayer = new GauntletLayer("GauntletLayer", 1, shouldClear: true);
             _gauntletLayer.InputRestrictions.SetInputRestrictions(true, InputUsageMask.All);
@@ -71,6 +75,13 @@ namespace SOTOR
             _dataSource?.OnFinalize();
             _gauntletLayer = null;
             _dataSource = null;
+            if (_charDevLoadedByUs)
+            {
+                try { _charDevCategory?.Unload(); }
+                catch (System.Exception ex) { SotorLog.Warn($"ui_characterdeveloper unload failed: {ex.Message}"); }
+            }
+            _charDevCategory = null;
+            _charDevLoadedByUs = false;
         }
 
         void IGameStateListener.OnInitialize()
@@ -83,6 +94,30 @@ namespace SOTOR
             if (Game.Current?.GameStateManager != null)
             {
                 Game.Current.GameStateManager.PopState(0);
+            }
+        }
+
+        private void EnsureCharacterDeveloperSprites()
+        {
+            try
+            {
+                var spriteData = UIResourceManager.SpriteData;
+                if (spriteData?.SpriteCategories == null
+                    || !spriteData.SpriteCategories.TryGetValue("ui_characterdeveloper", out var category))
+                {
+                    return;
+                }
+                _charDevCategory = category;
+                if (!category.IsLoaded)
+                {
+                    category.Load(UIResourceManager.ResourceContext, UIResourceManager.ResourceDepot);
+                    _charDevLoadedByUs = true;
+                    SotorLog.Info("Spellbook: loaded ui_characterdeveloper (map-hotkey path).");
+                }
+            }
+            catch (System.Exception ex)
+            {
+                SotorLog.Warn($"EnsureCharacterDeveloperSprites failed: {ex.Message}");
             }
         }
 

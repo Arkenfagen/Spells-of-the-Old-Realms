@@ -39,6 +39,16 @@
         <GameType value="EditorGame"/>
       </IncludedGameTypes>
     </XmlNode>
+
+    <XmlNode>
+      <XmlName id="GameText" path="sotor_strings"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
     <XmlNode>
       <XmlName id="SPCultures" path="sotor_cultures"/>
       <IncludedGameTypes>
@@ -131,6 +141,45 @@
     </XmlNode>
     <XmlNode>
       <XmlName id="NPCCharacters" path="sotor_skeleton_troops_tree"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+
+    <XmlNode>
+      <XmlName id="Items" path="items/sotor_blueprint_books"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+
+    <XmlNode>
+      <XmlName id="Items" path="items/sotor_ingredients"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+
+    <XmlNode>
+      <XmlName id="Items" path="items/sotor_dryad_armors"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="NPCCharacters" path="sotor_dryad_troop"/>
       <IncludedGameTypes>
         <GameType value="Campaign"/>
         <GameType value="CampaignStoryMode"/>
