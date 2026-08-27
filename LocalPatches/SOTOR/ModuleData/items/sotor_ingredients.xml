@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Items>
+  <Item id="sotor_tradegood_arcane_scroll" name="Arcane Scroll" mesh="tor_arcane_scroll" weight="0.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="500">
+    <Flags Civilian="false" />
+  </Item>
+  <Item id="sotor_tradegood_blessed_water" name="Blessed Water" mesh="tor_potion_blessedwater" weight="0.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="150">
+    <Flags Civilian="false" />
+  </Item>
+  <Item id="sotor_tradegood_dragonblood" name="Dragon Blood" mesh="tor_potion_dragonblood" weight="0.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
+    <Flags Civilian="false" />
+  </Item>
+  <Item id="sotor_tradegood_amber_crystal" name="Amber Crystal" mesh="tor_amber_crystal" weight="0.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="2500">
+    <Flags Civilian="false" />
+  </Item>
+  <Item id="sotor_tradegood_warpstone_dust" name="Warpstone Dust" mesh="tor_warpstone_dust" weight="0.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3500">
+    <Flags Civilian="false" />
+  </Item>
+  <Item id="sotor_tradegood_gemstone" name="Gemstone" mesh="tor_tradegood_gemstone" weight="0.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="750">
+    <Flags Civilian="false" />
+  </Item>
+</Items>

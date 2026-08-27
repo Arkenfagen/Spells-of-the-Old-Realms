@@ -8,4 +8,14 @@
   <SpriteCategory Name="ui_sotor_flipped">
     <AlwaysLoad/>
   </SpriteCategory>
+  <SpriteCategory Name="ui_sotor_reagents">
+    <AlwaysLoad/>
+  </SpriteCategory>
+
+  <SpriteCategory Name="ui_sotor_skills">
+    <AlwaysLoad/>
+  </SpriteCategory>
+  <SpriteCategory Name="ui_sotor_menu">
+    <AlwaysLoad/>
+  </SpriteCategory>
 </Config>

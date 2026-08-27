@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Items>
+  <Item id="sotor_dryad_head" name="Dryad Head" mesh="dryad_head_001" weight="1.9" appearance="1" item_category="light_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="18000">
+    <ItemComponent>
+      <Armor covers_head="true" modifier_group="leather" material_type="Leather" head_armor="18" hair_cover_type="all" beard_cover_type="all" />
+    </ItemComponent>
+    <Flags Civilian="true" />
+  </Item>
+  <Item id="sotor_dryad_torso" name="Dryad Barkskin Torso" mesh="dryad_torso_001" weight="3" appearance="1" item_category="light_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="23000">
+    <ItemComponent>
+      <Armor body_armor="22" leg_armor="8" arm_armor="3" covers_body="true" modifier_group="leather" material_type="Leather" />
+    </ItemComponent>
+    <Flags Civilian="true" />
+  </Item>
+  <Item id="sotor_dryad_arms" name="Dryad Barkskin Arms" mesh="dryad_arms_001" weight="0.2" appearance="3" item_category="light_armor" Type="HandArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="hand_armor" value="18000">
+    <ItemComponent>
+      <Armor arm_armor="18" modifier_group="leather" material_type="Leather" covers_hands="true" />
+    </ItemComponent>
+    <Flags Civilian="true" />
+  </Item>
+  <Item id="sotor_dryad_legs" name="Dryad Barkskin Legs" mesh="dryad_legs_001" weight="1.2" item_category="light_armor" Type="LegArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="leg_armor" value="23000">
+    <ItemComponent>
+      <Armor leg_armor="23" modifier_group="leather" material_type="Leather" covers_legs="true" />
+    </ItemComponent>
+    <Flags Civilian="true" />
+  </Item>
+</Items>

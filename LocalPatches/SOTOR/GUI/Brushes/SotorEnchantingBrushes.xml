@@ -1,0 +1,74 @@
+<Brushes>
+
+  <Brush Name="SotorEnchantingFontBrush" Font="Galahad" TextHorizontalAlignment="Left">
+    <Styles>
+      <Style Name="Default" FontColor="#FFFFFFFF" TextBlur="0" TextOutlineAmount="0" TextGlowRadius="0" FontSize="20" />
+    </Styles>
+  </Brush>
+  <Brush Name="SotorEnchantingIngredientRed" Font="FiraSansExtraCondensed-Regular" TextHorizontalAlignment="Center">
+    <Styles>
+      <Style Name="Default" FontColor="#FF0000FF" TextBlur="0" TextOutlineColor="#FFFFFFFF" TextOutlineAmount="0" TextGlowRadius="0" FontSize="20" />
+    </Styles>
+  </Brush>
+  <Brush Name="SotorEnchantingIngredientNormal" Font="FiraSansExtraCondensed-Regular" TextHorizontalAlignment="Center">
+    <Styles>
+      <Style Name="Default" FontColor="#000000FF" TextBlur="0" TextOutlineColor="#FFFFFFFF" TextOutlineAmount="1" TextGlowRadius="0" FontSize="20" />
+    </Styles>
+  </Brush>
+
+  <Brush Name="SotorInventoryMagicItemBrush" Font="FiraSansExtraCondensed-Regular" TextHorizontalAlignment="Center">
+    <Styles>
+      <Style Name="Default" FontColor="#0095A4FF" TextBlur="0" TextOutlineAmount="0" TextGlowRadius="0" FontSize="16" />
+    </Styles>
+  </Brush>
+
+  <Brush Name="SotorInventoryMagicItemTupleBrush">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="Inventory\tuple_right" ExtendTop="2" ExtendBottom="2" Color="#FF39FFEB"/>
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" Sprite="Inventory\tuple_right" ExtendTop="2" ExtendBottom="2" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" Sprite="Inventory\tuple_right" ExtendTop="2" ExtendBottom="2" ColorFactor="1.2"/>
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" Sprite="Inventory\tuple_right_pressed" ExtendTop="2" ExtendBottom="2" ExtendLeft="2" ExtendRight="2" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" Sprite="Inventory\tuple_right" ExtendTop="2" ExtendBottom="2" SaturationFactor="15" ValueFactor="5" />
+      </Style>
+    </Styles>
+  </Brush>
+  <Brush Name="SotorEnchantingItemBrush">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="BlankWhiteSquare_9" Color="#624726FF"/>
+    </Layers>
+    <Styles>
+      <Style Name="Default">
+        <BrushLayer Name="Default" AlphaFactor="0.4" />
+      </Style>
+      <Style Name="Hovered">
+        <BrushLayer Name="Default" AlphaFactor="0.8" />
+      </Style>
+      <Style Name="Pressed">
+        <BrushLayer Name="Default" AlphaFactor="0.4" ColorFactor="0.65" />
+      </Style>
+      <Style Name="Selected">
+        <BrushLayer Name="Default" AlphaFactor="0.8" ColorFactor="1.4" />
+      </Style>
+      <Style Name="Disabled">
+        <BrushLayer Name="Default" AlphaFactor="0.55" />
+      </Style>
+    </Styles>
+    <SoundProperties>
+      <StateSounds>
+        <StateSound StateName="Hovered" Audio="mini_popup" />
+      </StateSounds>
+      <EventSounds>
+        <EventSound EventName="Click" Audio="checkbox" />
+      </EventSounds>
+    </SoundProperties>
+  </Brush>
+</Brushes>

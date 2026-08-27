@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<NPCCharacters>
+  <NPCCharacter id="sotor_dryad"
+                default_group="Infantry"
+                level="31"
+                name="Dryad"
+                occupation="Soldier"
+                is_female="true"
+                is_hidden_encyclopedia="true"
+                culture="Culture.sotor_dryad">
+
+    <face>
+      <face_key_template value="BodyProperty.townswoman_empire" />
+      <hair_tags>
+        <hair_tag name="Bald" />
+      </hair_tags>
+    </face>
+    <skills>
+      <skill id="Athletics" value="120" />
+      <skill id="Riding" value="120" />
+      <skill id="OneHanded" value="120" />
+      <skill id="TwoHanded" value="120" />
+      <skill id="Polearm" value="120" />
+      <skill id="Bow" value="120" />
+      <skill id="Crossbow" value="120" />
+      <skill id="Throwing" value="120" />
+    </skills>
+    <upgrade_targets />
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Head"   id="Item.sotor_dryad_head" />
+        <equipment slot="Body"   id="Item.sotor_dryad_torso" />
+        <equipment slot="Gloves" id="Item.sotor_dryad_arms" />
+        <equipment slot="Leg"    id="Item.sotor_dryad_legs" />
+      </EquipmentRoster>
+      <EquipmentRoster civilian="true">
+        <equipment slot="Head"   id="Item.sotor_dryad_head" />
+        <equipment slot="Body"   id="Item.sotor_dryad_torso" />
+        <equipment slot="Gloves" id="Item.sotor_dryad_arms" />
+        <equipment slot="Leg"    id="Item.sotor_dryad_legs" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+</NPCCharacters>

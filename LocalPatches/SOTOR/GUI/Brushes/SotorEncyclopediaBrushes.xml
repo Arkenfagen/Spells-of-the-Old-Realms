@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Brushes>
+  <Brush Name="SotorEncyclopediaTradition" BaseBrush="Encyclopedia.Home.Button.Base">
+    <Layers>
+      <BrushLayer Name="Default" Sprite="Encyclopedia\kingdom" Color="#FFFFFFFF" XOffset="-35" />
+    </Layers>
+  </Brush>
+</Brushes>

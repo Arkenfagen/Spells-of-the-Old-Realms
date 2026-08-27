@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<terrain_materials>
+	<terrain_material is_enabled="true" name="t_o_r_dirt_ground" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="2.000, 2.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="soil" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="-0.300" ground_slope_scale="1.000" bigdetailmap_mode="2" bigdetailmap_weight="0.650" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+		<textures>
+			<texture type="diffusemap" name="the_old_realms_dirt_ground_001_d"/>
+			<texture type="areamap" name="the_old_realms_dirt_ground_001_d"/>
+			<texture type="normalmap" name="the_old_realms_dirt_ground_001_n"/>
+			<texture type="specularmap" name="the_old_realms_dirt_ground_001_s"/>
+			<texture type="splattingmap" name="none"/>
+			<texture type="displacementmap" name="the_old_realms_dirt_ground_001_h"/>
+		</textures>
+		<layer_flags>
+			<flag name="use_parallax" value="true"/>
+			<flag name="use_displacement_mapping" value="false"/>
+			<flag name="use_randomized_normalmap" value="false"/>
+			<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+			<flag name="use_transparency_of_ground_slope" value="false"/>
+			<flag name="use_dxt5_normal" value="false"/>
+			<flag name="use_six_side_uv_mapping" value="false"/>
+		</layer_flags>
+		<meshes/>
+	</terrain_material>
+	<terrain_material is_enabled="true" name="t_o_r_dirt_ground_mud" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="2.000, 2.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="mud" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="-0.300" ground_slope_scale="1.000" bigdetailmap_mode="2" bigdetailmap_weight="0.650" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+		<textures>
+			<texture type="diffusemap" name="the_old_realms_dirt_ground_mud_001_d"/>
+			<texture type="areamap" name="the_old_realms_dirt_ground_mud_001_d"/>
+			<texture type="normalmap" name="the_old_realms_dirt_ground_mud_001_n"/>
+			<texture type="specularmap" name="the_old_realms_dirt_ground_mud_001_s"/>
+			<texture type="splattingmap" name="none"/>
+			<texture type="displacementmap" name="the_old_realms_dirt_ground_mud_001_h"/>
+		</textures>
+		<layer_flags>
+			<flag name="use_parallax" value="true"/>
+			<flag name="use_displacement_mapping" value="false"/>
+			<flag name="use_randomized_normalmap" value="false"/>
+			<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+			<flag name="use_transparency_of_ground_slope" value="false"/>
+			<flag name="use_dxt5_normal" value="false"/>
+			<flag name="use_six_side_uv_mapping" value="false"/>
+		</layer_flags>
+		<meshes/>
+	</terrain_material>
+	<terrain_material is_enabled="true" name="t_o_r_forest_ground_mud" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="2.000, 2.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="mud" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="-0.300" ground_slope_scale="1.000" bigdetailmap_mode="2" bigdetailmap_weight="0.650" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+		<textures>
+			<texture type="diffusemap" name="the_old_realms_forest_ground_mud_001_d"/>
+			<texture type="areamap" name="the_old_realms_forest_ground_mud_001_d"/>
+			<texture type="normalmap" name="the_old_realms_forest_ground_mud_001_n"/>
+			<texture type="specularmap" name="the_old_realms_forest_ground_mud_001_s"/>
+			<texture type="splattingmap" name="none"/>
+			<texture type="displacementmap" name="the_old_realms_forest_ground_mud_001_h"/>
+		</textures>
+		<layer_flags>
+			<flag name="use_parallax" value="true"/>
+			<flag name="use_displacement_mapping" value="false"/>
+			<flag name="use_randomized_normalmap" value="false"/>
+			<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+			<flag name="use_transparency_of_ground_slope" value="false"/>
+			<flag name="use_dxt5_normal" value="false"/>
+			<flag name="use_six_side_uv_mapping" value="false"/>
+		</layer_flags>
+		<meshes/>
+	</terrain_material>
+	<terrain_material is_enabled="true" name="t_o_r_swamp_ground_mud" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="3.500, 3.500" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="mud" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="-0.300" ground_slope_scale="1.000" bigdetailmap_mode="2" bigdetailmap_weight="0.650" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+		<textures>
+			<texture type="diffusemap" name="the_old_realms_swamp_ground_001_d"/>
+			<texture type="areamap" name="the_old_realms_swamp_ground_001_d"/>
+			<texture type="normalmap" name="the_old_realms_swamp_ground_001_n"/>
+			<texture type="specularmap" name="the_old_realms_swamp_ground_001_s"/>
+			<texture type="splattingmap" name="none"/>
+			<texture type="displacementmap" name="the_old_realms_swamp_ground_001_h"/>
+		</textures>
+		<layer_flags>
+			<flag name="use_parallax" value="true"/>
+			<flag name="use_displacement_mapping" value="false"/>
+			<flag name="use_randomized_normalmap" value="false"/>
+			<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+			<flag name="use_transparency_of_ground_slope" value="false"/>
+			<flag name="use_dxt5_normal" value="false"/>
+			<flag name="use_six_side_uv_mapping" value="false"/>
+		</layer_flags>
+		<meshes/>
+	</terrain_material>
+	<terrain_material is_enabled="true" name="t_o_r_sylv_mud" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="5.000, 5.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="soil" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="0.000" ground_slope_scale="1.000" bigdetailmap_mode="2" bigdetailmap_weight="0.800" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+		<textures>
+			<texture type="diffusemap" name="the_old_realms_swamp_ground_001_d"/>
+			<texture type="areamap" name="black_terrain"/>
+			<texture type="normalmap" name="the_old_realms_swamp_ground_001_n"/>
+			<texture type="specularmap" name="the_old_realms_swamp_ground_001_s"/>
+			<texture type="splattingmap" name="none"/>
+			<texture type="displacementmap" name="the_old_realms_swamp_ground_001_h"/>
+		</textures>
+		<layer_flags>
+			<flag name="use_parallax" value="false"/>
+			<flag name="use_displacement_mapping" value="false"/>
+			<flag name="use_randomized_normalmap" value="false"/>
+			<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+			<flag name="use_transparency_of_ground_slope" value="false"/>
+			<flag name="use_dxt5_normal" value="false"/>
+			<flag name="use_six_side_uv_mapping" value="false"/>
+		</layer_flags>
+		<meshes>
+			<mesh name="flora_reed_a" index="0" density="40.000" seed_index="0" colony_radius="20.000" colony_threshold="0.300" size_min="0.650, 0.650, 0.650" size_max="1.550, 1.550, 1.750" albedo_multiplier="0.302, 0.426, 1.000" weight_offset="0.500"/>
+			<mesh name="flora_reed_b" index="1" density="35.000" seed_index="0" colony_radius="10.000" colony_threshold="0.300" size_min="0.650, 0.650, 0.650" size_max="1.550, 1.550, 1.750" albedo_multiplier="0.302, 0.426, 1.000" weight_offset="0.500"/>
+			<mesh name="flora_reed_c" index="2" density="30.000" seed_index="0" colony_radius="15.000" colony_threshold="0.300" size_min="0.650, 0.650, 0.650" size_max="1.550, 1.550, 1.750" albedo_multiplier="0.302, 0.426, 1.000" weight_offset="0.500"/>
+			<mesh name="free_grass_terrain_a" index="3" density="30.000" seed_index="0" colony_radius="10.000" colony_threshold="0.300" size_min="0.650, 0.650, 0.650" size_max="1.550, 1.550, 1.750" albedo_multiplier="0.394, 0.320, 0.659" weight_offset="0.500"/>
+		</meshes>
+	</terrain_material>
+	<terrain_material is_enabled="true" name="t_o_r_sylv_road_mud" is_flora_layer="false" is_mesh_blend_layer="false" pitch_roll_yaw="0.000, 0.000, 0.000" scale="5.000, 5.000" shear="0.000, 0.000" position_offset="0.000, 0.000" physics_material="soil" detail_level_adjustment="0" elevation_amount="0.000" parallax_amount="0.000" ground_slope_scale="1.000" bigdetailmap_mode="2" bigdetailmap_weight="0.900" albedo_factor_color="1.000, 1.000, 1.000" albedo_factor_mode="0" smooth_blend_amount="1.000" bigdetailmap_scale_x="0.080" bigdetailmap_scale_y="0.080" bigdetailmap_bias_x="0.080" bigdetailmap_bias_y="0.080">
+		<textures>
+			<texture type="diffusemap" name="the_old_realms_dirt_ground_mud_001_d"/>
+			<texture type="areamap" name="black_terrain"/>
+			<texture type="normalmap" name="the_old_realms_dirt_ground_mud_001_n"/>
+			<texture type="specularmap" name="the_old_realms_dirt_ground_mud_001_s"/>
+			<texture type="splattingmap" name="none"/>
+			<texture type="displacementmap" name="the_old_realms_dirt_ground_mud_001_h"/>
+		</textures>
+		<layer_flags>
+			<flag name="use_parallax" value="false"/>
+			<flag name="use_displacement_mapping" value="false"/>
+			<flag name="use_randomized_normalmap" value="false"/>
+			<flag name="use_transparency_of_diffuse_alpha" value="false"/>
+			<flag name="use_transparency_of_ground_slope" value="false"/>
+			<flag name="use_dxt5_normal" value="false"/>
+			<flag name="use_six_side_uv_mapping" value="false"/>
+		</layer_flags>
+		<meshes/>
+	</terrain_material>
+</terrain_materials>

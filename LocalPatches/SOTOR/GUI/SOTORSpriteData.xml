@@ -25,6 +25,24 @@
       <SpriteSheetCount>1</SpriteSheetCount>
       <SpriteSheetSize ID="1" Width="2048" Height="2048"/>
     </SpriteCategory>
+    <SpriteCategory>
+      <Name>ui_sotor_reagents</Name>
+      <AlwaysLoad />
+      <SpriteSheetCount>1</SpriteSheetCount>
+      <SpriteSheetSize ID="1" Width="512" Height="512" />
+    </SpriteCategory>
+    <SpriteCategory>
+      <Name>ui_sotor_skills</Name>
+      <AlwaysLoad />
+      <SpriteSheetCount>1</SpriteSheetCount>
+      <SpriteSheetSize ID="1" Width="256" Height="256" />
+    </SpriteCategory>
+    <SpriteCategory>
+      <Name>ui_sotor_menu</Name>
+      <AlwaysLoad />
+      <SpriteSheetCount>1</SpriteSheetCount>
+      <SpriteSheetSize ID="1" Width="128" Height="128" />
+    </SpriteCategory>
   </SpriteCategories>
   <SpriteParts>
     <SpritePart>
@@ -2646,6 +2664,105 @@
       <SheetY>4</SheetY>
       <CategoryName>ui_sotor</CategoryName>
     </SpritePart>
+    <SpritePart>
+      <SheetID>1</SheetID>
+      <Name>sotor_reagent_scroll</Name>
+      <Width>128</Width>
+      <Height>128</Height>
+      <SheetX>0</SheetX>
+      <SheetY>0</SheetY>
+      <CategoryName>ui_sotor_reagents</CategoryName>
+    </SpritePart>
+    <SpritePart>
+      <SheetID>1</SheetID>
+      <Name>sotor_reagent_blessedwater</Name>
+      <Width>128</Width>
+      <Height>128</Height>
+      <SheetX>128</SheetX>
+      <SheetY>0</SheetY>
+      <CategoryName>ui_sotor_reagents</CategoryName>
+    </SpritePart>
+    <SpritePart>
+      <SheetID>1</SheetID>
+      <Name>sotor_reagent_dragonblood</Name>
+      <Width>128</Width>
+      <Height>128</Height>
+      <SheetX>256</SheetX>
+      <SheetY>0</SheetY>
+      <CategoryName>ui_sotor_reagents</CategoryName>
+    </SpritePart>
+    <SpritePart>
+      <SheetID>1</SheetID>
+      <Name>sotor_reagent_amber</Name>
+      <Width>128</Width>
+      <Height>128</Height>
+      <SheetX>384</SheetX>
+      <SheetY>0</SheetY>
+      <CategoryName>ui_sotor_reagents</CategoryName>
+    </SpritePart>
+    <SpritePart>
+      <SheetID>1</SheetID>
+      <Name>sotor_reagent_warpstone</Name>
+      <Width>128</Width>
+      <Height>128</Height>
+      <SheetX>0</SheetX>
+      <SheetY>128</SheetY>
+      <CategoryName>ui_sotor_reagents</CategoryName>
+    </SpritePart>
+    <SpritePart>
+      <SheetID>1</SheetID>
+      <Name>sotor_reagent_gemstone</Name>
+      <Width>128</Width>
+      <Height>128</Height>
+      <SheetX>128</SheetX>
+      <SheetY>128</SheetY>
+      <CategoryName>ui_sotor_reagents</CategoryName>
+    </SpritePart>
+    <SpritePart>
+      <SheetID>1</SheetID>
+      <Name>SPGeneral\Skills\gui_skills_icon_sotorspellcraft</Name>
+      <Width>128</Width>
+      <Height>128</Height>
+      <SheetX>0</SheetX>
+      <SheetY>0</SheetY>
+      <CategoryName>ui_sotor_skills</CategoryName>
+    </SpritePart>
+    <SpritePart>
+      <SheetID>1</SheetID>
+      <Name>SPGeneral\Skills\gui_skills_icon_sotorspellcraft_small</Name>
+      <Width>76</Width>
+      <Height>76</Height>
+      <SheetX>128</SheetX>
+      <SheetY>0</SheetY>
+      <CategoryName>ui_sotor_skills</CategoryName>
+    </SpritePart>
+    <SpritePart>
+      <SheetID>1</SheetID>
+      <Name>SPGeneral\Skills\gui_skills_icon_sotorspellcraft_tiny</Name>
+      <Width>46</Width>
+      <Height>46</Height>
+      <SheetX>0</SheetX>
+      <SheetY>128</SheetY>
+      <CategoryName>ui_sotor_skills</CategoryName>
+    </SpritePart>
+      <SpritePart>
+      <SheetID>1</SheetID>
+      <Name>sotor_enchanter_quarter_icon</Name>
+      <Width>56</Width>
+      <Height>42</Height>
+      <SheetX>0</SheetX>
+      <SheetY>0</SheetY>
+      <CategoryName>ui_sotor_menu</CategoryName>
+    </SpritePart>
+    <SpritePart>
+      <SheetID>1</SheetID>
+      <Name>sotor_graveyard_icon</Name>
+      <Width>56</Width>
+      <Height>42</Height>
+      <SheetX>56</SheetX>
+      <SheetY>0</SheetY>
+      <CategoryName>ui_sotor_menu</CategoryName>
+    </SpritePart>
   </SpriteParts>
   <Sprites>
     <GenericSprite>
@@ -3811,6 +3928,62 @@
     <GenericSprite>
       <Name>spellbook_rightside_edge</Name>
       <SpritePartName>spellbook_rightside_edge</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>sotor_reagent_scroll</Name>
+      <SpritePartName>sotor_reagent_scroll</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>sotor_reagent_blessedwater</Name>
+      <SpritePartName>sotor_reagent_blessedwater</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>sotor_reagent_dragonblood</Name>
+      <SpritePartName>sotor_reagent_dragonblood</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>sotor_reagent_amber</Name>
+      <SpritePartName>sotor_reagent_amber</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>sotor_reagent_warpstone</Name>
+      <SpritePartName>sotor_reagent_warpstone</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>sotor_reagent_gemstone</Name>
+      <SpritePartName>sotor_reagent_gemstone</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>SPGeneral\Skills\gui_skills_icon_sotorspellcraft</Name>
+      <SpritePartName>SPGeneral\Skills\gui_skills_icon_sotorspellcraft</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>gui_skills_icon_sotorspellcraft</Name>
+      <SpritePartName>SPGeneral\Skills\gui_skills_icon_sotorspellcraft</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>SPGeneral\Skills\gui_skills_icon_sotorspellcraft_small</Name>
+      <SpritePartName>SPGeneral\Skills\gui_skills_icon_sotorspellcraft_small</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>gui_skills_icon_sotorspellcraft_small</Name>
+      <SpritePartName>SPGeneral\Skills\gui_skills_icon_sotorspellcraft_small</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>SPGeneral\Skills\gui_skills_icon_sotorspellcraft_tiny</Name>
+      <SpritePartName>SPGeneral\Skills\gui_skills_icon_sotorspellcraft_tiny</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>gui_skills_icon_sotorspellcraft_tiny</Name>
+      <SpritePartName>SPGeneral\Skills\gui_skills_icon_sotorspellcraft_tiny</SpritePartName>
+    </GenericSprite>
+      <GenericSprite>
+      <Name>sotor_enchanter_quarter_icon</Name>
+      <SpritePartName>sotor_enchanter_quarter_icon</SpritePartName>
+    </GenericSprite>
+    <GenericSprite>
+      <Name>sotor_graveyard_icon</Name>
+      <SpritePartName>sotor_graveyard_icon</SpritePartName>
     </GenericSprite>
   </Sprites>
 </SpriteData>

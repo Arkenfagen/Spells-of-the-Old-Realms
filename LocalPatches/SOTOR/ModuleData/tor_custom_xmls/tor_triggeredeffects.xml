@@ -1035,4 +1035,96 @@
     <ImbuedStatusEffect>arcane_conduit_res_debuff</ImbuedStatusEffect>
     <ImbuedStatusEffect>arcane_conduit_dmg_buff</ImbuedStatusEffect>
   </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="anath_raema_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Physical" DamageAmount="1" Radius="3" HasShockWave="true" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="0" ScriptNameToTrigger="" />
+  <TriggeredEffectTemplate StringID="aqshy_cinders_enchant" BurstParticleEffectPrefab="psys_fireball_explosion_1" SoundEffectId="sotor_fireball_explosion" SoundEffectLength="2.5" DamageType="Fire" DamageAmount="1" Radius="3" HasShockWave="false" TargetType="Enemy" ImbuedStatusEffectDuration="5" DamageVariance="0.05" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>fireball_dot</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="aqshy_firebreath_enchant" BurstParticleEffectPrefab="psys_fireball_explosion_1" SoundEffectId="sotor_fireball_explosion" SoundEffectLength="2.5" DamageType="Fire" DamageAmount="60" Radius="3" HasShockWave="false" TargetType="Enemy" ImbuedStatusEffectDuration="5" DamageVariance="0.05" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>fireball_dot</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="azure_mirror_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Lightning" DamageAmount="15" Radius="2" HasShockWave="true" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="none" />
+  <TriggeredEffectTemplate StringID="azyr_foresight_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Lightning" DamageAmount="0" Radius="7" HasShockWave="true" TargetType="Friendly" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="TOR_Core.BattleMechanics.TriggeredEffect.Scripts.ApplyAzyrForesightScript" />
+  <TriggeredEffectTemplate StringID="azyr_gale_enchant" BurstParticleEffectPrefab="wind_blast" SoundEffectId="none" SoundEffectLength="0" DamageType="Lightning" DamageAmount="10" Radius="3" HasShockWave="true" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="none" />
+  <TriggeredEffectTemplate StringID="bonds_of_darkness" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Invalid" DamageAmount="0" Radius="5" HasShockWave="false" TargetType="All" DamageVariance="0" TroopIdToSummon="sotor_skeleton_warrior" NumberToSummon="3" ScriptNameToTrigger="TOR_Core.BattleMechanics.TriggeredEffect.Scripts.SummonScript" />
+  <TriggeredEffectTemplate StringID="call_from_beyond" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Invalid" DamageAmount="0" Radius="5" HasShockWave="false" TargetType="All" DamageVariance="0" TroopIdToSummon="sotor_grave_guard_warrior" NumberToSummon="3" ScriptNameToTrigger="TOR_Core.BattleMechanics.TriggeredEffect.Scripts.SummonScript" />
+  <TriggeredEffectTemplate StringID="chamon_transmutation_enchant" BurstParticleEffectPrefab="" SoundEffectId="" SoundEffectLength="2.5" DamageType="Fire" DamageAmount="1" Radius="3" HasShockWave="false" TargetType="Enemy" ImbuedStatusEffectDuration="5" DamageVariance="0.05" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>chamon_transmutation_enchant_debuff</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="chilling_hand" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Holy" DamageAmount="0" Radius="7" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="">
+  <ImbuedStatusEffect>chilling_hand_mvs</ImbuedStatusEffect>
+  <ImbuedStatusEffect>chilling_hand_res</ImbuedStatusEffect>
+  <ImbuedStatusEffect>chilling_hand_ats</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="crimson_flood" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Magical" DamageAmount="15" Radius="3" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="" />
+  <TriggeredEffectTemplate StringID="dusk_and_dawn" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Holy" DamageAmount="40" Radius="3" HasShockWave="false" TargetType="Enemy" DamageVariance="0" TroopIdToSummon="none" NumberToSummon="1" ScriptNameToTrigger="none" />
+  <TriggeredEffectTemplate StringID="embrace_isha" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Holy" DamageAmount="0" Radius="3" HasShockWave="false" ImbuedStatusEffectDuration="5" TargetType="Self" DamageVariance="0" TroopIdToSummon="none" NumberToSummon="1" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>embrace_isha</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="emissaries_mirai" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Holy" DamageAmount="0" Radius="3" HasShockWave="false" TargetType="Enemy" DamageVariance="0" TroopIdToSummon="none" NumberToSummon="1" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>emissaries_mirai</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="enchant_ethereal_whispers" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Holy" DamageAmount="0" Radius="7" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="">
+  <ImbuedStatusEffect>enchant_ethereal_whispers</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="ghur_crows_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Invalid" DamageAmount="0" Radius="12" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>beast_crow_enchant_debuff</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="ghur_echo_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Invalid" DamageAmount="0" Radius="12" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>beast_echo_enchant_debuff</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="ghyran_brambles_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Physical" DamageAmount="25" Radius="2" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="none" />
+  <TriggeredEffectTemplate StringID="ghyran_tendrils_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Invalid" DamageAmount="0" Radius="3" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>ghyran_tendrils_enchant</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="hysh_brilliance_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Invalid" DamageAmount="0" Radius="3" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>hysh_brilliance_enchant_debuff</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="legacy_caledor_enchant" BurstParticleEffectPrefab="psys_fireball_explosion_1" SoundEffectId="sotor_fireball_explosion" SoundEffectLength="2.5" DamageType="Fire" DamageAmount="50" Radius="3" HasShockWave="false" TargetType="Enemy" ImbuedStatusEffectDuration="5" DamageVariance="0.05" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>fireball_dot</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="nightshroud" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Holy" DamageAmount="0" Radius="7" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="">
+  <ImbuedStatusEffect>nightshroud_ats</ImbuedStatusEffect>
+  <ImbuedStatusEffect>nightshroud_dmg</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="rune_parrying_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Physical" DamageAmount="1" Radius="3" HasShockWave="true" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="0" ScriptNameToTrigger="" />
+  <TriggeredEffectTemplate StringID="sanctuary_saphery_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Invalid" DamageAmount="0" Radius="0" HasShockWave="false" TargetType="Friendly" DamageVariance="0.0" ImbuedStatusEffectDuration="30" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>sanctuary_saphery_enchant_tick</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="shyish_messengers_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Lightning" DamageAmount="0" Radius="7" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="">
+  <ImbuedStatusEffect>shyish_messengers_debuff</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="storms_mathlann" BurstParticleEffectPrefab="blue_particle_explosion" SoundEffectId="sotor_dart_explosion" SoundEffectLength="2.5" DamageType="Lightning" DamageAmount="35" Radius="2.5" HasShockWave="false" TargetType="Enemy" DamageVariance="0.2" ScriptNameToTrigger="none" />
+  <TriggeredEffectTemplate StringID="thorns_nettles" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Physical" DamageAmount="40" Radius="2" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="none" />
+  <TriggeredEffectTemplate StringID="touch_jet" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Magical" DamageAmount="20" Radius="3" HasShockWave="false" TargetType="Enemy" DamageVariance="0" TroopIdToSummon="none" NumberToSummon="1" ScriptNameToTrigger="none" />
+  <TriggeredEffectTemplate StringID="tranquillity_cadai" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Holy" DamageAmount="0" Radius="3" HasShockWave="false" TargetType="Friendly" DamageVariance="0" TroopIdToSummon="none" NumberToSummon="1" ScriptNameToTrigger="none">
+  <ImbuedStatusEffect>tranquillity_cadai_res</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="tree_lord_bargain" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Invalid" DamageAmount="0" Radius="5" HasShockWave="false" TargetType="All" DamageVariance="0" TroopIdToSummon="sotor_dryad" NumberToSummon="1" ScriptNameToTrigger="TOR_Core.BattleMechanics.TriggeredEffect.Scripts.SummonScript" />
+
+  <TriggeredEffectTemplate StringID="net_amyn_movementimpair_100" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Invalid" DamageAmount="0" Radius="3" HasShockWave="false" TargetType="Enemy" ImbuedStatusEffectDuration="5" DamageVariance="0.0">
+  <ImbuedStatusEffect>net_amyn_movementimpair_100</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="shyish_deathsight" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Invalid" DamageAmount="0" Radius="1.5" HasShockWave="false" TargetType="Enemy" ImbuedStatusEffectDuration="10" DamageVariance="0.0">
+  <ImbuedStatusEffect>shyish_deathsight</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+
+  <TriggeredEffectTemplate StringID="sigmar_soulfire_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Holy" DamageAmount="35" Radius="7" HasShockWave="false" TargetType="Enemy" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="" />
+  <TriggeredEffectTemplate StringID="sigmar_light_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Invalid" DamageAmount="0" Radius="1" HasShockWave="false" TargetType="Self" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="">
+  <ImbuedStatusEffect>sigmar_light</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="ulric_frenzy_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Holy" DamageAmount="0" Radius="3" HasShockWave="false" TargetType="Friendly" DamageVariance="0.0" ImbuedStatusEffectDuration="20" ScriptNameToTrigger="">
+  <ImbuedStatusEffect>ulric_frenzy</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="shallya_pacifism_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Holy" DamageAmount="0" Radius="3" HasShockWave="false" TargetType="Self" DamageVariance="0.0" ImbuedStatusEffectDuration="5" ScriptNameToTrigger="">
+  <ImbuedStatusEffect>shallya_pacifism</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="shallya_martyrdom_enchant" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Holy" DamageAmount="0" Radius="3" HasShockWave="false" TargetType="Friendly" DamageVariance="0.0" ImbuedStatusEffectDuration="6" ScriptNameToTrigger="">
+  <ImbuedStatusEffect>shallya_pacifism</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="rune_spell_eating" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Physical" DamageAmount="0" Radius="3" HasShockWave="true" TargetType="Self" DamageVariance="0.0" ImbuedStatusEffectDuration="10" ScriptNameToTrigger="">
+  <ImbuedStatusEffect>rune_spell_eating</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
+  <TriggeredEffectTemplate StringID="rune_preservation" BurstParticleEffectPrefab="none" SoundEffectId="none" SoundEffectLength="0" DamageType="Physical" DamageAmount="0" Radius="3" HasShockWave="true" TargetType="Self" DamageVariance="0.0" ImbuedStatusEffectDuration="10" ScriptNameToTrigger="">
+  <ImbuedStatusEffect>rune_preservation</ImbuedStatusEffect>
+  </TriggeredEffectTemplate>
 </TriggeredEffects>

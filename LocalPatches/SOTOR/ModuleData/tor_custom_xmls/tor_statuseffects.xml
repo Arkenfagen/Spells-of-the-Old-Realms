@@ -458,4 +458,38 @@
                         type="DamageAmplification"
                         damage_type="Magical"
                         applies_for_attack_type="Spell" />
+  <StatusEffectTemplate id="beast_crow_enchant_debuff" particle_id="flock_of_doom" do_not_attach_to_agent_skeleton="true" base_effect_value="2" applies_for_attack_type="All" type="DamageOverTime" damage_type="Frost" />
+  <StatusEffectTemplate id="beast_echo_enchant_debuff" particle_id="curse_of_anraheir" do_not_attach_to_agent_skeleton="true" base_effect_value="-0.2" applies_for_attack_type="All" type="MovementManipulation" damage_type="Frost" />
+  <StatusEffectTemplate id="beast_savagery_enchant_ats" particle_id="general_beast_buff" do_not_attach_to_agent_skeleton="true" base_effect_value="0.02" applies_for_attack_type="All" type="AttackSpeedManipulation" damage_type="Frost" />
+  <StatusEffectTemplate id="beast_wildform_enchant_res" particle_id="general_beast_buff" do_not_attach_to_agent_skeleton="true" base_effect_value="0.03" applies_for_attack_type="All" type="Resistance" damage_type="Physical">
+  <temporary_attribute>wildform</temporary_attribute>
+  </StatusEffectTemplate>
+  <StatusEffectTemplate id="chamon_transmutation_enchant_debuff" particle_id="" do_not_attach_to_agent_skeleton="false" base_effect_value="-0.4" applies_for_attack_type="All" type="Resistance" damage_type="Physical" />
+  <StatusEffectTemplate id="chilling_hand_ats" particle_id="" do_not_attach_to_agent_skeleton="false" base_effect_value="-0.25" applies_for_attack_type="All" type="AttackSpeedManipulation" damage_type="Physical" />
+  <StatusEffectTemplate id="chilling_hand_mvs" particle_id="freeze" do_not_attach_to_agent_skeleton="false" base_effect_value="-0.25" applies_for_attack_type="All" type="MovementManipulation" damage_type="Physical" />
+  <StatusEffectTemplate id="chilling_hand_res" particle_id="" do_not_attach_to_agent_skeleton="false" base_effect_value="-0.25" applies_for_attack_type="All" type="ReloadSpeedManipulation" damage_type="Physical" />
+  <StatusEffectTemplate id="ghyran_bloom_enchant_heal" particle_id="general_life_buff" do_not_attach_to_agent_skeleton="true" base_effect_value="2" applies_for_attack_type="All" type="HealthOverTime" damage_type="Frost" />
+  <StatusEffectTemplate id="hagbane_debuff" particle_id="hagbane_debuff" do_not_attach_to_agent_skeleton="true" particle_intensity="High" base_effect_value="-0.4" type="MovementManipulation" damage_type="Frost" />
+  <StatusEffectTemplate id="hysh_brilliance_enchant_debuff" particle_id="general_light_debuff" do_not_attach_to_agent_skeleton="false" base_effect_value="-0.25" applies_for_attack_type="All" type="MovementManipulation" damage_type="Physical" />
+  <StatusEffectTemplate id="mockery_asps" particle_id="curse_of_years" do_not_attach_to_agent_skeleton="false" base_effect_value="-0.5" applies_for_attack_type="Ranged" type="Resistance" damage_type="Physical" />
+  <StatusEffectTemplate id="nightshroud_ats" particle_id="curse_of_years" do_not_attach_to_agent_skeleton="false" base_effect_value="-0.25" applies_for_attack_type="All" type="AttackSpeedManipulation" damage_type="Physical" />
+  <StatusEffectTemplate id="nightshroud_dmg" particle_id="curse_of_years" do_not_attach_to_agent_skeleton="false" base_effect_value="-0.25" applies_for_attack_type="All" type="DamageAmplification" damage_type="Physical" />
+  <StatusEffectTemplate id="sanctuary_saphery_enchant_tick" particle_id="aura_of_lady" do_not_attach_to_agent_skeleton="false" base_effect_value="1.0" applies_for_attack_type="Ranged" type="Resistance" damage_type="Physical">
+  <temporary_attribute>ClearBloodBurst</temporary_attribute>
+  </StatusEffectTemplate>
+  <StatusEffectTemplate id="shyish_blight_debuff" particle_id="caress_of_laniph" do_not_attach_to_agent_skeleton="true" base_effect_value="-0.25" applies_for_attack_type="All" type="Resistance" damage_type="Physical" />
+  <StatusEffectTemplate id="shyish_deathsight" particle_id="caress_of_laniph" do_not_attach_to_agent_skeleton="false" base_effect_value="-0.33" applies_for_attack_type="All" type="Resistance" damage_type="Magical" />
+  <StatusEffectTemplate id="shyish_messengers_debuff" particle_id="caress_of_laniph" particle_intensity="High" do_not_attach_to_agent_skeleton="true" base_effect_value="4" type="DamageOverTime" damage_type="Magical" />
+  <StatusEffectTemplate id="shyish_pall_buff" particle_id="" do_not_attach_to_agent_skeleton="false" base_effect_value="0.10" applies_for_attack_type="All" type="Resistance" damage_type="Magical" />
+  <StatusEffectTemplate id="shyish_withering_debuff" particle_id="curse_of_years" do_not_attach_to_agent_skeleton="false" base_effect_value="-0.25" applies_for_attack_type="All" type="MovementManipulation" damage_type="Physical" />
+  <StatusEffectTemplate id="tranquillity_cadai_res" particle_id="healing_hand" do_not_attach_to_agent_skeleton="false" base_effect_value="0.15" applies_for_attack_type="All" type="Resistance" damage_type="Magical" />
+
+  <StatusEffectTemplate id="sigmar_light" particle_id="healing_hand" do_not_attach_to_agent_skeleton="false" base_effect_value="1" applies_for_attack_type="All" type="HealthOverTime" damage_type="Holy" />
+  <StatusEffectTemplate id="sigmar_retribution" particle_id="caress_of_laniph" do_not_attach_to_agent_skeleton="false" base_effect_value="0.10" applies_for_attack_type="All" type="DamageAmplification" damage_type="Holy" />
+  <StatusEffectTemplate id="ulric_wrath" particle_id="ulrics_gift" do_not_attach_to_agent_skeleton="false" base_effect_value="0.02" applies_for_attack_type="All" type="AttackSpeedManipulation" damage_type="Holy" />
+  <StatusEffectTemplate id="ulric_frenzy" particle_id="ulrics_gift" do_not_attach_to_agent_skeleton="false" base_effect_value="0.15" applies_for_attack_type="All" type="AttackSpeedManipulation" damage_type="Frost" />
+  <StatusEffectTemplate id="wolf_god_bite" particle_id="ulrics_gift" do_not_attach_to_agent_skeleton="false" base_effect_value="0.06" applies_for_attack_type="All" type="DamageAmplification" damage_type="Frost" />
+  <StatusEffectTemplate id="shallya_pacifism" particle_id="healing_hand" do_not_attach_to_agent_skeleton="false" base_effect_value="2" applies_for_attack_type="All" type="HealthOverTime" damage_type="Holy" />
+  <StatusEffectTemplate id="rune_spell_eating" particle_id="" do_not_attach_to_agent_skeleton="false" base_effect_value="1" applies_for_attack_type="All" type="Resistance" damage_type="Magical" />
+  <StatusEffectTemplate id="rune_preservation" particle_id="" do_not_attach_to_agent_skeleton="false" base_effect_value="2" applies_for_attack_type="All" type="HealthOverTime" damage_type="Magical" />
 </StatusEffects>

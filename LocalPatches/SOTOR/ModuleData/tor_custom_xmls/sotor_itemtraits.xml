@@ -1,0 +1,1548 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ItemTraits>
+  <ItemTrait ItemTraitStringId="emp_enchant_ghur_wildform" ItemTraitName="Wildform of Ghur" IsCraftable="true" ImbuedEffectChance="1.00" IconName="ghur" RequiredLore="LoreOfBeasts" LearnThreshold="125" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>3% extra physical resistance, 15% to receive a fleeting 3% physical resistance bonus upon receiving damage. Stacks up to 3 times</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.03" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseStackBuffScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>beast_wildform_enchant_res</WeaponScriptArgument>
+        <WeaponScriptArgument>3</WeaponScriptArgument>
+        <WeaponScriptArgument>10</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_ghur_savagery" ItemTraitName="Savagery of Ghur" IsCraftable="true" ImbuedEffectChance="1.00" IconName="ghur" RequiredLore="LoreOfBeasts" LearnThreshold="125" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>18</IngredientAmount>
+    <ItemTraitDescription>10% extra physical damage, 10% to receive a fleeting 2% attack speed bonus upon dealing damge. Stacks up to 5 times</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.10" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponBuffStackScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>beast_savagery_enchant_ats</WeaponScriptArgument>
+        <WeaponScriptArgument>5</WeaponScriptArgument>
+        <WeaponScriptArgument>20</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_ghur_crows" ItemTraitName="Crows of Ghur" IsCraftable="true" ImbuedEffectChance="0.10" IconName="ghur" RequiredLore="LoreOfBeasts" LearnThreshold="200" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>8</IngredientAmount>
+    <ItemTraitDescription>10% extra physical damage, 10% to summon vicious crows in a very small area upon dealing damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.10" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>ghur_crows_enchant</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_ghur_echo" ItemTraitName="Echo of Ghur" IsCraftable="true" ImbuedEffectChance="0.10" IconName="ghur" RequiredLore="LoreOfBeasts" LearnThreshold="125" Tradition="Empire">
+    <ValidItemType>Ranged</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>15% extra physical damage, 15% extra missile speed, 10% to reduce movement speed of nearby enemies upon dealing damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.15" />
+    <StatsTuple StatType="MissileSpeed" Value="15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>ghur_echo_enchant</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_ghur_whisper" ItemTraitName="Whisper of Ghur" IsCraftable="true" IconName="ghur" RequiredLore="LoreOfBeasts" LearnThreshold="25" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>10% extra physical damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_hysh_sanctuary" ItemTraitName="Sanctuary of Hysh" IsCraftable="true" ImbuedEffectChance="0.05" IconName="hysh" RequiredLore="LoreOfLight" LearnThreshold="125" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>14</IngredientAmount>
+    <ItemTraitDescription>3% extra physical resistance, 5% to snare nearby enemies with a net of Hysh upon receiving damage</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.03" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>net_amyn_movementimpair_100</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_hysh_brilliance" ItemTraitName="Brilliance of Hysh" IsCraftable="true" ImbuedEffectChance="0.15" IconName="hysh" RequiredLore="LoreOfLight" LearnThreshold="125" Tradition="Empire">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>15% to trigger a burst of light upon blocking damage. Reduces attack speed of nearby enemies for a short time</ItemTraitDescription>
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>hysh_brilliance_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_hysh_timewarp" ItemTraitName="Timewarp of Hysh" IsCraftable="true" ImbuedEffectChance="0.10" IconName="hysh" RequiredLore="LoreOfLight" LearnThreshold="200" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>6</IngredientAmount>
+    <ItemTraitDescription>20 extra magic damage, 15% to receive a movement speed buff for a short time upon dealing damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.20" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>hysh_brilliance_enchant</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_hysh_clarity" ItemTraitName="Clarity of Hysh" IsCraftable="true" IconName="hysh" RequiredLore="LoreOfLight" LearnThreshold="125" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>25</IngredientAmount>
+    <ItemTraitDescription>3 extra Winds of Magic</ItemTraitDescription>
+    <StatsTuple StatType="WindsOfMagicMax" Value="3" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_hysh_whisper" ItemTraitName="Whisper of Hysh" IsCraftable="true" IconName="hysh" RequiredLore="LoreOfLight" LearnThreshold="25" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>10 extra magic damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_hysh_providence" ItemTraitName="Providence of Hysh" IsCraftable="true" IconName="hysh" RequiredLore="LoreOfLight" LearnThreshold="25" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>5% magic resistance, 10 bonus skillpoints to Spellcraft</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.05" />
+    <StatsTuple StatType="Skill" SkillId="Spellcraft" Value="10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_ghyran_brambles" ItemTraitName="Brambles of Ghyran" IsCraftable="true" ImbuedEffectChance="1.00" IconName="ghyran" RequiredLore="LoreOfLife" LearnThreshold="75" Tradition="Empire">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>Deal 25 physical damage to enemies blocked in melee, -10% fire resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Fire" ReductionPercent="-0.10" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>ghyran_brambles_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>melee</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_ghyran_bloom" ItemTraitName="Bloom of Ghyran" IsCraftable="true" ImbuedStatusEffectId="ghyran_bloom_enchant_heal" ImbuedEffectChance="0.10" IconName="ghyran" RequiredLore="LoreOfLife" LearnThreshold="200" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>6 max HP bonus, -10% fire resistance, 10% chance to recover 2 HP per second for a short time upon receiving damage</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Fire" ReductionPercent="-0.10" />
+    <StatsTuple StatType="HealthMax" Value="6" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_ghyran_cloak" ItemTraitName="Cloak of Ghyran" IsCraftable="true" IconName="ghyran" RequiredLore="LoreOfLife" LearnThreshold="25" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>2</IngredientAmount>
+    <ItemTraitDescription>25% extra healing rate when travelling</ItemTraitDescription>
+    <StatsTuple StatType="HealthRegen" Value="25" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_ghyran_tendrils" ItemTraitName="Tendrils of Ghyran" IsCraftable="true" ImbuedEffectChance="0.25" IconName="ghyran" RequiredLore="LoreOfLife" LearnThreshold="100" Tradition="Empire">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>15</IngredientAmount>
+    <ItemTraitDescription>15% extra physical resistance, 25% to snare nearby enemies with powerful roots upon blocking damage</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>ghyran_tendrils_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_ghyran_whisper" ItemTraitName="Whisper of Ghyran" IsCraftable="true" IconName="ghyran" RequiredLore="LoreOfLife" LearnThreshold="25" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>3 max HP bonus, -15% fire resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Fire" ReductionPercent="-0.15" />
+    <StatsTuple StatType="HealthMax" Value="3" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_ghyran_intuition" ItemTraitName="Intuition of Ghyran" IsCraftable="true" IconName="ghyran" RequiredLore="LoreOfLife" LearnThreshold="150" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>18</IngredientAmount>
+    <ItemTraitDescription>3 extra Winds of Magic, -25% fire resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Fire" ReductionPercent="-0.25" />
+    <StatsTuple StatType="WindsOfMagicMax" Value="3" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_aqshy_hearth" ItemTraitName="Hearth of Aqshy" IsCraftable="true" IconName="aqshy" RequiredLore="LoreOfFire" LearnThreshold="100" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>7% bonus to fire damage, -25% fire resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Fire" ReductionPercent="-0.25" />
+    <AmplifierTuple AmplifiedDamageType="Fire" DamageAmplifier="0.07" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_aqshy_firebreath" ItemTraitName="Firebreath of Aqshy" IsCraftable="true" ImbuedEffectChance="0.20" IconName="aqshy" RequiredLore="LoreOfFire" LearnThreshold="225" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>25 extra fire damage, 20% to summon a fiery explosion upon dealing damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Fire" Percent="0.25" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>aqshy_firebreath_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_aqshy_cinders" ItemTraitName="Cinders of Aqshy" IsCraftable="true" ImbuedEffectChance="0.15" IconName="aqshy" RequiredLore="LoreOfFire" LearnThreshold="125" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>15</IngredientAmount>
+    <ItemTraitDescription>15 extra fire damage, 15% to inflict fire DoT effect on nearby enemies upon dealing damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Fire" Percent="0.15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>aqshy_cinders_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_aqshy_rage" ItemTraitName="Rage of Aqshy" IsCraftable="true" IconName="aqshy" RequiredLore="LoreOfFire" LearnThreshold="200" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>8</IngredientAmount>
+    <ItemTraitDescription>40% extra fire damage, -15% fire resistance</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Fire" Percent="0.40" />
+    <ResistanceTuple ResistedDamageType="Fire" ReductionPercent="-0.15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_aqshy_whisper" ItemTraitName="Whisper of Aqshy" IsCraftable="true" IconName="aqshy" RequiredLore="LoreOfFire" LearnThreshold="25" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>12% extra fire damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Fire" Percent="0.12" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_aqshy_fury" ItemTraitName="Fury of Aqshy" IsCraftable="true" ImbuedEffectChance="1.00" IconName="aqshy" RequiredLore="LoreOfFire" LearnThreshold="125" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>Damaging burning enemies inflicts 50 extra fire damage</ItemTraitDescription>
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.BonusDOTDamageEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>50</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_aqshy_curtain" ItemTraitName="Curtain of Aqshy" IsCraftable="true" ImbuedEffectChance="0.15" IconName="aqshy" RequiredLore="LoreOfFire" LearnThreshold="100" Tradition="Empire">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>14</IngredientAmount>
+    <ItemTraitDescription>20% extra fire resistance, 15% chance to inflict fire DoT on blocked enemies. This DoT effect can spread onto enemies and allies alike</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Fire" ReductionPercent="0.20" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>aqshy_cinders_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_chamon_transmutation" ItemTraitName="Transmutation of Chamon" IsCraftable="true" IconName="chamon" RequiredLore="LoreOfMetal" LearnThreshold="225" Tradition="Empire">
+    <ValidItemType>Ammo</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>20% extra fire damage, projectiles penetrate targets</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Fire" Percent="0.20" />
+    <StatsTuple StatType="MultiPenetration" Value="1" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_chamon_aegis" ItemTraitName="Aegis of Chamon" IsCraftable="true" ImbuedEffectChance="0.50" IconName="chamon" RequiredLore="LoreOfMetal" LearnThreshold="75" Tradition="Empire">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>20% extra shield HP, 5% physical resistance, 50% chance to decrease physical resistance of nearby enemies upon blocking damage</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.05" />
+    <StatsTuple StatType="ShieldHealth" Value="20" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>chamon_transmutation_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_chamon_laws" ItemTraitName="Laws of Chamon" IsCraftable="true" IconName="chamon" RequiredLore="LoreOfMetal" LearnThreshold="175" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>8</IngredientAmount>
+    <ItemTraitDescription>50% extra armour penetration</ItemTraitDescription>
+    <StatsTuple StatType="ArmorPenetration" Value="50" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_chamon_feathers_lead" ItemTraitName="Feathers to Lead" IsCraftable="true" IconName="chamon" RequiredLore="LoreOfMetal" LearnThreshold="100" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>8% extra physical resistance, 5% penalty to movement speed</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.08" />
+    <StatsTuple StatType="MovementSpeed" Value="-5" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_chamon_lead_feathers" ItemTraitName="Lead to Feathers" IsCraftable="true" IconName="chamon" RequiredLore="LoreOfMetal" LearnThreshold="100" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>3% penalty to physical resistance, 5% bonus to movement speed</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="-0.03" />
+    <StatsTuple StatType="MovementSpeed" Value="5" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_chamon_forge" ItemTraitName="Forge of Chamon" IsCraftable="true" IconName="chamon" RequiredLore="LoreOfMetal" LearnThreshold="150" Tradition="Empire">
+    <ValidItemType>Ranged</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>20</IngredientAmount>
+    <ItemTraitDescription>30% extra reload speed, 10 extra magic damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.10" />
+    <StatsTuple StatType="ReloadSpeed" Value="30" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_chamon_whisper" ItemTraitName="Whisper of Chamon" IsCraftable="true" IconName="chamon" RequiredLore="LoreOfMetal" LearnThreshold="25" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>3% extra physical resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.03" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_chamon_crucible" ItemTraitName="Crucible of Chamon" IsCraftable="true" IconName="chamon" RequiredLore="LoreOfMetal" LearnThreshold="225" Tradition="Empire">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>30</IngredientAmount>
+    <ItemTraitDescription>20% extra magic damage, weapon gains the Cleave trait</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.20" />
+    <StatsTuple StatType="Cleave" Value="1" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_azyr_wind" ItemTraitName="Wind of Azyr" IsCraftable="true" IconName="azyr" RequiredLore="LoreOfHeavens" LearnThreshold="25" Tradition="Empire">
+    <ValidItemType>Ammo</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>10% extra projectile speed</ItemTraitDescription>
+    <StatsTuple StatType="MissileSpeed" Value="10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_azyr_harmony" ItemTraitName="Harmony of Azyr" IsCraftable="true" IconName="azyr" RequiredLore="LoreOfHeavens" LearnThreshold="75" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>9</IngredientAmount>
+    <ItemTraitDescription>4% bonus to lightning damage</ItemTraitDescription>
+    <AmplifierTuple AmplifiedDamageType="Lightning" DamageAmplifier="0.04" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_azyr_azure_mirror" ItemTraitName="Azure Mirror of Azyr" IsCraftable="true" ImbuedEffectChance="1.00" IconName="azyr" RequiredLore="LoreOfHeavens" LearnThreshold="200" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>2% extra physical resistance, deal 15 lightning damage to enemies attacking you in melee</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.02" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>azure_mirror_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_azyr_gale" ItemTraitName="Gale of Azyr" IsCraftable="true" ImbuedEffectChance="0.15" IconName="azyr" RequiredLore="LoreOfHeavens" LearnThreshold="125" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>25</IngredientAmount>
+    <ItemTraitDescription>15% extra armour penetration, 15% to summon a gust of wind knocking down surrounding enemies upon dealing damage</ItemTraitDescription>
+    <StatsTuple StatType="ArmorPenetration" Value="15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>azyr_gale_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_azyr_foresight" ItemTraitName="Foresight of Azyr" IsCraftable="true" ImbuedEffectChance="0.15" IconName="azyr" RequiredLore="LoreOfHeavens" LearnThreshold="200" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>15% extra lightning damage and 15% physical resistance, 15% chance to grant nearby troops the same boons for 20 seconds upon dealing damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Lightning" Percent="0.15" />
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>azyr_foresight_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_azyr_divination" ItemTraitName="Divination of Azyr" IsCraftable="true" IconName="azyr" RequiredLore="LoreOfHeavens" LearnThreshold="175" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>5% extra magic resistance, 7% extra party travel speed</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.05" />
+    <StatsTuple StatType="PartySpeed" Value="7" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_azyr_whisper" ItemTraitName="Whisper of Azyr" IsCraftable="true" IconName="azyr" RequiredLore="LoreOfHeavens" LearnThreshold="25" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>3% magic resistance, 3% extra party travel speed</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.03" />
+    <StatsTuple StatType="PartySpeed" Value="3" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_shyish_pale_grip" ItemTraitName="Pale Grip of Shyish" IsCraftable="true" IconName="shyish" RequiredLore="LoreOfDeath" LearnThreshold="100" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>9</IngredientAmount>
+    <ItemTraitDescription>7% bonus to magic damage, -3 HP</ItemTraitDescription>
+    <AmplifierTuple AmplifiedDamageType="Magical" DamageAmplifier="0.07" />
+    <StatsTuple StatType="HealthMax" Value="-3" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_shyish_messengers" ItemTraitName="Messengers of Shyish" IsCraftable="true" ImbuedEffectChance="0.10" IconName="shyish" RequiredLore="LoreOfDeath" LearnThreshold="175" Tradition="Empire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>6</IngredientAmount>
+    <ItemTraitDescription>5% extra magic resistance, 10% chance to inflict horrific visions in a small radius upon taking damage. Nearby enemies suffer a DoT effect</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.05" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>shyish_messengers_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_shyish_blight" ItemTraitName="Blight of Shyish" IsCraftable="true" ImbuedStatusEffectId="shyish_blight_debuff" ImbuedEffectChance="0.10" IconName="shyish" RequiredLore="LoreOfDeath" LearnThreshold="200" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>9</IngredientAmount>
+    <ItemTraitDescription>25 extra magic damage, damaged enemies suffer a 25% physical resistance penalty</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.25" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_shyish_pall" ItemTraitName="Pall of Shyish" IsCraftable="true" ImbuedEffectChance="1.00" IconName="shyish" RequiredLore="LoreOfDeath" LearnThreshold="150" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>20</IngredientAmount>
+    <ItemTraitDescription>15 extra magic damage, gain a stacking 10% magic resistance bonus upon killing enemies. Stacks up to 5 times and fades after a short while</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.BuffStackOnKill">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>shyish_pall_buff</WeaponScriptArgument>
+        <WeaponScriptArgument>50</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_shyish_withering" ItemTraitName="Withering of Shyish" IsCraftable="true" ImbuedStatusEffectId="shyish_withering_debuff" ImbuedEffectChance="0.10" IconName="shyish" RequiredLore="LoreOfDeath" LearnThreshold="150" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>30</IngredientAmount>
+    <ItemTraitDescription>10% extra magic damage, 10% chance to reduce attack speed of nearby enemies by 15% when dealing damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_shyish_whisper" ItemTraitName="Whisper of Shyish" IsCraftable="true" IconName="shyish" RequiredLore="LoreOfDeath" LearnThreshold="25" Tradition="Empire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>12% extra magic damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.12" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_enchant_shyish_deathsight" ItemTraitName="Deathsight of Shyish" IsCraftable="true" ImbuedEffectChance="0.50" IconName="shyish" RequiredLore="LoreOfDeath" LearnThreshold="50" Tradition="Empire">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>Blocking hits of Undead units carries a 50% chance to apply an 'Exorcism', granting 33% extra magic melee dmg for 10 seconds against the target</ItemTraitDescription>
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.UndeadConditionDefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>shyish_deathsight</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_bonds_darkness" ItemTraitName="Bonds of Darkness" IsCraftable="true" ImbuedEffectChance="1.00" IconName="darkenergy_icon_100" RequiredLore="LoreOfNecromancy" LearnThreshold="25" Tradition="Vampire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>5% bonus to magic damage, summon 3 Crypt Warriors for every enemy felled in melee</ItemTraitDescription>
+    <AmplifierTuple AmplifiedDamageType="Magical" DamageAmplifier="0.05" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.TriggerOnKillScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>bonds_of_darkness</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_call_beyond" ItemTraitName="Call from Beyond" IsCraftable="true" ImbuedEffectChance="1.00" IconName="darkenergy_icon_100" RequiredLore="LoreOfNecromancy" LearnThreshold="75" Tradition="Vampire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>15</IngredientAmount>
+    <ItemTraitDescription>10% bonus to magic damage, summon 3 Grave Guard for every enemy felled in melee</ItemTraitDescription>
+    <AmplifierTuple AmplifiedDamageType="Magical" DamageAmplifier="0.10" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.TriggerOnKillScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>call_from_beyond</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_unhallowed_pact" ItemTraitName="Unhallowed Pact" IsCraftable="true" IconName="darkenergy_icon_100" RequiredLore="LoreOfNecromancy" LearnThreshold="75" Tradition="Vampire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>9</IngredientAmount>
+    <ItemTraitDescription>-5% physical resistance, 33% extra spell radius</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="-0.05" />
+    <StatsTuple StatType="SpellRadius" Value="33" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_drinker_blood" ItemTraitName="Drinker of Blood" IsCraftable="true" IconName="darkenergy_icon_100" RequiredLore="LoreOfNecromancy" LearnThreshold="225" Tradition="Vampire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>16</IngredientAmount>
+    <ItemTraitDescription>15 extra magic damage. Recover 1 HP for every instance of damage dealt in melee, triggers below 50% HP</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.BloodLeechingScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>1</WeaponScriptArgument>
+        <WeaponScriptArgument>50</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_nightshroud" ItemTraitName="Nightshroud" IsCraftable="true" ImbuedEffectChance="0.15" IconName="necrarch_icon" RequiredLore="DarkMagic" LearnThreshold="75" Tradition="Vampire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>5% extra magic resistance, 15% chance to reduce attack speed and damage of nearby enemies upon receiving damage</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.05" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>nightshroud</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_ethereal_whispers" ItemTraitName="Ethereal Whispers" IsCraftable="true" IconName="necrarch_icon" RequiredLore="DarkMagic" LearnThreshold="225" Tradition="Vampire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>25</IngredientAmount>
+    <ItemTraitDescription>5% extra physical resistance, upon receiving ranged damage gain 50% ranged damage immunity for a short time</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.05" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>enchant_ethereal_whispers</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>ranged</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_mockery_asps" ItemTraitName="Mockery of Asps" IsCraftable="true" ImbuedStatusEffectId="mockery_asps" ImbuedEffectChance="1.00" IconName="darkenergy_icon_100" RequiredLore="LoreOfNecromancy" LearnThreshold="150" Tradition="Vampire">
+    <ValidItemType>Ranged</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>25</IngredientAmount>
+    <ItemTraitDescription>25% extra magic damage, ranged shots reduce physical resistance of the target by 50%</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.25" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_touch_jet" ItemTraitName="Touch of Jet" IsCraftable="true" ImbuedEffectChance="1.00" IconName="necrarch_icon" RequiredLore="DarkMagic" LearnThreshold="25" Tradition="Vampire">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>5% extra swing speed, each blow has a 10% chance to deal extra 20 magic damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.20" />
+    <StatsTuple StatType="SwingSpeed" Value="5" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>touch_jet</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_caress_void" ItemTraitName="Caress of the Void" IsCraftable="true" IconName="necrarch_icon" RequiredLore="DarkMagic" LearnThreshold="200" Tradition="Vampire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>-10% physical resistance, 10 extra Winds of Magic</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="-0.10" />
+    <StatsTuple StatType="WindsOfMagicMax" Value="10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_unholy_blessing" ItemTraitName="Unholy Blessings" IsCraftable="true" IconName="necrarch_icon" RequiredLore="DarkMagic" LearnThreshold="25" Tradition="Vampire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>6</IngredientAmount>
+    <ItemTraitDescription>15 extra magic damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_chilling_hand" ItemTraitName="Chilling Hand" IsCraftable="true" ImbuedEffectChance="0.10" IconName="necrarch_icon" RequiredLore="DarkMagic" LearnThreshold="75" Tradition="Vampire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>16</IngredientAmount>
+    <ItemTraitDescription>15 extra frost damage, 10% chance to slow the movement of nearby enemies with each strike</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Frost" Percent="0.15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>chilling_hand</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_bulwark_blood_keep" ItemTraitName="Bulwark of Blood Keep" IsCraftable="true" IconName="darkenergy_icon_100" RequiredLore="LoreOfNecromancy" LearnThreshold="150" Tradition="Vampire">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>2</IngredientAmount>
+    <ItemTraitDescription>20% extra shield HP, 8% extra physical resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.08" />
+    <StatsTuple StatType="ShieldHealth" Value="20" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_crimson_flood" ItemTraitName="The Crimson Flood" IsCraftable="true" ImbuedEffectChance="1.00" IconName="necrarch_icon" RequiredLore="DarkMagic" LearnThreshold="200" Tradition="Vampire">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>25 extra magic damage, 10% to send out a damaging wave of magic with each strike. Each wave drains 2 HP of the wearer</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.25" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.BloodLettingTriggerScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>crimson_flood</WeaponScriptArgument>
+        <WeaponScriptArgument>100</WeaponScriptArgument>
+        <WeaponScriptArgument>1</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>2</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_legacy_arkhan" ItemTraitName="Legacy of Arkhan" IsCraftable="true" IconName="darkenergy_icon_100" RequiredLore="LoreOfNecromancy" LearnThreshold="150" Tradition="Vampire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>12% bonus to magic damage, 15% extra spell radius</ItemTraitDescription>
+    <AmplifierTuple AmplifiedDamageType="Magical" DamageAmplifier="0.12" />
+    <StatsTuple StatType="SpellRadius" Value="15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="vc_enchant_secrets_wsoran" ItemTraitName="Secrets of W'soran" IsCraftable="true" IconName="darkenergy_icon_100" RequiredLore="LoreOfNecromancy" LearnThreshold="200" Tradition="Vampire">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>18</IngredientAmount>
+    <ItemTraitDescription>5% bonus to magic damage, 4 extra Winds of Magic</ItemTraitDescription>
+    <AmplifierTuple AmplifiedDamageType="Magical" DamageAmplifier="0.05" />
+    <StatsTuple StatType="WindsOfMagicMax" Value="4" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_blackbriar_kiss" ItemTraitName="Blackbriar's Kiss" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="Throwing" SkillThreshold="60" LearnThreshold="60" Tradition="Elf">
+    <ValidItemType>Thrown</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>6</IngredientAmount>
+    <ItemTraitDescription>10% extra physical damage, 10% extra armour penetration</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.10" />
+    <StatsTuple StatType="ArmorPenetration" Value="10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_emissaries_mirai" ItemTraitName="Emissaries of Mirai" IsCraftable="true" ImbuedEffectChance="0.15" IconName="necrarch_icon" RequiredLore="DarkMagic" LearnThreshold="25" Tradition="Elf">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>18</IngredientAmount>
+    <ItemTraitDescription>15% extra magic damage, 15% chance to inflict horrific visions in a radius upon dealing damage. Nearby enemies suffer a DoT effect effect</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>emissaries_mirai</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_song_doom" ItemTraitName="Song of Doom" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="Bow" SkillThreshold="60" LearnThreshold="60" Tradition="Elf">
+    <ValidItemType>Ranged</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>6</IngredientAmount>
+    <ItemTraitDescription>10 extra physical damage, 15% extra missile speed</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.10" />
+    <StatsTuple StatType="MissileSpeed" Value="15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="asrai_enchant_dusk_wood" ItemTraitName="Dusk of the Woods" IsCraftable="true" IconName="necrarch_icon" RequiredLore="DarkMagic" LearnThreshold="225" Tradition="Elf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>8</IngredientAmount>
+    <ItemTraitDescription>-8% physical resistance, 8 extra Winds of Magic</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="-0.08" />
+    <StatsTuple StatType="WindsOfMagicMax" Value="8" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_moon_stone" ItemTraitName="Moonstone of the Hidden Ways" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="Riding" SkillThreshold="60" LearnThreshold="60" Tradition="Elf">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>10% bonus to magic damage, 12% extra travel speed</ItemTraitDescription>
+    <AmplifierTuple AmplifiedDamageType="Magical" DamageAmplifier="0.10" />
+    <StatsTuple StatType="PartySpeed" Value="12" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_trickery_loec" ItemTraitName="Trickery of Loec" IsCraftable="true" ImbuedEffectChance="1.00" IconName="harmony_icon_100" RequiredSkill="OneHanded,TwoHanded" SkillThreshold="60" LearnThreshold="60" Tradition="Elf">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>50% extra damage when striking at the backs of enemies. Same bonus applies to unaware enemies hit from any angle</ItemTraitDescription>
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.StealthAttackScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>50</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_thorns_nettles" ItemTraitName="&quot;Thorns, Nettles and Spines&quot;" IsCraftable="true" ImbuedEffectChance="1.00" IconName="harmony_icon_100" RequiredSkill="OneHanded" SkillThreshold="110" LearnThreshold="110" Tradition="Elf">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>14</IngredientAmount>
+    <ItemTraitDescription>-15% shield HP, deal 40 physical damage to enemies blocked in melee</ItemTraitDescription>
+    <StatsTuple StatType="ShieldHealth" Value="-15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>thorns_nettles</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>melee</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_tranquillity_cadai" ItemTraitName="Tranquillity of Cadai" IsCraftable="true" ImbuedEffectChance="0.30" IconName="favor_icon_100" RequiredLore="HighMagic" LearnThreshold="75" Tradition="Elf">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>20</IngredientAmount>
+    <ItemTraitDescription>15% extra magic damage and magic resistance, 30% to grant nearby troops the same boons for a short time upon dealing damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.15" />
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>tranquillity_cadai</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="asrai_enchant_radiance_woods" ItemTraitName="Radiance of the Woods" IsCraftable="true" IconName="favor_icon_100" RequiredLore="HighMagic" LearnThreshold="225" Tradition="Elf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>40</IngredientAmount>
+    <ItemTraitDescription>3% Ward Save, 4 extra Winds of Magic</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="All" ReductionPercent="0.03" />
+    <StatsTuple StatType="WindsOfMagicMax" Value="4" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_touch_lileath" ItemTraitName="Touch of Lileath" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="Spellcraft" SkillThreshold="60" LearnThreshold="60" Tradition="Elf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>15</IngredientAmount>
+    <ItemTraitDescription>5% extra magic resistance, 3 extra Winds of Magic</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.05" />
+    <StatsTuple StatType="WindsOfMagicMax" Value="3" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_dusk_dawn" ItemTraitName="Dusk and Dawn" IsCraftable="true" ImbuedEffectChance="1.00" IconName="favor_icon_100" RequiredLore="HighMagic" LearnThreshold="250" Tradition="Elf">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>40 extra magic and holy damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.40" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>dusk_and_dawn</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_arcane_bodkins" ItemTraitName="Arcane Bodkins" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="Bow" SkillThreshold="60" LearnThreshold="60" Tradition="Elf">
+    <ValidItemType>Ammo</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>6</IngredientAmount>
+    <ItemTraitDescription>10% extra armour penetration</ItemTraitDescription>
+    <StatsTuple StatType="ArmorPenetration" Value="10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_hagbane_tips" ItemTraitName="Hagbane Tips" IsCraftable="true" ImbuedStatusEffectId="hagbane_debuff" ImbuedEffectChance="0.50" IconName="harmony_icon_100" RequiredSkill="Bow" SkillThreshold="60" LearnThreshold="60" Tradition="Elf">
+    <ValidItemType>Ammo</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>50% chance to decrease the movement speed of the target by 40%</ItemTraitDescription>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_moon_fire" ItemTraitName="Moonfire Shot" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="Bow" SkillThreshold="110" LearnThreshold="110" Tradition="Elf">
+    <ValidItemType>Ammo</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>8</IngredientAmount>
+    <ItemTraitDescription>20 extra fire damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Fire" Percent="0.20" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_star_fire" ItemTraitName="Starfire Shafts" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="Bow" SkillThreshold="110" LearnThreshold="110" Tradition="Elf">
+    <ValidItemType>Ammo</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>7</IngredientAmount>
+    <ItemTraitDescription>25% extra armour penetration</ItemTraitDescription>
+    <AmplifierTuple AmplifiedDamageType="Fire" DamageAmplifier="0.25" />
+    <StatsTuple StatType="ArmorPenetration" Value="25" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_swift_shiver" ItemTraitName="Swiftshiver Shards" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="Bow" SkillThreshold="160" LearnThreshold="160" Tradition="Elf">
+    <ValidItemType>Ammo</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>10% extra magic damage and 10% extra missile speed</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.10" />
+    <StatsTuple StatType="MissileSpeed" Value="10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="we_enchant_trueflight" ItemTraitName="Trueflight Arrows" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="Bow" SkillThreshold="200" LearnThreshold="200" Tradition="Elf">
+    <ValidItemType>Ammo</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>40% extra armour penetration</ItemTraitDescription>
+    <StatsTuple StatType="ArmorPenetration" Value="40" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="asrai_enchant_tree_lord" ItemTraitName="The Tree Lords' Bargain" IsCraftable="true" ImbuedEffectChance="0.15" IconName="harmony_icon_100" RequiredSkill="Medicine" SkillThreshold="160" LearnThreshold="160" Tradition="Elf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>20</IngredientAmount>
+    <ItemTraitDescription>5 max HP bonus, 15% chance to summon a Dryad upon taking damage</ItemTraitDescription>
+    <StatsTuple StatType="HealthMax" Value="5" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>tree_lord_bargain</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="asrai_enchant_quake_hukon" ItemTraitName="Quake of Hukon" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="OneHanded" SkillThreshold="110" LearnThreshold="110" Tradition="Elf">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>25% extra shield HP, knock down foes when blocking melee hits</ItemTraitDescription>
+    <StatsTuple StatType="ShieldHealth" Value="25" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>rune_parrying_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>melee</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="asrai_enchant_morai_heg" ItemTraitName="Schemes of Morai-heg" IsCraftable="true" ImbuedEffectChance="1.00" IconName="harmony_icon_100" RequiredSkill="OneHanded,TwoHanded" SkillThreshold="110" LearnThreshold="110" Tradition="Elf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>8</IngredientAmount>
+    <ItemTraitDescription>10% extra swing speed, 500% damage when striking at the backs of enemies. Same bonus applies to unaware enemies hit from any angle</ItemTraitDescription>
+    <StatsTuple StatType="SwingSpeed" Value="10" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.StealthAttackScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>500</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="asrai_enchant_oakhart_blessing" ItemTraitName="Oakheart's Blessing" IsCraftable="true" IconName="favor_icon_100" RequiredLore="HighMagic" LearnThreshold="75" Tradition="Elf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>18</IngredientAmount>
+    <ItemTraitDescription>4% extra physical resistance, 4% bonus to magic damage</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.04" />
+    <AmplifierTuple AmplifiedDamageType="Magical" DamageAmplifier="0.04" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="asrai_enchant_vengeance_khaine" ItemTraitName="Vengeance of Khaine" IsCraftable="true" ImbuedEffectChance="1.00" IconName="necrarch_icon" RequiredLore="DarkMagic" LearnThreshold="75" Tradition="Elf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>WarpstoneDust</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>8% extra swing speed, 15 extra physical damage, 100% damage when striking at the heads of enemies</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.15" />
+    <StatsTuple StatType="SwingSpeed" Value="8" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.ExtraHeadshotDamageScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>100</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="asrai_enchant_anath_raema" ItemTraitName="Predator of Anath Raema" IsCraftable="true" ImbuedEffectChance="1.00" IconName="necrarch_icon" RequiredLore="DarkMagic" LearnThreshold="150" Tradition="Elf">
+    <ValidItemType>Ranged</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>30</IngredientAmount>
+    <ItemTraitDescription>15 extra magic damage and missile speed, dismount damaged cavalry units</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.15" />
+    <StatsTuple StatType="MissileSpeed" Value="15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>anath_raema_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="asrai_enchant_trance_loec" ItemTraitName="Trance of Loec" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="OneHanded,TwoHanded" SkillThreshold="110" LearnThreshold="110" Tradition="Elf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>16</IngredientAmount>
+    <ItemTraitDescription>10% extra swing speed, physical damage and physical resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.10" />
+    <AmplifierTuple AmplifiedDamageType="Physical" DamageAmplifier="0.10" />
+    <StatsTuple StatType="SwingSpeed" Value="10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="asrai_enchant_embrace_isha" ItemTraitName="Embrace of Isha" IsCraftable="true" ImbuedEffectChance="0.10" IconName="favor_icon_100" RequiredLore="HighMagic" LearnThreshold="250" Tradition="Elf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>4% extra Ward Save, 10% chance to recover 10 HP upon receiving damage</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="All" ReductionPercent="0.04" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>embrace_isha</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="asrai_enchant_ferocity_kurnous" ItemTraitName="Ferocity of Kurnous" IsCraftable="true" IconName="harmony_icon_100" RequiredSkill="Throwing" SkillThreshold="200" LearnThreshold="200" Tradition="Elf">
+    <ValidItemType>Thrown</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>15</IngredientAmount>
+    <ItemTraitDescription>30 extra magic damage, 50% extra missile speed</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.30" />
+    <StatsTuple StatType="MissileSpeed" Value="50" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="eo_enchant_wisdom_hoeth" ItemTraitName="Wisdom of Hoeth" IsCraftable="true" IconName="favor_icon_100" RequiredLore="HighMagic" LearnThreshold="250" Tradition="Eonir">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>28</IngredientAmount>
+    <ItemTraitDescription>7 extra Winds of Magic, 5% bonus to magic damage</ItemTraitDescription>
+    <AmplifierTuple AmplifiedDamageType="Magical" DamageAmplifier="0.05" />
+    <StatsTuple StatType="WindsOfMagicMax" Value="7" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="eo_enchant_storms_mathlann" ItemTraitName="Storms of Mathlann" IsCraftable="true" ImbuedEffectChance="0.25" IconName="favor_icon_100" RequiredLore="HighMagic" LearnThreshold="150" Tradition="Eonir">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>28</IngredientAmount>
+    <ItemTraitDescription>50% lightning resistance, 15% extra shield HP, 25% chance to summon a bolt of lightning upon blocking damage</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Lightning" ReductionPercent="0.50" />
+    <StatsTuple StatType="ShieldHealth" Value="15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>storms_mathlann</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="eo_enchant_flames_asuryan" ItemTraitName="Flames of Asuryan" IsCraftable="true" IconName="favor_icon_100" RequiredLore="HighMagic" LearnThreshold="225" Tradition="Eonir">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>14</IngredientAmount>
+    <ItemTraitDescription>60 extra fire damage, 15% extra fire resistance</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Fire" Percent="0.60" />
+    <ResistanceTuple ResistedDamageType="Fire" ReductionPercent="0.15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="eo_enchant_legacy_caledor" ItemTraitName="Legacy of Caledor" IsCraftable="true" ImbuedEffectChance="0.25" IconName="favor_icon_100" RequiredLore="HighMagic" LearnThreshold="200" Tradition="Eonir">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>8</IngredientAmount>
+    <ItemTraitDescription>50% fire resistance, 25% extra shield HP, 25% chance to conjure a fire explosion upon blocking damage</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Fire" ReductionPercent="0.50" />
+    <StatsTuple StatType="ShieldHealth" Value="25" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>legacy_caledor_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="eo_enchant_sanctuary_saphery" ItemTraitName="Sanctuary of Saphery" IsCraftable="true" ImbuedEffectChance="1.00" IconName="favor_icon_100" RequiredLore="HighMagic" LearnThreshold="250" Tradition="Eonir">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>60</IngredientAmount>
+    <ItemTraitDescription>Upon receiving ranged damage gain complete ranged damage immunity for 30 seconds</ItemTraitDescription>
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.AttackTypeDefenseTriggerScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>sanctuary_saphery_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>ranged</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="bret_blessing_eerie_touch" ItemTraitName="Touch of the Eerie" IsCraftable="true" IconName="grail" RequiredSkill="Riding" SkillThreshold="60" LearnThreshold="60" Tradition="Lady">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>2% extra physical resistance, 25 bonus skillpoints to Riding</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.02" />
+    <StatsTuple StatType="Skill" SkillId="Riding" Value="25" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="bret_blessing_fey_guidance" ItemTraitName="Guidance of the Fey" IsCraftable="true" IconName="grail" RequiredSkill="Riding" SkillThreshold="160" LearnThreshold="160" Tradition="Lady">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>9</IngredientAmount>
+    <ItemTraitDescription>10% extra party travel speed, 5% magic resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.05" />
+    <StatsTuple StatType="PartySpeed" Value="10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="bret_blessing_grail_legacy" ItemTraitName="Legacy of the Grail" IsCraftable="true" IconName="grail" RequiredSkill="OneHanded,TwoHanded" SkillThreshold="200" LearnThreshold="200" Tradition="Lady">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>30% extra holy damage, weapon gains the Cleave trait</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Holy" Percent="0.30" />
+    <StatsTuple StatType="Cleave" Value="1" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="bret_blessing_lady_ward" ItemTraitName="Ward of the Lady" IsCraftable="true" ImbuedEffectChance="1.00" IconName="grail" RequiredSkill="Medicine" SkillThreshold="200" LearnThreshold="200" Tradition="Lady">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>10% extra magic resistance, once per battle fatal wounds will revive you with 50% HP</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.10" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.ReviveScript" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="bret_blessing_mists_sacred_lake" ItemTraitName="Mists of the Sacred Lake" IsCraftable="true" IconName="grail" RequiredSkill="Athletics" SkillThreshold="160" LearnThreshold="160" Tradition="Lady">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>3% extra physical resistance, 15% extra spell radius</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.03" />
+    <StatsTuple StatType="SpellRadius" Value="15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="bret_blessing_pilgrim_tenacity" ItemTraitName="Tenacity of the Pilgrim" IsCraftable="true" IconName="grail" RequiredSkill="Medicine" SkillThreshold="60" LearnThreshold="60" Tradition="Lady">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>2 extra HP</ItemTraitDescription>
+    <StatsTuple StatType="HealthMax" Value="2" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="bret_blessing_scourge_evil" ItemTraitName="Scourge of Evil" IsCraftable="true" IconName="grail" RequiredSkill="OneHanded,TwoHanded" SkillThreshold="160" LearnThreshold="160" Tradition="Lady">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>35</IngredientAmount>
+    <ItemTraitDescription>5% extra swing speed, 25% chance to deal 40 holy damage to the undead</ItemTraitDescription>
+    <StatsTuple StatType="SwingSpeed" Value="5" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.UndeadTriggeredEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>dusk_and_dawn</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="bret_blessing_shield_faith" ItemTraitName="Shield of Faith" IsCraftable="true" IconName="grail" RequiredSkill="OneHanded" SkillThreshold="160" LearnThreshold="160" Tradition="Lady">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>25</IngredientAmount>
+    <ItemTraitDescription>10% extra physical resistance, blocked hits reduce one of your spell cooldowns by 1 second</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.10" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.TimeCoolDownReductionShieldScript" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="bret_blessing_wisdom_virtue" ItemTraitName="Wisdom and Virtue" IsCraftable="true" IconName="grail" RequiredSkill="Medicine" SkillThreshold="110" LearnThreshold="110" Tradition="Lady">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>15</IngredientAmount>
+    <ItemTraitDescription>3 extra HP, 5% extra magic resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.05" />
+    <StatsTuple StatType="HealthMax" Value="3" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_master_rune_adamant" ItemTraitName="Master Rune of Adamant" IsCraftable="true" IconName="rune_adamant" RequiredSkill="Crafting" SkillThreshold="200" LearnThreshold="200" Tradition="Dwarf">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>8</IngredientAmount>
+    <ItemTraitDescription>10% Ward Save, 50% extra shield HP</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="All" ReductionPercent="0.10" />
+    <StatsTuple StatType="ShieldHealth" Value="50" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_master_rune_alaric" ItemTraitName="Master Rune of Alaric the Mad" IsCraftable="true" IconName="rune_alaric" RequiredSkill="Crafting" SkillThreshold="200" LearnThreshold="200" Tradition="Dwarf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>15</IngredientAmount>
+    <ItemTraitDescription>Ignore 95% of the target's armour</ItemTraitDescription>
+    <StatsTuple StatType="ArmorPenetration" Value="95" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_master_rune_breaking" ItemTraitName="Master Rune of Breaking" IsCraftable="true" IconName="rune_breaking" RequiredSkill="Crafting" SkillThreshold="200" LearnThreshold="200" Tradition="Dwarf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>42</IngredientAmount>
+    <ItemTraitDescription>500% extra shield damage, 50% extra physical damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.50" />
+    <StatsTuple StatType="ShieldDamage" Value="500" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_master_rune_flight" ItemTraitName="Master Rune of Flight" IsCraftable="true" ImbuedEffectChance="1.00" IconName="rune_flight" RequiredSkill="Throwing" SkillThreshold="200" LearnThreshold="200" Tradition="Dwarf">
+    <ValidItemType>Thrown</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>26</IngredientAmount>
+    <ItemTraitDescription>33% extra missile speed, regain throwing ammunition upon landing hits</ItemTraitDescription>
+    <StatsTuple StatType="MissileSpeed" Value="33" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.AmmoRechargeOnHit" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_master_rune_gromril" ItemTraitName="Master Rune of Gromril" IsCraftable="true" IconName="rune_gromril" RequiredSkill="Crafting" SkillThreshold="200" LearnThreshold="200" Tradition="Dwarf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>5% Ward Save</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="All" ReductionPercent="0.05" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_master_rune_preservation" ItemTraitName="Rune of Preservation" IsCraftable="true" ImbuedEffectChance="0.10" IconName="rune_preservation" RequiredSkill="Crafting" SkillThreshold="200" LearnThreshold="200" Tradition="Dwarf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>25</IngredientAmount>
+    <ItemTraitDescription>6 max HP bonus, 10% chance to ignore lethal damage and recover 5 HP upon taking damage</ItemTraitDescription>
+    <StatsTuple StatType="HealthMax" Value="6" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>rune_preservation</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_master_rune_skaldour" ItemTraitName="Master Rune of Skaldour" IsCraftable="true" IconName="rune_skaldour" RequiredSkill="Crafting" SkillThreshold="200" LearnThreshold="200" Tradition="Dwarf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>100% fire resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Fire" ReductionPercent="1.00" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_master_rune_skalf" ItemTraitName="Master Rune of Skalf Blackhammer" IsCraftable="true" IconName="rune_skalf" RequiredSkill="Crafting" SkillThreshold="200" LearnThreshold="200" Tradition="Dwarf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>15</IngredientAmount>
+    <ItemTraitDescription>50% bonus to physical damage, 75 extra magic damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.75" />
+    <AmplifierTuple AmplifiedDamageType="Physical" DamageAmplifier="0.50" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_master_rune_steel" ItemTraitName="Master Rune of Steel" IsCraftable="true" IconName="rune_steel" RequiredSkill="Crafting" SkillThreshold="200" LearnThreshold="200" Tradition="Dwarf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>40</IngredientAmount>
+    <ItemTraitDescription>10% extra physical resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_master_rune_swiftness" ItemTraitName="Master Rune of Swiftness" IsCraftable="true" IconName="rune_ switftness" RequiredSkill="Crafting" SkillThreshold="200" LearnThreshold="200" Tradition="Dwarf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>25</IngredientAmount>
+    <ItemTraitDescription>50% extra swing speed, 15% extra physical damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.15" />
+    <StatsTuple StatType="SwingSpeed" Value="50" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_beastslaying" ItemTraitName="Rune of Beastslaying" IsCraftable="true" ImbuedEffectChance="1.00" IconName="rune_beastslaying" RequiredSkill="Crafting" SkillThreshold="160" LearnThreshold="160" Tradition="Dwarf">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>15</IngredientAmount>
+    <ItemTraitDescription>500% damage against mounts and large enemies</ItemTraitDescription>
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.BeastSlayingScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>500</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_clear_sights" ItemTraitName="Rune of Clear Sights" IsCraftable="true" IconName="rune_clearsight" RequiredSkill="Crossbow" SkillThreshold="60" LearnThreshold="60" Tradition="Dwarf">
+    <ValidItemType>Ranged</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>10% extra physical damage, 15% reduced reload speed</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.10" />
+    <StatsTuple StatType="ReloadSpeed" Value="15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_cleaving" ItemTraitName="Rune of Cleaving" IsCraftable="true" IconName="rune_cleaving" RequiredSkill="Crafting" SkillThreshold="160" LearnThreshold="160" Tradition="Dwarf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>18</IngredientAmount>
+    <ItemTraitDescription>25% extra physical damage, weapon gains the Cleave trait</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.25" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_fire" ItemTraitName="Rune of Fire" IsCraftable="true" IconName="rune_fire" RequiredSkill="Crafting" SkillThreshold="60" LearnThreshold="60" Tradition="Dwarf">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>20% extra fire damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Fire" Percent="0.20" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_force" ItemTraitName="Rune of Force" IsCraftable="true" ImbuedEffectChance="0.70" IconName="rune_force" RequiredSkill="Crafting" SkillThreshold="110" LearnThreshold="110" Tradition="Dwarf">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>8</IngredientAmount>
+    <ItemTraitDescription>33% extra shield HP, 70% chance to knock down foes when blocking melee hits</ItemTraitDescription>
+    <StatsTuple StatType="ShieldHealth" Value="33" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>rune_parrying_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>melee</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_fortitude" ItemTraitName="Rune of Fortitude" IsCraftable="true" IconName="rune_fortitude" RequiredSkill="Crafting" SkillThreshold="160" LearnThreshold="160" Tradition="Dwarf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>13</IngredientAmount>
+    <ItemTraitDescription>3% Ward Save, 4 extra HP</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="All" ReductionPercent="0.03" />
+    <StatsTuple StatType="HealthMax" Value="4" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_fury" ItemTraitName="Rune of Fury" IsCraftable="true" IconName="rune_fury" RequiredSkill="Crafting" SkillThreshold="160" LearnThreshold="160" Tradition="Dwarf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>35</IngredientAmount>
+    <ItemTraitDescription>25% extra swing speed, 15 extra physical damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.15" />
+    <StatsTuple StatType="SwingSpeed" Value="25" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_head_wrecking" ItemTraitName="Rune of Head-Wrecking" IsCraftable="true" ImbuedEffectChance="1.00" IconName="rune_headwrecking" RequiredSkill="Crossbow" SkillThreshold="160" LearnThreshold="160" Tradition="Dwarf">
+    <ValidItemType>Ranged</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>24</IngredientAmount>
+    <ItemTraitDescription>15% extra missile speed, 200% extra headshot damage</ItemTraitDescription>
+    <StatsTuple StatType="MissileSpeed" Value="15" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.ExtraHeadshotDamageScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>200</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_impact" ItemTraitName="Rune of Impact" IsCraftable="true" ImbuedEffectChance="0.30" IconName="rune_impact" RequiredSkill="Crafting" SkillThreshold="110" LearnThreshold="110" Tradition="Dwarf">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>8</IngredientAmount>
+    <ItemTraitDescription>10% physical resistance, 30% chance to knock down foes when blocking melee hits</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.10" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>rune_parrying_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>melee</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_iron" ItemTraitName="Rune of Iron" IsCraftable="true" IconName="rune_iron" RequiredSkill="Crafting" SkillThreshold="160" LearnThreshold="160" Tradition="Dwarf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>AmberCrystal</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>7% extra physical resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.07" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_might" ItemTraitName="Rune of Might" IsCraftable="true" IconName="rune_might" RequiredSkill="Crafting" SkillThreshold="60" LearnThreshold="60" Tradition="Dwarf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>20% extra physical damage, 15% extra armour penetration</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.20" />
+    <StatsTuple StatType="ArmorPenetration" Value="15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_parrying" ItemTraitName="Rune of Parrying" IsCraftable="true" ImbuedEffectChance="0.25" IconName="rune_parry" RequiredSkill="Crafting" SkillThreshold="110" LearnThreshold="110" Tradition="Dwarf">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>3</IngredientAmount>
+    <ItemTraitDescription>25% chance to knock down foes when blocking melee hits</ItemTraitDescription>
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>rune_parrying_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+        <WeaponScriptArgument>melee</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_protection" ItemTraitName="Rune of Protection" IsCraftable="true" IconName="rune_protection" RequiredSkill="Crafting" SkillThreshold="60" LearnThreshold="60" Tradition="Dwarf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>5% extra magic resistance, 2 extra HP</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.05" />
+    <StatsTuple StatType="HealthMax" Value="2" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_reloading" ItemTraitName="Rune of Reloading" IsCraftable="true" IconName="rune_reloading" RequiredSkill="Crossbow" SkillThreshold="160" LearnThreshold="160" Tradition="Dwarf">
+    <ValidItemType>Ranged</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>30</IngredientAmount>
+    <ItemTraitDescription>50% reduced reload speed</ItemTraitDescription>
+    <StatsTuple StatType="ReloadSpeed" Value="50" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_shielding" ItemTraitName="Rune of Shielding" IsCraftable="true" IconName="rune_shielding" RequiredSkill="Crafting" SkillThreshold="60" LearnThreshold="60" Tradition="Dwarf">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>5% physical resistance, 33% extra shield HP</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.05" />
+    <StatsTuple StatType="ShieldHealth" Value="33" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_speed" ItemTraitName="Rune of Speed" IsCraftable="true" IconName="rune_speed" RequiredSkill="Crafting" SkillThreshold="110" LearnThreshold="110" Tradition="Dwarf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>15% extra swing speed</ItemTraitDescription>
+    <StatsTuple StatType="SwingSpeed" Value="15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_spell_eating" ItemTraitName="Rune of Spell Eating" IsCraftable="true" ImbuedEffectChance="0.50" IconName="rune_spelleating" RequiredSkill="Crafting" SkillThreshold="160" LearnThreshold="160" Tradition="Dwarf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>10% extra magic resistance, 50% chance to gain 100% magic resistance for a short time upon taking damage</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.10" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>rune_spell_eating</WeaponScriptArgument>
+        <WeaponScriptArgument>false</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_stone" ItemTraitName="Rune of Stone" IsCraftable="true" IconName="rune_stone" RequiredSkill="Crafting" SkillThreshold="110" LearnThreshold="110" Tradition="Dwarf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>3</IngredientAmount>
+    <ItemTraitDescription>4% extra physical resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.04" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_striking" ItemTraitName="Rune of Striking" IsCraftable="true" IconName="rune_striking" RequiredSkill="Crafting" SkillThreshold="110" LearnThreshold="110" Tradition="Dwarf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>6</IngredientAmount>
+    <ItemTraitDescription>5% extra swing speed, 10% extra physical damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Physical" Percent="0.10" />
+    <StatsTuple StatType="SwingSpeed" Value="5" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_unbinding" ItemTraitName="Rune of Unbinding" IsCraftable="true" IconName="rune_unbinding" RequiredSkill="Crafting" SkillThreshold="160" LearnThreshold="160" Tradition="Dwarf">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>ArcaneScroll</IngredientItem>
+    <IngredientAmount>16</IngredientAmount>
+    <ItemTraitDescription>25% extra magic damage, 15% extra magic resistance</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.25" />
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="dw_rune_vigour" ItemTraitName="Rune of Vigour" IsCraftable="true" IconName="rune_vigour" RequiredSkill="Crafting" SkillThreshold="60" LearnThreshold="60" Tradition="Dwarf">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>2</IngredientAmount>
+    <ItemTraitDescription>5 extra HP</ItemTraitDescription>
+    <StatsTuple StatType="HealthMax" Value="5" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_shallya_martyrdom" ItemTraitName="Martyrdom of Shallya" IsCraftable="true" ImbuedEffectChance="0.33" IconName="shallya_dove_icon" RequiredSkill="Medicine" SkillThreshold="160" LearnThreshold="160" Tradition="Shallya">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>3 extra HP, taking damage has a 33% chance to heal nearby friendly units</ItemTraitDescription>
+    <StatsTuple StatType="HealthMax" Value="3" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>shallya_martyrdom_enchant</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_shallya_mercy" ItemTraitName="Mercy of Shallya" IsCraftable="true" IconName="shallya_dove_icon" RequiredSkill="Medicine" SkillThreshold="200" LearnThreshold="200" Tradition="Shallya">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>22</IngredientAmount>
+    <ItemTraitDescription>6 extra HP</ItemTraitDescription>
+    <StatsTuple StatType="HealthMax" Value="6" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_shallya_pacifism" ItemTraitName="Pacifism of Shallya" IsCraftable="true" ImbuedEffectChance="1.00" IconName="shallya_dove_icon" RequiredSkill="OneHanded,TwoHanded" SkillThreshold="160" LearnThreshold="160" Tradition="Shallya">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>26</IngredientAmount>
+    <ItemTraitDescription>Chance to recover 2 HP per second for a short time when defeating enemies (based on knockout probability)</ItemTraitDescription>
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.KnockOutCheckTriggerScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>shallya_pacifism_enchant</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_shallya_purity" ItemTraitName="Purity of Shallya" IsCraftable="true" IconName="shallya_dove_icon" RequiredSkill="Medicine" SkillThreshold="60" LearnThreshold="60" Tradition="Shallya">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>4</IngredientAmount>
+    <ItemTraitDescription>50% extra healing rate when travelling</ItemTraitDescription>
+    <StatsTuple StatType="HealthRegen" Value="50" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_sigmar_beacon" ItemTraitName="Beacon of Sigmar" IsCraftable="true" IconName="sigmar_comet_icon" RequiredSkill="Athletics" SkillThreshold="110" LearnThreshold="110" Tradition="Sigmar">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>GemStone</IngredientItem>
+    <IngredientAmount>10</IngredientAmount>
+    <ItemTraitDescription>10% extra magic resistance, 15% extra spell radius</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.10" />
+    <StatsTuple StatType="SpellRadius" Value="15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_sigmar_exorcism" ItemTraitName="Exorcism of Sigmar" IsCraftable="true" ImbuedEffectChance="0.10" IconName="sigmar_comet_icon" RequiredSkill="OneHanded,TwoHanded" SkillThreshold="160" LearnThreshold="160" Tradition="Sigmar">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>20</IngredientAmount>
+    <ItemTraitDescription>20% extra holy damage, 10% chance to strike the undead for double damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Holy" Percent="0.20" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.BonusDamageOnUndeadEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>100</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_sigmar_justice" ItemTraitName="Justice of Sigmar" IsCraftable="true" IconName="sigmar_comet_icon" RequiredSkill="OneHanded,TwoHanded" SkillThreshold="60" LearnThreshold="60" Tradition="Sigmar">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>12% extra holy damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Holy" Percent="0.12" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_sigmar_light" ItemTraitName="Light of Sigmar" IsCraftable="true" ImbuedEffectChance="0.10" IconName="sigmar_comet_icon" RequiredSkill="Medicine" SkillThreshold="200" LearnThreshold="200" Tradition="Sigmar">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>22</IngredientAmount>
+    <ItemTraitDescription>6% extra magic resistance, 3 extra HP, 10% chance to gain minor regeneration whenever the undead strike you in melee</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.06" />
+    <StatsTuple StatType="HealthMax" Value="3" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.UndeadConditionDefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>sigmar_light_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_sigmar_retribution" ItemTraitName="Retribution of Sigmar" IsCraftable="true" ImbuedEffectChance="1.00" IconName="sigmar_comet_icon" RequiredSkill="OneHanded" SkillThreshold="110" LearnThreshold="110" Tradition="Sigmar">
+    <ValidItemType>Shield</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>15</IngredientAmount>
+    <ItemTraitDescription>Gain a fleeting 10% bonus to holy damage when blocking blows of the undead. Stacks up to 5 times</ItemTraitDescription>
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.UndeadConditionDefenseStackBuffScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>sigmar_retribution</WeaponScriptArgument>
+        <WeaponScriptArgument>5</WeaponScriptArgument>
+        <WeaponScriptArgument>15</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_sigmar_soulfire" ItemTraitName="Soulfire of Sigmar" IsCraftable="true" ImbuedEffectChance="0.10" IconName="sigmar_comet_icon" RequiredSkill="Medicine" SkillThreshold="160" LearnThreshold="160" Tradition="Sigmar">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>9</IngredientAmount>
+    <ItemTraitDescription>6% extra magic resistance, 3 extra HP, 10% chance to emit a damaging wave of holy energy whenever the undead strike you in melee</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.06" />
+    <StatsTuple StatType="HealthMax" Value="3" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.UndeadConditionDefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>sigmar_soulfire_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_ulric_chill" ItemTraitName="Chill of Ulric" IsCraftable="true" ImbuedEffectChance="1.00" IconName="whitewolf_icon" RequiredSkill="OneHanded,TwoHanded" SkillThreshold="60" LearnThreshold="60" Tradition="Ulric">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>5</IngredientAmount>
+    <ItemTraitDescription>15% extra frost damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Frost" Percent="0.15" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_ulric_frenzy" ItemTraitName="Frenzy of Ulric" IsCraftable="true" ImbuedEffectChance="0.15" IconName="whitewolf_icon" RequiredSkill="Athletics" SkillThreshold="110" LearnThreshold="110" Tradition="Ulric">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>9</IngredientAmount>
+    <ItemTraitDescription>5% extra physical resistance, receiving melee damage carries a 15% chance to drive nearby allies into a battle frenzy</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Physical" ReductionPercent="0.05" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.DefenseTriggerEffectScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>ulric_frenzy_enchant</WeaponScriptArgument>
+        <WeaponScriptArgument>true</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_ulric_winterfather_gift" ItemTraitName="Gift of the Winterfather" IsCraftable="true" IconName="whitewolf_icon" RequiredSkill="TwoHanded" SkillThreshold="110" LearnThreshold="110" Tradition="Ulric">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>6</IngredientAmount>
+    <ItemTraitDescription>5% extra magic resistance, 20 bonus skillpoints to Two Handed</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.05" />
+    <StatsTuple StatType="Skill" SkillId="TwoHanded" Value="20" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_ulric_wolf-god_bite" ItemTraitName="Bite of the Wolf-God" IsCraftable="true" ImbuedEffectChance="1.00" IconName="whitewolf_icon" RequiredSkill="OneHanded,TwoHanded" SkillThreshold="160" LearnThreshold="160" Tradition="Ulric">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>BlessedWater</IngredientItem>
+    <IngredientAmount>35</IngredientAmount>
+    <ItemTraitDescription>10% extra swing speed, 15% to receive a fleeting 6 frost damage bonus upon dealing damage. Stacks up to 5 times</ItemTraitDescription>
+    <StatsTuple StatType="SwingSpeed" Value="10" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponBuffStackScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>wolf_god_bite</WeaponScriptArgument>
+        <WeaponScriptArgument>5</WeaponScriptArgument>
+        <WeaponScriptArgument>15</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="emp_blessing_ulric_wrath" ItemTraitName="Wrath of Ulric" IsCraftable="true" IconName="whitewolf_icon" RequiredSkill="OneHanded,TwoHanded" SkillThreshold="200" LearnThreshold="200" Tradition="Ulric">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>DragonBlood</IngredientItem>
+    <IngredientAmount>12</IngredientAmount>
+    <ItemTraitDescription>350% extra shield damage, 15% to receive a fleeting 2% attack speed bonus upon dealing damage. Stacks up to 5 times</ItemTraitDescription>
+    <StatsTuple StatType="ShieldDamage" Value="350" />
+    <OnWeaponHitScript WeaponScriptName="TOR_Core.Items.WeaponHitScripts.WeaponBuffStackScript">
+      <WeaponScriptArguments>
+        <WeaponScriptArgument>ulric_wrath</WeaponScriptArgument>
+        <WeaponScriptArgument>5</WeaponScriptArgument>
+        <WeaponScriptArgument>15</WeaponScriptArgument>
+      </WeaponScriptArguments>
+    </OnWeaponHitScript>
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="lesser_loot_weapon_fire_dmg" ItemTraitName="Aspect of Fire" IsCraftable="false" IconName="traits_fire_icon">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>Invalid</IngredientItem>
+    <IngredientAmount>-1</IngredientAmount>
+    <ItemTraitDescription>10 extra fire damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Fire" Percent="0.10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="lesser_loot_weapon_lightning_dmg" ItemTraitName="Aspect of Thunder" IsCraftable="false" IconName="traits_lightning_icon">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>Invalid</IngredientItem>
+    <IngredientAmount>-1</IngredientAmount>
+    <ItemTraitDescription>10 extra lightning damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Lightning" Percent="0.10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="lesser_loot_weapon_magic_dmg" ItemTraitName="Aspect of Magic" IsCraftable="false" IconName="traits_magic_icon">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>Invalid</IngredientItem>
+    <IngredientAmount>-1</IngredientAmount>
+    <ItemTraitDescription>10 extra magic damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Magical" Percent="0.10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="lesser_loot_weapon_frost_dmg" ItemTraitName="Aspect of Frost" IsCraftable="false" IconName="traits_frost_icon">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>Invalid</IngredientItem>
+    <IngredientAmount>-1</IngredientAmount>
+    <ItemTraitDescription>10 extra frost damage</ItemTraitDescription>
+    <AdditionalDamageTuple DamageType="Frost" Percent="0.10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="lesser_loot_weapon_armor_penetraiton" ItemTraitName="Aspect of Piercing" IsCraftable="false" IconName="shiftshiver_shards">
+    <ValidItemType>Weapon</ValidItemType>
+    <IngredientItem>Invalid</IngredientItem>
+    <IngredientAmount>-1</IngredientAmount>
+    <ItemTraitDescription>10% extra armor penetration</ItemTraitDescription>
+    <StatsTuple StatType="ArmorPenetration" Value="10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="lesser_loot_weapon_swiftness" ItemTraitName="Aspect of Speed" IsCraftable="false" IconName="winds_icon_100">
+    <ValidItemType>Melee</ValidItemType>
+    <IngredientItem>Invalid</IngredientItem>
+    <IngredientAmount>-1</IngredientAmount>
+    <ItemTraitDescription>10% extra swing speed</ItemTraitDescription>
+    <StatsTuple StatType="SwingSpeed" Value="10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="lesser_loot_weapon_reloadspeed" ItemTraitName="Aspect of Reloading" IsCraftable="false" IconName="winds_icon_100">
+    <ValidItemType>Ranged</ValidItemType>
+    <IngredientItem>Invalid</IngredientItem>
+    <IngredientAmount>-1</IngredientAmount>
+    <ItemTraitDescription>10% extra reload speed</ItemTraitDescription>
+    <StatsTuple StatType="ReloadSpeed" Value="10" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="lesser_loot_armor_health" ItemTraitName="Aspect of Vitality" IsCraftable="false" IconName="heart_icon">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>Invalid</IngredientItem>
+    <IngredientAmount>-1</IngredientAmount>
+    <ItemTraitDescription>3 extra HP</ItemTraitDescription>
+    <StatsTuple StatType="HealthMax" Value="3" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="lesser_loot_armor_winds" ItemTraitName="Aspect of Enlightment" IsCraftable="false" IconName="winds_icon_100">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>Invalid</IngredientItem>
+    <IngredientAmount>-1</IngredientAmount>
+    <ItemTraitDescription>2 extra Winds of Magic</ItemTraitDescription>
+    <StatsTuple StatType="WindsOfMagicMax" Value="2" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="lesser_loot_armor_phy_res" ItemTraitName="Aspect of Protection" IsCraftable="false" IconName="winds_icon_100">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>Invalid</IngredientItem>
+    <IngredientAmount>-1</IngredientAmount>
+    <ItemTraitDescription>4% extra physical resistance</ItemTraitDescription>
+    <AmplifierTuple AmplifiedDamageType="Physical" DamageAmplifier="0.04" />
+  </ItemTrait>
+  <ItemTrait ItemTraitStringId="lesser_loot_armor_magic_res" ItemTraitName="Aspect of Superstition" IsCraftable="false" IconName="winds_icon_100">
+    <ValidItemType>Armor</ValidItemType>
+    <IngredientItem>Invalid</IngredientItem>
+    <IngredientAmount>-1</IngredientAmount>
+    <ItemTraitDescription>5% extra magic resistance</ItemTraitDescription>
+    <ResistanceTuple ResistedDamageType="Magical" ReductionPercent="0.05" />
+  </ItemTrait>
+</ItemTraits>
