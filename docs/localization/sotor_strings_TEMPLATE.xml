@@ -1,0 +1,1397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/ModuleLanguage.xsd">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+
+    <string id="sotor_blueprint_learned" text="{HERO} has learned {TRAIT}." />
+    <string id="sotor_blueprint_not_kept" text="The book on {TRAIT} left your party. Nothing was learned." />
+    <string id="sotor_commission_deliver_text" text="Choose the item to hand over. It will be kept as compensation for your lessons." />
+    <string id="sotor_commission_deliver_title" text="Present Your Work" />
+    <string id="sotor_commission_delivered_msg" text="You gave {ITEM} to {MASTER}." />
+    <string id="sotor_commission_due" text="You carry the finished piece on you? Let me see it then." />
+    <string id="sotor_commission_empty_handed" text="Empty handed? I gave you {TRAIT} freely and asked one simple thing in return. Come back when you have completed the work." />
+    <string id="sotor_commission_hand_over" text="Here it is." />
+    <string id="sotor_commission_kept" text="Changed your mind?" />
+    <string id="sotor_commission_not_yet" text="Not yet." />
+    <string id="sotor_commission_quest_expired" text="You never brought {MASTER} the {TRAIT} piece you owed. They have forgotten about you." />
+    <string id="sotor_commission_quest_giver_died" text="{MASTER} is dead. Whatever you owed them died with them." />
+    <string id="sotor_commission_quest_log" text="{MASTER} taught you {TRAIT} and expects an item bearing it in return. Make one and bring it to them." />
+    <string id="sotor_commission_quest_title" text="{MASTER}'s Commission" />
+    <string id="sotor_commission_settled" text="This is fine craftsmanship. You have done well and you are ready to learn more enchantments." />
+    <string id="sotor_duel_chide" text="The challenge stands. You have {DAYS} day(s) to face {MASTER}'s apprentice." />
+    <string id="sotor_duel_menu_continue" text="Continue." />
+    <string id="sotor_duel_menu_defeat" text="The ground comes up to meet you. You wake some time later, bruised to the bone and short of the breath to argue.{newline}{newline}{MASTER}'s verdict is brief: train your magic, and come back when you are worth teaching." />
+    <string id="sotor_duel_menu_fight" text="Face the apprentice." />
+    <string id="sotor_duel_menu_prepare" text="{MASTER} leads you out to an arena they prepared. Their apprentice, {APPRENTICE}, is already waiting and is armed, armoured, and entirely unbothered by the sight of you.{newline}{newline}You fight until one of you cannot stand. Nobody is here to die. Your magic is your own to use." />
+    <string id="sotor_duel_menu_victory" text="{APPRENTICE} goes down hard, beaten but breathing.{newline}{newline}Return to {MASTER} and inform them of your deed." />
+    <string id="sotor_duel_menu_withdraw" text="Withdraw. You are not ready." />
+    <string id="sotor_duel_quest_expired" text="You let the week {MASTER} gave you run out without facing their apprentice. They have made their judgement of you." />
+    <string id="sotor_duel_quest_giver_died" text="{MASTER} is dead. Whatever they meant to teach you died with them." />
+    <string id="sotor_duel_quest_log_fight" text="{MASTER} will not teach you {SPELL} until you have beaten their apprentice in single combat." />
+    <string id="sotor_duel_quest_log_return" text="You have beaten {MASTER}'s apprentice. Return to them to claim {SPELL}." />
+    <string id="sotor_duel_quest_lost" text="{MASTER}'s apprentice left you in the dust. They will not hear you again for some time." />
+    <string id="sotor_duel_quest_title" text="{MASTER}'s Apprentice" />
+    <string id="sotor_enc_hero_tradition_label" text="Tradition" />
+    <string id="sotor_enc_standing" text="Standing: {VALUE} ({BAND})" />
+    <string id="sotor_enc_standing_band_despised" text="despised" />
+    <string id="sotor_enc_standing_band_neutral" text="indifferent" />
+    <string id="sotor_enc_standing_band_respected" text="respected" />
+    <string id="sotor_enc_traditions_desc" text="The arcane traditions of the world and those known to practice them." />
+    <string id="sotor_enc_traditions_followers" text="Practitioners" />
+    <string id="sotor_enc_traditions_none_known" text="No practitioners of this tradition are known to you." />
+    <string id="sotor_enc_traditions_none_known_hidden" text="This art is wielded by no clans. Its few masters are hidden, and none are known to you yet." />
+    <string id="sotor_enc_traditions_role_noble" text="Noble" />
+    <string id="sotor_enc_traditions_role_wanderer" text="Wanderer" />
+    <string id="sotor_enc_traditions_title" text="Arcane Traditions" />
+    <string id="sotor_enc_traditions_unknown" text="A {CULTURE} {ROLE}" />
+    <string id="sotor_enc_traditions_unknown_hint" text="You have not identified this practitioner. Find them in the world or ask after them in a tavern." />
+    <string id="sotor_enchant_master_answer" text="Interested in the craft? Very well, I am willing to part with a formula, but I'll want a piece made with it in return." />
+    <string id="sotor_enchant_master_ask" text="Your enchantments. I would learn the craft." />
+    <string id="sotor_enchant_master_empty" text="You hold every formula I would part with, {STUDENT}. There is nothing new for you here." />
+    <string id="sotor_enchanted_default_name" text="{MODIFIER} {ITEM}" />
+    <string id="sotor_enchanter_disenchant" text="Disenchant an item" />
+    <string id="sotor_enchanter_disenchant_done" text="Recovered {ITEMS}." />
+    <string id="sotor_enchanter_disenchant_hint" text="The item is unmade. You keep part of its reagents." />
+    <string id="sotor_enchanter_disenchant_line" text="{ITEM} - returns {REFUND}" />
+    <string id="sotor_enchanter_disenchant_none" text="You carry nothing that holds an enchantment." />
+    <string id="sotor_enchanter_disenchant_row_hint" text="Unmaking this returns {ITEMS}." />
+    <string id="sotor_enchanter_disenchant_running" text="You recover {ITEMS}." />
+    <string id="sotor_enchanter_disenchant_text" text="Choose the enchanted items to unmake. Half of each reagent cost comes back to you, a third if you crafted the item yourself." />
+    <string id="sotor_enchanter_disenchant_title" text="Disenchant" />
+    <string id="sotor_enchanter_intro" text="Between a scribe's shop and a shuttered apothecary you find {SETTLEMENT_NAME}'s enchanter's quarter. Reagent jars line the shelves, and the air smells faintly of scorched copper." />
+    <string id="sotor_enchanter_leave" text="Leave" />
+    <string id="sotor_enchanter_menu_goto" text="Visit the enchanter's quarter" />
+    <string id="sotor_enchanter_open_screen" text="Enchant an item" />
+    <string id="sotor_enchanter_pick_blocked" text="Knows {COUNT} enchantment(s) but lacks the skill or lore for any of them." />
+    <string id="sotor_enchanter_pick_none" text="Knows no enchantments." />
+    <string id="sotor_enchanter_pick_ready" text="Can work {COUNT} enchantment(s)." />
+    <string id="sotor_enchanter_pick_text" text="Choose who in your party will use their skills to enchant equipment." />
+    <string id="sotor_enchanter_pick_title" text="Select An Enchanter" />
+    <string id="sotor_enchanter_reagent_line" text="{ITEM} - {PRICE} gold" />
+    <string id="sotor_enchanter_refund_nothing" text="nothing" />
+    <string id="sotor_enchanter_refund_row" text="{AMOUNT}  {ITEM}" />
+    <string id="sotor_enchanter_screen_locked" text="No one in your party knows any enchantment yet. Books and masters can teach you." />
+    <string id="sotor_enchanter_shop" text="Trade with the enchanter" />
+    <string id="sotor_enchanter_shop_closed" text="The enchanter has nothing to sell." />
+    <string id="sotor_enchanter_title" text="Enchanter's Quarter" />
+    <string id="sotor_enchanting_enchant_label" text="Enchant" />
+    <string id="sotor_enchanting_enter_name" text="Name your enchanted item" />
+    <string id="sotor_enchanting_failed" text="The enchantment failed to take." />
+    <string id="sotor_enchanting_items_label" text="Items" />
+    <string id="sotor_enchanting_max_traits" text="An item can carry at most {MAX_TRAITS} enchantment(s)." />
+    <string id="sotor_enchanting_missing_ingredients" text="You lack the reagents for this work." />
+    <string id="sotor_enchanting_no_blueprints" text="No one in your party knows an enchantment that fits this item." />
+    <string id="sotor_enchanting_no_blueprints_hero" text="{HERO} knows no enchantment that fits this item." />
+    <string id="sotor_enchanting_no_description" text="No description available." />
+    <string id="sotor_enchanting_no_traits_selected" text="No enchantment is selected." />
+    <string id="sotor_enchanting_sort_lore" text="Lore" />
+    <string id="sotor_enchanting_sort_name" text="Name" />
+    <string id="sotor_enchanting_sort_type" text="Type" />
+    <string id="sotor_enchanting_success" text="The work holds. The item is in your inventory." />
+    <string id="sotor_enchanting_title" text="Enchanting" />
+    <string id="sotor_enchanting_title_hero" text="{HERO}'s Workbench" />
+    <string id="sotor_enchanting_trait_blocked" text="{HERO} cannot work this enchantment. {NEEDS}" />
+    <string id="sotor_enchanting_traits_label" text="Enchantments" />
+    <string id="sotor_enum_AbilityEffectType_ArtilleryPlacement" text="Artillery Placement" />
+    <string id="sotor_enum_AbilityEffectType_Augment" text="Augment" />
+    <string id="sotor_enum_AbilityEffectType_Blast" text="Blast" />
+    <string id="sotor_enum_AbilityEffectType_Bombardment" text="Bombardment" />
+    <string id="sotor_enum_AbilityEffectType_CareerAbilityEffect" text="Career Ability" />
+    <string id="sotor_enum_AbilityEffectType_Heal" text="Heal" />
+    <string id="sotor_enum_AbilityEffectType_Hex" text="Hex" />
+    <string id="sotor_enum_AbilityEffectType_MindControl" text="Mind Control" />
+    <string id="sotor_enum_AbilityEffectType_Missile" text="Missile" />
+    <string id="sotor_enum_AbilityEffectType_Projectile" text="Projectile" />
+    <string id="sotor_enum_AbilityEffectType_SeekerMissile" text="Seeker Missile" />
+    <string id="sotor_enum_AbilityEffectType_Summoning" text="Summoning" />
+    <string id="sotor_enum_AbilityEffectType_TacticalReposition" text="Tactical Reposition" />
+    <string id="sotor_enum_AbilityEffectType_TimeWarpEffect" text="Time Warp" />
+    <string id="sotor_enum_AbilityEffectType_Vortex" text="Vortex" />
+    <string id="sotor_enum_AbilityEffectType_Wind" text="Wind" />
+    <string id="sotor_enum_SpellCastingLevel_Adept" text="Adept" />
+    <string id="sotor_enum_SpellCastingLevel_Archmage" text="Archmage" />
+    <string id="sotor_enum_SpellCastingLevel_Entry" text="Entry" />
+    <string id="sotor_enum_SpellCastingLevel_Master" text="Master" />
+    <string id="sotor_enum_SpellCastingLevel_Minor" text="Minor" />
+    <string id="sotor_enum_SpellCastingLevel_None" text="None" />
+    <string id="sotor_graveyard_caught_body" text="The local nightwatch is onto you. Face the consequences of your vile actions." />
+    <string id="sotor_graveyard_caught_title" text="Caught in the act" />
+    <string id="sotor_graveyard_gates_closed" text="The graveyard's massive iron gates are closed shut." />
+    <string id="sotor_graveyard_intro" text="You have arrived at {SETTLEMENT_NAME}'s graveyard. Graves, tombstones and family crypts litter the peaceful hillside." />
+    <string id="sotor_graveyard_menu_goto" text="Go to the graveyard" />
+    <string id="sotor_graveyard_opt_defend" text="Defend yourself" />
+    <string id="sotor_graveyard_opt_leave" text="Leave" />
+    <string id="sotor_graveyard_opt_raise" text="Raise dead from the corpses in the ground (wait 8 hours)." />
+    <string id="sotor_graveyard_opt_surrender" text="Surrender" />
+    <string id="sotor_graveyard_raise_result" text="The common folk's graves are ripe for the taking. You spend the night hours dragging corpses from the ground and binding them to your will." />
+    <string id="sotor_graveyard_raised_more" text="You drag {COUNT} more from the earth to serve you." />
+    <string id="sotor_graveyard_recruit_count" text="+{COUNT} Skeleton{?PLURAL}s{?}{\?}" />
+    <string id="sotor_graveyard_settlement_fallback" text="the town" />
+    <string id="sotor_graveyard_title" text="Graveyard" />
+    <string id="sotor_hm_bargain_accept" text="Speak. You will have your freedom." />
+    <string id="sotor_hm_bargain_refuse" text="Your freedom is worth more to me than your gossip. Get comfortable." />
+    <string id="sotor_hm_captive_bargain" text="I know something, but I will not hand it to you through these bars for the pleasure of your company. Open the door, give me a horse, and my knowledge is yours." />
+    <string id="sotor_hm_captive_confirms" text="Yes, {MASTER} is said to walk a forbidden path that most tremble at. What you do with this information is of your own accord." />
+    <string id="sotor_hm_captive_nothing" text="Forbidden magic? Bah, I know nothing of such superstitions, and neither does anyone worth listening to." />
+    <string id="sotor_hm_captive_whisper" text="Whispers only. They say {CLAN} keeps a secret they would kill to protect. Ask among that clan, if you have the stomach for it." />
+    <string id="sotor_hm_confront_admit" text="You think me afraid? I hide nothing, I simply don't advertise. What you say is true, now what is it you want of me?" />
+    <string id="sotor_hm_confront_ask" text="I have spoken with those who keep your clan's secrets. I know what you are. Shall we speak plainly, or shall I say it louder?" />
+    <string id="sotor_hm_interrogate" text="They say someone in these lands practices forbidden magic. What do you know of it?" />
+    <string id="sotor_hm_lead_ribbon" text="A lead: {CLAN} hides a practitioner of forbidden magic. Capture one of its own to learn who." />
+    <string id="sotor_hm_reveal_ribbon" text="The truth is out: {NAME} is a hidden master of the {TRADITION}." />
+    <string id="sotor_hm_suspect_ribbon" text="A name at last: {NAME} is said to be the one practicing forbidden magic. Time to confront them." />
+    <string id="sotor_inventory_item_effects" text="Item Effects" />
+    <string id="sotor_inventory_magic_item" text="Magic Item" />
+    <string id="sotor_inventory_trait_hint" text="{NAME}: {EFFECT}" />
+    <string id="sotor_inventory_use_item" text="Use Item" />
+    <string id="sotor_loot_item_name" text="{MODIFIER} {ITEM}" />
+    <string id="sotor_loot_rarity_1" text="Uncommon" />
+    <string id="sotor_loot_rarity_2" text="Rare" />
+    <string id="sotor_loot_rarity_3" text="Epic" />
+    <string id="sotor_loot_rarity_4" text="Legendary" />
+    <string id="sotor_lore_short_DarkMagic" text="dark magic" />
+    <string id="sotor_lore_short_HighMagic" text="high magic" />
+    <string id="sotor_lore_short_LoreOfBeasts" text="beasts" />
+    <string id="sotor_lore_short_LoreOfDeath" text="death" />
+    <string id="sotor_lore_short_LoreOfFire" text="fire" />
+    <string id="sotor_lore_short_LoreOfHeavens" text="the heavens" />
+    <string id="sotor_lore_short_LoreOfLife" text="life" />
+    <string id="sotor_lore_short_LoreOfLight" text="light" />
+    <string id="sotor_lore_short_LoreOfMetal" text="metal" />
+    <string id="sotor_lore_short_LoreOfNecromancy" text="necromancy" />
+    <string id="sotor_lore_short_MinorMagic" text="hedge-magic" />
+    <string id="sotor_lore_title_darkmagic" text="Dark Magic" />
+    <string id="sotor_lore_title_highmagic" text="High Magic" />
+    <string id="sotor_lore_title_loreofbeasts" text="Lore of Beasts" />
+    <string id="sotor_lore_title_loreofdeath" text="Lore of Death" />
+    <string id="sotor_lore_title_loreoffire" text="Lore of Fire" />
+    <string id="sotor_lore_title_loreofheavens" text="Lore of Heavens" />
+    <string id="sotor_lore_title_loreoflife" text="Lore of Life" />
+    <string id="sotor_lore_title_loreoflight" text="Lore of Light" />
+    <string id="sotor_lore_title_loreofmetal" text="Lore of Metal" />
+    <string id="sotor_lore_title_loreofnecromancy" text="Lore of Necromancy" />
+    <string id="sotor_lore_title_minormagic" text="Minor Magic" />
+    <string id="sotor_magic_hub_never" text="Nothing, for now." />
+    <string id="sotor_magic_hub_open" text="You have my ear, {STUDENT}. What is it you seek?" />
+    <string id="sotor_magic_hub_spells" text="Your magic. I would learn a spell." />
+    <string id="sotor_mapbar_winds_max" text="Maximum:" />
+    <string id="sotor_mapbar_winds_recharge" text="Recharge Rate:" />
+    <string id="sotor_mapbar_winds_title" text="Winds of Magic" />
+    <string id="sotor_master_lore_DarkMagic" text="That's all of it, and also none of it. Every mixture, every ratio, everything I know is yours. Now go out there and find something that can put a hole through the horizon. I have some theories... but nothing concrete." />
+    <string id="sotor_master_lore_HighMagic" text="I do believe you now know virtually everything I do. Forgive me, this occasion usually calls for ceremony but it's been so long that I honestly do not remember the words. You are now a Loremaster. But the work continues. The work always continues." />
+    <string id="sotor_master_lore_LoreOfBeasts" text="That's the last of it. Everything my master taught me and what I managed to work out on my own. ...This never happened before, so I'm not quite sure what to say. Safe travels? Just don't go dying recklessly now." />
+    <string id="sotor_master_lore_LoreOfDeath" text="Tha's all the tales I carry, lad, n' all the words I know.{newline}Not one of em was ever mine, they came from long ago.{newline}Go tell em proper someplace else, n' tell em nice n' slow,{newline}for one day thou'lt be in one, lad, n' someone else shall know." />
+    <string id="sotor_master_lore_LoreOfFire" text="That is all of Aqshy I have to give. When they whisper your name in that frightened manner they often use, do let them know who your master was. It is after all professional courtesy." />
+    <string id="sotor_master_lore_LoreOfHeavens" text="You see it all now don't you? I have granted you eyes. Behold the sky in all its glory! Oh how the patterns swirl and churn unending. Every eventuality..." />
+    <string id="sotor_master_lore_LoreOfLife" text="That's everything I have. Use it wisely and don't forget to pass it on, preferably while you're still above the ground." />
+    <string id="sotor_master_lore_LoreOfLight" text="That is the last of it. You no longer require my instruction, Hierophant. Now you hold the line. Dismissed!" />
+    <string id="sotor_master_lore_LoreOfMetal" text="You have them all now, my apprentice, all my notes. Every trial, every failure, the whole damn ledger. Now go out there and find something I got wrong. I shall be furious! And delighted... to finally have a peer!" />
+    <string id="sotor_master_lore_LoreOfNecromancy" text="Everything! You have everything! Oh how quickly you've grown, my little morsel. And now that I've taught you all I know, I find I have no further use for you. Ha! Be at rest, 'twas just a jest, your heart shall remain inside your chest." />
+    <string id="sotor_master_lore_MinorMagic" text="You have mastered the whole of Minor Magic, should we call you a Minor Master now I wonder?" />
+    <string id="sotor_master_shop_text" text="The master will teach you for a price." />
+    <string id="sotor_master_shop_title" text="{MASTER}'s Formulae" />
+    <string id="sotor_mc_lost_men" text="{COUNT} of your men march with {PARTY} now, their minds no longer their own." />
+    <string id="sotor_mcm_apply_done" text="Rebuilt the world: removed magic from {REMOVED} hero(es) and generated a new set of wizards." />
+    <string id="sotor_mcm_defaults_done" text="Rival Wizards settings restored to their defaults. The boxes on screen may still show the old numbers, but the defaults are what will be saved. Press Done to apply them and rebuild your world. Pressing Cancel discards this." />
+    <string id="sotor_mcm_defaults_failed" text="Could not restore the defaults. See the SOTOR log for details." />
+    <string id="sotor_mcm_dialog_ok" text="OK" />
+    <string id="sotor_mcm_dialog_title" text="Rival Wizards" />
+    <string id="sotor_mcm_no_campaign" text="No campaign is loaded. Start or load a game first." />
+    <string id="sotor_mcm_preview_bloodline" text="{EXTRA} of them inherited the gift from their parents." />
+    <string id="sotor_mcm_preview_counts" text="Wizard lords: {LORDS}   Hidden masters: {HIDDEN}   Tavern casters: {TAVERN}" />
+    <string id="sotor_mcm_preview_disabled" text="Rival Wizards is switched OFF, so this world would have no wizards at all." />
+    <string id="sotor_mcm_preview_footer" text="This is an estimate. Changes will not be applied until you press Done and restart." />
+    <string id="sotor_mcm_preview_title" text="World Preview" />
+    <string id="sotor_mcm_report_failed" text="Could not read the campaign. See the SOTOR log for details." />
+    <string id="sotor_mcm_report_knobs" text="Lords {LORDSHARE}%  Wanderers {WANDERERSHARE}%  Dark/High {FORBIDDEN}%  Tier {MINTIER}+" />
+    <string id="sotor_mcm_report_seed_custom" text="World seed: {SEED} (custom)" />
+    <string id="sotor_mcm_report_seed_default" text="World seed: {SEED} (default)" />
+    <string id="sotor_no_summons_in_arena" text="The arena masters permit no conjured servants." />
+    <string id="sotor_overrides_broken" text="SOTOR: sotor_overrides.xml could not be read, so ALL of your overrides were ignored. Usually a missing '/&gt;' or quote. ({ERROR})" />
+    <string id="sotor_perk_adept_spellcaster_desc" text="Gain access to adept level spells. Unlocks the ability to learn the Lore of Necromancy." />
+    <string id="sotor_perk_adept_spellcaster_name" text="Adept Spellcaster" />
+    <string id="sotor_perk_arcane_link_desc" text="Any buffs you cast on a friendly unit will now also apply to you even if you are not in range." />
+    <string id="sotor_perk_arcane_link_desc2" text="As formation Captain, all troops in your formation deal additional 10% magic damage." />
+    <string id="sotor_perk_arcane_link_name" text="Arcane Link" />
+    <string id="sotor_perk_archmage_desc" text="Become an Archmage. Unlocks the restricted High Magic and Dark Magic lores, and lets you set two enchantments on a single item." />
+    <string id="sotor_perk_archmage_name" text="Archmage" />
+    <string id="sotor_perk_catalyst_desc" text="For every enchanted item in your equipment slots you gain +5 extra Winds of magic at the start of battle." />
+    <string id="sotor_perk_catalyst_desc2" text="You gain +20% Winds of Magic regeneration while waiting in a town." />
+    <string id="sotor_perk_catalyst_name" text="Catalyst" />
+    <string id="sotor_perk_dampener_desc" text="Damage dealt by your damaging spells is reduced by 15%, but troops in your formation take 30% less damage from spells." />
+    <string id="sotor_perk_dampener_desc2" text="You gain 5% ward save." />
+    <string id="sotor_perk_dampener_name" text="Dampener" />
+    <string id="sotor_perk_efficient_spellcaster_desc" text="Your instant damaging and healing spells are 20% less effective, but cost 30% less winds of magic." />
+    <string id="sotor_perk_efficient_spellcaster_name" text="Efficient Spellcaster" />
+    <string id="sotor_perk_improvision_desc" text="Your Winds of Magic is set to 25 if you have less than that at the beginning of the battle." />
+    <string id="sotor_perk_improvision_desc2" text="+10% Persuasion chance during speech checks." />
+    <string id="sotor_perk_improvision_name" text="Improvision" />
+    <string id="sotor_perk_librarian_desc" text="You gain 25% more Spellcraft experience from casting spells." />
+    <string id="sotor_perk_librarian_desc2" text="Learning new spells and lores costs 50% less gold." />
+    <string id="sotor_perk_librarian_name" text="Librarian" />
+    <string id="sotor_perk_master_spellcaster_desc" text="Gain access to master level spells." />
+    <string id="sotor_perk_master_spellcaster_name" text="Master Spellcaster" />
+    <string id="sotor_perk_novice_spellcaster_desc" text="Gain access to entry level spells." />
+    <string id="sotor_perk_novice_spellcaster_name" text="Novice Spellcaster" />
+    <string id="sotor_perk_overcaster_desc" text="Your instant damaging and healing spells are 20% more effective but cost 30% more winds of magic." />
+    <string id="sotor_perk_overcaster_name" text="Overcaster" />
+    <string id="sotor_perk_selfish_desc" text="Your damaging spells do 90% reduced damage to yourself." />
+    <string id="sotor_perk_selfish_desc2" text="Your self targeted buff spells have 50% more duration." />
+    <string id="sotor_perk_selfish_name" text="Selfish" />
+    <string id="sotor_perk_storyteller_desc" text="Every companion in your party gains 1000 experience in a random skill per day." />
+    <string id="sotor_perk_storyteller_desc2" text="Your party gains a permanent +5 increase to party morale." />
+    <string id="sotor_perk_storyteller_name" text="Storyteller" />
+    <string id="sotor_perk_well_controlled_desc" text="Your damaging spells do 30% less damage to troops in your party." />
+    <string id="sotor_perk_well_controlled_desc2" text="Gain 5% advantage in simulation battles." />
+    <string id="sotor_perk_well_controlled_name" text="Well Controlled" />
+    <string id="sotor_practice_counter_afflicted" text="Enemies afflicted" />
+    <string id="sotor_practice_counter_buffed" text="Allies warded" />
+    <string id="sotor_practice_counter_casts" text="Casts" />
+    <string id="sotor_practice_counter_healed" text="Hit points restored" />
+    <string id="sotor_practice_counter_kills" text="Kills" />
+    <string id="sotor_practice_quest_expired" text="You never finished drilling {SPELL}, and {MASTER} has lost track of you." />
+    <string id="sotor_practice_quest_giver_died" text="{MASTER} is dead. There is no one left to judge your practice." />
+    <string id="sotor_practice_quest_title" text="Practice: {SPELL}" />
+    <string id="sotor_practice_task_afflicted" text="Afflict {TARGET} enemies with {SPELL}." />
+    <string id="sotor_practice_task_buffed" text="Ward {TARGET} of your men with {SPELL}." />
+    <string id="sotor_practice_task_casts" text="Cast {SPELL} {TARGET} times." />
+    <string id="sotor_practice_task_healed" text="Restore {TARGET} hit points with {SPELL}." />
+    <string id="sotor_practice_task_kills" text="Kill {TARGET} enemies with {SPELL}." />
+    <string id="sotor_practice_task_return" text="Return to {MASTER} and show him what you have learned." />
+    <string id="sotor_practitioner_culture_unknown" text="mysterious" />
+    <string id="sotor_prisoner_blueprint_cancelled" text="No? Then stop wasting my time and make up your mind." />
+    <string id="sotor_prisoner_blueprint_list" text="You would rummage through my mind like a purse for coins? Fine, which one?" />
+    <string id="sotor_prisoner_blueprint_list_text" text="Take one formula and your prisoner will go free." />
+    <string id="sotor_prisoner_blueprint_nothing" text="I hold no formula that you do not already know." />
+    <string id="sotor_prisoner_blueprint_option" text="{TRAIT} ({LORE})" />
+    <string id="sotor_prisoner_spell_list" text="Then choose, and choose quickly. Which of them?" />
+    <string id="sotor_prisoner_spell_none" text="Wait. Let me reconsider." />
+    <string id="sotor_prisoner_teach_ask" text="Teach me your magics, and I may yet let you walk free." />
+    <string id="sotor_prisoner_teach_done_free" text="You are a fool. But a merciful one." />
+    <string id="sotor_prisoner_teach_done_take" text="Very well. Listen carefully. I will say this only once before I take my leave of you." />
+    <string id="sotor_prisoner_teach_never" text="On second thought, rot here." />
+    <string id="sotor_prisoner_teach_nothing" text="You have everything I know already, and I have nothing left to buy my freedom with. Kill me or keep me, but stop wasting my time." />
+    <string id="sotor_prisoner_teach_release" text="Keep your secrets and go, I release you." />
+    <string id="sotor_prisoner_teach_reply" text="You would wring the secrets of {LORE_NAME} from me for my freedom? Say what it is you want, and be plain about it." />
+    <string id="sotor_prisoner_teach_take" text="Your lore. Open it to me, and you walk out of here." />
+    <string id="sotor_prisoner_teach_take_blueprint" text="Your enchanting secrets. One formula, and you go free." />
+    <string id="sotor_prisoner_teach_take_spell" text="One spell. Teach it, and you go free." />
+    <string id="sotor_raid_scroll_loot" text="You plundered {COUNT} {ITEM}." />
+    <string id="sotor_ransom_blueprint" text="Very well. Attend me closely. The formula of {TRAIT}, every measure and every word. Commit it to paper, and I shall take my leave." />
+    <string id="sotor_ransom_lore_DarkMagic" text="Cutting through bureaucracy with sheer force, are we? Then you are already a Doomweaver in spirit. Good. You'll need that if you hope to master Dhar." />
+    <string id="sotor_ransom_lore_HighMagic" text="Well this is a rare thing indeed. I can sense you truly have the knack for it. It would be a shame for such talent to go to waste now, wouldn't it? I give you Qhaysh, my captor. Please do not disappoint me." />
+    <string id="sotor_ransom_lore_LoreOfBeasts" text="So this is how it goes. Fine, Ghur's yours. It never belonged to me anyway and at least now there's another Shaman out there. Now get these off me." />
+    <string id="sotor_ransom_lore_LoreOfDeath" text="Thou'st put these ancient hands in irons ta make me speak my part.{newline}Shyish was never mine ta keep, so take it, take the art.{newline}But there's a jest in what thou'st done, n' here it is for free:{newline}death would have found thee soon enough. Thou needn't have troubled me." />
+    <string id="sotor_ransom_lore_LoreOfFire" text="Unhand me and it is yours. Aqshy will answer to you now, freely given. Do note that word when you tell the story, for I would far rather be remembered for my generosity." />
+    <string id="sotor_ransom_lore_LoreOfHeavens" text="Oh, don't look so pleased with yourself. I saw this. Not clearly, but I saw it, and I came anyway. Here, Azyr is yours as it was always meant to be." />
+    <string id="sotor_ransom_lore_LoreOfLife" text="Chains, how quaint. Fine, here's Ghyran, take it. Nothing in nature is ever truly yours, it is simply your turn. Though I would have preferred a conversation." />
+    <string id="sotor_ransom_lore_LoreOfLight" text="You want Hysh? Then take it and be quick about it. I have been on the losing side of a rout and I know what becomes of prisoners who bore their captors. It is yours. I warn you, you'll find it much less pliable than me." />
+    <string id="sotor_ransom_lore_LoreOfMetal" text="Restraints? Truly? Shall I turn them to gold? Or perhaps rust them away? I simply cannot decide. Very well, Chamon is yours, the basic principles that is. Let's see what you can manage on your own. I am keeping my notes." />
+    <string id="sotor_ransom_lore_LoreOfNecromancy" text="Chains! Oh marvelous, my little morsel, you are a natural! Yes, yes, take it, the Ninth Book lies open for you, oh I could weep with pride. Do loosen these though. My wrists are coming apart." />
+    <string id="sotor_ransom_lore_MinorMagic" text="You went to all this trouble... for Minor Magic? Take it. Take it and never tell a soul for your own sake." />
+    <string id="sotor_read_hero_blocked" text="Lacks the lore or the caster level this text demands." />
+    <string id="sotor_read_hero_hint" text="Meets the requirements." />
+    <string id="sotor_read_hero_text" text="Choose who learns this enchantment." />
+    <string id="sotor_read_hero_title" text="Who studies it?" />
+    <string id="sotor_refuse_lore_DarkMagic" text="Oh, you. You have quite some nerve, don't you? Or are you just thick? Fine, I'll teach you, but only if you give me another battle like the last one. Show me it wasn't luck!" />
+    <string id="sotor_refuse_lore_HighMagic" text="You may have the raw talent but wisdom takes time. Come back to me when you have outgrown your need for misadventure, and we shall explore the secrets of magic together." />
+    <string id="sotor_refuse_lore_LoreOfBeasts" text="I've been called a savage my whole life by men like you with your soft palms and clean boots. You took a shortcut which defeats the whole point of Ghur. You want the rest? Learn it yourself like I did." />
+    <string id="sotor_refuse_lore_LoreOfDeath" text="A tale that's forced ain't worth the tellin', lad.{newline}Nor is it worth the hearin' twice.{newline}It comes out thin n' bare n' sad.{newline}So do not ask me thrice." />
+    <string id="sotor_refuse_lore_LoreOfFire" text="You had me in chains. Chains! And now you want lessons? I will teach you nothing. Whatever you manage from here on out you shall manage alone, and you will leave my name out of it." />
+    <string id="sotor_refuse_lore_LoreOfHeavens" text="I have taught you this already, a hundred times, in a hundred futures of a hundred lifetimes. It went the way you would expect. Forgive me if I decline. I did not become an Astromancer to spend a season on something so dreadfully dull." />
+    <string id="sotor_refuse_lore_LoreOfLife" text="No, and not out of spite. You can't grow an oak in barren soil, and I've had a glimpse of what's between your ears. A fine young sprout you are not." />
+    <string id="sotor_refuse_lore_LoreOfLight" text="Instruction is a privilege, not war spoils. I shall not teach an enemy, former or otherwise. You want it? Come and take it." />
+    <string id="sotor_refuse_lore_LoreOfMetal" text="Ha! Couldn't manage it, could you? A colleague I would teach. A patron I would tolerate. A captor and also a helpless amateur? No, you shall not have my method, and you will no doubt get every part of it wrong. That is punishment enough." />
+    <string id="sotor_refuse_lore_LoreOfNecromancy" text="Oh, but you have all that you need from me, morsel, and now you demand the rest for free? No, no, no. I shall not spoil our burgeoning little prodigy with my instruction. That is how I learned, you see. Go out there and take it!" />
+    <string id="sotor_refuse_lore_MinorMagic" text="You put me in irons over children's charms. No. Go find a hedge witch to teach you your parlor tricks." />
+    <string id="sotor_reveal_battle" text="You saw forbidden winds in that battle. {NAME} is one of the {TRADITION}." />
+    <string id="sotor_rumour_again" text="Is there anyone else?" />
+    <string id="sotor_rumour_answer" text="{NAME}, of the {TRADITION}. Their people hold {WHERE}, off to the {DIRECTION}. You didn't hear it from me." />
+    <string id="sotor_rumour_ask" text="I am looking for someone who commands the arcane arts." />
+    <string id="sotor_rumour_direction_east" text="east" />
+    <string id="sotor_rumour_direction_here" text="here, in this very town" />
+    <string id="sotor_rumour_direction_north" text="north" />
+    <string id="sotor_rumour_direction_northeast" text="north-east" />
+    <string id="sotor_rumour_direction_northwest" text="north-west" />
+    <string id="sotor_rumour_direction_south" text="south" />
+    <string id="sotor_rumour_direction_southeast" text="south-east" />
+    <string id="sotor_rumour_direction_southwest" text="south-west" />
+    <string id="sotor_rumour_direction_unknown" text="somewhere out there" />
+    <string id="sotor_rumour_direction_west" text="west" />
+    <string id="sotor_rumour_done" text="That will do. My thanks." />
+    <string id="sotor_rumour_none" text="Sorcerers? Not round here. Try the bigger towns, or ask further afield." />
+    <string id="sotor_rumour_nowhere" text="no place I could name" />
+    <string id="sotor_rumour_price_hint" text="{SOTOR_RUMOUR_PRICE}{GOLD_ICON}" />
+    <string id="sotor_rumour_too_poor" text="You cannot afford this." />
+    <string id="sotor_rumour_unknown_tradition" text="hedge-wizards" />
+    <string id="sotor_sb_cooldown_seconds" text="{COUNT} seconds" />
+    <string id="sotor_sb_focus_points" text="Focus Points" />
+    <string id="sotor_sb_lbl_casting_level" text="Spell Casting Level:" />
+    <string id="sotor_sb_lbl_catalyst" text="Catalyst (legendary gear):" />
+    <string id="sotor_sb_lbl_conduit_many" text="Arcane Conduit ({COUNT} charges):" />
+    <string id="sotor_sb_lbl_conduit_one" text="Arcane Conduit ({COUNT} charge):" />
+    <string id="sotor_sb_lbl_cooldown" text="Cooldown:" />
+    <string id="sotor_sb_lbl_duration" text="Spell Duration:" />
+    <string id="sotor_sb_lbl_effectiveness" text="Spell Effectiveness:" />
+    <string id="sotor_sb_lbl_friendly_damage" text="Friendly Spell Damage:" />
+    <string id="sotor_sb_lbl_known_lores" text="Known Magic Lores:" />
+    <string id="sotor_sb_lbl_mind_control" text="Base Mind Control Chance:" />
+    <string id="sotor_sb_lbl_self_damage" text="Self Spell Damage:" />
+    <string id="sotor_sb_lbl_skeleton_weight" text="Skeleton Troop Weight:" />
+    <string id="sotor_sb_lbl_spell_name" text="Spell Name:" />
+    <string id="sotor_sb_lbl_spell_tier" text="Spell Tier:" />
+    <string id="sotor_sb_lbl_spell_type" text="Spell Type:" />
+    <string id="sotor_sb_lbl_spell_winds_cost" text="Spell Winds Cost:" />
+    <string id="sotor_sb_lbl_ward_save" text="Ward Save:" />
+    <string id="sotor_sb_lbl_winds_cost" text="Winds of Magic cost:" />
+    <string id="sotor_sb_lbl_winds_current" text="Current Winds of Magic:" />
+    <string id="sotor_sb_lbl_winds_max" text="Maximum Winds of Magic:" />
+    <string id="sotor_sb_lbl_winds_recharge" text="Winds of Magic Recharge:" />
+    <string id="sotor_sb_learning_rate" text="Learning Rate: x {RATE}" />
+    <string id="sotor_sb_val_none" text="None" />
+    <string id="sotor_shelf_known_hint" text="You already know this enchantment." />
+    <string id="sotor_skill_gate_or" text="{A} or {B}" />
+    <string id="sotor_skill_spellcraft_desc" text="Your mastery of the Winds of Magic. Higher Spellcraft increases spell damage and unlocks higher spell tiers." />
+    <string id="sotor_skill_spellcraft_name" text="Spellcraft" />
+    <string id="sotor_spellbook_needs_master" text="Seek out a master or companion to teach you" />
+    <string id="sotor_spellbook_needs_you_first" text="No one in your clan knows this lore" />
+    <string id="sotor_standing_fought_alongside" text="+{AMOUNT} standing with the {TRADITION} for fighting alongside {NAME}." />
+    <string id="sotor_standing_learn_gained" text="You gained standing with {TRADITIONS}, and the {LORD_COUNT} lords who follow those traditions." />
+    <string id="sotor_standing_learn_lost" text="You lost standing with {TRADITIONS}, and the {LORD_COUNT} lords who follow those traditions." />
+    <string id="sotor_standing_tradition_fell" text="Your standing with the {TRADITION} fell by {AMOUNT}, and by {LORD_AMOUNT} with the {LORD_COUNT} lords who follow them." />
+    <string id="sotor_standing_tradition_fell_only" text="Your standing with the {TRADITION} fell by {AMOUNT}." />
+    <string id="sotor_standing_tradition_rose" text="Your standing with the {TRADITION} rose by {AMOUNT}, and by {LORD_AMOUNT} with the {LORD_COUNT} lords who follow them." />
+    <string id="sotor_standing_tradition_rose_only" text="Your standing with the {TRADITION} rose by {AMOUNT}." />
+    <string id="sotor_stat_enchanted_gear" text="Enchanted gear" />
+    <string id="sotor_stealth_attack" text="Stealth attack!" />
+    <string id="sotor_str_accept" text="Accept" />
+    <string id="sotor_str_buy" text="Buy" />
+    <string id="sotor_str_cancel" text="Cancel" />
+    <string id="sotor_str_ok" text="OK" />
+    <string id="sotor_summon_over_water" text="You cannot raise the dead over open water." />
+    <string id="sotor_teach_accepted_student" text="You already carry {LORE}, so I do not need to repeat the basics. You are now my student. Ask me for a spell and we shall see your worth." />
+    <string id="sotor_teach_arg_1" text="{SOTOR_TEACH_ARG_1}" />
+    <string id="sotor_teach_arg_2" text="{SOTOR_TEACH_ARG_2}" />
+    <string id="sotor_teach_arg_3" text="{SOTOR_TEACH_ARG_3}" />
+    <string id="sotor_teach_arg_bail" text="I have no answer to that." />
+    <string id="sotor_teach_arg_charm" text="I would honor your teachings and spread the word of your good name." />
+    <string id="sotor_teach_arg_charm_loremaster" text="Your name deserves better recognition amongst our peers. Teach me, and I will see that it is spoken properly." />
+    <string id="sotor_teach_arg_leadership" text="The world needs more of us who can wield these magics wisely, and fewer who cannot." />
+    <string id="sotor_teach_arg_leadership_loremaster" text="I hold all eight, which makes me answerable to all eight. A gap in one is a duty I am failing." />
+    <string id="sotor_teach_arg_medicine" text="I have closed wounds and watched men die of things nobody could name. I know what the winds do to a body." />
+    <string id="sotor_teach_arg_medicine_loremaster" text="I can knit a wound shut and still not say what the winds do inside a man. Teach me that to which you have dedicated your life." />
+    <string id="sotor_teach_arg_roguery" text="A man in your position collects secrets, and secrets find the wrong ear. I would rather owe you a kindness." />
+    <string id="sotor_teach_arg_roguery_loremaster" text="I know of some of your... colorful activities, and have told no one. I would rather that stayed a courtesy between us." />
+    <string id="sotor_teach_arg_spellcraft" text="I have faced worse than your magics and lived. Teach me, if you are so great." />
+    <string id="sotor_teach_arg_spellcraft_loremaster" text="I hold all eight, true, but you have lived inside one your whole life. That is the sort of expertise I came for." />
+    <string id="sotor_teach_arg_steward" text="My clan has land, coin, and a long memory for those who help it. You would find us generous." />
+    <string id="sotor_teach_arg_steward_loremaster" text="Ask anything of my clan and it is done. I would sooner be in your debt than go on not knowing this." />
+    <string id="sotor_teach_arg_tactics" text="I know what this magic is worth on a field of battle. In the wrong hands it is a waste, but not in mine." />
+    <string id="sotor_teach_arg_tactics_loremaster" text="All wizards have a theory until they get a fireball to the face. Show me actual application." />
+    <string id="sotor_teach_arg_trade" text="Name your price. Coin, a favour owed, a share of the spoils. I pay my debts." />
+    <string id="sotor_teach_arg_trade_loremaster" text="I will not haggle with you as though this were grain. But should you be curious about a spell of mine I would perhaps accommodate." />
+    <string id="sotor_teach_ask" text="I wish to learn the arcane arts you command." />
+    <string id="sotor_teach_duel_accept" text="Bring him out. I will face him." />
+    <string id="sotor_teach_duel_chide_spoken" text="Then go and prepare. You have {DAYS} day(s). Come to me after that and you will find I have nothing to say to you." />
+    <string id="sotor_teach_duel_decline" text="Another day, perhaps." />
+    <string id="sotor_teach_duel_demand" text="Before I teach you any further you must prove yourself, {STUDENT}. Defeat my current apprentice in a wizard duel, and {SPELL} is yours." />
+    <string id="sotor_teach_duel_pending" text="Have you found your nerve, {STUDENT}? My apprentice is waiting, and you have {DAYS} day(s) left of the week I gave you." />
+    <string id="sotor_teach_duel_reward" text="You knocked my apprentice on his arse. Very well, a bargain is a bargain. Listen closely..." />
+    <string id="sotor_teach_forgot_you" text="Hm? Who are you again? Ah. My apprentice. I had wondered where you had got to. What did you need?" />
+    <string id="sotor_teach_gate_fallback" text="You messed with the weave and broke something, Wizlet. Speak to me again and we will begin afresh." />
+    <string id="sotor_teach_hub_continue" text="So you wish to learn my magics, then? Give me a good reason." />
+    <string id="sotor_teach_hub_fail" text="My magics are too strong for you {STUDENT}. Find yourself a master who can teach you weaker magic." />
+    <string id="sotor_teach_hub_success" text="Enough. Very well, listen carefully..." />
+    <string id="sotor_teach_learned_lore" text="{MASTER} has opened {LORE} to you. Return to learn its spells." />
+    <string id="sotor_teach_learned_spell" text="{MASTER} has taught you {SPELL}." />
+    <string id="sotor_teach_offer" text="{SOTOR_TEACH_OFFER}" />
+    <string id="sotor_teach_offer_lore" text="So you would learn {LORE}. Convince me you are worth the risk." />
+    <string id="sotor_teach_offer_lore_loremaster" text="You? Asking me? You hold all eight winds at once, and you want {LORE} from my hands. ...Are you testing me? Convince me you're serious." />
+    <string id="sotor_teach_offer_spell" text="So, you wish to further your knowledge of {LORE} and learn {SPELL}? Convince me." />
+    <string id="sotor_teach_offer_spell_loremaster" text="A Loremaster at my door asking after {SPELL}. You could likely reason it out yourself without much effort. So why come to me?" />
+    <string id="sotor_teach_practice_done" text="So. You have been busy with {SPELL}. Good, you have earned the right to ask me for more." />
+    <string id="sotor_teach_practice_pending" text="Not yet, {STUDENT}. I gave you {SPELL} and you have barely used it. Go and put it to work, then come back to me." />
+    <string id="sotor_teach_reaction" text="{SOTOR_TEACH_REACTION}" />
+    <string id="sotor_teach_reaction_text" text="Hm. Go on." />
+    <string id="sotor_teach_reaction_text_loremaster" text="...Hm. Fascinating. Go on." />
+    <string id="sotor_teach_refuse" text="{SOTOR_TEACH_REFUSE}" />
+    <string id="sotor_teach_refuse_doctrine" text="You reek of {LORE}! Get out of my sight, {PRACTITIONER}!" />
+    <string id="sotor_teach_refuse_ignorance" text="Feeble Wizlet! Do you really think you can manage the glories that are my spells?" />
+    <string id="sotor_teach_refuse_knows_all" text="You already know every spell I could teach you. Find yourself a greater master than I." />
+    <string id="sotor_teach_refuse_knows_all_loremaster" text="I am flattered you even thought to ask, Loremaster. But you already hold everything I could offer, and a great deal more. Should I ever stumble onto something new, you will be the first to hear of it." />
+    <string id="sotor_teach_refuse_recent_failure" text="You again? We discussed this already and my answer has not changed. Do not bother me for another {SOTOR_RETRY_DAYS} days." />
+    <string id="sotor_teach_refuse_standing" text="Who has brought this filthy peasant before me? Guards! Throw him out!" />
+    <string id="sotor_teach_refuse_war" text="Our people are at war. They'd have me drawn and quartered if I taught an enemy." />
+    <string id="sotor_teach_spell_list" text="Which of them, then? Name it." />
+    <string id="sotor_teach_spell_none" text="None of them, for now." />
+    <string id="sotor_teach_spell_option" text="{SPELL} ({LORE})" />
+    <string id="sotor_trad_desc_beasts" text="Shamans keep to the wild places and take the strength and the shape of beasts for their own. They hold few halls and fewer titles, and the courts of the great clans regard them as little better than the animals they command." />
+    <string id="sotor_trad_desc_dark" text="Doomweavers take the winds raw and unsorted, and pay for that power in a coin they do not name. No clan flies their colours. They are one or two hidden souls inside a great hall, and finding one is a labour of its own." />
+    <string id="sotor_trad_desc_death" text="Spirit Magisters walk the purple wind at the border of dying, taking the will out of an enemy before ever taking his life. They insist they are nothing like the necromancers, and the necromancers agree." />
+    <string id="sotor_trad_desc_fire" text="Pyromancers draw on the red wind and answer with fire, favouring the swift and total ruin of whatever stands before them. Even allied captains keep their powder and their tents well clear of a Pyromancer's tent." />
+    <string id="sotor_trad_desc_heavens" text="Astromancers read the turning of the heavens and call down its lightning and its storms. They are trusted as counsellors and feared as omens, for they are said to know a battle's end before it is joined." />
+    <string id="sotor_trad_desc_high" text="Loremasters hold all the winds at once in a discipline that most who attempt it do not survive. No clan flies their colours. They are one or two hidden souls inside a great hall, and finding one is a labour of its own." />
+    <string id="sotor_trad_desc_life" text="Druids draw on the green wind that runs through root and blood, closing wounds and calling the living land to fight beside them. They are welcome in villages that would turn any other wizard away." />
+    <string id="sotor_trad_desc_light" text="Hierophants wield the white wind as a lantern and a blade, burning what should not walk and mending what should. They are the traditional enemies of the necromancer and the Doomweaver alike." />
+    <string id="sotor_trad_desc_metal" text="Alchemists work the yellow wind through ore and edge, hardening their own arms and rotting the arms of their enemies. They are the most respected of wizards among smiths, quartermasters and paymasters." />
+    <string id="sotor_trad_desc_necromancy" text="Necromancers refuse the border of dying altogether and raise what lies beneath the field to march again. Where a Necromancer holds a clan, that clan does not want for soldiers." />
+    <string id="sotor_trad_name_beasts" text="Shamans" />
+    <string id="sotor_trad_name_dark" text="Doomweavers" />
+    <string id="sotor_trad_name_death" text="Spirit Magisters" />
+    <string id="sotor_trad_name_fire" text="Pyromancers" />
+    <string id="sotor_trad_name_heavens" text="Astromancers" />
+    <string id="sotor_trad_name_high" text="Loremasters" />
+    <string id="sotor_trad_name_life" text="Druids" />
+    <string id="sotor_trad_name_light" text="Hierophants" />
+    <string id="sotor_trad_name_metal" text="Alchemists" />
+    <string id="sotor_trad_name_necromancy" text="Necromancers" />
+    <string id="sotor_trait_needs_line" text="Needs {REQ}." />
+    <string id="sotor_trait_req_lore" text="{LORE} · Spellcraft {THRESHOLD}" />
+    <string id="sotor_trait_req_skill" text="{SKILLS} {THRESHOLD}" />
+    <string id="sotor_unlock_lore_DarkMagic" text="Dark Magic or 'Dhar' as it's named. I'm sure you've heard it called something worse. The other orders each take one wind and spend a lifetime learning to hold it politely, but really who exactly are they trying to impress? There are eight winds and so we use all eight of them together. They don't always mesh well so sometimes you just need to force it. This can have some disastrous results, but that's exactly where the power comes from. They call us Doomweavers. Such a fancy name for such a simple concept. We don't have a philosophy and hold nothing in reverence. Magic is a tool, plain and simple. Everything I teach you will break something or someone, maybe even yourself if you're not careful. So ask questions and listen carefully because it's going to be a lot of work." />
+    <string id="sotor_unlock_lore_HighMagic" text="Before you learn a single spell, understand what you have been looking at. Magic was once whole and an undivided silvery haze over everything. Then it was broken by people who had good reasons but insufficient foresight, and the eight winds are what fell out of the wreck. Every order you have met studies a shard and calls it a discipline. Qhaysh means holding all eight in harmony rather than choosing one and calling the choice a philosophy. Yes, I know all eight of the other lores adequately, which is the minimum requirement to begin here. This prerequisite is why our order is so small. You will no doubt hear whispers that we do what the Doomweavers do. And while this is technically correct, it misses all the nuance. We do not force the eight winds together in a destructive collision. Instead we... persuade them, which takes considerably longer and does not disfigure the practitioner." />
+    <string id="sotor_unlock_lore_LoreOfBeasts" text="You won't find a college for our lore. No tower, no dome, not even a library. Does that bother you? Bothers some more than it should. They call us Shamans when they're being polite, and file the Lore of Beasts under &quot;primal thaumaturgy,&quot; a great many syllables for a thing they've never once tried to understand. Ghur is heard and not seen, and it's loudest where there's no one else to hear it. So what would we do with a building? I've had students leave over this. Do as you like." />
+    <string id="sotor_unlock_lore_LoreOfDeath" text="There was a village once what would not bury up their dead.{newline}Cheaper ta keep em at their labor, or so it was said.{newline}'Leven years the harvest came in fat n' fair n' ahead.{newline}Then the corpses took a count, found themselves the greater number,{newline}rose up ta settle the score n' tore the livin' all asunder.{newline}I know, for I were there ta see the last of em go under.{newline}I tell thee this for one day thou shalt stand accused the same,{newline}by some loud mouth'd blaggard what can't tell releasin' from a claim.{newline}We're the Spirit Magisters, whate'er the street sees fit ta name.{newline}Shyish blows from all what's ended, through all what hath not.{newline}Hear an endin' proper, lad, n' fear neither grave nor rot." />
+    <string id="sotor_unlock_lore_LoreOfFire" text="Pyromancy is the art of invoking and manipulating fire. Aqshy, rather. And the far harder art of keeping it under control. Any fool with some flint can start a fire. I am teaching you to do it without immolating yourself as well. You will learn, for instance, that plate armor is merely a cooking vessel, and that the men wearing it have never once worked this out. Enjoy their screams, but never grow careless around it. I have seen many a Wizlet turn themselves to ash. Amusing, certainly. But don't you dare lose control, as your failures would stain my reputation." />
+    <string id="sotor_unlock_lore_LoreOfHeavens" text="Astromancy is the art of reading and manipulating the heavens. Storms, comets, the hour of a man's death... all of it is written, and all of it can be controlled. Ah, Azyr, most distant of the winds. It gathers far above our heads and recognizes no boundary of time. Learn to channel it and you will glimpse the sea of eventualities... only glimpse. No eyes were built wide enough for more. A man who knows the shape of tomorrow is never truly at war, he always arrives at the right place and at the right time." />
+    <string id="sotor_unlock_lore_LoreOfLife" text="We Druids are the practitioners of the Lore of Life, but there's nothing truly special about our magic. I'm sure you've heard legends of us healing the sick and wounded, stopping plagues, curing famine. Nonsense, we simply manipulate the natural cycle of life. For growth and rot are the same process viewed from opposite ends, and Ghyran attends to both without preference. Your friends, your enemies, your own body, all of it will grow and all of it will die. Nature cares not, and I have made my peace with that." />
+    <string id="sotor_unlock_lore_LoreOfLight" text="Stand there. Feet apart, hands down, eyes forward. They call it the Lore of Light, but light is the least of it. I will drill that lesson into you. Hysh was the first of the winds, and everything made since must defer to its presence. Our light cannot be resisted. It cannot be refused. You are now a Hierophant. You do not grasp, you hold. You do not move. Master stillness and very little in creation will be permitted to argue. Stop! You are already fidgeting." />
+    <string id="sotor_unlock_lore_LoreOfMetal" text="So you want to be an Alchemist? My apprentice? I should warn you that I ramble sometimes and you may interrupt me. Quiet! The Lore of Metal, they call it. Alchemy. What we do here is not really magic, it is closer to natural philosophy except that I am permitted to cheat! Chamon is the heavy wind and it sticks to metal the way ink takes to paper. Which is to say reliably! Well, 80% of the time. Do you know how rare that is among wizards? I can run the same experiment eleven times and get the same result eleven times, no matter how much the subjects squirm. The others find this dull. Dull! Their muddled heads are full of abstract prophecies and here I am documenting empirical truth." />
+    <string id="sotor_unlock_lore_LoreOfNecromancy" text="Ah yes! Do come sit down anywhere you like. Mind the smell, it's mine. They tell you necromancy is all about the dead. Hogwash! The exact bloody opposite! It is about control of all life and surpassing the tyranny of death! And believe me I have, for a long, long time. Ha! Look at my hands, morsel. Go on, look. That is what the Ninth Book costs, and I would gladly pay it all again tomorrow. Necromancy is not a practice of that watery Shyish the Magisters sip at. Our Dhar takes and takes but then it gives you everything, including time! And time is the only thing worth having, and you, my little morsel, are running out of it the longer we waste on pleasantries. Tick tock. So let's get started!" />
+    <string id="sotor_unlock_lore_MinorMagic" text="I don't know how you convinced me to teach you Minor Magic but this 'lore' is so simple we usually teach it to children. Surely you cannot screw this up?" />
+    <string id="sotor_unlock_spell_Amaranth" text="The amaranth doth keep her color long past cut n' dried.{newline}A flower what will not admit the day that she hath died.{newline}Wear that stubbornness thyself n' poison passeth by,{newline}n' plague n' rot n' fouled water leave thee well n' dry.{newline}But mark me twice, for here's the whole n' honest of the writ:{newline}I said thou shalt not sicken. Never said thou shalt not wilt." />
+    <string id="sotor_unlock_spell_AmberSpear" text="A spear. Yes, an actual spear. I've watched grown wizards wrinkle their noses at this one. Pour Ghur into the shaft until it hums and then throw it like you mean it. Goes through armor, goes through the man, keeps going. Two thousand generations of hunters can't all have been wrong." />
+    <string id="sotor_unlock_spell_Apotheosis" text="Recall what I told you about the silver haze. This is the closest anyone has come to putting it back. Weave all eight winds into a temporary equilibrium and pour that energy into a wounded man, and he will be... corrected. Restored to the condition his body was meant to be in. Stronger and faster than he has ever been, or ever will be again. But it is a fleeting sensation, for, alas, perfection cannot be maintained in nature. I find that most weep after the experience and they can never really explain why." />
+    <string id="sotor_unlock_spell_AshesAndDust" text="Thou needst not aim this cleverly nor seek a gap in mail.{newline}Steel means nothin' ta what comes, nor shield, nor coat o' scale.{newline}Call it down upon the ground n' all what stood there turns ta gray.{newline}No wound, no blood, no body. Just the ash n' what blows away." />
+    <string id="sotor_unlock_spell_AuraOfResistance" text="A simple protection spell that may prove useful. This is the elementary form of more sophisticated magics." />
+    <string id="sotor_unlock_spell_Barkskin" text="Put your hand on that trunk and push. Harder. It resists because it has nothing to prove and nowhere to be. That is what you will lay over your soldiers. Their skin will thicken and dull, and blades chip upon their flesh. But it will fade and the damage will come back eventually in some other form." />
+    <string id="sotor_unlock_spell_BironasTimewarp" text="Now the harder lesson. Light came before the hour, so the hour must yield. Draw the light in close about your body and feel the space around you distort. The body stands still but the space bends around you and you cross the battlefield in a flash of light. Stillness is speed. Speed is power. Do not question it." />
+    <string id="sotor_unlock_spell_BlackHorror" text="Beyond our world exist countless others with horrors that can melt a man's mind, but anything can be weaponized. Tear the seam between realities and something comes through that has no business being here, and its fury can usually be pointed at your enemies. It stays for just as long as the tear remains open, but that's not always the case, as the late Arnzipal would no doubt attest." />
+    <string id="sotor_unlock_spell_Blizzard" text="High enough above us, the air is cruel. It hates the living and freezes without mercy. Take it. Pull that place down and onto your enemies, let them congeal blades in hand, solidify, stiffen, perfectly preserved as all things should be." />
+    <string id="sotor_unlock_spell_BoltOfAqshy" text="A simple bolt of fire. Point your hand and melt your enemy. There is no technique to it and no artistry in it, and you will use it more than everything else I teach you combined. I suppose we all have to start somewhere..." />
+    <string id="sotor_unlock_spell_BurningHead" text="A bit of Shyish in the mix for this one. Yes, Shyish, don't make that face, the Spirit Magisters do not own it. Bind it to the flames and you get a skull, burning, that tears through enemy formations like a vengeful god. I have seen it incinerate thousands and I still do not tire of the sight. Try it." />
+    <string id="sotor_unlock_spell_CaressOfLaniph" text="Not one rightly knows what Laniph were. A queen. A witch.{newline}A madwoman gone thin n' strange n' buried in a ditch.{newline}What's known is that she killed n' killed n' left no mark on skin.{newline}The purple light comes up close as a breath, n' then it draws thee in.{newline}It squeezes till the heart gives way n' he drops where he stood.{newline}But choose thy targets carefully, the stout ones are no good." />
+    <string id="sotor_unlock_spell_CascadingFireCloak" text="A Pyromancer's greatest enemy is always themselves. Fire does not distinguish between the man casting it and the man receiving, so we cheat by wearing it. Wreathe yourself in flame and the heat disperses laterally, avoiding your ripe pink flesh. Mind you, it lasts only as long as your concentration. Requires a bit of attention span, this one. But hopefully yours is long enough to spare you the most embarrassing death our order offers." />
+    <string id="sotor_unlock_spell_ChainLightning" text="You have heard the tales I imagine. A sphere of light that drifts through a shuttered window, circles a room, chooses one man out of ten and leaves the rest untouched? Sailors call it &quot;corpse candle&quot;, priests name it &quot;judgment&quot;, and scholars insist it is nothing at all. Fools the lot of them! It is Azyr, bright holy Azyr! Pooled and wandering, looking for somewhere to go." />
+    <string id="sotor_unlock_spell_Chillwind" text="There's no lore for cold. No color, no institution. Yet somewhere far north they've made an entire discipline of it and nobody here has bothered to learn how. Doesn't matter, here's my take on it. Force enough Dhar together in a particular way and you get the same result without needing to understand anything about it. Not the strongest spell in our repertoire but certainly the cheapest and the easiest to cast. It also numbs whoever survives it. Frozen hands can't draw a bow." />
+    <string id="sotor_unlock_spell_CinderBlast" text="If ever you tire of burning things, and I cannot imagine why you would, there is this. Solidified magma thrown in fragments like primates throwing poo. It works, in the sense that a rock works. There are better uses of your time and mine, but you asked, and here we are." />
+    <string id="sotor_unlock_spell_CometOfCasandora" text="Beyond the heavens your naked eye can bear lie countless bodies, some smaller than our own and some vast beyond reckoning. An endless armory just above our heads... and no one thinks to reach for it! You need only give one a push. Let the world below do the rest." />
+    <string id="sotor_unlock_spell_CourageOfAenarion" text="Aenarion is a name from long before the breaking, and the sources contradict each other on everything except for his bravery and the speed at which he fought. Weave the eight and speak his name, and every ally near you will forget their fear and find their blows landing quicker than their arms should permit. I do not know what special power the name holds but the spell fizzles without it. Perhaps this is the very first instance of magical copyright. Do bear in mind that Aenarion is said to have lived his entire life in this condition, and it did not end well for him or for anyone standing nearby." />
+    <string id="sotor_unlock_spell_CurseOfAnraheir" text="Saw a mercenary company break to this once. Two hundred men, good armor, no casualties to speak of. They just got tired of it. Sprites in the eyes and the mouth and under the mail, biting, and nothing to swing at. They walked off the field. Whole thing took a quarter hour and nobody could say what killed them, because nothing did." />
+    <string id="sotor_unlock_spell_CurseOfArrowAttraction" text="A hex is rarely anything more than a charm run backwards. I wish more people understood this, because half the curses in the world are some old protective working that an untrained wizard botched. Take a ward against arrows, reverse the flow, and it will attract projectiles instead. Cast it on an enemy formation and your peasant levies will shoot like veterans of thirty years. They will credit themselves, of course. Let them bask in their ignorance." />
+    <string id="sotor_unlock_spell_CurseOfMidnightWind" text="There was a tongue spoken when the world was young, and it is gone. Three words survive. Three! I do not know what they mean and I will not pretend to... but say them into a company of men and trigger the inverse of spherical harmony. Learn them exactly. Kha'ronis. Vel'thuun. Azyrath!" />
+    <string id="sotor_unlock_spell_CurseOfYears" text="Time is the thief that has been at us since the day we were born, but there are ways to redirect and intensify its flow. Spit the words out and watch it take them. Their hair will go white, their skin will draw in tight over the bone, and it will quicken and worsen and they will plead with every breath they have left. Armor won't save them, nothing will. Oh how they beg. Their voice gradually turning older and older until they cannot form the words any longer. It is such a delight on the ears." />
+    <string id="sotor_unlock_spell_Dart" text="I once taught this spell to a child that had not yet learned to speak. He took to casting it at his parents when he was hungry." />
+    <string id="sotor_unlock_spell_DeathSpasm" text="Azyr and Aqshy in equal quantities, force them together into the same shape and hold them there until they're about to explode, then release. The bolt is the Azyr, the burst is the Aqshy decompressing at unnatural speeds. Anything left standing is set alight. If the Astromancers and Pyromancers ever set aside their differences and worked together, they could destroy all of creation, but you'd have better luck reconciling oil and water." />
+    <string id="sotor_unlock_spell_DeathlyShards" text="Light can be hard or soft. Hold it too tightly and it turns brittle like glass. Then you break it. The shards will find the first men standing in front of you and bury themselves in whatever they touch. Aim once. They will not travel past the first rank, so choose wisely." />
+    <string id="sotor_unlock_spell_DoomBolt" text="The high and mighty Astromancers pull rocks out of the sky and take enormous pride in it. Same principle here, but you pack the thing with Dhar before it lands. The sky opens, and what comes down is black and burning and arrives with more explosive force than any comet could possibly have. It punches through armor, ships, castle walls, even dragons if you ever meet one. Careful not to get caught in the impact crater." />
+    <string id="sotor_unlock_spell_DrainLife" text="Everything alive is either taking or being taken from. No matter what your priests tell you, there are no bystanders in the great game. Open a channel between yourself and your enemies and their strength will run downhill towards you. They will wither and turn into fertilizer for your growth. Their life pays for yours. But you have changed nothing for all remains equal." />
+    <string id="sotor_unlock_spell_DustStorm" text="An amusing method to unhorse those uppity knights. More fun than effective, truly." />
+    <string id="sotor_unlock_spell_DwellersBelow" text="Beneath the earth lies an entire world of hidden life, matching the variety found on the surface. Though few people ever see these secret creatures, this spell lets you call them forth to honor your enemies by returning them to the earth's natural cycle." />
+    <string id="sotor_unlock_spell_EnchantWeapon" text="Why would you wish to fight like a peasant if you already know magic? Oh fine..." />
+    <string id="sotor_unlock_spell_FateOfBjuna" text="Bjuna were a warrior grand what never cracked a grin.{newline}Sixty year o' stone-faced glory, not one chuckle got within.{newline}Then a fool let slip a jest n' found the crack n' got it in.{newline}Laughed until his sides gave way, he laughed until they split.{newline}Now whose fate were worse, thou reckons? His, or his servin' boys what's left ta scrape the pit?" />
+    <string id="sotor_unlock_spell_FieryConvocation" text="While everything else I have taught you has been about balance, this spell has some... stylistic disharmony. You weave the eight, then deliberately let Aqshy slip its restraint and utter the one secret word I shall teach you. Ashaellu. Do not write it down. But do commit it to memory, for once you speak it the fire shall take the shape of a great bird and swoop down on your enemies. Those not consumed outright shall burn until they perish, and the only witnesses take the word to their graves." />
+    <string id="sotor_unlock_spell_FinalTransmutation" text="To transmute one metal you must sacrifice another. The first alchemical law, no doubt written by the insufficiently curious. Flesh, as it turns out, was never accounted for. Force enough Chamon through a man and he does not merely die, he changes into something solid, gleaming, permanent, and considerably more valuable than he was a moment ago. I ask you, of all the deaths in this world, is there truly any more glorious than this?" />
+    <string id="sotor_unlock_spell_Fireball" text="Ah yes, the spell no one shuts up about. Tell me, did you decide to become a Pyromancer just to learn this one? Bah, tis no matter. Gather Aqshy until your palms blister, then throw it and let it come apart where it lands. Everything within twenty paces catches at once, including the ground and the air. Elegant? Well yes, actually. There is elegance in simplicity and nothing else clears out vermin in such an efficient way." />
+    <string id="sotor_unlock_spell_FlameStorm" text="Any Wizlet can hurl a ball of fire at an enemy. Only a master can hold that fire open into a vortex that devours all within. Cast it into a packed formation and you will learn the name of every god in creation, one scream at a time." />
+    <string id="sotor_unlock_spell_FlamingSwords" text="A blade is a peasant's weapon, but even such crude utensils can be improved. Channel Aqshy down through the hilt until the steel glows white and burns more than it cuts. Armor, shield, bone, it makes no distinction and leaves all wounds nice and cauterized. No risk of blood on your cloak. Do try not to enjoy yourself too much with this one, it's unseemly." />
+    <string id="sotor_unlock_spell_FlockOfDoom" text="Crows have been following armies and feeding on corpses since long before anybody could write it down. They know what a battle is and what it means. Call enough of them and they won't wait for the fighting to finish, they'll go straight for the eyes, hundreds of little wounds and no way to guard against any of them. It's not dignified but it works." />
+    <string id="sotor_unlock_spell_FoetidCloud" text="Disgusting! You want me to teach you what? Fine then..." />
+    <string id="sotor_unlock_spell_GehennasGoldenGlobe" text="Three syllables. That is all Gehenna left us, no notes whatsoever, or none that survived the fire. Next time use retardant paper, amateur. Nevertheless, say the words and hurl the sphere, and it will roll through a formation leaving nothing but slag and the smell. Not transmutation, mind you, nothing so refined. Simply metal at temperatures it was never meant to reach. Crude but effective. I have a garden of failed attempts and I water them regularly." />
+    <string id="sotor_unlock_spell_GehennasGoldenHounds" text="Gehenna's again, and this time he did leave notes, and frankly the penmanship is appalling. Molten gold, held in the shape of a hound? Not machines at least, nothing so crude as gears. But they work. Blow the whistle and they shall rampage across the battlefield. They do not tire, they do not lose the scent, and they do not stop when the screaming starts. I have improved the hips." />
+    <string id="sotor_unlock_spell_GleamingArrow" text="Yes, out of the forehead. I know, I have tried every other point of exit and the forehead is the only one that doesn't disfigure the caster, so stop grumbling. It leaves you, it vanishes, and then it pierces a man and melts him from the inside. Never misses, either! Not once in four hundred trials. It does have to get through his armor like anything else, so aim for the head! So many generals are too proud to wear helmets. You would think they'd learn. They never do!" />
+    <string id="sotor_unlock_spell_GraveCall" text="Far, far below the earth lie the corpses of battles so ancient that every record of them is lost. Dig with a shovel and you get last winter's paupers. Reach deeper, morsel, and you shall pull out the champions of old. You could even call us the premiere archaeologists of this world! Who else brings the past back in such a visceral form? Truly we honor the poor sods of this world with a chance to meet their ancestors in a river of blood!" />
+    <string id="sotor_unlock_spell_HailStorm" text="It's not actually hail, it's a bunch of falling rocks. Lift a few hundred of them out of the riverbed and put them in the air then stop holding them. Armor doesn't help. Shields don't help. This is how men killed each other before anyone thought of any magic, and if it ain't broke don't fix it." />
+    <string id="sotor_unlock_spell_HarmonicConvergence" text="When the spheres are in harmony, the world beneath them falls into place. Men do not stumble. Blades do not find the gaps in their armor. Reach into the sea of eventualities and pluck every future in which they fail. What remains must, by definition, be victory. Your men will never know why they could not be killed... let them thank their gods." />
+    <string id="sotor_unlock_spell_HealingLight" text="Your men will want to die. They will lie there and bleed and consider it. But you will not permit this. Pour the light into their wounds and let them bathe in it. Hysh is far older than their pathetic mortality. Do not ask them if they can stand. Forbid them to die. You will not always manage it. Do it anyway." />
+    <string id="sotor_unlock_spell_LightningBolt" text="The simplest gift of the storm, but the most memorable. Reach up, little Wizlet, take hold of what is already gathering above you, and let it fall! Any peasant who has watched a tree split in a storm understands this spell already. But you... you will choose the tree!" />
+    <string id="sotor_unlock_spell_MeteroicIronclad" text="Ordinary armor is so last century. A smith hammering a flat sheet is almost adorable, wouldn't you agree? Instead we invite Chamon into the metal until it becomes one with the man inside it, and then it will turn a blow the way a mountain turns weather. Do not ask me what meteors have to do with it. That came from my publicist, I would have named it &quot;dense phase viscosity experiment v5&quot;." />
+    <string id="sotor_unlock_spell_MindControl" text="Some consider this forbidden, and I understand the objection, but &quot;forbidden&quot; is a committee word. Not one a deep thinker would keep in their repertoire. A mind is a structure like any other, and years of study will teach you its ins and outs and demystify its sacred connotations. Once you understand it, you may take hold of the mind, and the man attached to it. Command him and he will fight for you as sincerely as he fought against you a moment before. Ask yourself what is truly more merciful for an adversary: a gruesome death, or a life of useful service that he will perhaps never remember?" />
+    <string id="sotor_unlock_spell_MinorHeal" text="An elementary spell to prevent death on the battlefield. Though you might just die from embarrassment if someone witnesses you cast it." />
+    <string id="sotor_unlock_spell_Morkharn" text="Ah, now this is my little masterpiece. Your servants come apart for that is simply what they do, but nothing that has already died can truly die a second time. Breathe in Dhar, then exhale darkness and let it fill the gaps. Bone knits with bone, sinew finds sinew, and flesh melds with flesh. They will stand up as though nothing had happened. They won't thank you of course but you will feel great satisfaction. Careful using it on yourself or you might end up with hands like mine." />
+    <string id="sotor_unlock_spell_NagashGaze" text="This one is his. The great one's own, straight from the Book, and the fact that I can cast it without dissolving should tell you precisely who you are dealing with. It is only looking, morsel. Fix your eyes on a living man and let the Dhar out through them, and watch him go gray and dry and empty while he is still standing up, still trying to speak. That is the moment I do this all for. Not the corpse but the face he makes just before he becomes one." />
+    <string id="sotor_unlock_spell_NetOfAmyntok" text="Hands up, fingers spread. A net of Hysh makes the perfect trap for tight unit formations. It is not thrown. You hold them as long as you command them to stay. The threads of light are virtually unbreakable. Halt their movements and they will be defenseless as you rain down holy fire. Do not drop your hands." />
+    <string id="sotor_unlock_spell_PannsImpenetrablePelt" text="Pann was a real person no matter what you hear scholars say. He walked out of a bear fight without a mark on him and would not explain how, and I spent eleven years working it out. Guess I'm giving it to you for free. Thicken the hide until steel feels like nothing. Your men won't be pretty afterward, but they'll be alive, and that's good enough for me." />
+    <string id="sotor_unlock_spell_PhaProtection" text="Pha never lost a man he was paying attention to and neither will you. He taught me this standing exactly where you are standing. It might seem like a wall around your men but it's really a fog around your enemies. Every arrow and every blade will go a hand's width wide off target. The enemy will believe himself unlucky. Not so, he is simply being refused." />
+    <string id="sotor_unlock_spell_PlagueOfRust" text="Look at them, clad heel to toe in iron, each convinced they're safe because a man with a hammer promised them. Well, iron oxidizes! It has always loved to rust, and the smiths continue their futile postponing. So unpostpone it. Cast it once and the armor sags, then flakes, then crumbles! A proud noble sir in full regalia... reduced to standing naked and covered in orange dust! Has there ever been a sight more amusing, I ask?" />
+    <string id="sotor_unlock_spell_PowerOfDarkness" text="The winds all come from the same place, and by the time they reach us they've been strained through the vortex and sorted into colors. Walk it a step upstream. Reach back to where it comes from and take it raw and unfiltered, as much as you can hold, then hand it to your forces and watch them work. Some will go mad with frenzy but that power will be directed towards your enemies. The effect fades quickly. Don't use it on men you intend to keep." />
+    <string id="sotor_unlock_spell_PurpleSun" text="There was a tribe long gone afore the oldest name I know,{newline}what worshipped up a sun that give no warmth n' cast no glow.{newline}Fed the thing its proper due n' it would feed em back in kind.{newline}Missed a season, just the one, n' left the whole of em behind.{newline}Now most such tales are half made up n' liar's work the rest,{newline}but every one of em hath got a seed o' truth at best.{newline}Watch close, lad. I'll show thee what the old ones had in mind,{newline}n' thou shalt never doubt again what tellin's left behind." />
+    <string id="sotor_unlock_spell_QuicksilverSwords" text="Now this one I am proud of, because it technically shouldn't work! Ordinarily, quicksilver refuses to be a solid, which every child discovers by spilling it and drinking it, and yet if you hold Chamon just right it will hold an edge for exactly as long as your concentration does. Armor becomes irrelevant. Do you know how sharp a blade one atom thick is? Plate, mail, scale, bones, all sliced through so beautifully. I have never been able to keep one longer than a minute but trust me you won't need it." />
+    <string id="sotor_unlock_spell_RadiancePillar" text="Pick your ground. Not the men, the ground. Bring the light straight down onto that spot and hold it there, and everything standing beneath will be incinerated with great prejudice. Mind your placement, be exact. Light falls where you put it, not where you meant to put it." />
+    <string id="sotor_unlock_spell_RadiantGaze" text="No hands for this one, only your eyes and your patience. Fix your gaze upon a man and do not look away. The light pours out of you for as long as you lock your gaze. Blink and it ends. Most Wizlets blink." />
+    <string id="sotor_unlock_spell_Regrowth" text="The most popular spell on the battlefield and the least understood. Your body already heals itself constantly and slowly at the pace your flesh can afford. But Ghyran has no concept of affordability. Force the whole month of mending into a moment and the wound will vanish before your eyes. Worry about the aftereffects later, once the battle is won." />
+    <string id="sotor_unlock_spell_ScreamingSkull" text="Shyish and a little Aqshy, I'm sure you've seen the Pyromancers use something like this. Except their mixture is wrong, you need a lot more death and a lot less fire, but they're too proud to admit it. It's almost frustrating to see how close they come and yet refuse to take the final step. Get the ratio right and the skull comes out as acid. A formation that hears this thing coming will break before it even arrives, and anyone caught in its path will wish they burned to death instead." />
+    <string id="sotor_unlock_spell_Sear" text="This one you hold in your hand before you use it, which is precisely as unwise as it sounds. Build the flame in your palm, let it grow until it hurts, then release it across everything standing in front of you. Do not hesitate. Hesitation is how a Pyromancer learns what his own hand smells like." />
+    <string id="sotor_unlock_spell_Shadowblood" text="Blood mixed with Dhar makes for a wonderful combination. Open a vein and do not be squeamish about it, let it all squirt out! It will come out dark and deadly, cling to your foes, and burn them! You will feel weaker afterward, oh you poor little morsel. But then you will feel wonderful. And you'll want to do it again!" />
+    <string id="sotor_unlock_spell_ShemGaze" text="Keep your eyes forward. The light does not care for your feelings about your adversary, it only asks whether he should be there. Point it at the corrupt and it will purify them from this world. You will find it burns hottest on the undead and demonic. They are the only things that ever truly refuse us. I take it personally." />
+    <string id="sotor_unlock_spell_ShieldOfSaphery" text="Every magister sneers at Minor Magic, including me at one point. But consider what a village hedge caster actually does. They have no order and no discipline so they grab a little of everything all at once. Some may call it Dhar, but with a bit of training and some manners it is Qhaysh. Ward of Arrows is the crude form of what I am about to teach you. This polished shield does not shelter one man, it shelters an entire army. Many a wizard has died to a stray projectile, and this will save you and your men from an undignified end to your careers." />
+    <string id="sotor_unlock_spell_ShieldOfThorns" text="I watched a boar die in a bramble once. Nothing killed it and it thrashed and thrashed. The thorns took a little each time it tried harder to free itself. Give your soldiers that bramble and every enemy who strikes them becomes the boar. They will swing, and they will bleed, and they will swing again, and they will bleed." />
+    <string id="sotor_unlock_spell_SoulQuench" text="The simplest thing this order can do, and still there's nothing quite like it in this world. Balance the eight until they surrender their colors and throw the result. You can't rightly call it fire, or lightning, or rot. It is the colorless raw energy which underpins all other magic and whatever it touches is snuffed the way you would pinch out a candle. You may pour more in if you like and the sphere grows accordingly. There is no upper limit that I have found, only a limit to what I have been willing to attempt indoors." />
+    <string id="sotor_unlock_spell_SoulRain" text="Azyr, Shyish, and a measure of necromantic energy. Three ingredients and the third is usually what gets people executed. But I can assure you no one will live to tell the tale. Hold them together and let the mixture fall rather than fly. What comes down can be best described as soul lightning and it burns all material living or otherwise. Slower than a bolt but it covers more ground and lasts far longer. Use it at chokepoints for great effect." />
+    <string id="sotor_unlock_spell_SoulStealer" text="This one kills slowly but perhaps &quot;kill&quot; is not the right word. Gather Ghyran and Shyish, life and death, into a man's body and leave it there, and his soul will slowly unzip from his flesh. It will only take a few seconds, and he'll keep fighting for most of the process, but eventually his being will split in two leaving his soul ripe for the taking. Do with it what you wish." />
+    <string id="sotor_unlock_spell_SpiritLeech" text="No blade in this one, lad, no bolt, no burnin' brand ta cast.{newline}Just thy will against another's till the weaker of em's passed.{newline}The stronger of the two drinks deep, the lesser one runs dry.{newline}I've seen a farmhand's stubbornness undo a knight thereby.{newline}So choose thy man with care, for armor hath no word ta say.{newline}It's thou what's bein' weighed in this. Pick wrong n' thou shalt pay." />
+    <string id="sotor_unlock_spell_StormOfRenewal" text="Wait for them to break, and in the moment the line sags and men start to panic, then bring the rain. All of them at once will be mended where they stand. Your enemy will despair and that is when you will crush them. Into paste. Food for the fungi." />
+    <string id="sotor_unlock_spell_StrengthOfCombat" text="So you wish to fight like a mindless beast? An Amber Wizard in the making I see." />
+    <string id="sotor_unlock_spell_SummerHeat" text="You have felt this before. A field in high summer. No wind and the air thick enough to lean on. The desire to lie down and nap. Bless your enemies with the sensation and they will slow to a stumble and cook inside the metal they are so proud of. A gentle spark would set them completely alight. Summer kills as many as winter, yet no one seems to notice or care." />
+    <string id="sotor_unlock_spell_SummonSkeleton" text="Look at the ground, morsel. Look at it! Everywhere you have ever walked someone or something died, what do you think fertilizes all these beautiful little flowers? Push Dhar into the soil and up they come! Oh the sound of it, that first wet crack as the earth gives them back! Here's the best part: they do not ask why. They never ask why. Give me a plague pit and a bad afternoon and I will hand you an army, and every single one of them will tear a living man apart the moment you point." />
+    <string id="sotor_unlock_spell_TanglingThorn" text="Nothing in a thicket wants you to pass through it. No that's not poetry, it's just what a thicket is. Call it up under a man's feet and it will have his ankles before he understands what happened. He will hack at it. It grows faster than he swings. There is no fancy incantation for this one. It's just a thicket." />
+    <string id="sotor_unlock_spell_TasteOfDeath" text="There was a taster in a lord's employ, a cautious sort o' man.{newline}Sipped from every cup n' bowl afore his master's meal began.{newline}But Shyish don't come in a cup, nor in the meat nor bread.{newline}It comes up through the marrow, lad. It's always been thy bed." />
+    <string id="sotor_unlock_spell_Tempest" text="No doubt you will hear that the great vortex is the origin of all magic but this is a common misconception. The vortex only divides the raw magic which leaks out of that wound and into our world. I cannot help you find it and you would gain nothing by standing in front of it. But the principle scales down, and a Loremaster who understands the concept can conjure a miniature vortex of their own. What forms will divide and pull everything apart, caring not for allegiances. Do mind your footing." />
+    <string id="sotor_unlock_spell_TheBeastUnleashed" text="Everyone's got a beast inside them. I'm not speaking metaphorically. It's just an older part of us that existed long before we learned to speak. Let it out. Your men will stop thinking and start doing, faster and stronger and entirely unbothered by the pain. Only they won't remember much afterward, which could be for the best." />
+    <string id="sotor_unlock_spell_TheGreenEye" text="Close your eyes. What do you feel? Beneath the wind on your face. Everything around you is straining upward. The moss, the roots, the mould in your boots, all of it pushing because it knows nothing else. That pressure is Ghyran and it is already inside you. Open your eyes and let it out, and whatever you look at will be bored clean through." />
+    <string id="sotor_unlock_spell_Thunderbolt" text="The common bolt takes what the storm offers. This one does not ask. Gather Azyr in your fist until it protests, then loose it in a single stroke that leaves nothing standing in the space it occupied... a whole rank, unmade between heartbeats. Do mind your footing lest you be devoured." />
+    <string id="sotor_unlock_spell_VanHelsDanseMacabre" text="The dead are slow and patient, morsel, what a waste. This is how you whip them into shape! Lash the Dhar through your servants and they will surge forward out of turn, faster than a living man expects, striking again and again, wearing the enemy down. The living are fragile things, you see. But be warned, pushing your servants will make them come apart faster. Let them! Then raise some more! There are always more." />
+    <string id="sotor_unlock_spell_WardOfArrows" text="A paltry charm that can be surprisingly effective on the battlefield. This one is a bit of a prank." />
+    <string id="sotor_unlock_spell_WindBlast" text="Azyr is a wind before it is anything else, and a wind may simply be pushed. There is no artistry here, just a great and sudden shove. Loose it into a line of charging knights and watch them topple from their horses. Even an oracle must be permitted his vulgar indulgences." />
+    <string id="sotor_unlock_spell_WindOfDeath" text="Now stand back and let me show you my favorite. It begins as a single point and then it spreads and spreads, like a plague of locusts across the battlefield, devouring all the living and even some of the dead. No wounds or blood, just men folding over in rows, bodies falling by the score, fresh corpses for the grinder! Mind your own troops. Or don't! I have never been precious about the difference. You do find me precious, yes?" />
+    <string id="sotor_ward_revive" text="The Lady's ward pulls you back from death." />
+
+    <string id="sotor_amber_javelin" text="Amber Spear" />
+    <string id="sotor_amber_spear_blade" text="Amber Spear Head" />
+    <string id="sotor_amber_spear_handle" text="Amber Spear Shaft" />
+    <string id="sotor_amber_spear_pommel" text="Amber Spear Pommel" />
+    <string id="sotor_culture_sotor_dryad" text="Forest Spirit" />
+    <string id="sotor_culture_sotor_skeleton" text="Skeleton" />
+    <string id="sotor_item_sotor_book_asrai_enchant_anath_raema" text="Predator of Anath Raema" />
+    <string id="sotor_item_sotor_book_asrai_enchant_dusk_wood" text="Dusk of the Woods" />
+    <string id="sotor_item_sotor_book_asrai_enchant_embrace_isha" text="Embrace of Isha" />
+    <string id="sotor_item_sotor_book_asrai_enchant_ferocity_kurnous" text="Ferocity of Kurnous" />
+    <string id="sotor_item_sotor_book_asrai_enchant_morai_heg" text="Schemes of Morai-heg" />
+    <string id="sotor_item_sotor_book_asrai_enchant_oakhart_blessing" text="Oakheart's Blessing" />
+    <string id="sotor_item_sotor_book_asrai_enchant_quake_hukon" text="Quake of Hukon" />
+    <string id="sotor_item_sotor_book_asrai_enchant_radiance_woods" text="Radiance of the Woods" />
+    <string id="sotor_item_sotor_book_asrai_enchant_trance_loec" text="Trance of Loec" />
+    <string id="sotor_item_sotor_book_asrai_enchant_tree_lord" text="The Tree Lords' Bargain" />
+    <string id="sotor_item_sotor_book_asrai_enchant_vengeance_khaine" text="Vengeance of Khaine" />
+    <string id="sotor_item_sotor_book_bret_blessing_eerie_touch" text="Touch of the Eerie" />
+    <string id="sotor_item_sotor_book_bret_blessing_fey_guidance" text="Guidance of the Fey" />
+    <string id="sotor_item_sotor_book_bret_blessing_grail_legacy" text="Legacy of the Grail" />
+    <string id="sotor_item_sotor_book_bret_blessing_lady_ward" text="Ward of the Lady" />
+    <string id="sotor_item_sotor_book_bret_blessing_mists_sacred_lake" text="Mists of the Sacred Lake" />
+    <string id="sotor_item_sotor_book_bret_blessing_pilgrim_tenacity" text="Tenacity of the Pilgrim" />
+    <string id="sotor_item_sotor_book_bret_blessing_scourge_evil" text="Scourge of Evil" />
+    <string id="sotor_item_sotor_book_bret_blessing_shield_faith" text="Shield of Faith" />
+    <string id="sotor_item_sotor_book_bret_blessing_wisdom_virtue" text="Wisdom and Virtue" />
+    <string id="sotor_item_sotor_book_dw_master_rune_adamant" text="Master Rune of Adamant" />
+    <string id="sotor_item_sotor_book_dw_master_rune_alaric" text="Master Rune of Alaric the Mad" />
+    <string id="sotor_item_sotor_book_dw_master_rune_breaking" text="Master Rune of Breaking" />
+    <string id="sotor_item_sotor_book_dw_master_rune_flight" text="Master Rune of Flight" />
+    <string id="sotor_item_sotor_book_dw_master_rune_gromril" text="Master Rune of Gromril" />
+    <string id="sotor_item_sotor_book_dw_master_rune_preservation" text="Rune of Preservation" />
+    <string id="sotor_item_sotor_book_dw_master_rune_skaldour" text="Master Rune of Skaldour" />
+    <string id="sotor_item_sotor_book_dw_master_rune_skalf" text="Master Rune of Skalf Blackhammer" />
+    <string id="sotor_item_sotor_book_dw_master_rune_steel" text="Master Rune of Steel" />
+    <string id="sotor_item_sotor_book_dw_master_rune_swiftness" text="Master Rune of Swiftness" />
+    <string id="sotor_item_sotor_book_dw_rune_beastslaying" text="Rune of Beastslaying" />
+    <string id="sotor_item_sotor_book_dw_rune_clear_sights" text="Rune of Clear Sights" />
+    <string id="sotor_item_sotor_book_dw_rune_cleaving" text="Rune of Cleaving" />
+    <string id="sotor_item_sotor_book_dw_rune_fire" text="Rune of Fire" />
+    <string id="sotor_item_sotor_book_dw_rune_force" text="Rune of Force" />
+    <string id="sotor_item_sotor_book_dw_rune_fortitude" text="Rune of Fortitude" />
+    <string id="sotor_item_sotor_book_dw_rune_fury" text="Rune of Fury" />
+    <string id="sotor_item_sotor_book_dw_rune_head_wrecking" text="Rune of Head-Wrecking" />
+    <string id="sotor_item_sotor_book_dw_rune_impact" text="Rune of Impact" />
+    <string id="sotor_item_sotor_book_dw_rune_iron" text="Rune of Iron" />
+    <string id="sotor_item_sotor_book_dw_rune_might" text="Rune of Might" />
+    <string id="sotor_item_sotor_book_dw_rune_parrying" text="Rune of Parrying" />
+    <string id="sotor_item_sotor_book_dw_rune_protection" text="Rune of Protection" />
+    <string id="sotor_item_sotor_book_dw_rune_reloading" text="Rune of Reloading" />
+    <string id="sotor_item_sotor_book_dw_rune_shielding" text="Rune of Shielding" />
+    <string id="sotor_item_sotor_book_dw_rune_speed" text="Rune of Speed" />
+    <string id="sotor_item_sotor_book_dw_rune_spell_eating" text="Rune of Spell Eating" />
+    <string id="sotor_item_sotor_book_dw_rune_stone" text="Rune of Stone" />
+    <string id="sotor_item_sotor_book_dw_rune_striking" text="Rune of Striking" />
+    <string id="sotor_item_sotor_book_dw_rune_unbinding" text="Rune of Unbinding" />
+    <string id="sotor_item_sotor_book_dw_rune_vigour" text="Rune of Vigour" />
+    <string id="sotor_item_sotor_book_emp_blessing_shallya_martyrdom" text="Martyrdom of Shallya" />
+    <string id="sotor_item_sotor_book_emp_blessing_shallya_mercy" text="Mercy of Shallya" />
+    <string id="sotor_item_sotor_book_emp_blessing_shallya_pacifism" text="Pacifism of Shallya" />
+    <string id="sotor_item_sotor_book_emp_blessing_shallya_purity" text="Purity of Shallya" />
+    <string id="sotor_item_sotor_book_emp_blessing_sigmar_beacon" text="Beacon of Sigmar" />
+    <string id="sotor_item_sotor_book_emp_blessing_sigmar_exorcism" text="Exorcism of Sigmar" />
+    <string id="sotor_item_sotor_book_emp_blessing_sigmar_justice" text="Justice of Sigmar" />
+    <string id="sotor_item_sotor_book_emp_blessing_sigmar_light" text="Light of Sigmar" />
+    <string id="sotor_item_sotor_book_emp_blessing_sigmar_retribution" text="Retribution of Sigmar" />
+    <string id="sotor_item_sotor_book_emp_blessing_sigmar_soulfire" text="Soulfire of Sigmar" />
+    <string id="sotor_item_sotor_book_emp_blessing_ulric_chill" text="Chill of Ulric" />
+    <string id="sotor_item_sotor_book_emp_blessing_ulric_frenzy" text="Frenzy of Ulric" />
+    <string id="sotor_item_sotor_book_emp_blessing_ulric_winterfather_gift" text="Gift of the Winterfather" />
+    <string id="sotor_item_sotor_book_emp_blessing_ulric_wrath" text="Wrath of Ulric" />
+    <string id="sotor_item_sotor_book_emp_enchant_aqshy_cinders" text="Cinders of Aqshy" />
+    <string id="sotor_item_sotor_book_emp_enchant_aqshy_curtain" text="Curtain of Aqshy" />
+    <string id="sotor_item_sotor_book_emp_enchant_aqshy_firebreath" text="Firebreath of Aqshy" />
+    <string id="sotor_item_sotor_book_emp_enchant_aqshy_fury" text="Fury of Aqshy" />
+    <string id="sotor_item_sotor_book_emp_enchant_aqshy_hearth" text="Hearth of Aqshy" />
+    <string id="sotor_item_sotor_book_emp_enchant_aqshy_rage" text="Rage of Aqshy" />
+    <string id="sotor_item_sotor_book_emp_enchant_aqshy_whisper" text="Whisper of Aqshy" />
+    <string id="sotor_item_sotor_book_emp_enchant_azyr_azure_mirror" text="Azure Mirror of Azyr" />
+    <string id="sotor_item_sotor_book_emp_enchant_azyr_divination" text="Divination of Azyr" />
+    <string id="sotor_item_sotor_book_emp_enchant_azyr_foresight" text="Foresight of Azyr" />
+    <string id="sotor_item_sotor_book_emp_enchant_azyr_gale" text="Gale of Azyr" />
+    <string id="sotor_item_sotor_book_emp_enchant_azyr_harmony" text="Harmony of Azyr" />
+    <string id="sotor_item_sotor_book_emp_enchant_azyr_whisper" text="Whisper of Azyr" />
+    <string id="sotor_item_sotor_book_emp_enchant_azyr_wind" text="Wind of Azyr" />
+    <string id="sotor_item_sotor_book_emp_enchant_chamon_aegis" text="Aegis of Chamon" />
+    <string id="sotor_item_sotor_book_emp_enchant_chamon_crucible" text="Crucible of Chamon" />
+    <string id="sotor_item_sotor_book_emp_enchant_chamon_feathers_lead" text="Feathers to Lead" />
+    <string id="sotor_item_sotor_book_emp_enchant_chamon_forge" text="Forge of Chamon" />
+    <string id="sotor_item_sotor_book_emp_enchant_chamon_laws" text="Laws of Chamon" />
+    <string id="sotor_item_sotor_book_emp_enchant_chamon_lead_feathers" text="Lead to Feathers" />
+    <string id="sotor_item_sotor_book_emp_enchant_chamon_transmutation" text="Transmutation of Chamon" />
+    <string id="sotor_item_sotor_book_emp_enchant_chamon_whisper" text="Whisper of Chamon" />
+    <string id="sotor_item_sotor_book_emp_enchant_ghur_crows" text="Crows of Ghur" />
+    <string id="sotor_item_sotor_book_emp_enchant_ghur_echo" text="Echo of Ghur" />
+    <string id="sotor_item_sotor_book_emp_enchant_ghur_savagery" text="Savagery of Ghur" />
+    <string id="sotor_item_sotor_book_emp_enchant_ghur_whisper" text="Whisper of Ghur" />
+    <string id="sotor_item_sotor_book_emp_enchant_ghur_wildform" text="Wildform of Ghur" />
+    <string id="sotor_item_sotor_book_emp_enchant_ghyran_bloom" text="Bloom of Ghyran" />
+    <string id="sotor_item_sotor_book_emp_enchant_ghyran_brambles" text="Brambles of Ghyran" />
+    <string id="sotor_item_sotor_book_emp_enchant_ghyran_cloak" text="Cloak of Ghyran" />
+    <string id="sotor_item_sotor_book_emp_enchant_ghyran_intuition" text="Intuition of Ghyran" />
+    <string id="sotor_item_sotor_book_emp_enchant_ghyran_tendrils" text="Tendrils of Ghyran" />
+    <string id="sotor_item_sotor_book_emp_enchant_ghyran_whisper" text="Whisper of Ghyran" />
+    <string id="sotor_item_sotor_book_emp_enchant_hysh_brilliance" text="Brilliance of Hysh" />
+    <string id="sotor_item_sotor_book_emp_enchant_hysh_clarity" text="Clarity of Hysh" />
+    <string id="sotor_item_sotor_book_emp_enchant_hysh_providence" text="Providence of Hysh" />
+    <string id="sotor_item_sotor_book_emp_enchant_hysh_sanctuary" text="Sanctuary of Hysh" />
+    <string id="sotor_item_sotor_book_emp_enchant_hysh_timewarp" text="Timewarp of Hysh" />
+    <string id="sotor_item_sotor_book_emp_enchant_hysh_whisper" text="Whisper of Hysh" />
+    <string id="sotor_item_sotor_book_emp_enchant_shyish_blight" text="Blight of Shyish" />
+    <string id="sotor_item_sotor_book_emp_enchant_shyish_deathsight" text="Deathsight of Shyish" />
+    <string id="sotor_item_sotor_book_emp_enchant_shyish_messengers" text="Messengers of Shyish" />
+    <string id="sotor_item_sotor_book_emp_enchant_shyish_pale_grip" text="Pale Grip of Shyish" />
+    <string id="sotor_item_sotor_book_emp_enchant_shyish_pall" text="Pall of Shyish" />
+    <string id="sotor_item_sotor_book_emp_enchant_shyish_whisper" text="Whisper of Shyish" />
+    <string id="sotor_item_sotor_book_emp_enchant_shyish_withering" text="Withering of Shyish" />
+    <string id="sotor_item_sotor_book_eo_enchant_flames_asuryan" text="Flames of Asuryan" />
+    <string id="sotor_item_sotor_book_eo_enchant_legacy_caledor" text="Legacy of Caledor" />
+    <string id="sotor_item_sotor_book_eo_enchant_sanctuary_saphery" text="Sanctuary of Saphery" />
+    <string id="sotor_item_sotor_book_eo_enchant_storms_mathlann" text="Storms of Mathlann" />
+    <string id="sotor_item_sotor_book_eo_enchant_wisdom_hoeth" text="Wisdom of Hoeth" />
+    <string id="sotor_item_sotor_book_vc_enchant_bonds_darkness" text="Bonds of Darkness" />
+    <string id="sotor_item_sotor_book_vc_enchant_bulwark_blood_keep" text="Bulwark of Blood Keep" />
+    <string id="sotor_item_sotor_book_vc_enchant_call_beyond" text="Call from Beyond" />
+    <string id="sotor_item_sotor_book_vc_enchant_caress_void" text="Caress of the Void" />
+    <string id="sotor_item_sotor_book_vc_enchant_chilling_hand" text="Chilling Hand" />
+    <string id="sotor_item_sotor_book_vc_enchant_crimson_flood" text="The Crimson Flood" />
+    <string id="sotor_item_sotor_book_vc_enchant_drinker_blood" text="Drinker of Blood" />
+    <string id="sotor_item_sotor_book_vc_enchant_ethereal_whispers" text="Ethereal Whispers" />
+    <string id="sotor_item_sotor_book_vc_enchant_legacy_arkhan" text="Legacy of Arkhan" />
+    <string id="sotor_item_sotor_book_vc_enchant_mockery_asps" text="Mockery of Asps" />
+    <string id="sotor_item_sotor_book_vc_enchant_nightshroud" text="Nightshroud" />
+    <string id="sotor_item_sotor_book_vc_enchant_secrets_wsoran" text="Secrets of W'soran" />
+    <string id="sotor_item_sotor_book_vc_enchant_touch_jet" text="Touch of Jet" />
+    <string id="sotor_item_sotor_book_vc_enchant_unhallowed_pact" text="Unhallowed Pact" />
+    <string id="sotor_item_sotor_book_vc_enchant_unholy_blessing" text="Unholy Blessings" />
+    <string id="sotor_item_sotor_book_we_enchant_arcane_bodkins" text="Arcane Bodkins" />
+    <string id="sotor_item_sotor_book_we_enchant_blackbriar_kiss" text="Blackbriar's Kiss" />
+    <string id="sotor_item_sotor_book_we_enchant_dusk_dawn" text="Dusk and Dawn" />
+    <string id="sotor_item_sotor_book_we_enchant_emissaries_mirai" text="Emissaries of Mirai" />
+    <string id="sotor_item_sotor_book_we_enchant_hagbane_tips" text="Hagbane Tips" />
+    <string id="sotor_item_sotor_book_we_enchant_moon_fire" text="Moonfire Shot" />
+    <string id="sotor_item_sotor_book_we_enchant_moon_stone" text="Moonstone of the Hidden Ways" />
+    <string id="sotor_item_sotor_book_we_enchant_song_doom" text="Song of Doom" />
+    <string id="sotor_item_sotor_book_we_enchant_star_fire" text="Starfire Shafts" />
+    <string id="sotor_item_sotor_book_we_enchant_swift_shiver" text="Swiftshiver Shards" />
+    <string id="sotor_item_sotor_book_we_enchant_thorns_nettles" text="&amp;quot;Thorns, Nettles and Spines&amp;quot;" />
+    <string id="sotor_item_sotor_book_we_enchant_touch_lileath" text="Touch of Lileath" />
+    <string id="sotor_item_sotor_book_we_enchant_tranquillity_cadai" text="Tranquillity of Cadai" />
+    <string id="sotor_item_sotor_book_we_enchant_trickery_loec" text="Trickery of Loec" />
+    <string id="sotor_item_sotor_book_we_enchant_trueflight" text="Trueflight Arrows" />
+    <string id="sotor_item_sotor_dryad_arms" text="Dryad Barkskin Arms" />
+    <string id="sotor_item_sotor_dryad_head" text="Dryad Head" />
+    <string id="sotor_item_sotor_dryad_legs" text="Dryad Barkskin Legs" />
+    <string id="sotor_item_sotor_dryad_torso" text="Dryad Barkskin Torso" />
+    <string id="sotor_item_sotor_grave_guard_armor_001" text="Grave Guard Armor 001" />
+    <string id="sotor_item_sotor_grave_guard_armor_002" text="Grave Guard Armor 002" />
+    <string id="sotor_item_sotor_grave_guard_armor_003" text="Grave Guard Armor 003" />
+    <string id="sotor_item_sotor_grave_guard_armor_004" text="Grave Guard Armor 004" />
+    <string id="sotor_item_sotor_grave_guard_helm_001" text="Grave Guard Helm 001" />
+    <string id="sotor_item_sotor_grave_guard_helm_002" text="Grave Guard Helm 002" />
+    <string id="sotor_item_sotor_grave_guard_helm_003" text="Grave Guard Helm 003" />
+    <string id="sotor_item_sotor_grave_guard_shoulder_001" text="Grave Guard Shoulder 001" />
+    <string id="sotor_item_sotor_grave_guard_shoulder_002" text="Grave Guard Shoulder 002" />
+    <string id="sotor_item_sotor_grave_guard_shoulder_003" text="Grave Guard Shoulder 003" />
+    <string id="sotor_item_sotor_grave_guard_shoulder_004" text="Grave Guard Shoulder 004" />
+    <string id="sotor_item_sotor_hell_knight_armor_001" text="Hell Knight Armor 001" />
+    <string id="sotor_item_sotor_hell_knight_boots_001" text="Hell Knight Boots 001" />
+    <string id="sotor_item_sotor_hell_knight_gauntlet_001" text="Hell Knight Gauntlet 001" />
+    <string id="sotor_item_sotor_hell_knight_helm_001" text="Hell Knight Helm 001" />
+    <string id="sotor_item_sotor_hell_knight_helm_002" text="Hell Knight Helm 002" />
+    <string id="sotor_item_sotor_hell_knight_helm_003" text="Hell Knight Helm 003" />
+    <string id="sotor_item_sotor_hell_knight_pauldron_001" text="Hell Knight Pauldron 001" />
+    <string id="sotor_item_sotor_skeleton_warrior_armor_001" text="Skeleton Warrior Armor" />
+    <string id="sotor_item_sotor_skeleton_warrior_armor_002" text="Skeleton Warrior Armor" />
+    <string id="sotor_item_sotor_skeleton_warrior_armor_003" text="Skeleton Warrior Armor" />
+    <string id="sotor_item_sotor_skeleton_warrior_boots_001" text="Skeleton Warrior Boots" />
+    <string id="sotor_item_sotor_skeleton_warrior_boots_002" text="Skeleton Warrior Boots" />
+    <string id="sotor_item_sotor_skeleton_warrior_boots_003" text="Skeleton Warrior Boots" />
+    <string id="sotor_item_sotor_skeleton_warrior_boots_004" text="Skeleton Warrior Boots" />
+    <string id="sotor_item_sotor_skeleton_warrior_boots_005" text="Skeleton Warrior Boots" />
+    <string id="sotor_item_sotor_skeleton_warrior_boots_006" text="Skeleton Warrior Boots" />
+    <string id="sotor_item_sotor_skeleton_warrior_boots_007" text="Skeleton Warrior Boots" />
+    <string id="sotor_item_sotor_skeleton_warrior_bracers_001" text="Skeleton Warrior Bracer" />
+    <string id="sotor_item_sotor_skeleton_warrior_bracers_002" text="Skeleton Warrior Bracer" />
+    <string id="sotor_item_sotor_skeleton_warrior_bracers_003" text="Skeleton Warrior Bracer" />
+    <string id="sotor_item_sotor_skeleton_warrior_helmet_001" text="Skeleton Warrior Helm" />
+    <string id="sotor_item_sotor_skeleton_warrior_helmet_002" text="Skeleton Warrior Helm" />
+    <string id="sotor_item_sotor_skeleton_warrior_shoulder_001" text="Skeleton Warrior Pauldrons" />
+    <string id="sotor_item_sotor_skeleton_warrior_shoulder_002" text="Skeleton Warrior Pauldrons" />
+    <string id="sotor_item_sotor_skeleton_warrior_shoulder_003" text="Skeleton Warrior Pauldrons" />
+    <string id="sotor_item_sotor_tradegood_amber_crystal" text="Amber Crystal" />
+    <string id="sotor_item_sotor_tradegood_arcane_scroll" text="Arcane Scroll" />
+    <string id="sotor_item_sotor_tradegood_blessed_water" text="Blessed Water" />
+    <string id="sotor_item_sotor_tradegood_dragonblood" text="Dragon Blood" />
+    <string id="sotor_item_sotor_tradegood_gemstone" text="Gemstone" />
+    <string id="sotor_item_sotor_tradegood_warpstone_dust" text="Warpstone Dust" />
+    <string id="sotor_item_sotor_vc_mount_horse_skeleton_horse_001" text="Skeletal Steed" />
+    <string id="sotor_item_sotor_vc_mount_horse_skeleton_horse_002" text="Skeletal Steed" />
+    <string id="sotor_item_sotor_vc_mountarmor_horsearmor_black_knight_001" text="Black Knight Horse Harness" />
+    <string id="sotor_spell_Amaranth" text="Amaranth" />
+    <string id="sotor_spell_AmberSpear" text="Amber Spear" />
+    <string id="sotor_spell_AmberSpearThrown" text="Amber Spear" />
+    <string id="sotor_spell_Apotheosis" text="Apotheosis" />
+    <string id="sotor_spell_ArcaneConduit" text="Arcane Conduit" />
+    <string id="sotor_spell_AshesAndDust" text="Ashes and Dust" />
+    <string id="sotor_spell_AuraOfResistance" text="Aura of Resistance" />
+    <string id="sotor_spell_Barkskin" text="Barkskin" />
+    <string id="sotor_spell_BironasTimewarp" text="Birona's Timewarp" />
+    <string id="sotor_spell_BlackHorror" text="Arnzipal's Black Horror" />
+    <string id="sotor_spell_Blizzard" text="Iceshard Blizzard" />
+    <string id="sotor_spell_BoltOfAqshy" text="Bolt of Aqshy" />
+    <string id="sotor_spell_BurningHead" text="The Burning Head" />
+    <string id="sotor_spell_CaressOfLaniph" text="Caress of Laniph" />
+    <string id="sotor_spell_CascadingFireCloak" text="Cascading Fire-Cloak" />
+    <string id="sotor_spell_ChainLightning" text="Chain Lightning" />
+    <string id="sotor_spell_Chillwind" text="Chillwind" />
+    <string id="sotor_spell_CinderBlast" text="Cinder Blast" />
+    <string id="sotor_spell_CometOfCasandora" text="Comet of Casandora" />
+    <string id="sotor_spell_CourageOfAenarion" text="Courage of Aenarion" />
+    <string id="sotor_spell_CurseOfAnraheir" text="Curse of Anraheir" />
+    <string id="sotor_spell_CurseOfArrowAttraction" text="Curse of Arrow Attraction" />
+    <string id="sotor_spell_CurseOfMidnightWind" text="Curse of the Midnight Wind" />
+    <string id="sotor_spell_CurseOfYears" text="Curse of Years" />
+    <string id="sotor_spell_Dart" text="Magic Bolt" />
+    <string id="sotor_spell_DeathSpasm" text="Death Spasm" />
+    <string id="sotor_spell_DeathlyShards" text="Deathly Shards" />
+    <string id="sotor_spell_DoomBolt" text="Doom Bolt" />
+    <string id="sotor_spell_DrainLife" text="Drain Life" />
+    <string id="sotor_spell_DustStorm" text="Dust Storm" />
+    <string id="sotor_spell_DwellersBelow" text="Dwellers Below" />
+    <string id="sotor_spell_EnchantWeapon" text="Enchant Weapon" />
+    <string id="sotor_spell_FateOfBjuna" text="Fate of Bjuna" />
+    <string id="sotor_spell_FieryConvocation" text="Fiery Convocation" />
+    <string id="sotor_spell_FinalTransmutation" text="Final Transmutation" />
+    <string id="sotor_spell_Fireball" text="Fireball" />
+    <string id="sotor_spell_FlameStorm" text="Fire Tornado" />
+    <string id="sotor_spell_FlamingSwords" text="Flaming Sword of Rhuin" />
+    <string id="sotor_spell_FlockOfDoom" text="Flock of Doom" />
+    <string id="sotor_spell_FoetidCloud" text="Foetid Cloud" />
+    <string id="sotor_spell_GehennasGoldenGlobe" text="Gehenna's Golden Globe" />
+    <string id="sotor_spell_GehennasGoldenHounds" text="Gehenna's Golden Hounds" />
+    <string id="sotor_spell_GleamingArrow" text="Gleaming Arrow" />
+    <string id="sotor_spell_GraveCall" text="Grave Call" />
+    <string id="sotor_spell_HailStorm" text="Hail Storm" />
+    <string id="sotor_spell_HarmonicConvergence" text="Harmonic Convergence" />
+    <string id="sotor_spell_HealingLight" text="Healing Light" />
+    <string id="sotor_spell_LightningBolt" text="Lightning Bolt" />
+    <string id="sotor_spell_MeteroicIronclad" text="Meteoric Ironclad" />
+    <string id="sotor_spell_MindControl" text="Mind Control" />
+    <string id="sotor_spell_MinorHeal" text="Petty Heal" />
+    <string id="sotor_spell_Morkharn" text="Morkharn - Breath of Darkness" />
+    <string id="sotor_spell_NagashGaze" text="Gaze of Nagash" />
+    <string id="sotor_spell_NetOfAmyntok" text="Net of Amyntok" />
+    <string id="sotor_spell_PannsImpenetrablePelt" text="Pann's Impenetrable Pelt" />
+    <string id="sotor_spell_PhaProtection" text="Pha's Protection" />
+    <string id="sotor_spell_PlagueOfRust" text="Plague of Rust" />
+    <string id="sotor_spell_PowerOfDarkness" text="Power of Darkness" />
+    <string id="sotor_spell_PurpleSun" text="Purple Sun of Xereus" />
+    <string id="sotor_spell_QuicksilverSwords" text="Quicksilver Swords" />
+    <string id="sotor_spell_RadiancePillar" text="Pillar of Radiance" />
+    <string id="sotor_spell_RadiantGaze" text="Radiant Gaze" />
+    <string id="sotor_spell_Regrowth" text="Regrowth" />
+    <string id="sotor_spell_ScreamingSkull" text="Screaming Skull" />
+    <string id="sotor_spell_Sear" text="Sear" />
+    <string id="sotor_spell_Shadowblood" text="Shadowblood" />
+    <string id="sotor_spell_ShemGaze" text="Shem's Burning Gaze" />
+    <string id="sotor_spell_ShieldOfSaphery" text="Shield of Saphery" />
+    <string id="sotor_spell_ShieldOfThorns" text="Shield of Thorns" />
+    <string id="sotor_spell_SoulQuench" text="Soul Quench" />
+    <string id="sotor_spell_SoulRain" text="Soul Rain" />
+    <string id="sotor_spell_SoulStealer" text="Soul Stealer" />
+    <string id="sotor_spell_SpiritLeech" text="Spirit Leech" />
+    <string id="sotor_spell_StormOfRenewal" text="Storm of Renewal" />
+    <string id="sotor_spell_StrengthOfCombat" text="Strength Of Combat" />
+    <string id="sotor_spell_SummerHeat" text="Summer Heat" />
+    <string id="sotor_spell_SummonSkeleton" text="Raise the Dead" />
+    <string id="sotor_spell_TanglingThorn" text="Tangling Thorn" />
+    <string id="sotor_spell_TasteOfDeath" text="Taste of Death" />
+    <string id="sotor_spell_Tempest" text="Tempest" />
+    <string id="sotor_spell_TheBeastUnleashed" text="The Beast Unleashed" />
+    <string id="sotor_spell_TheGreenEye" text="The Green Eye" />
+    <string id="sotor_spell_Thunderbolt" text="Urannon's Thunderbolt" />
+    <string id="sotor_spell_VanHelsDanseMacabre" text="Vanhel's Danse Macabre" />
+    <string id="sotor_spell_WardOfArrows" text="Ward of Arrows" />
+    <string id="sotor_spell_WindBlast" text="Wind Blast" />
+    <string id="sotor_spell_WindOfDeath" text="Wind of Death" />
+    <string id="sotor_troop_sotor_black_knight" text="Black Knight" />
+    <string id="sotor_troop_sotor_crypt_guard" text="Crypt Guard" />
+    <string id="sotor_troop_sotor_crypt_warrior" text="Crypt Warrior" />
+    <string id="sotor_troop_sotor_dryad" text="Dryad" />
+    <string id="sotor_troop_sotor_grave_guard_seneschal" text="Grave Guard Seneschal" />
+    <string id="sotor_troop_sotor_grave_guard_spearman" text="Grave Guard Spearman" />
+    <string id="sotor_troop_sotor_grave_guard_warrior" text="Grave Guard Warrior" />
+    <string id="sotor_troop_sotor_grave_guardian" text="Grave Guardian" />
+    <string id="sotor_troop_sotor_hell_knight" text="Hell Knight" />
+    <string id="sotor_troop_sotor_skeleton" text="Skeleton" />
+    <string id="sotor_troop_sotor_skeleton_guard" text="Skeleton Guard" />
+    <string id="sotor_troop_sotor_skeleton_spearman" text="Skeleton Spearman" />
+    <string id="sotor_troop_sotor_skeleton_swordsman" text="Skeleton Swordsman" />
+    <string id="sotor_troop_sotor_skeleton_warrior" text="Skeleton Warrior" />
+    <string id="str_black_knight_lance_001_blade" text="Black Knight Lance Blade" />
+    <string id="str_black_knight_lance_001_guard" text="Black Knight Lance Guard" />
+    <string id="str_black_knight_lance_001_handle" text="Black Knight Lance Handle" />
+    <string id="str_black_knight_lance_001_pommel" text="Black Knight Lance Pommel" />
+    <string id="str_default_weapon_guard" text="None" />
+    <string id="str_default_weapon_pommel" text="None" />
+    <string id="str_empire_halberd_005_shaft" text="Empire Halberd Shaft" />
+    <string id="str_grave_guard_greataxe_001_blade" text="Grave Guard Greataxe Blade" />
+    <string id="str_grave_guard_greataxe_001_handle" text="Grave Guard Greataxe Handle" />
+    <string id="str_grave_guard_greatsword_001_blade" text="Grave Guard Greatsword Blade" />
+    <string id="str_grave_guard_greatsword_001_guard" text="Grave Guard Greatsword Guard" />
+    <string id="str_grave_guard_greatsword_001_handle" text="Grave Guard Greatsword Handle" />
+    <string id="str_grave_guard_greatsword_001_pommel" text="Grave Guard Greatsword Pommel" />
+    <string id="str_grave_guard_sword_001_blade" text="Grave Guard Blade" />
+    <string id="str_grave_guard_sword_001_guard" text="Grave Guard Guard" />
+    <string id="str_grave_guard_sword_001_hilt" text="Grave Guard Hilt" />
+    <string id="str_grave_guard_sword_001_pommel" text="Grave Guard Pommel" />
+    <string id="str_runefang_001_blade" text="Runefang Blade" />
+    <string id="str_skeleton_spear_guard" text="Old Spearguard" />
+    <string id="str_skeleton_spear_head" text="Old Spearhead" />
+    <string id="str_skeleton_spear_pommel" text="Old Spearpommel" />
+    <string id="str_skeleton_spear_shaft" text="Old Spearshaft" />
+    <string id="str_skeleton_warrior_sword_001_blade" text="Skeleton Warrior Sword Blade" />
+    <string id="str_skeleton_warrior_sword_001_guard" text="Skeleton Warrior Sword Guard" />
+    <string id="str_skeleton_warrior_sword_001_hilt" text="Skeleton Warrior Sword Hilt" />
+    <string id="str_skeleton_warrior_sword_001_pommel" text="Skeleton Warrior Sword Pommel" />
+    <string id="str_skeleton_warrior_sword_002_blade" text="Skeleton Warrior Sword Blade" />
+    <string id="str_skeleton_warrior_sword_002_guard" text="Skeleton Warrior Sword Guard" />
+    <string id="str_skeleton_warrior_sword_002_hilt" text="Skeleton Warrior Sword Hilt" />
+    <string id="str_skeleton_warrior_sword_002_pommel" text="Skeleton Warrior Sword Pommel" />
+    <string id="str_skeleton_warrior_sword_003_blade" text="Skeleton Warrior Sword Blade" />
+    <string id="str_skeleton_warrior_sword_003_hilt" text="Skeleton Warrior Sword Hilt" />
+    <string id="str_skeleton_warrior_sword_003_pommel" text="Skeleton Warrior Sword Pommel" />
+    <string id="str_skeleton_warrior_sword_004_blade" text="Skeleton Warrior Sword Blade" />
+    <string id="str_skeleton_warrior_sword_004_guard" text="Skeleton Warrior Sword Guard" />
+    <string id="str_skeleton_warrior_sword_004_hilt" text="Skeleton Warrior Sword Hilt" />
+    <string id="str_skeleton_warrior_sword_004_pommel" text="Skeleton Warrior Sword Pommel" />
+    <string id="str_skeleton_warrior_sword_005_blade" text="Skeleton Warrior Sword Blade" />
+    <string id="str_skeleton_warrior_sword_005_hilt" text="Skeleton Warrior Sword Hilt" />
+    <string id="str_tor_vc_weapon_halberd_001" text="Old Halberd" />
+    <string id="str_tor_vc_weapon_halberd_002" text="Old Halberd" />
+    <string id="str_tor_vc_weapon_halberd_003" text="Old Halberd" />
+    <string id="str_tor_vc_weapon_lance_black_knight_001" text="Black Knight Lance" />
+    <string id="str_tor_vc_weapon_mace_skeleton_001" text="Skeleton Warrior Mace" />
+    <string id="str_tor_vc_weapon_mace_skeleton_002" text="Skeleton Warrior Mace" />
+    <string id="str_tor_vc_weapon_mace_skeleton_003" text="Skeleton Warrior Mace" />
+    <string id="str_tor_vc_weapon_mace_skeleton_004" text="Skeleton Warrior Mace" />
+    <string id="str_tor_vc_weapon_shield_grave_guard_001" text="Grave Guard Shield" />
+    <string id="str_tor_vc_weapon_shield_grave_guard_002" text="Grave Guard Shield" />
+    <string id="str_tor_vc_weapon_shield_skeleton_001" text="Skeleton Warrior Shield" />
+    <string id="str_tor_vc_weapon_shield_skeleton_002" text="Skeleton Warrior Shield" />
+    <string id="str_tor_vc_weapon_shield_skeleton_003" text="Skeleton Warrior Shield" />
+    <string id="str_tor_vc_weapon_shield_skeleton_004" text="Skeleton Warrior Shield" />
+    <string id="str_tor_vc_weapon_shield_skeleton_005" text="Skeleton Warrior Shield" />
+    <string id="str_tor_vc_weapon_shield_skeleton_006" text="Skeleton Warrior Shield" />
+    <string id="str_tor_vc_weapon_shield_skeleton_007" text="Skeleton Warrior Shield" />
+    <string id="str_tor_vc_weapon_shield_vampire_007" text="Vampire Shield" />
+    <string id="str_tor_vc_weapon_spear_skeleton_001" text="Old Spear" />
+    <string id="str_tor_vc_weapon_sword_grave_guard_001" text="Grave Guard Sword" />
+    <string id="str_tor_vc_weapon_sword_skeleton_001" text="Skeleton Warrior Sword" />
+    <string id="str_tor_vc_weapon_sword_skeleton_002" text="Skeleton Warrior Sword" />
+    <string id="str_tor_vc_weapon_sword_skeleton_003" text="Skeleton Warrior Sword" />
+    <string id="str_tor_vc_weapon_sword_skeleton_004" text="Skeleton Warrior Sword" />
+    <string id="str_tor_vc_weapon_sword_skeleton_005" text="Skeleton Warrior Sword" />
+    <string id="str_tor_vc_weapon_sword_vampire_005" text="Vampire Sword" />
+    <string id="str_tor_vc_weapon_sword_vampire_008" text="Vampire Sword" />
+    <string id="str_tor_vc_weapon_thaxe_graveguard_001" text="Grave Guard Greataxe" />
+    <string id="str_tor_vc_weapon_thsword_grave_guard_001" text="Grave Guard Greatsword" />
+    <string id="str_vampire_sword_005_blade" text="Vampire Sword Blade" />
+    <string id="str_vampire_sword_005_guard" text="Vampire Sword Guard" />
+    <string id="str_vampire_sword_005_handle" text="Vampire Sword Handle" />
+    <string id="str_vampire_sword_005_pommel" text="Vampire Sword Pommel" />
+    <string id="str_vampire_sword_008_blade" text="Vampire Sword Blade" />
+    <string id="str_vampire_sword_008_guard" text="Vampire Sword Guard" />
+    <string id="str_vampire_sword_008_handle" text="Vampire Sword Handle" />
+    <string id="str_vampire_sword_008_pommel" text="Vampire Sword Pommel" />
+    <string id="str_vc_halberd_001_head" text="Old Halberdhead" />
+    <string id="str_vc_halberd_002_head" text="Old Halberdhead" />
+    <string id="str_vc_halberd_003_head" text="Old Halberdhead" />
+    <string id="str_vc_skeleton_warrior_mace_001_blade" text="Skeleton Warrior Mace Head" />
+    <string id="str_vc_skeleton_warrior_mace_001_handle" text="Skeleton Warrior Mace Handle" />
+    <string id="str_vc_skeleton_warrior_mace_002_blade" text="Skeleton Warrior Mace Head" />
+    <string id="str_vc_skeleton_warrior_mace_002_handle" text="Skeleton Warrior Mace Handle" />
+    <string id="str_vc_skeleton_warrior_mace_003_blade" text="Skeleton Warrior Mace Head" />
+    <string id="str_vc_skeleton_warrior_mace_003_handle" text="Skeleton Warrior Mace Handle" />
+    <string id="str_vc_skeleton_warrior_mace_004_blade" text="Skeleton Warrior Mace Head" />
+    <string id="str_vc_skeleton_warrior_mace_004_handle" text="Skeleton Warrior Mace Handle" />
+
+    <string id="sotor_trait_asrai_enchant_anath_raema_desc" text="15 extra magic damage and missile speed, dismount damaged cavalry units" />
+    <string id="sotor_trait_asrai_enchant_anath_raema_name" text="Predator of Anath Raema" />
+    <string id="sotor_trait_asrai_enchant_dusk_wood_desc" text="-8% physical resistance, 8 extra Winds of Magic" />
+    <string id="sotor_trait_asrai_enchant_dusk_wood_name" text="Dusk of the Woods" />
+    <string id="sotor_trait_asrai_enchant_embrace_isha_desc" text="4% extra Ward Save, 10% chance to recover 10 HP upon receiving damage" />
+    <string id="sotor_trait_asrai_enchant_embrace_isha_name" text="Embrace of Isha" />
+    <string id="sotor_trait_asrai_enchant_ferocity_kurnous_desc" text="30 extra magic damage, 50% extra missile speed" />
+    <string id="sotor_trait_asrai_enchant_ferocity_kurnous_name" text="Ferocity of Kurnous" />
+    <string id="sotor_trait_asrai_enchant_morai_heg_desc" text="10% extra swing speed, 500% damage when striking at the backs of enemies. Same bonus applies to unaware enemies hit from any angle" />
+    <string id="sotor_trait_asrai_enchant_morai_heg_name" text="Schemes of Morai-heg" />
+    <string id="sotor_trait_asrai_enchant_oakhart_blessing_desc" text="4% extra physical resistance, 4% bonus to magic damage" />
+    <string id="sotor_trait_asrai_enchant_oakhart_blessing_name" text="Oakheart's Blessing" />
+    <string id="sotor_trait_asrai_enchant_quake_hukon_desc" text="25% extra shield HP, knock down foes when blocking melee hits" />
+    <string id="sotor_trait_asrai_enchant_quake_hukon_name" text="Quake of Hukon" />
+    <string id="sotor_trait_asrai_enchant_radiance_woods_desc" text="3% Ward Save, 4 extra Winds of Magic" />
+    <string id="sotor_trait_asrai_enchant_radiance_woods_name" text="Radiance of the Woods" />
+    <string id="sotor_trait_asrai_enchant_trance_loec_desc" text="10% extra swing speed, physical damage and physical resistance" />
+    <string id="sotor_trait_asrai_enchant_trance_loec_name" text="Trance of Loec" />
+    <string id="sotor_trait_asrai_enchant_tree_lord_desc" text="5 max HP bonus, 15% chance to summon a Dryad upon taking damage" />
+    <string id="sotor_trait_asrai_enchant_tree_lord_name" text="The Tree Lords' Bargain" />
+    <string id="sotor_trait_asrai_enchant_vengeance_khaine_desc" text="8% extra swing speed, 15 extra physical damage, 100% damage when striking at the heads of enemies" />
+    <string id="sotor_trait_asrai_enchant_vengeance_khaine_name" text="Vengeance of Khaine" />
+    <string id="sotor_trait_bret_blessing_eerie_touch_desc" text="2% extra physical resistance, 25 bonus skillpoints to Riding" />
+    <string id="sotor_trait_bret_blessing_eerie_touch_name" text="Touch of the Eerie" />
+    <string id="sotor_trait_bret_blessing_fey_guidance_desc" text="10% extra party travel speed, 5% magic resistance" />
+    <string id="sotor_trait_bret_blessing_fey_guidance_name" text="Guidance of the Fey" />
+    <string id="sotor_trait_bret_blessing_grail_legacy_desc" text="30% extra holy damage, weapon gains the Cleave trait" />
+    <string id="sotor_trait_bret_blessing_grail_legacy_name" text="Legacy of the Grail" />
+    <string id="sotor_trait_bret_blessing_lady_ward_desc" text="10% extra magic resistance, once per battle fatal wounds will revive you with 50% HP" />
+    <string id="sotor_trait_bret_blessing_lady_ward_name" text="Ward of the Lady" />
+    <string id="sotor_trait_bret_blessing_mists_sacred_lake_desc" text="3% extra physical resistance, 15% extra spell radius" />
+    <string id="sotor_trait_bret_blessing_mists_sacred_lake_name" text="Mists of the Sacred Lake" />
+    <string id="sotor_trait_bret_blessing_pilgrim_tenacity_desc" text="2 extra HP" />
+    <string id="sotor_trait_bret_blessing_pilgrim_tenacity_name" text="Tenacity of the Pilgrim" />
+    <string id="sotor_trait_bret_blessing_scourge_evil_desc" text="5% extra swing speed, 25% chance to deal 40 holy damage to the undead" />
+    <string id="sotor_trait_bret_blessing_scourge_evil_name" text="Scourge of Evil" />
+    <string id="sotor_trait_bret_blessing_shield_faith_desc" text="10% extra physical resistance, blocked hits reduce one of your spell cooldowns by 1 second" />
+    <string id="sotor_trait_bret_blessing_shield_faith_name" text="Shield of Faith" />
+    <string id="sotor_trait_bret_blessing_wisdom_virtue_desc" text="3 extra HP, 5% extra magic resistance" />
+    <string id="sotor_trait_bret_blessing_wisdom_virtue_name" text="Wisdom and Virtue" />
+    <string id="sotor_trait_dw_master_rune_adamant_desc" text="10% Ward Save, 50% extra shield HP" />
+    <string id="sotor_trait_dw_master_rune_adamant_name" text="Master Rune of Adamant" />
+    <string id="sotor_trait_dw_master_rune_alaric_desc" text="Ignore 95% of the target's armour" />
+    <string id="sotor_trait_dw_master_rune_alaric_name" text="Master Rune of Alaric the Mad" />
+    <string id="sotor_trait_dw_master_rune_breaking_desc" text="500% extra shield damage, 50% extra physical damage" />
+    <string id="sotor_trait_dw_master_rune_breaking_name" text="Master Rune of Breaking" />
+    <string id="sotor_trait_dw_master_rune_flight_desc" text="33% extra missile speed, regain throwing ammunition upon landing hits" />
+    <string id="sotor_trait_dw_master_rune_flight_name" text="Master Rune of Flight" />
+    <string id="sotor_trait_dw_master_rune_gromril_desc" text="5% Ward Save" />
+    <string id="sotor_trait_dw_master_rune_gromril_name" text="Master Rune of Gromril" />
+    <string id="sotor_trait_dw_master_rune_preservation_desc" text="6 max HP bonus, 10% chance to ignore lethal damage and recover 5 HP upon taking damage" />
+    <string id="sotor_trait_dw_master_rune_preservation_name" text="Rune of Preservation" />
+    <string id="sotor_trait_dw_master_rune_skaldour_desc" text="100% fire resistance" />
+    <string id="sotor_trait_dw_master_rune_skaldour_name" text="Master Rune of Skaldour" />
+    <string id="sotor_trait_dw_master_rune_skalf_desc" text="50% bonus to physical damage, 75 extra magic damage" />
+    <string id="sotor_trait_dw_master_rune_skalf_name" text="Master Rune of Skalf Blackhammer" />
+    <string id="sotor_trait_dw_master_rune_steel_desc" text="10% extra physical resistance" />
+    <string id="sotor_trait_dw_master_rune_steel_name" text="Master Rune of Steel" />
+    <string id="sotor_trait_dw_master_rune_swiftness_desc" text="50% extra swing speed, 15% extra physical damage" />
+    <string id="sotor_trait_dw_master_rune_swiftness_name" text="Master Rune of Swiftness" />
+    <string id="sotor_trait_dw_rune_beastslaying_desc" text="500% damage against mounts and large enemies" />
+    <string id="sotor_trait_dw_rune_beastslaying_name" text="Rune of Beastslaying" />
+    <string id="sotor_trait_dw_rune_clear_sights_desc" text="10% extra physical damage, 15% reduced reload speed" />
+    <string id="sotor_trait_dw_rune_clear_sights_name" text="Rune of Clear Sights" />
+    <string id="sotor_trait_dw_rune_cleaving_desc" text="25% extra physical damage, weapon gains the Cleave trait" />
+    <string id="sotor_trait_dw_rune_cleaving_name" text="Rune of Cleaving" />
+    <string id="sotor_trait_dw_rune_fire_desc" text="20% extra fire damage" />
+    <string id="sotor_trait_dw_rune_fire_name" text="Rune of Fire" />
+    <string id="sotor_trait_dw_rune_force_desc" text="33% extra shield HP, 70% chance to knock down foes when blocking melee hits" />
+    <string id="sotor_trait_dw_rune_force_name" text="Rune of Force" />
+    <string id="sotor_trait_dw_rune_fortitude_desc" text="3% Ward Save, 4 extra HP" />
+    <string id="sotor_trait_dw_rune_fortitude_name" text="Rune of Fortitude" />
+    <string id="sotor_trait_dw_rune_fury_desc" text="25% extra swing speed, 15 extra physical damage" />
+    <string id="sotor_trait_dw_rune_fury_name" text="Rune of Fury" />
+    <string id="sotor_trait_dw_rune_head_wrecking_desc" text="15% extra missile speed, 200% extra headshot damage" />
+    <string id="sotor_trait_dw_rune_head_wrecking_name" text="Rune of Head-Wrecking" />
+    <string id="sotor_trait_dw_rune_impact_desc" text="10% physical resistance, 30% chance to knock down foes when blocking melee hits" />
+    <string id="sotor_trait_dw_rune_impact_name" text="Rune of Impact" />
+    <string id="sotor_trait_dw_rune_iron_desc" text="7% extra physical resistance" />
+    <string id="sotor_trait_dw_rune_iron_name" text="Rune of Iron" />
+    <string id="sotor_trait_dw_rune_might_desc" text="20% extra physical damage, 15% extra armour penetration" />
+    <string id="sotor_trait_dw_rune_might_name" text="Rune of Might" />
+    <string id="sotor_trait_dw_rune_parrying_desc" text="25% chance to knock down foes when blocking melee hits" />
+    <string id="sotor_trait_dw_rune_parrying_name" text="Rune of Parrying" />
+    <string id="sotor_trait_dw_rune_protection_desc" text="5% extra magic resistance, 2 extra HP" />
+    <string id="sotor_trait_dw_rune_protection_name" text="Rune of Protection" />
+    <string id="sotor_trait_dw_rune_reloading_desc" text="50% reduced reload speed" />
+    <string id="sotor_trait_dw_rune_reloading_name" text="Rune of Reloading" />
+    <string id="sotor_trait_dw_rune_shielding_desc" text="5% physical resistance, 33% extra shield HP" />
+    <string id="sotor_trait_dw_rune_shielding_name" text="Rune of Shielding" />
+    <string id="sotor_trait_dw_rune_speed_desc" text="15% extra swing speed" />
+    <string id="sotor_trait_dw_rune_speed_name" text="Rune of Speed" />
+    <string id="sotor_trait_dw_rune_spell_eating_desc" text="10% extra magic resistance, 50% chance to gain 100% magic resistance for a short time upon taking damage" />
+    <string id="sotor_trait_dw_rune_spell_eating_name" text="Rune of Spell Eating" />
+    <string id="sotor_trait_dw_rune_stone_desc" text="4% extra physical resistance" />
+    <string id="sotor_trait_dw_rune_stone_name" text="Rune of Stone" />
+    <string id="sotor_trait_dw_rune_striking_desc" text="5% extra swing speed, 10% extra physical damage" />
+    <string id="sotor_trait_dw_rune_striking_name" text="Rune of Striking" />
+    <string id="sotor_trait_dw_rune_unbinding_desc" text="25% extra magic damage, 15% extra magic resistance" />
+    <string id="sotor_trait_dw_rune_unbinding_name" text="Rune of Unbinding" />
+    <string id="sotor_trait_dw_rune_vigour_desc" text="5 extra HP" />
+    <string id="sotor_trait_dw_rune_vigour_name" text="Rune of Vigour" />
+    <string id="sotor_trait_emp_blessing_shallya_martyrdom_desc" text="3 extra HP, taking damage has a 33% chance to heal nearby friendly units" />
+    <string id="sotor_trait_emp_blessing_shallya_martyrdom_name" text="Martyrdom of Shallya" />
+    <string id="sotor_trait_emp_blessing_shallya_mercy_desc" text="6 extra HP" />
+    <string id="sotor_trait_emp_blessing_shallya_mercy_name" text="Mercy of Shallya" />
+    <string id="sotor_trait_emp_blessing_shallya_pacifism_desc" text="Chance to recover 2 HP per second for a short time when defeating enemies (based on knockout probability)" />
+    <string id="sotor_trait_emp_blessing_shallya_pacifism_name" text="Pacifism of Shallya" />
+    <string id="sotor_trait_emp_blessing_shallya_purity_desc" text="50% extra healing rate when travelling" />
+    <string id="sotor_trait_emp_blessing_shallya_purity_name" text="Purity of Shallya" />
+    <string id="sotor_trait_emp_blessing_sigmar_beacon_desc" text="10% extra magic resistance, 15% extra spell radius" />
+    <string id="sotor_trait_emp_blessing_sigmar_beacon_name" text="Beacon of Sigmar" />
+    <string id="sotor_trait_emp_blessing_sigmar_exorcism_desc" text="20% extra holy damage, 10% chance to strike the undead for double damage" />
+    <string id="sotor_trait_emp_blessing_sigmar_exorcism_name" text="Exorcism of Sigmar" />
+    <string id="sotor_trait_emp_blessing_sigmar_justice_desc" text="12% extra holy damage" />
+    <string id="sotor_trait_emp_blessing_sigmar_justice_name" text="Justice of Sigmar" />
+    <string id="sotor_trait_emp_blessing_sigmar_light_desc" text="6% extra magic resistance, 3 extra HP, 10% chance to gain minor regeneration whenever the undead strike you in melee" />
+    <string id="sotor_trait_emp_blessing_sigmar_light_name" text="Light of Sigmar" />
+    <string id="sotor_trait_emp_blessing_sigmar_retribution_desc" text="Gain a fleeting 10% bonus to holy damage when blocking blows of the undead. Stacks up to 5 times" />
+    <string id="sotor_trait_emp_blessing_sigmar_retribution_name" text="Retribution of Sigmar" />
+    <string id="sotor_trait_emp_blessing_sigmar_soulfire_desc" text="6% extra magic resistance, 3 extra HP, 10% chance to emit a damaging wave of holy energy whenever the undead strike you in melee" />
+    <string id="sotor_trait_emp_blessing_sigmar_soulfire_name" text="Soulfire of Sigmar" />
+    <string id="sotor_trait_emp_blessing_ulric_chill_desc" text="15% extra frost damage" />
+    <string id="sotor_trait_emp_blessing_ulric_chill_name" text="Chill of Ulric" />
+    <string id="sotor_trait_emp_blessing_ulric_frenzy_desc" text="5% extra physical resistance, receiving melee damage carries a 15% chance to drive nearby allies into a battle frenzy" />
+    <string id="sotor_trait_emp_blessing_ulric_frenzy_name" text="Frenzy of Ulric" />
+    <string id="sotor_trait_emp_blessing_ulric_winterfather_gift_desc" text="5% extra magic resistance, 20 bonus skillpoints to Two Handed" />
+    <string id="sotor_trait_emp_blessing_ulric_winterfather_gift_name" text="Gift of the Winterfather" />
+    <string id="sotor_trait_emp_blessing_ulric_wrath_desc" text="350% extra shield damage, 15% to receive a fleeting 2% attack speed bonus upon dealing damage. Stacks up to 5 times" />
+    <string id="sotor_trait_emp_blessing_ulric_wrath_name" text="Wrath of Ulric" />
+    <string id="sotor_trait_emp_enchant_aqshy_cinders_desc" text="15 extra fire damage, 15% to inflict fire DoT effect on nearby enemies upon dealing damage" />
+    <string id="sotor_trait_emp_enchant_aqshy_cinders_name" text="Cinders of Aqshy" />
+    <string id="sotor_trait_emp_enchant_aqshy_curtain_desc" text="20% extra fire resistance, 15% chance to inflict fire DoT on blocked enemies. This DoT effect can spread onto enemies and allies alike" />
+    <string id="sotor_trait_emp_enchant_aqshy_curtain_name" text="Curtain of Aqshy" />
+    <string id="sotor_trait_emp_enchant_aqshy_firebreath_desc" text="25 extra fire damage, 20% to summon a fiery explosion upon dealing damage" />
+    <string id="sotor_trait_emp_enchant_aqshy_firebreath_name" text="Firebreath of Aqshy" />
+    <string id="sotor_trait_emp_enchant_aqshy_fury_desc" text="Damaging burning enemies inflicts 50 extra fire damage" />
+    <string id="sotor_trait_emp_enchant_aqshy_fury_name" text="Fury of Aqshy" />
+    <string id="sotor_trait_emp_enchant_aqshy_hearth_desc" text="7% bonus to fire damage, -25% fire resistance" />
+    <string id="sotor_trait_emp_enchant_aqshy_hearth_name" text="Hearth of Aqshy" />
+    <string id="sotor_trait_emp_enchant_aqshy_rage_desc" text="40% extra fire damage, -15% fire resistance" />
+    <string id="sotor_trait_emp_enchant_aqshy_rage_name" text="Rage of Aqshy" />
+    <string id="sotor_trait_emp_enchant_aqshy_whisper_desc" text="12% extra fire damage" />
+    <string id="sotor_trait_emp_enchant_aqshy_whisper_name" text="Whisper of Aqshy" />
+    <string id="sotor_trait_emp_enchant_azyr_azure_mirror_desc" text="2% extra physical resistance, deal 15 lightning damage to enemies attacking you in melee" />
+    <string id="sotor_trait_emp_enchant_azyr_azure_mirror_name" text="Azure Mirror of Azyr" />
+    <string id="sotor_trait_emp_enchant_azyr_divination_desc" text="5% extra magic resistance, 7% extra party travel speed" />
+    <string id="sotor_trait_emp_enchant_azyr_divination_name" text="Divination of Azyr" />
+    <string id="sotor_trait_emp_enchant_azyr_foresight_desc" text="15% extra lightning damage and 15% physical resistance, 15% chance to grant nearby troops the same boons for 20 seconds upon dealing damage" />
+    <string id="sotor_trait_emp_enchant_azyr_foresight_name" text="Foresight of Azyr" />
+    <string id="sotor_trait_emp_enchant_azyr_gale_desc" text="15% extra armour penetration, 15% to summon a gust of wind knocking down surrounding enemies upon dealing damage" />
+    <string id="sotor_trait_emp_enchant_azyr_gale_name" text="Gale of Azyr" />
+    <string id="sotor_trait_emp_enchant_azyr_harmony_desc" text="4% bonus to lightning damage" />
+    <string id="sotor_trait_emp_enchant_azyr_harmony_name" text="Harmony of Azyr" />
+    <string id="sotor_trait_emp_enchant_azyr_whisper_desc" text="3% magic resistance, 3% extra party travel speed" />
+    <string id="sotor_trait_emp_enchant_azyr_whisper_name" text="Whisper of Azyr" />
+    <string id="sotor_trait_emp_enchant_azyr_wind_desc" text="10% extra projectile speed" />
+    <string id="sotor_trait_emp_enchant_azyr_wind_name" text="Wind of Azyr" />
+    <string id="sotor_trait_emp_enchant_chamon_aegis_desc" text="20% extra shield HP, 5% physical resistance, 50% chance to decrease physical resistance of nearby enemies upon blocking damage" />
+    <string id="sotor_trait_emp_enchant_chamon_aegis_name" text="Aegis of Chamon" />
+    <string id="sotor_trait_emp_enchant_chamon_crucible_desc" text="20% extra magic damage, weapon gains the Cleave trait" />
+    <string id="sotor_trait_emp_enchant_chamon_crucible_name" text="Crucible of Chamon" />
+    <string id="sotor_trait_emp_enchant_chamon_feathers_lead_desc" text="8% extra physical resistance, 5% penalty to movement speed" />
+    <string id="sotor_trait_emp_enchant_chamon_feathers_lead_name" text="Feathers to Lead" />
+    <string id="sotor_trait_emp_enchant_chamon_forge_desc" text="30% extra reload speed, 10 extra magic damage" />
+    <string id="sotor_trait_emp_enchant_chamon_forge_name" text="Forge of Chamon" />
+    <string id="sotor_trait_emp_enchant_chamon_laws_desc" text="50% extra armour penetration" />
+    <string id="sotor_trait_emp_enchant_chamon_laws_name" text="Laws of Chamon" />
+    <string id="sotor_trait_emp_enchant_chamon_lead_feathers_desc" text="3% penalty to physical resistance, 5% bonus to movement speed" />
+    <string id="sotor_trait_emp_enchant_chamon_lead_feathers_name" text="Lead to Feathers" />
+    <string id="sotor_trait_emp_enchant_chamon_transmutation_desc" text="20% extra fire damage, projectiles penetrate targets" />
+    <string id="sotor_trait_emp_enchant_chamon_transmutation_name" text="Transmutation of Chamon" />
+    <string id="sotor_trait_emp_enchant_chamon_whisper_desc" text="3% extra physical resistance" />
+    <string id="sotor_trait_emp_enchant_chamon_whisper_name" text="Whisper of Chamon" />
+    <string id="sotor_trait_emp_enchant_ghur_crows_desc" text="10% extra physical damage, 10% to summon vicious crows in a very small area upon dealing damage" />
+    <string id="sotor_trait_emp_enchant_ghur_crows_name" text="Crows of Ghur" />
+    <string id="sotor_trait_emp_enchant_ghur_echo_desc" text="15% extra physical damage, 15% extra missile speed, 10% to reduce movement speed of nearby enemies upon dealing damage" />
+    <string id="sotor_trait_emp_enchant_ghur_echo_name" text="Echo of Ghur" />
+    <string id="sotor_trait_emp_enchant_ghur_savagery_desc" text="10% extra physical damage, 10% to receive a fleeting 2% attack speed bonus upon dealing damge. Stacks up to 5 times" />
+    <string id="sotor_trait_emp_enchant_ghur_savagery_name" text="Savagery of Ghur" />
+    <string id="sotor_trait_emp_enchant_ghur_whisper_desc" text="10% extra physical damage" />
+    <string id="sotor_trait_emp_enchant_ghur_whisper_name" text="Whisper of Ghur" />
+    <string id="sotor_trait_emp_enchant_ghur_wildform_desc" text="3% extra physical resistance, 15% to receive a fleeting 3% physical resistance bonus upon receiving damage. Stacks up to 3 times" />
+    <string id="sotor_trait_emp_enchant_ghur_wildform_name" text="Wildform of Ghur" />
+    <string id="sotor_trait_emp_enchant_ghyran_bloom_desc" text="6 max HP bonus, -10% fire resistance, 10% chance to recover 2 HP per second for a short time upon receiving damage" />
+    <string id="sotor_trait_emp_enchant_ghyran_bloom_name" text="Bloom of Ghyran" />
+    <string id="sotor_trait_emp_enchant_ghyran_brambles_desc" text="Deal 25 physical damage to enemies blocked in melee, -10% fire resistance" />
+    <string id="sotor_trait_emp_enchant_ghyran_brambles_name" text="Brambles of Ghyran" />
+    <string id="sotor_trait_emp_enchant_ghyran_cloak_desc" text="25% extra healing rate when travelling" />
+    <string id="sotor_trait_emp_enchant_ghyran_cloak_name" text="Cloak of Ghyran" />
+    <string id="sotor_trait_emp_enchant_ghyran_intuition_desc" text="3 extra Winds of Magic, -25% fire resistance" />
+    <string id="sotor_trait_emp_enchant_ghyran_intuition_name" text="Intuition of Ghyran" />
+    <string id="sotor_trait_emp_enchant_ghyran_tendrils_desc" text="15% extra physical resistance, 25% to snare nearby enemies with powerful roots upon blocking damage" />
+    <string id="sotor_trait_emp_enchant_ghyran_tendrils_name" text="Tendrils of Ghyran" />
+    <string id="sotor_trait_emp_enchant_ghyran_whisper_desc" text="3 max HP bonus, -15% fire resistance" />
+    <string id="sotor_trait_emp_enchant_ghyran_whisper_name" text="Whisper of Ghyran" />
+    <string id="sotor_trait_emp_enchant_hysh_brilliance_desc" text="15% to trigger a burst of light upon blocking damage. Reduces attack speed of nearby enemies for a short time" />
+    <string id="sotor_trait_emp_enchant_hysh_brilliance_name" text="Brilliance of Hysh" />
+    <string id="sotor_trait_emp_enchant_hysh_clarity_desc" text="3 extra Winds of Magic" />
+    <string id="sotor_trait_emp_enchant_hysh_clarity_name" text="Clarity of Hysh" />
+    <string id="sotor_trait_emp_enchant_hysh_providence_desc" text="5% magic resistance, 10 bonus skillpoints to Spellcraft" />
+    <string id="sotor_trait_emp_enchant_hysh_providence_name" text="Providence of Hysh" />
+    <string id="sotor_trait_emp_enchant_hysh_sanctuary_desc" text="3% extra physical resistance, 5% to snare nearby enemies with a net of Hysh upon receiving damage" />
+    <string id="sotor_trait_emp_enchant_hysh_sanctuary_name" text="Sanctuary of Hysh" />
+    <string id="sotor_trait_emp_enchant_hysh_timewarp_desc" text="20 extra magic damage, 15% to receive a movement speed buff for a short time upon dealing damage" />
+    <string id="sotor_trait_emp_enchant_hysh_timewarp_name" text="Timewarp of Hysh" />
+    <string id="sotor_trait_emp_enchant_hysh_whisper_desc" text="10 extra magic damage" />
+    <string id="sotor_trait_emp_enchant_hysh_whisper_name" text="Whisper of Hysh" />
+    <string id="sotor_trait_emp_enchant_shyish_blight_desc" text="25 extra magic damage, damaged enemies suffer a 25% physical resistance penalty" />
+    <string id="sotor_trait_emp_enchant_shyish_blight_name" text="Blight of Shyish" />
+    <string id="sotor_trait_emp_enchant_shyish_deathsight_desc" text="Blocking hits of Undead units carries a 50% chance to apply an 'Exorcism', granting 33% extra magic melee dmg for 10 seconds against the target" />
+    <string id="sotor_trait_emp_enchant_shyish_deathsight_name" text="Deathsight of Shyish" />
+    <string id="sotor_trait_emp_enchant_shyish_messengers_desc" text="5% extra magic resistance, 10% chance to inflict horrific visions in a small radius upon taking damage. Nearby enemies suffer a DoT effect" />
+    <string id="sotor_trait_emp_enchant_shyish_messengers_name" text="Messengers of Shyish" />
+    <string id="sotor_trait_emp_enchant_shyish_pale_grip_desc" text="7% bonus to magic damage, -3 HP" />
+    <string id="sotor_trait_emp_enchant_shyish_pale_grip_name" text="Pale Grip of Shyish" />
+    <string id="sotor_trait_emp_enchant_shyish_pall_desc" text="15 extra magic damage, gain a stacking 10% magic resistance bonus upon killing enemies. Stacks up to 5 times and fades after a short while" />
+    <string id="sotor_trait_emp_enchant_shyish_pall_name" text="Pall of Shyish" />
+    <string id="sotor_trait_emp_enchant_shyish_whisper_desc" text="12% extra magic damage" />
+    <string id="sotor_trait_emp_enchant_shyish_whisper_name" text="Whisper of Shyish" />
+    <string id="sotor_trait_emp_enchant_shyish_withering_desc" text="10% extra magic damage, 10% chance to reduce attack speed of nearby enemies by 15% when dealing damage" />
+    <string id="sotor_trait_emp_enchant_shyish_withering_name" text="Withering of Shyish" />
+    <string id="sotor_trait_eo_enchant_flames_asuryan_desc" text="60 extra fire damage, 15% extra fire resistance" />
+    <string id="sotor_trait_eo_enchant_flames_asuryan_name" text="Flames of Asuryan" />
+    <string id="sotor_trait_eo_enchant_legacy_caledor_desc" text="50% fire resistance, 25% extra shield HP, 25% chance to conjure a fire explosion upon blocking damage" />
+    <string id="sotor_trait_eo_enchant_legacy_caledor_name" text="Legacy of Caledor" />
+    <string id="sotor_trait_eo_enchant_sanctuary_saphery_desc" text="Upon receiving ranged damage gain complete ranged damage immunity for 30 seconds" />
+    <string id="sotor_trait_eo_enchant_sanctuary_saphery_name" text="Sanctuary of Saphery" />
+    <string id="sotor_trait_eo_enchant_storms_mathlann_desc" text="50% lightning resistance, 15% extra shield HP, 25% chance to summon a bolt of lightning upon blocking damage" />
+    <string id="sotor_trait_eo_enchant_storms_mathlann_name" text="Storms of Mathlann" />
+    <string id="sotor_trait_eo_enchant_wisdom_hoeth_desc" text="7 extra Winds of Magic, 5% bonus to magic damage" />
+    <string id="sotor_trait_eo_enchant_wisdom_hoeth_name" text="Wisdom of Hoeth" />
+    <string id="sotor_trait_lesser_loot_armor_health_desc" text="3 extra HP" />
+    <string id="sotor_trait_lesser_loot_armor_health_name" text="Aspect of Vitality" />
+    <string id="sotor_trait_lesser_loot_armor_magic_res_desc" text="5% extra magic resistance" />
+    <string id="sotor_trait_lesser_loot_armor_magic_res_name" text="Aspect of Superstition" />
+    <string id="sotor_trait_lesser_loot_armor_phy_res_desc" text="4% extra physical resistance" />
+    <string id="sotor_trait_lesser_loot_armor_phy_res_name" text="Aspect of Protection" />
+    <string id="sotor_trait_lesser_loot_armor_winds_desc" text="2 extra Winds of Magic" />
+    <string id="sotor_trait_lesser_loot_armor_winds_name" text="Aspect of Enlightment" />
+    <string id="sotor_trait_lesser_loot_weapon_armor_penetraiton_desc" text="10% extra armor penetration" />
+    <string id="sotor_trait_lesser_loot_weapon_armor_penetraiton_name" text="Aspect of Piercing" />
+    <string id="sotor_trait_lesser_loot_weapon_fire_dmg_desc" text="10 extra fire damage" />
+    <string id="sotor_trait_lesser_loot_weapon_fire_dmg_name" text="Aspect of Fire" />
+    <string id="sotor_trait_lesser_loot_weapon_frost_dmg_desc" text="10 extra frost damage" />
+    <string id="sotor_trait_lesser_loot_weapon_frost_dmg_name" text="Aspect of Frost" />
+    <string id="sotor_trait_lesser_loot_weapon_lightning_dmg_desc" text="10 extra lightning damage" />
+    <string id="sotor_trait_lesser_loot_weapon_lightning_dmg_name" text="Aspect of Thunder" />
+    <string id="sotor_trait_lesser_loot_weapon_magic_dmg_desc" text="10 extra magic damage" />
+    <string id="sotor_trait_lesser_loot_weapon_magic_dmg_name" text="Aspect of Magic" />
+    <string id="sotor_trait_lesser_loot_weapon_reloadspeed_desc" text="10% extra reload speed" />
+    <string id="sotor_trait_lesser_loot_weapon_reloadspeed_name" text="Aspect of Reloading" />
+    <string id="sotor_trait_lesser_loot_weapon_swiftness_desc" text="10% extra swing speed" />
+    <string id="sotor_trait_lesser_loot_weapon_swiftness_name" text="Aspect of Speed" />
+    <string id="sotor_trait_vc_enchant_bonds_darkness_desc" text="5% bonus to magic damage, summon 3 Crypt Warriors for every enemy felled in melee" />
+    <string id="sotor_trait_vc_enchant_bonds_darkness_name" text="Bonds of Darkness" />
+    <string id="sotor_trait_vc_enchant_bulwark_blood_keep_desc" text="20% extra shield HP, 8% extra physical resistance" />
+    <string id="sotor_trait_vc_enchant_bulwark_blood_keep_name" text="Bulwark of Blood Keep" />
+    <string id="sotor_trait_vc_enchant_call_beyond_desc" text="10% bonus to magic damage, summon 3 Grave Guard for every enemy felled in melee" />
+    <string id="sotor_trait_vc_enchant_call_beyond_name" text="Call from Beyond" />
+    <string id="sotor_trait_vc_enchant_caress_void_desc" text="-10% physical resistance, 10 extra Winds of Magic" />
+    <string id="sotor_trait_vc_enchant_caress_void_name" text="Caress of the Void" />
+    <string id="sotor_trait_vc_enchant_chilling_hand_desc" text="15 extra frost damage, 10% chance to slow the movement of nearby enemies with each strike" />
+    <string id="sotor_trait_vc_enchant_chilling_hand_name" text="Chilling Hand" />
+    <string id="sotor_trait_vc_enchant_crimson_flood_desc" text="25 extra magic damage, 10% to send out a damaging wave of magic with each strike. Each wave drains 2 HP of the wearer" />
+    <string id="sotor_trait_vc_enchant_crimson_flood_name" text="The Crimson Flood" />
+    <string id="sotor_trait_vc_enchant_drinker_blood_desc" text="15 extra magic damage. Recover 1 HP for every instance of damage dealt in melee, triggers below 50% HP" />
+    <string id="sotor_trait_vc_enchant_drinker_blood_name" text="Drinker of Blood" />
+    <string id="sotor_trait_vc_enchant_ethereal_whispers_desc" text="5% extra physical resistance, upon receiving ranged damage gain 50% ranged damage immunity for a short time" />
+    <string id="sotor_trait_vc_enchant_ethereal_whispers_name" text="Ethereal Whispers" />
+    <string id="sotor_trait_vc_enchant_legacy_arkhan_desc" text="12% bonus to magic damage, 15% extra spell radius" />
+    <string id="sotor_trait_vc_enchant_legacy_arkhan_name" text="Legacy of Arkhan" />
+    <string id="sotor_trait_vc_enchant_mockery_asps_desc" text="25% extra magic damage, ranged shots reduce physical resistance of the target by 50%" />
+    <string id="sotor_trait_vc_enchant_mockery_asps_name" text="Mockery of Asps" />
+    <string id="sotor_trait_vc_enchant_nightshroud_desc" text="5% extra magic resistance, 15% chance to reduce attack speed and damage of nearby enemies upon receiving damage" />
+    <string id="sotor_trait_vc_enchant_nightshroud_name" text="Nightshroud" />
+    <string id="sotor_trait_vc_enchant_secrets_wsoran_desc" text="5% bonus to magic damage, 4 extra Winds of Magic" />
+    <string id="sotor_trait_vc_enchant_secrets_wsoran_name" text="Secrets of W'soran" />
+    <string id="sotor_trait_vc_enchant_touch_jet_desc" text="5% extra swing speed, each blow has a 10% chance to deal extra 20 magic damage" />
+    <string id="sotor_trait_vc_enchant_touch_jet_name" text="Touch of Jet" />
+    <string id="sotor_trait_vc_enchant_unhallowed_pact_desc" text="-5% physical resistance, 33% extra spell radius" />
+    <string id="sotor_trait_vc_enchant_unhallowed_pact_name" text="Unhallowed Pact" />
+    <string id="sotor_trait_vc_enchant_unholy_blessing_desc" text="15 extra magic damage" />
+    <string id="sotor_trait_vc_enchant_unholy_blessing_name" text="Unholy Blessings" />
+    <string id="sotor_trait_we_enchant_arcane_bodkins_desc" text="10% extra armour penetration" />
+    <string id="sotor_trait_we_enchant_arcane_bodkins_name" text="Arcane Bodkins" />
+    <string id="sotor_trait_we_enchant_blackbriar_kiss_desc" text="10% extra physical damage, 10% extra armour penetration" />
+    <string id="sotor_trait_we_enchant_blackbriar_kiss_name" text="Blackbriar's Kiss" />
+    <string id="sotor_trait_we_enchant_dusk_dawn_desc" text="40 extra magic and holy damage" />
+    <string id="sotor_trait_we_enchant_dusk_dawn_name" text="Dusk and Dawn" />
+    <string id="sotor_trait_we_enchant_emissaries_mirai_desc" text="15% extra magic damage, 15% chance to inflict horrific visions in a radius upon dealing damage. Nearby enemies suffer a DoT effect effect" />
+    <string id="sotor_trait_we_enchant_emissaries_mirai_name" text="Emissaries of Mirai" />
+    <string id="sotor_trait_we_enchant_hagbane_tips_desc" text="50% chance to decrease the movement speed of the target by 40%" />
+    <string id="sotor_trait_we_enchant_hagbane_tips_name" text="Hagbane Tips" />
+    <string id="sotor_trait_we_enchant_moon_fire_desc" text="20 extra fire damage" />
+    <string id="sotor_trait_we_enchant_moon_fire_name" text="Moonfire Shot" />
+    <string id="sotor_trait_we_enchant_moon_stone_desc" text="10% bonus to magic damage, 12% extra travel speed" />
+    <string id="sotor_trait_we_enchant_moon_stone_name" text="Moonstone of the Hidden Ways" />
+    <string id="sotor_trait_we_enchant_song_doom_desc" text="10 extra physical damage, 15% extra missile speed" />
+    <string id="sotor_trait_we_enchant_song_doom_name" text="Song of Doom" />
+    <string id="sotor_trait_we_enchant_star_fire_desc" text="25% extra armour penetration" />
+    <string id="sotor_trait_we_enchant_star_fire_name" text="Starfire Shafts" />
+    <string id="sotor_trait_we_enchant_swift_shiver_desc" text="10% extra magic damage and 10% extra missile speed" />
+    <string id="sotor_trait_we_enchant_swift_shiver_name" text="Swiftshiver Shards" />
+    <string id="sotor_trait_we_enchant_thorns_nettles_desc" text="-15% shield HP, deal 40 physical damage to enemies blocked in melee" />
+    <string id="sotor_trait_we_enchant_thorns_nettles_name" text="&amp;quot;Thorns, Nettles and Spines&amp;quot;" />
+    <string id="sotor_trait_we_enchant_touch_lileath_desc" text="5% extra magic resistance, 3 extra Winds of Magic" />
+    <string id="sotor_trait_we_enchant_touch_lileath_name" text="Touch of Lileath" />
+    <string id="sotor_trait_we_enchant_tranquillity_cadai_desc" text="15% extra magic damage and magic resistance, 30% to grant nearby troops the same boons for a short time upon dealing damage" />
+    <string id="sotor_trait_we_enchant_tranquillity_cadai_name" text="Tranquillity of Cadai" />
+    <string id="sotor_trait_we_enchant_trickery_loec_desc" text="50% extra damage when striking at the backs of enemies. Same bonus applies to unaware enemies hit from any angle" />
+    <string id="sotor_trait_we_enchant_trickery_loec_name" text="Trickery of Loec" />
+    <string id="sotor_trait_we_enchant_trueflight_desc" text="40% extra armour penetration" />
+    <string id="sotor_trait_we_enchant_trueflight_name" text="Trueflight Arrows" />
+
+    <string id="key" text="English" />
+    <string id="sotor_attr_control" text="Control" />
+    <string id="sotor_attr_cunning" text="Cunning" />
+    <string id="sotor_attr_endurance" text="Endurance" />
+    <string id="sotor_attr_intelligence" text="Intelligence" />
+    <string id="sotor_attr_social" text="Social" />
+    <string id="sotor_attr_vigor" text="Vigor" />
+    <string id="sotor_mcm_abandon_ship" text="Crew Abandon Doomed Ships" />
+    <string id="sotor_mcm_abandon_ship_hint" text="Requires War Sails. Crew of a sinking or burning ship flee to the nearest safe ship by running across a bridge or swimming, preferring their own but boarding an enemy vessel if they must." />
+    <string id="sotor_mcm_amber_thrown" text="Improved Amber Spear" />
+    <string id="sotor_mcm_amber_thrown_hint" text="Swaps Amber Spear for a magic javelin that scales off Throwing and Spellcraft." />
+    <string id="sotor_mcm_arcane_conduit" text="Arcane Conduit" />
+    <string id="sotor_mcm_arcane_conduit_hint" text="Lets casters channel to recharge Winds of Magic, at the cost of being sluggish and vulnerable while they do. Higher caster levels reduce the drawbacks. Affects enemy and companion wizards too." />
+    <string id="sotor_mcm_armor_recharge" text="Armor Effect on Winds Recharge" />
+    <string id="sotor_mcm_armor_recharge_hint" text="Changes how much armor weight slows Winds of Magic recharge." />
+    <string id="sotor_mcm_armor_recharge_pct" text="Armor effect on Winds recharge" />
+    <string id="sotor_mcm_armor_recharge_pct_hint" text="-100% removes the armor penalty. 0% keeps default. 200% triples the armor penalty." />
+    <string id="sotor_mcm_battle_regen" text="Winds regenerate in missions" />
+    <string id="sotor_mcm_battle_regen_hint" text="Recharges Winds of Magic for yourself, allies, and enemies while you are in a battle or town scene. Recharge rate depends on derived stats. Only works if you have a real time mod like Time Pass enabled." />
+    <string id="sotor_mcm_burning_deck" text="Burning Decks Hurt Crew" />
+    <string id="sotor_mcm_burning_deck_dps" text="Burning deck damage" />
+    <string id="sotor_mcm_burning_deck_dps_hint" text="Fire damage per second to anyone on an ablaze deck. Default 4." />
+    <string id="sotor_mcm_burning_deck_hint" text="Requires War Sails. When a ship is set ablaze, anyone standing on its deck takes fire damage over time until they get off. Vanilla leaves the crew unharmed on a burning ship." />
+    <string id="sotor_mcm_cast_slowmo" text="Cast Slow Motion" />
+    <string id="sotor_mcm_cast_slowmo_hint" text="Slows the battle to 30 percent speed while you aim or charge a spell. Turn it off to keep the game at full speed while you cast." />
+    <string id="sotor_mcm_companion_casters" text="Companion Spellcasters" />
+    <string id="sotor_mcm_companion_casters_hint" text="Lets your clan companions and family use magic and appear in the spellbook's hero cycle. Turning it off later keeps their learned lores, spells and Winds intact for when you turn it back on. The main hero is always a caster." />
+    <string id="sotor_mcm_deaths_at_once" text="Spell deaths resolved at once" />
+    <string id="sotor_mcm_deaths_at_once_hint" text="Lag and crash protection. Lower it if huge spells stutter or freeze. Higher resolves big spells faster, but is the riskiest setting here." />
+    <string id="sotor_mcm_disable_siege_magic" text="Disable Magic in Sieges" />
+    <string id="sotor_mcm_disable_siege_magic_hint" text="Disables spellcasting during siege battles." />
+    <string id="sotor_mcm_enchanting" text="Enable enchanting" />
+    <string id="sotor_mcm_enchanting_hint" text="Enchant items with the magical lores you know. Town enchanter's quarters, blueprint books, reagent drops, and enchanted gear on rival wizards." />
+    <string id="sotor_mcm_gore" text="Spell Gore" />
+    <string id="sotor_mcm_gore_at_once" text="Bodies that can burst at once" />
+    <string id="sotor_mcm_gore_at_once_hint" text="How many bodies come apart at once. Capped by Spell deaths resolved at once, under Performance." />
+    <string id="sotor_mcm_gore_gib" text="Body explosion chance" />
+    <string id="sotor_mcm_gore_gib_hint" text="Scales how often a spell kill bursts a body apart. 100% is the default rate, 0% turns it off." />
+    <string id="sotor_mcm_gore_hint" text="Big spell kills can blow a body apart or scatter a skeleton into bones. Bombardments pack the most punch while hexes never dismember. Heroes are never affected." />
+    <string id="sotor_mcm_gore_shatter" text="Skeleton shatter chance" />
+    <string id="sotor_mcm_gore_shatter_hint" text="Scales how often a spell kill scatters skeletons into bones. 130% is the default rate, 0% turns it off." />
+    <string id="sotor_mcm_grp_armor" text="Armor Effect on Winds Recharge" />
+    <string id="sotor_mcm_grp_eff" text="Spell Effectiveness" />
+    <string id="sotor_mcm_grp_enchanting" text="Enchanting" />
+    <string id="sotor_mcm_grp_features" text="Features" />
+    <string id="sotor_mcm_grp_gore" text="Spell Gore" />
+    <string id="sotor_mcm_grp_perf" text="Performance" />
+    <string id="sotor_mcm_grp_rival" text="Rival Wizards" />
+    <string id="sotor_mcm_grp_rival_adv" text="Advanced Generation Options" />
+    <string id="sotor_mcm_grp_rival_politics" text="Tradition Politics" />
+    <string id="sotor_mcm_grp_ship" text="Ship Magic" />
+    <string id="sotor_mcm_grp_tweaks" text="Magic Tweaks" />
+    <string id="sotor_mcm_grp_winds_kill" text="Winds on Magic Kill" />
+    <string id="sotor_mcm_hud_always" text="Always" />
+    <string id="sotor_mcm_hud_casting" text="Only while casting" />
+    <string id="sotor_mcm_hud_hidden" text="Hidden" />
+    <string id="sotor_mcm_hud_mode" text="Battle spell HUD" />
+    <string id="sotor_mcm_hud_mode_hint" text="When to show the bottom left spell and Winds of Magic panel in battle." />
+    <string id="sotor_mcm_magicloot" text="Enable magic item battle loot" />
+    <string id="sotor_mcm_magicloot_hint" text="Victorious battles can reward a fallen enemy's weapon or armor bearing a random enchantment." />
+    <string id="sotor_mcm_mindcontrol_armies" text="Mind Controlled Armies" />
+    <string id="sotor_mcm_mindcontrol_armies_hint" text="Surviving units you mind controlled during a battle join your party afterward. Heroes never join. The in battle Mind Control spell works regardless of this setting." />
+    <string id="sotor_mcm_reagent_rate" text="Reagent drop rate" />
+    <string id="sotor_mcm_reagent_rate_hint" text="How many enchanting reagents defeated enemies drop, as a percent of the default rate." />
+    <string id="sotor_mcm_rival_casters" text="Enable Rival Wizards" />
+    <string id="sotor_mcm_rival_casters_hint" text="Fills the world with wizard lords who cast in battle. Each clan's tradition is fixed for the campaign. Off stops them casting." />
+    <string id="sotor_mcm_rival_density" text="Magic Density" />
+    <string id="sotor_mcm_rival_density_age" text="Age of Sorcery" />
+    <string id="sotor_mcm_rival_density_custom" text="Custom" />
+    <string id="sotor_mcm_rival_density_high" text="High Magic" />
+    <string id="sotor_mcm_rival_density_hint" text="How common wizard lords are. Picking a preset fills in the Advanced sliders. Editing a slider switches this to Custom." />
+    <string id="sotor_mcm_rival_density_low" text="Low Magic" />
+    <string id="sotor_mcm_rival_density_rumors" text="Rumors of Magic" />
+    <string id="sotor_mcm_rival_forbidden" text="Hidden Dark or High masters" />
+    <string id="sotor_mcm_rival_forbidden_hint" text="Chance each lord of a great house is secretly a master of Dark or High Magic. At least one of each always exists. Editing this switches Magic Density to Custom." />
+    <string id="sotor_mcm_rival_info" text="Preview This World" />
+    <string id="sotor_mcm_rival_info_btn" text="Preview" />
+    <string id="sotor_mcm_rival_info_hint" text="Predicts what your current settings and seed would produce, by tradition. Reads the screen, so you can try numbers first. It does not describe the wizards your save already has." />
+    <string id="sotor_mcm_rival_lord_share" text="Wizard lords" />
+    <string id="sotor_mcm_rival_lord_share_hint" text="Percent of eligible lords who are wizards. Editing this switches Magic Density to Custom." />
+    <string id="sotor_mcm_rival_lore_by_clan" text="By Clan" />
+    <string id="sotor_mcm_rival_lore_by_culture" text="By Culture" />
+    <string id="sotor_mcm_rival_lore_source" text="Lore Assignment" />
+    <string id="sotor_mcm_rival_lore_source_hint" text="By Clan gives every wizard clan its own lore. By Culture gives a whole faction the same lore, so Vlandia or Battania read as a single order. Applies on the next load." />
+    <string id="sotor_mcm_rival_min_tier" text="Minimum clan tier" />
+    <string id="sotor_mcm_rival_min_tier_hint" text="Houses below this clan tier never field wizards. 0 means any house can. Applies to every density setting." />
+    <string id="sotor_mcm_rival_minor" text="Minor Faction Wizards" />
+    <string id="sotor_mcm_rival_minor_hint" text="Lets mercenary companies and outlaw bands field wizards too. Off keeps magic to the great houses." />
+    <string id="sotor_mcm_rival_power" text="Rival Wizard Power" />
+    <string id="sotor_mcm_rival_power_hint" text="Shifts how strong the world's wizards are. Zero is the default setting with no change. Your own clan is never affected, and hidden masters stay at full strength." />
+    <string id="sotor_mcm_rival_raise_cap" text="Undead raised per battle" />
+    <string id="sotor_mcm_rival_raise_cap_hint" text="Caps how many skeletons an AI necromancer can raise from one battle, as a percent of his party size limit." />
+    <string id="sotor_mcm_rival_reset" text="Restore Default Settings" />
+    <string id="sotor_mcm_rival_reset_btn" text="Defaults" />
+    <string id="sotor_mcm_rival_reset_hint" text="Puts the Rival Wizards settings back to their defaults. Press Done to apply them." />
+    <string id="sotor_mcm_rival_rulers" text="Wizard Kings" />
+    <string id="sotor_mcm_rival_rulers_hint" text="Allows faction leaders to be wizards. Turn off for a world where only lesser nobles practise magic. Applies on the next load." />
+    <string id="sotor_mcm_rival_seed" text="World seed" />
+    <string id="sotor_mcm_rival_seed_hint" text="The seed your world is built from. Determines who becomes a wizard. Clear it for your own seed." />
+    <string id="sotor_mcm_rival_wanderer_share" text="Tavern wizards" />
+    <string id="sotor_mcm_rival_wanderer_share_hint" text="Percent of wandering companions who start as wizards. Editing this switches Magic Density to Custom." />
+    <string id="sotor_mcm_ship_dmg" text="Spells Damage Ships" />
+    <string id="sotor_mcm_ship_dmg_hint" text="Requires the War Sails expansion. When on, your spells damage enemy ship hulls, set them ablaze, and shred their sails in naval battles. When off, magic only harms the crew." />
+    <string id="sotor_mcm_ship_dmg_pct" text="Ship damage" />
+    <string id="sotor_mcm_ship_dmg_pct_hint" text="Scales how much damage your spells deal to ships. 100% is the tuned default and 0% is the same as turning ship damage off." />
+    <string id="sotor_mcm_shopbooks" text="Enchanter sells blueprint books" />
+    <string id="sotor_mcm_shopbooks_hint" text="The enchanter's quarter stocks blueprint books, rotating weekly by the town's ruling lore and prosperity. Turn off to learn only from drops and masters." />
+    <string id="sotor_mcm_shopmaterials" text="Enchanter sells reagents" />
+    <string id="sotor_mcm_shopmaterials_hint" text="The enchanter's quarter stocks a small weekly supply of enchanting reagents. Turn off to make reagents drop only." />
+    <string id="sotor_mcm_skeleton_armies" text="Skeleton Armies" />
+    <string id="sotor_mcm_skeleton_armies_hint" text="Enables the resurrection of fallen enemies as skeletons after victorious battles." />
+    <string id="sotor_mcm_spare_civilians" text="Spells Spare Civilians" />
+    <string id="sotor_mcm_spare_civilians_hint" text="Spell damage skips bystanders such as arena spectators, townsfolk and merchants. Anyone actively fighting you is still a valid target." />
+    <string id="sotor_mcm_spell_dmg_log" text="Spell Damage Log" />
+    <string id="sotor_mcm_spell_dmg_log_hint" text="Shows a battle log line for your spell damage, healing, and friendly fire, colored by element." />
+    <string id="sotor_mcm_spell_eff" text="Spell Effectiveness" />
+    <string id="sotor_mcm_spell_eff_hint" text="Adds a flat bonus to your Spell Effectiveness (scales spell damage and healing)." />
+    <string id="sotor_mcm_spell_eff_pct" text="Spell effectiveness bonus" />
+    <string id="sotor_mcm_spell_eff_pct_hint" text="Percent added to Spell Effectiveness. -100% means spells deal no damage, 0% is unchanged, 200% adds triple." />
+    <string id="sotor_mcm_spellbook_masters" text="Only Learn Magic From Masters" />
+    <string id="sotor_mcm_spellbook_masters_hint" text="The spellbook screen no longer sells anything beyond Minor Magic. Seek out wizard lords and learn from them instead. Does nothing while Rival Wizards is off." />
+    <string id="sotor_mcm_spellcraft_attr" text="Spellcraft Attribute" />
+    <string id="sotor_mcm_spellcraft_attr_hint" text="Which attribute governs the Spellcraft skill's learning rate. Takes effect after a restart. Default Intelligence." />
+    <string id="sotor_mcm_std_assist" text="Fight beside an order" />
+    <string id="sotor_mcm_std_assist_hint" text="What fighting a battle alongside an order's wizard earns you, counted only once per battle." />
+    <string id="sotor_mcm_std_execute" text="Execute a caster" />
+    <string id="sotor_mcm_std_execute_hint" text="What executing one of an order's wizards costs you with it. Killing one in battle does not count." />
+    <string id="sotor_mcm_std_free" text="Free a captured caster" />
+    <string id="sotor_mcm_std_free_hint" text="What releasing one of an order's captured wizards earns you. Ransoms and escapes do not count." />
+    <string id="sotor_mcm_std_lord_share" text="Effect on individual lords (%)" />
+    <string id="sotor_mcm_std_lord_share_hint" text="How much of a standing change also influences each lord's relation in that order." />
+    <string id="sotor_mcm_std_lore" text="Learn a lore" />
+    <string id="sotor_mcm_std_lore_hint" text="How much learning a whole lore moves your standing. Orders that favour that lore approve, rivals take offense." />
+    <string id="sotor_mcm_std_spell" text="Learn a spell" />
+    <string id="sotor_mcm_std_spell_hint" text="How much learning a single spell moves your standing. Orders that favour that lore approve, rivals take offense." />
+    <string id="sotor_mcm_winds_on_kill" text="Winds on Magic Kill" />
+    <string id="sotor_mcm_winds_on_kill_amt" text="Winds per magic kill" />
+    <string id="sotor_mcm_winds_on_kill_amt_hint" text="How much Winds of Magic each spell kill grants." />
+    <string id="sotor_mcm_winds_on_kill_hint" text="Gives Winds of Magic on a spell kill. Player only." />
+  </strings>
+</base>

@@ -145,7 +145,7 @@ namespace SOTOR
             return SotorSpellcraftHelper.GetCastingLevel(_hero);
         }
 
-        private string GetStagedCastingLevelText() => GetStagedCastingLevel().ToString();
+        private string GetStagedCastingLevelText() => SotorText.EnumName(GetStagedCastingLevel());
 
         private float GetStagedCasterPerkDamageFactor()
         {

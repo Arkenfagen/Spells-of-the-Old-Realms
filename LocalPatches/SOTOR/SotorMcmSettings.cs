@@ -10,6 +10,7 @@ namespace SOTOR
     public sealed class SotorMcmSettings : AttributeGlobalSettings<SotorMcmSettings>
     {
         public override string Id => "SOTOR_Settings_v1";
+
         public override string DisplayName => "Spells of the Old Realms";
         public override string FolderName => "SOTOR";
 

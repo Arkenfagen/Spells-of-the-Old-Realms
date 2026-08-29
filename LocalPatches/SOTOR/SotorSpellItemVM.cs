@@ -41,9 +41,9 @@ namespace SOTOR
 
             _statItems = new MBBindingList<SotorStatItemVM>
             {
-                new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_cooldown"), template.CoolDown + " seconds"),
-                new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_spell_type"), template.AbilityEffectType.ToString()),
-                new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_spell_tier"), ((SpellCastingLevel)template.SpellTier).ToString()),
+                new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_cooldown"), CooldownText(template.CoolDown)),
+                new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_spell_type"), SotorText.EnumName(template.AbilityEffectType)),
+                new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_spell_tier"), SotorText.EnumName((SpellCastingLevel)template.SpellTier)),
                 new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_winds_cost"), template.WindsOfMagicCost.ToString()),
                 new SotorStatItemVM(SotorText.Rendered("sotor_sb_lbl_spell_name"), template.Name),
             };
@@ -51,6 +51,13 @@ namespace SOTOR
             _abilityHint = new BasicTooltipViewModel(() => _description);
 
             RefreshFromState();
+        }
+
+        private static string CooldownText(int seconds)
+        {
+            var t = SotorText.GetObject("sotor_sb_cooldown_seconds", "{COUNT} seconds");
+            t.SetTextVariable("COUNT", seconds);
+            return t.ToString();
         }
 
         [DataSourceProperty]

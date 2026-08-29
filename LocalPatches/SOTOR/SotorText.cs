@@ -45,6 +45,36 @@ namespace SOTOR
             return GetObject(id, englishFallback).ToString() ?? string.Empty;
         }
 
+        public static string Marker(string raw, ref string cache, ref int cacheLang)
+        {
+            if (string.IsNullOrEmpty(raw)) return string.Empty;
+            if (!raw.StartsWith("{=")) return raw;
+
+            int lang = -1;
+            try { lang = MBTextManager.GetActiveTextLanguageIndex(); }
+            catch { }
+            if (cache != null && cacheLang == lang) return cache;
+
+            try { cache = new TextObject(raw).ToString(); }
+            catch { cache = StripMarker(raw); }
+            cacheLang = lang;
+            return cache;
+        }
+
+        public static string StripMarker(string raw)
+        {
+            if (string.IsNullOrEmpty(raw) || !raw.StartsWith("{=")) return raw ?? string.Empty;
+            int close = raw.IndexOf('}');
+            return close < 0 ? raw : raw.Substring(close + 1);
+        }
+
+        public static string EnumName(System.Enum value)
+        {
+            if (value == null) return string.Empty;
+            string name = value.ToString();
+            return Rendered("sotor_enum_" + value.GetType().Name + "_" + name, name);
+        }
+
         public static void SetPlayerVariables()
         {
             try

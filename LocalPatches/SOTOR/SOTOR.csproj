@@ -1,11 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <!-- Point these at your own install if it is not in the default Steam location:
-         dotnet build SOTOR.csproj -c Release -p:BannerlordDir="D:\Games\Bannerlord"
-       Bannerlord1315Dir is only used by the legacy -p:GameVersion=1315 build; it defaults to
-       BannerlordDir, so a single 1.3.15 install needs no extra argument. -->
   <PropertyGroup>
     <BannerlordDir Condition="'$(BannerlordDir)'==''">C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</BannerlordDir>
     <Bannerlord1315Dir Condition="'$(Bannerlord1315Dir)'==''">$(BannerlordDir)</Bannerlord1315Dir>
+    <Bannerlord145Dir Condition="'$(Bannerlord145Dir)'==''">$(BannerlordDir)</Bannerlord145Dir>
   </PropertyGroup>
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
@@ -43,6 +40,17 @@
     <UiExtenderBin>$(Bannerlord1315Dir)\Modules\Bannerlord.UIExtenderEx\bin\Win64_Shipping_Client</UiExtenderBin>
     <McmBin>$(Bannerlord1315Dir)\Modules\Bannerlord.MBOptionScreen\bin\Win64_Shipping_Client</McmBin>
     <NavalBin>$(Bannerlord1315Dir)\Modules\NavalDLC\bin\Win64_Shipping_Client</NavalBin>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GameVersion)'=='145'">
+    <OutputPath>bin\Win64_Shipping_Client_145\</OutputPath>
+    <GameBin>$(Bannerlord145Dir)\bin\Win64_Shipping_Client</GameBin>
+    <NativeBin>$(Bannerlord145Dir)\Modules\Native\bin\Win64_Shipping_Client</NativeBin>
+    <SandBoxBin>$(Bannerlord145Dir)\Modules\SandBox\bin\Win64_Shipping_Client</SandBoxBin>
+    <HarmonyBin>$(Bannerlord145Dir)\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client</HarmonyBin>
+    <UiExtenderBin>$(Bannerlord145Dir)\Modules\Bannerlord.UIExtenderEx\bin\Win64_Shipping_Client</UiExtenderBin>
+    <McmBin>$(Bannerlord145Dir)\Modules\Bannerlord.MBOptionScreen\bin\Win64_Shipping_Client</McmBin>
+    <NavalBin>$(Bannerlord145Dir)\Modules\NavalDLC\bin\Win64_Shipping_Client</NavalBin>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(EditorBuild)'=='true'">
