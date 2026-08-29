@@ -368,11 +368,11 @@ namespace SOTOR.Items
                 SotorText.Rendered("sotor_enchanting_title"),
                 SotorText.Rendered("sotor_enchanting_enter_name"),
                 true, true, SotorText.Rendered("sotor_str_ok"), SotorText.Rendered("sotor_str_cancel"),
-                name => CreateNewItem(name, element.Item),
+                name => CreateNewItem(name, element.Item, element.ItemModifier),
                 InformationManager.HideInquiry));
         }
 
-        private void CreateNewItem(string newItemName, ItemObject original)
+        private void CreateNewItem(string newItemName, ItemObject original, ItemModifier modifier)
         {
             var traitIds = SelectedTraits.Select(x => x.ItemTrait.ItemTraitStringId).ToList();
             var created = SotorEnchantmentHelper.CreateEnchantedItem(original, traitIds, newItemName, playerCrafted: true);
@@ -382,8 +382,8 @@ namespace SOTOR.Items
                 return;
             }
             var roster = MobileParty.MainParty.ItemRoster;
-            roster.AddToCounts(created, 1);
-            roster.AddToCounts(original, -1);
+            roster.AddToCounts(new EquipmentElement(created, modifier), 1);
+            roster.AddToCounts(new EquipmentElement(original, modifier), -1);
             foreach (var ingredient in Ingredients.Where(x => x.PendingAmount != 0))
             {
                 roster.AddToCounts(ingredient.Item, ingredient.PendingAmount);

@@ -1,445 +1,445 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Items>
-  <Item id="sotor_book_emp_enchant_ghur_wildform" name="Wildform of Ghur" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
+  <Item id="sotor_book_emp_enchant_ghur_wildform" name="{=sotor_item_sotor_book_emp_enchant_ghur_wildform}Wildform of Ghur" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_ghur_savagery" name="Savagery of Ghur" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
+  <Item id="sotor_book_emp_enchant_ghur_savagery" name="{=sotor_item_sotor_book_emp_enchant_ghur_savagery}Savagery of Ghur" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_ghur_crows" name="Crows of Ghur" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
+  <Item id="sotor_book_emp_enchant_ghur_crows" name="{=sotor_item_sotor_book_emp_enchant_ghur_crows}Crows of Ghur" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_ghur_echo" name="Echo of Ghur" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
+  <Item id="sotor_book_emp_enchant_ghur_echo" name="{=sotor_item_sotor_book_emp_enchant_ghur_echo}Echo of Ghur" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_ghur_whisper" name="Whisper of Ghur" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_emp_enchant_ghur_whisper" name="{=sotor_item_sotor_book_emp_enchant_ghur_whisper}Whisper of Ghur" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_hysh_sanctuary" name="Sanctuary of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
+  <Item id="sotor_book_emp_enchant_hysh_sanctuary" name="{=sotor_item_sotor_book_emp_enchant_hysh_sanctuary}Sanctuary of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_hysh_brilliance" name="Brilliance of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
+  <Item id="sotor_book_emp_enchant_hysh_brilliance" name="{=sotor_item_sotor_book_emp_enchant_hysh_brilliance}Brilliance of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_hysh_timewarp" name="Timewarp of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
+  <Item id="sotor_book_emp_enchant_hysh_timewarp" name="{=sotor_item_sotor_book_emp_enchant_hysh_timewarp}Timewarp of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_hysh_clarity" name="Clarity of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
+  <Item id="sotor_book_emp_enchant_hysh_clarity" name="{=sotor_item_sotor_book_emp_enchant_hysh_clarity}Clarity of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_hysh_whisper" name="Whisper of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_emp_enchant_hysh_whisper" name="{=sotor_item_sotor_book_emp_enchant_hysh_whisper}Whisper of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_hysh_providence" name="Providence of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_emp_enchant_hysh_providence" name="{=sotor_item_sotor_book_emp_enchant_hysh_providence}Providence of Hysh" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_ghyran_brambles" name="Brambles of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
+  <Item id="sotor_book_emp_enchant_ghyran_brambles" name="{=sotor_item_sotor_book_emp_enchant_ghyran_brambles}Brambles of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_ghyran_bloom" name="Bloom of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
+  <Item id="sotor_book_emp_enchant_ghyran_bloom" name="{=sotor_item_sotor_book_emp_enchant_ghyran_bloom}Bloom of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_ghyran_cloak" name="Cloak of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_emp_enchant_ghyran_cloak" name="{=sotor_item_sotor_book_emp_enchant_ghyran_cloak}Cloak of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_ghyran_tendrils" name="Tendrils of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
+  <Item id="sotor_book_emp_enchant_ghyran_tendrils" name="{=sotor_item_sotor_book_emp_enchant_ghyran_tendrils}Tendrils of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_ghyran_whisper" name="Whisper of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_emp_enchant_ghyran_whisper" name="{=sotor_item_sotor_book_emp_enchant_ghyran_whisper}Whisper of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_ghyran_intuition" name="Intuition of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
+  <Item id="sotor_book_emp_enchant_ghyran_intuition" name="{=sotor_item_sotor_book_emp_enchant_ghyran_intuition}Intuition of Ghyran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_aqshy_hearth" name="Hearth of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
+  <Item id="sotor_book_emp_enchant_aqshy_hearth" name="{=sotor_item_sotor_book_emp_enchant_aqshy_hearth}Hearth of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_aqshy_firebreath" name="Firebreath of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
+  <Item id="sotor_book_emp_enchant_aqshy_firebreath" name="{=sotor_item_sotor_book_emp_enchant_aqshy_firebreath}Firebreath of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_aqshy_cinders" name="Cinders of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
+  <Item id="sotor_book_emp_enchant_aqshy_cinders" name="{=sotor_item_sotor_book_emp_enchant_aqshy_cinders}Cinders of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_aqshy_rage" name="Rage of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
+  <Item id="sotor_book_emp_enchant_aqshy_rage" name="{=sotor_item_sotor_book_emp_enchant_aqshy_rage}Rage of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_aqshy_whisper" name="Whisper of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_emp_enchant_aqshy_whisper" name="{=sotor_item_sotor_book_emp_enchant_aqshy_whisper}Whisper of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_aqshy_fury" name="Fury of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
+  <Item id="sotor_book_emp_enchant_aqshy_fury" name="{=sotor_item_sotor_book_emp_enchant_aqshy_fury}Fury of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_aqshy_curtain" name="Curtain of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
+  <Item id="sotor_book_emp_enchant_aqshy_curtain" name="{=sotor_item_sotor_book_emp_enchant_aqshy_curtain}Curtain of Aqshy" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_chamon_transmutation" name="Transmutation of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
+  <Item id="sotor_book_emp_enchant_chamon_transmutation" name="{=sotor_item_sotor_book_emp_enchant_chamon_transmutation}Transmutation of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_chamon_aegis" name="Aegis of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
+  <Item id="sotor_book_emp_enchant_chamon_aegis" name="{=sotor_item_sotor_book_emp_enchant_chamon_aegis}Aegis of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_chamon_laws" name="Laws of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6000">
+  <Item id="sotor_book_emp_enchant_chamon_laws" name="{=sotor_item_sotor_book_emp_enchant_chamon_laws}Laws of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_chamon_feathers_lead" name="Feathers to Lead" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
+  <Item id="sotor_book_emp_enchant_chamon_feathers_lead" name="{=sotor_item_sotor_book_emp_enchant_chamon_feathers_lead}Feathers to Lead" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_chamon_lead_feathers" name="Lead to Feathers" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
+  <Item id="sotor_book_emp_enchant_chamon_lead_feathers" name="{=sotor_item_sotor_book_emp_enchant_chamon_lead_feathers}Lead to Feathers" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_chamon_forge" name="Forge of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
+  <Item id="sotor_book_emp_enchant_chamon_forge" name="{=sotor_item_sotor_book_emp_enchant_chamon_forge}Forge of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_chamon_whisper" name="Whisper of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_emp_enchant_chamon_whisper" name="{=sotor_item_sotor_book_emp_enchant_chamon_whisper}Whisper of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_chamon_crucible" name="Crucible of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
+  <Item id="sotor_book_emp_enchant_chamon_crucible" name="{=sotor_item_sotor_book_emp_enchant_chamon_crucible}Crucible of Chamon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_azyr_wind" name="Wind of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_emp_enchant_azyr_wind" name="{=sotor_item_sotor_book_emp_enchant_azyr_wind}Wind of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_azyr_harmony" name="Harmony of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
+  <Item id="sotor_book_emp_enchant_azyr_harmony" name="{=sotor_item_sotor_book_emp_enchant_azyr_harmony}Harmony of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_azyr_azure_mirror" name="Azure Mirror of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
+  <Item id="sotor_book_emp_enchant_azyr_azure_mirror" name="{=sotor_item_sotor_book_emp_enchant_azyr_azure_mirror}Azure Mirror of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_azyr_gale" name="Gale of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
+  <Item id="sotor_book_emp_enchant_azyr_gale" name="{=sotor_item_sotor_book_emp_enchant_azyr_gale}Gale of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="4500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_azyr_foresight" name="Foresight of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
+  <Item id="sotor_book_emp_enchant_azyr_foresight" name="{=sotor_item_sotor_book_emp_enchant_azyr_foresight}Foresight of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_azyr_divination" name="Divination of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6000">
+  <Item id="sotor_book_emp_enchant_azyr_divination" name="{=sotor_item_sotor_book_emp_enchant_azyr_divination}Divination of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_azyr_whisper" name="Whisper of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_emp_enchant_azyr_whisper" name="{=sotor_item_sotor_book_emp_enchant_azyr_whisper}Whisper of Azyr" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_shyish_pale_grip" name="Pale Grip of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
+  <Item id="sotor_book_emp_enchant_shyish_pale_grip" name="{=sotor_item_sotor_book_emp_enchant_shyish_pale_grip}Pale Grip of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_shyish_messengers" name="Messengers of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6000">
+  <Item id="sotor_book_emp_enchant_shyish_messengers" name="{=sotor_item_sotor_book_emp_enchant_shyish_messengers}Messengers of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_shyish_blight" name="Blight of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
+  <Item id="sotor_book_emp_enchant_shyish_blight" name="{=sotor_item_sotor_book_emp_enchant_shyish_blight}Blight of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_shyish_pall" name="Pall of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
+  <Item id="sotor_book_emp_enchant_shyish_pall" name="{=sotor_item_sotor_book_emp_enchant_shyish_pall}Pall of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_shyish_withering" name="Withering of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
+  <Item id="sotor_book_emp_enchant_shyish_withering" name="{=sotor_item_sotor_book_emp_enchant_shyish_withering}Withering of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_shyish_whisper" name="Whisper of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_emp_enchant_shyish_whisper" name="{=sotor_item_sotor_book_emp_enchant_shyish_whisper}Whisper of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_enchant_shyish_deathsight" name="Deathsight of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="2250">
+  <Item id="sotor_book_emp_enchant_shyish_deathsight" name="{=sotor_item_sotor_book_emp_enchant_shyish_deathsight}Deathsight of Shyish" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="2250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_bonds_darkness" name="Bonds of Darkness" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_vc_enchant_bonds_darkness" name="{=sotor_item_sotor_book_vc_enchant_bonds_darkness}Bonds of Darkness" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_call_beyond" name="Call from Beyond" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
+  <Item id="sotor_book_vc_enchant_call_beyond" name="{=sotor_item_sotor_book_vc_enchant_call_beyond}Call from Beyond" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_unhallowed_pact" name="Unhallowed Pact" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
+  <Item id="sotor_book_vc_enchant_unhallowed_pact" name="{=sotor_item_sotor_book_vc_enchant_unhallowed_pact}Unhallowed Pact" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_drinker_blood" name="Drinker of Blood" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
+  <Item id="sotor_book_vc_enchant_drinker_blood" name="{=sotor_item_sotor_book_vc_enchant_drinker_blood}Drinker of Blood" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_nightshroud" name="Nightshroud" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
+  <Item id="sotor_book_vc_enchant_nightshroud" name="{=sotor_item_sotor_book_vc_enchant_nightshroud}Nightshroud" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_ethereal_whispers" name="Ethereal Whispers" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
+  <Item id="sotor_book_vc_enchant_ethereal_whispers" name="{=sotor_item_sotor_book_vc_enchant_ethereal_whispers}Ethereal Whispers" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_mockery_asps" name="Mockery of Asps" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
+  <Item id="sotor_book_vc_enchant_mockery_asps" name="{=sotor_item_sotor_book_vc_enchant_mockery_asps}Mockery of Asps" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_touch_jet" name="Touch of Jet" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_vc_enchant_touch_jet" name="{=sotor_item_sotor_book_vc_enchant_touch_jet}Touch of Jet" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_caress_void" name="Caress of the Void" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
+  <Item id="sotor_book_vc_enchant_caress_void" name="{=sotor_item_sotor_book_vc_enchant_caress_void}Caress of the Void" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_unholy_blessing" name="Unholy Blessings" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_vc_enchant_unholy_blessing" name="{=sotor_item_sotor_book_vc_enchant_unholy_blessing}Unholy Blessings" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_chilling_hand" name="Chilling Hand" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
+  <Item id="sotor_book_vc_enchant_chilling_hand" name="{=sotor_item_sotor_book_vc_enchant_chilling_hand}Chilling Hand" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_bulwark_blood_keep" name="Bulwark of Blood Keep" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
+  <Item id="sotor_book_vc_enchant_bulwark_blood_keep" name="{=sotor_item_sotor_book_vc_enchant_bulwark_blood_keep}Bulwark of Blood Keep" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_crimson_flood" name="The Crimson Flood" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
+  <Item id="sotor_book_vc_enchant_crimson_flood" name="{=sotor_item_sotor_book_vc_enchant_crimson_flood}The Crimson Flood" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_legacy_arkhan" name="Legacy of Arkhan" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
+  <Item id="sotor_book_vc_enchant_legacy_arkhan" name="{=sotor_item_sotor_book_vc_enchant_legacy_arkhan}Legacy of Arkhan" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_vc_enchant_secrets_wsoran" name="Secrets of W'soran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
+  <Item id="sotor_book_vc_enchant_secrets_wsoran" name="{=sotor_item_sotor_book_vc_enchant_secrets_wsoran}Secrets of W'soran" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_blackbriar_kiss" name="Blackbriar's Kiss" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_we_enchant_blackbriar_kiss" name="{=sotor_item_sotor_book_we_enchant_blackbriar_kiss}Blackbriar's Kiss" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_emissaries_mirai" name="Emissaries of Mirai" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
+  <Item id="sotor_book_we_enchant_emissaries_mirai" name="{=sotor_item_sotor_book_we_enchant_emissaries_mirai}Emissaries of Mirai" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="1500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_song_doom" name="Song of Doom" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_we_enchant_song_doom" name="{=sotor_item_sotor_book_we_enchant_song_doom}Song of Doom" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_asrai_enchant_dusk_wood" name="Dusk of the Woods" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
+  <Item id="sotor_book_asrai_enchant_dusk_wood" name="{=sotor_item_sotor_book_asrai_enchant_dusk_wood}Dusk of the Woods" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_moon_stone" name="Moonstone of the Hidden Ways" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_we_enchant_moon_stone" name="{=sotor_item_sotor_book_we_enchant_moon_stone}Moonstone of the Hidden Ways" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_trickery_loec" name="Trickery of Loec" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_we_enchant_trickery_loec" name="{=sotor_item_sotor_book_we_enchant_trickery_loec}Trickery of Loec" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_thorns_nettles" name="&quot;Thorns, Nettles and Spines&quot;" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_we_enchant_thorns_nettles" name="{=sotor_item_sotor_book_we_enchant_thorns_nettles}&quot;Thorns, Nettles and Spines&quot;" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_tranquillity_cadai" name="Tranquillity of Cadai" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
+  <Item id="sotor_book_we_enchant_tranquillity_cadai" name="{=sotor_item_sotor_book_we_enchant_tranquillity_cadai}Tranquillity of Cadai" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_asrai_enchant_radiance_woods" name="Radiance of the Woods" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
+  <Item id="sotor_book_asrai_enchant_radiance_woods" name="{=sotor_item_sotor_book_asrai_enchant_radiance_woods}Radiance of the Woods" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_touch_lileath" name="Touch of Lileath" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_we_enchant_touch_lileath" name="{=sotor_item_sotor_book_we_enchant_touch_lileath}Touch of Lileath" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_dusk_dawn" name="Dusk and Dawn" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="8250">
+  <Item id="sotor_book_we_enchant_dusk_dawn" name="{=sotor_item_sotor_book_we_enchant_dusk_dawn}Dusk and Dawn" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="8250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_arcane_bodkins" name="Arcane Bodkins" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_we_enchant_arcane_bodkins" name="{=sotor_item_sotor_book_we_enchant_arcane_bodkins}Arcane Bodkins" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_hagbane_tips" name="Hagbane Tips" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_we_enchant_hagbane_tips" name="{=sotor_item_sotor_book_we_enchant_hagbane_tips}Hagbane Tips" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_moon_fire" name="Moonfire Shot" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_we_enchant_moon_fire" name="{=sotor_item_sotor_book_we_enchant_moon_fire}Moonfire Shot" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_star_fire" name="Starfire Shafts" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_we_enchant_star_fire" name="{=sotor_item_sotor_book_we_enchant_star_fire}Starfire Shafts" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_swift_shiver" name="Swiftshiver Shards" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_we_enchant_swift_shiver" name="{=sotor_item_sotor_book_we_enchant_swift_shiver}Swiftshiver Shards" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_we_enchant_trueflight" name="Trueflight Arrows" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_we_enchant_trueflight" name="{=sotor_item_sotor_book_we_enchant_trueflight}Trueflight Arrows" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_asrai_enchant_tree_lord" name="The Tree Lords' Bargain" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_asrai_enchant_tree_lord" name="{=sotor_item_sotor_book_asrai_enchant_tree_lord}The Tree Lords' Bargain" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_asrai_enchant_quake_hukon" name="Quake of Hukon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_asrai_enchant_quake_hukon" name="{=sotor_item_sotor_book_asrai_enchant_quake_hukon}Quake of Hukon" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_asrai_enchant_morai_heg" name="Schemes of Morai-heg" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_asrai_enchant_morai_heg" name="{=sotor_item_sotor_book_asrai_enchant_morai_heg}Schemes of Morai-heg" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_asrai_enchant_oakhart_blessing" name="Oakheart's Blessing" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
+  <Item id="sotor_book_asrai_enchant_oakhart_blessing" name="{=sotor_item_sotor_book_asrai_enchant_oakhart_blessing}Oakheart's Blessing" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_asrai_enchant_vengeance_khaine" name="Vengeance of Khaine" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
+  <Item id="sotor_book_asrai_enchant_vengeance_khaine" name="{=sotor_item_sotor_book_asrai_enchant_vengeance_khaine}Vengeance of Khaine" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="3000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_asrai_enchant_anath_raema" name="Predator of Anath Raema" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
+  <Item id="sotor_book_asrai_enchant_anath_raema" name="{=sotor_item_sotor_book_asrai_enchant_anath_raema}Predator of Anath Raema" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_asrai_enchant_trance_loec" name="Trance of Loec" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_asrai_enchant_trance_loec" name="{=sotor_item_sotor_book_asrai_enchant_trance_loec}Trance of Loec" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_asrai_enchant_embrace_isha" name="Embrace of Isha" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="8250">
+  <Item id="sotor_book_asrai_enchant_embrace_isha" name="{=sotor_item_sotor_book_asrai_enchant_embrace_isha}Embrace of Isha" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="8250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_asrai_enchant_ferocity_kurnous" name="Ferocity of Kurnous" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_asrai_enchant_ferocity_kurnous" name="{=sotor_item_sotor_book_asrai_enchant_ferocity_kurnous}Ferocity of Kurnous" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_eo_enchant_wisdom_hoeth" name="Wisdom of Hoeth" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="8250">
+  <Item id="sotor_book_eo_enchant_wisdom_hoeth" name="{=sotor_item_sotor_book_eo_enchant_wisdom_hoeth}Wisdom of Hoeth" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="8250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_eo_enchant_storms_mathlann" name="Storms of Mathlann" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
+  <Item id="sotor_book_eo_enchant_storms_mathlann" name="{=sotor_item_sotor_book_eo_enchant_storms_mathlann}Storms of Mathlann" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_eo_enchant_flames_asuryan" name="Flames of Asuryan" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
+  <Item id="sotor_book_eo_enchant_flames_asuryan" name="{=sotor_item_sotor_book_eo_enchant_flames_asuryan}Flames of Asuryan" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="7500">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_eo_enchant_legacy_caledor" name="Legacy of Caledor" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
+  <Item id="sotor_book_eo_enchant_legacy_caledor" name="{=sotor_item_sotor_book_eo_enchant_legacy_caledor}Legacy of Caledor" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="6750">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_eo_enchant_sanctuary_saphery" name="Sanctuary of Saphery" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="8250">
+  <Item id="sotor_book_eo_enchant_sanctuary_saphery" name="{=sotor_item_sotor_book_eo_enchant_sanctuary_saphery}Sanctuary of Saphery" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="8250">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_bret_blessing_eerie_touch" name="Touch of the Eerie" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_bret_blessing_eerie_touch" name="{=sotor_item_sotor_book_bret_blessing_eerie_touch}Touch of the Eerie" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_bret_blessing_fey_guidance" name="Guidance of the Fey" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_bret_blessing_fey_guidance" name="{=sotor_item_sotor_book_bret_blessing_fey_guidance}Guidance of the Fey" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_bret_blessing_grail_legacy" name="Legacy of the Grail" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_bret_blessing_grail_legacy" name="{=sotor_item_sotor_book_bret_blessing_grail_legacy}Legacy of the Grail" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_bret_blessing_lady_ward" name="Ward of the Lady" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_bret_blessing_lady_ward" name="{=sotor_item_sotor_book_bret_blessing_lady_ward}Ward of the Lady" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_bret_blessing_mists_sacred_lake" name="Mists of the Sacred Lake" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_bret_blessing_mists_sacred_lake" name="{=sotor_item_sotor_book_bret_blessing_mists_sacred_lake}Mists of the Sacred Lake" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_bret_blessing_pilgrim_tenacity" name="Tenacity of the Pilgrim" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_bret_blessing_pilgrim_tenacity" name="{=sotor_item_sotor_book_bret_blessing_pilgrim_tenacity}Tenacity of the Pilgrim" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_bret_blessing_scourge_evil" name="Scourge of Evil" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_bret_blessing_scourge_evil" name="{=sotor_item_sotor_book_bret_blessing_scourge_evil}Scourge of Evil" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_bret_blessing_shield_faith" name="Shield of Faith" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_bret_blessing_shield_faith" name="{=sotor_item_sotor_book_bret_blessing_shield_faith}Shield of Faith" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_bret_blessing_wisdom_virtue" name="Wisdom and Virtue" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_bret_blessing_wisdom_virtue" name="{=sotor_item_sotor_book_bret_blessing_wisdom_virtue}Wisdom and Virtue" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_master_rune_adamant" name="Master Rune of Adamant" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_dw_master_rune_adamant" name="{=sotor_item_sotor_book_dw_master_rune_adamant}Master Rune of Adamant" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_master_rune_alaric" name="Master Rune of Alaric the Mad" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_dw_master_rune_alaric" name="{=sotor_item_sotor_book_dw_master_rune_alaric}Master Rune of Alaric the Mad" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_master_rune_breaking" name="Master Rune of Breaking" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_dw_master_rune_breaking" name="{=sotor_item_sotor_book_dw_master_rune_breaking}Master Rune of Breaking" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_master_rune_flight" name="Master Rune of Flight" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_dw_master_rune_flight" name="{=sotor_item_sotor_book_dw_master_rune_flight}Master Rune of Flight" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_master_rune_gromril" name="Master Rune of Gromril" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_dw_master_rune_gromril" name="{=sotor_item_sotor_book_dw_master_rune_gromril}Master Rune of Gromril" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_master_rune_preservation" name="Rune of Preservation" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_dw_master_rune_preservation" name="{=sotor_item_sotor_book_dw_master_rune_preservation}Rune of Preservation" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_master_rune_skaldour" name="Master Rune of Skaldour" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_dw_master_rune_skaldour" name="{=sotor_item_sotor_book_dw_master_rune_skaldour}Master Rune of Skaldour" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_master_rune_skalf" name="Master Rune of Skalf Blackhammer" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_dw_master_rune_skalf" name="{=sotor_item_sotor_book_dw_master_rune_skalf}Master Rune of Skalf Blackhammer" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_master_rune_steel" name="Master Rune of Steel" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_dw_master_rune_steel" name="{=sotor_item_sotor_book_dw_master_rune_steel}Master Rune of Steel" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_master_rune_swiftness" name="Master Rune of Swiftness" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_dw_master_rune_swiftness" name="{=sotor_item_sotor_book_dw_master_rune_swiftness}Master Rune of Swiftness" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_beastslaying" name="Rune of Beastslaying" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_dw_rune_beastslaying" name="{=sotor_item_sotor_book_dw_rune_beastslaying}Rune of Beastslaying" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_clear_sights" name="Rune of Clear Sights" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_dw_rune_clear_sights" name="{=sotor_item_sotor_book_dw_rune_clear_sights}Rune of Clear Sights" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_cleaving" name="Rune of Cleaving" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_dw_rune_cleaving" name="{=sotor_item_sotor_book_dw_rune_cleaving}Rune of Cleaving" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_fire" name="Rune of Fire" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_dw_rune_fire" name="{=sotor_item_sotor_book_dw_rune_fire}Rune of Fire" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_force" name="Rune of Force" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_dw_rune_force" name="{=sotor_item_sotor_book_dw_rune_force}Rune of Force" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_fortitude" name="Rune of Fortitude" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_dw_rune_fortitude" name="{=sotor_item_sotor_book_dw_rune_fortitude}Rune of Fortitude" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_fury" name="Rune of Fury" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_dw_rune_fury" name="{=sotor_item_sotor_book_dw_rune_fury}Rune of Fury" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_head_wrecking" name="Rune of Head-Wrecking" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_dw_rune_head_wrecking" name="{=sotor_item_sotor_book_dw_rune_head_wrecking}Rune of Head-Wrecking" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_impact" name="Rune of Impact" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_dw_rune_impact" name="{=sotor_item_sotor_book_dw_rune_impact}Rune of Impact" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_iron" name="Rune of Iron" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_dw_rune_iron" name="{=sotor_item_sotor_book_dw_rune_iron}Rune of Iron" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_might" name="Rune of Might" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_dw_rune_might" name="{=sotor_item_sotor_book_dw_rune_might}Rune of Might" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_parrying" name="Rune of Parrying" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_dw_rune_parrying" name="{=sotor_item_sotor_book_dw_rune_parrying}Rune of Parrying" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_protection" name="Rune of Protection" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_dw_rune_protection" name="{=sotor_item_sotor_book_dw_rune_protection}Rune of Protection" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_reloading" name="Rune of Reloading" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_dw_rune_reloading" name="{=sotor_item_sotor_book_dw_rune_reloading}Rune of Reloading" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_shielding" name="Rune of Shielding" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_dw_rune_shielding" name="{=sotor_item_sotor_book_dw_rune_shielding}Rune of Shielding" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_speed" name="Rune of Speed" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_dw_rune_speed" name="{=sotor_item_sotor_book_dw_rune_speed}Rune of Speed" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_spell_eating" name="Rune of Spell Eating" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_dw_rune_spell_eating" name="{=sotor_item_sotor_book_dw_rune_spell_eating}Rune of Spell Eating" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_stone" name="Rune of Stone" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_dw_rune_stone" name="{=sotor_item_sotor_book_dw_rune_stone}Rune of Stone" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_striking" name="Rune of Striking" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_dw_rune_striking" name="{=sotor_item_sotor_book_dw_rune_striking}Rune of Striking" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_unbinding" name="Rune of Unbinding" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_dw_rune_unbinding" name="{=sotor_item_sotor_book_dw_rune_unbinding}Rune of Unbinding" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_dw_rune_vigour" name="Rune of Vigour" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_dw_rune_vigour" name="{=sotor_item_sotor_book_dw_rune_vigour}Rune of Vigour" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_shallya_martyrdom" name="Martyrdom of Shallya" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_emp_blessing_shallya_martyrdom" name="{=sotor_item_sotor_book_emp_blessing_shallya_martyrdom}Martyrdom of Shallya" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_shallya_mercy" name="Mercy of Shallya" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_emp_blessing_shallya_mercy" name="{=sotor_item_sotor_book_emp_blessing_shallya_mercy}Mercy of Shallya" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_shallya_pacifism" name="Pacifism of Shallya" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_emp_blessing_shallya_pacifism" name="{=sotor_item_sotor_book_emp_blessing_shallya_pacifism}Pacifism of Shallya" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_shallya_purity" name="Purity of Shallya" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_emp_blessing_shallya_purity" name="{=sotor_item_sotor_book_emp_blessing_shallya_purity}Purity of Shallya" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_sigmar_beacon" name="Beacon of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_emp_blessing_sigmar_beacon" name="{=sotor_item_sotor_book_emp_blessing_sigmar_beacon}Beacon of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_sigmar_exorcism" name="Exorcism of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_emp_blessing_sigmar_exorcism" name="{=sotor_item_sotor_book_emp_blessing_sigmar_exorcism}Exorcism of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_sigmar_justice" name="Justice of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_emp_blessing_sigmar_justice" name="{=sotor_item_sotor_book_emp_blessing_sigmar_justice}Justice of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_sigmar_light" name="Light of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_emp_blessing_sigmar_light" name="{=sotor_item_sotor_book_emp_blessing_sigmar_light}Light of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_sigmar_retribution" name="Retribution of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_emp_blessing_sigmar_retribution" name="{=sotor_item_sotor_book_emp_blessing_sigmar_retribution}Retribution of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_sigmar_soulfire" name="Soulfire of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_emp_blessing_sigmar_soulfire" name="{=sotor_item_sotor_book_emp_blessing_sigmar_soulfire}Soulfire of Sigmar" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_ulric_chill" name="Chill of Ulric" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
+  <Item id="sotor_book_emp_blessing_ulric_chill" name="{=sotor_item_sotor_book_emp_blessing_ulric_chill}Chill of Ulric" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="5400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_ulric_frenzy" name="Frenzy of Ulric" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_emp_blessing_ulric_frenzy" name="{=sotor_item_sotor_book_emp_blessing_ulric_frenzy}Frenzy of Ulric" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_ulric_winterfather_gift" name="Gift of the Winterfather" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
+  <Item id="sotor_book_emp_blessing_ulric_winterfather_gift" name="{=sotor_item_sotor_book_emp_blessing_ulric_winterfather_gift}Gift of the Winterfather" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="18150">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_ulric_wolf-god_bite" name="Bite of the Wolf-God" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
+  <Item id="sotor_book_emp_blessing_ulric_wolf-god_bite" name="{=sotor_item_sotor_book_emp_blessing_ulric_wolf-god_bite}Bite of the Wolf-God" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="38400">
     <Flags Civilian="false" />
   </Item>
-  <Item id="sotor_book_emp_blessing_ulric_wrath" name="Wrath of Ulric" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
+  <Item id="sotor_book_emp_blessing_ulric_wrath" name="{=sotor_item_sotor_book_emp_blessing_ulric_wrath}Wrath of Ulric" mesh="empire_shield_book_002" weight="1.5" item_category="jewelry" Type="Goods" is_merchandise="false" value="60000">
     <Flags Civilian="false" />
   </Item>
 </Items>

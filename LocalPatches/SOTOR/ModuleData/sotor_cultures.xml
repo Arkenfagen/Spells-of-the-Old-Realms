@@ -3,7 +3,7 @@
 <SPCultures>
   <Culture
     id="sotor_skeleton"
-    name="Skeleton"
+    name="{=sotor_culture_sotor_skeleton}Skeleton"
     color="0xFF303030"
     color2="0xFF1c0d14"
     is_bandit="false"
@@ -22,7 +22,7 @@
 
   <Culture
     id="sotor_dryad"
-    name="Forest Spirit"
+    name="{=sotor_culture_sotor_dryad}Forest Spirit"
     color="0xFF2d4a1e"
     color2="0xFF17260f"
     is_bandit="false"

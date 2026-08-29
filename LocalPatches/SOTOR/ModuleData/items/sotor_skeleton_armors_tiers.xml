@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Items>
-  <Item id="sotor_grave_guard_helm_001" name="Grave Guard Helm 001" mesh="sotor_grave_guard_helm_001" weight="2.5" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="28000">
+  <Item id="sotor_grave_guard_helm_001" name="{=sotor_item_sotor_grave_guard_helm_001}Grave Guard Helm 001" mesh="sotor_grave_guard_helm_001" weight="2.5" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="28000">
     <ItemComponent><Armor modifier_group="plate" material_type="Plate" head_armor="28" hair_cover_type="all" beard_cover_type="all" covers_head="true" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_grave_guard_helm_002" name="Grave Guard Helm 002" mesh="sotor_grave_guard_helm_002" weight="2.8" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="28000">
+  <Item id="sotor_grave_guard_helm_002" name="{=sotor_item_sotor_grave_guard_helm_002}Grave Guard Helm 002" mesh="sotor_grave_guard_helm_002" weight="2.8" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="28000">
     <ItemComponent><Armor modifier_group="plate" material_type="Plate" head_armor="28" hair_cover_type="all" beard_cover_type="all" covers_head="true" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_grave_guard_helm_003" name="Grave Guard Helm 003" mesh="sotor_grave_guard_helm_003" weight="2.6" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="28000">
+  <Item id="sotor_grave_guard_helm_003" name="{=sotor_item_sotor_grave_guard_helm_003}Grave Guard Helm 003" mesh="sotor_grave_guard_helm_003" weight="2.6" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="28000">
     <ItemComponent><Armor modifier_group="plate" material_type="Plate" head_armor="28" hair_cover_type="all" beard_cover_type="all" covers_head="true" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_grave_guard_armor_001" name="Grave Guard Armor 001" mesh="sotor_grave_guard_armor_001" weight="10.1" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="21000">
+  <Item id="sotor_grave_guard_armor_001" name="{=sotor_item_sotor_grave_guard_armor_001}Grave Guard Armor 001" mesh="sotor_grave_guard_armor_001" weight="10.1" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="21000">
     <ItemComponent><Armor body_armor="21" modifier_group="plate" material_type="Plate" covers_body="true" body_mesh_type="upperbody" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_grave_guard_armor_002" name="Grave Guard Armor 002" mesh="sotor_grave_guard_armor_002" weight="11.2" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="21000">
+  <Item id="sotor_grave_guard_armor_002" name="{=sotor_item_sotor_grave_guard_armor_002}Grave Guard Armor 002" mesh="sotor_grave_guard_armor_002" weight="11.2" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="21000">
     <ItemComponent><Armor body_armor="21" modifier_group="plate" material_type="Plate" covers_body="true" body_mesh_type="upperbody" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_grave_guard_armor_003" name="Grave Guard Armor 003" mesh="sotor_grave_guard_armor_003" weight="10.1" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="28000">
+  <Item id="sotor_grave_guard_armor_003" name="{=sotor_item_sotor_grave_guard_armor_003}Grave Guard Armor 003" mesh="sotor_grave_guard_armor_003" weight="10.1" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="28000">
     <ItemComponent><Armor body_armor="25" arm_armor="3" modifier_group="plate" material_type="Plate" covers_body="true" body_mesh_type="upperbody" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_grave_guard_armor_004" name="Grave Guard Armor 004" mesh="sotor_grave_guard_armor_004" weight="11.2" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="30000">
+  <Item id="sotor_grave_guard_armor_004" name="{=sotor_item_sotor_grave_guard_armor_004}Grave Guard Armor 004" mesh="sotor_grave_guard_armor_004" weight="11.2" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="30000">
     <ItemComponent><Armor body_armor="25" arm_armor="5" modifier_group="plate" material_type="Plate" covers_body="true" body_mesh_type="upperbody" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_grave_guard_shoulder_001" name="Grave Guard Shoulder 001" mesh="grave_guard_shoulder_001" weight="4" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="18000">
+  <Item id="sotor_grave_guard_shoulder_001" name="{=sotor_item_sotor_grave_guard_shoulder_001}Grave Guard Shoulder 001" mesh="grave_guard_shoulder_001" weight="4" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="18000">
     <ItemComponent><Armor body_armor="16" arm_armor="2" modifier_group="plate" material_type="Plate" body_mesh_type="shoulders" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_grave_guard_shoulder_002" name="Grave Guard Shoulder 002" mesh="grave_guard_shoulder_002" weight="4" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="18000">
+  <Item id="sotor_grave_guard_shoulder_002" name="{=sotor_item_sotor_grave_guard_shoulder_002}Grave Guard Shoulder 002" mesh="grave_guard_shoulder_002" weight="4" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="18000">
     <ItemComponent><Armor body_armor="16" arm_armor="2" modifier_group="plate" material_type="Plate" body_mesh_type="shoulders" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_grave_guard_shoulder_003" name="Grave Guard Shoulder 003" mesh="grave_guard_shoulder_003" weight="4" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="24000">
+  <Item id="sotor_grave_guard_shoulder_003" name="{=sotor_item_sotor_grave_guard_shoulder_003}Grave Guard Shoulder 003" mesh="grave_guard_shoulder_003" weight="4" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="24000">
     <ItemComponent><Armor body_armor="20" arm_armor="4" modifier_group="plate" material_type="Plate" body_mesh_type="shoulders" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_grave_guard_shoulder_004" name="Grave Guard Shoulder 004" mesh="grave_guard_shoulder_004" weight="4" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="26000">
+  <Item id="sotor_grave_guard_shoulder_004" name="{=sotor_item_sotor_grave_guard_shoulder_004}Grave Guard Shoulder 004" mesh="grave_guard_shoulder_004" weight="4" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="26000">
     <ItemComponent><Armor body_armor="20" arm_armor="6" modifier_group="plate" material_type="Plate" body_mesh_type="shoulders" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_hell_knight_helm_001" name="Hell Knight Helm 001" mesh="sotor_hell_knight_helm_001" weight="2.5" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="32000">
+  <Item id="sotor_hell_knight_helm_001" name="{=sotor_item_sotor_hell_knight_helm_001}Hell Knight Helm 001" mesh="sotor_hell_knight_helm_001" weight="2.5" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="32000">
     <ItemComponent><Armor modifier_group="plate" material_type="Plate" head_armor="32" hair_cover_type="all" beard_cover_type="all" covers_head="true" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_hell_knight_helm_002" name="Hell Knight Helm 002" mesh="sotor_hell_knight_helm_002" weight="2.5" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="32000">
+  <Item id="sotor_hell_knight_helm_002" name="{=sotor_item_sotor_hell_knight_helm_002}Hell Knight Helm 002" mesh="sotor_hell_knight_helm_002" weight="2.5" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="32000">
     <ItemComponent><Armor modifier_group="plate" material_type="Plate" head_armor="32" hair_cover_type="all" beard_cover_type="all" covers_head="true" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_hell_knight_helm_003" name="Hell Knight Helm 003" mesh="sotor_hell_knight_helm_003" weight="2.5" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="32000">
+  <Item id="sotor_hell_knight_helm_003" name="{=sotor_item_sotor_hell_knight_helm_003}Hell Knight Helm 003" mesh="sotor_hell_knight_helm_003" weight="2.5" item_category="heavy_armor" Type="HeadArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="head_armor" value="32000">
     <ItemComponent><Armor modifier_group="plate" material_type="Plate" head_armor="32" hair_cover_type="all" beard_cover_type="all" covers_head="true" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_hell_knight_armor_001" name="Hell Knight Armor 001" mesh="sotor_hell_knight_armor_001" weight="16" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="48000">
+  <Item id="sotor_hell_knight_armor_001" name="{=sotor_item_sotor_hell_knight_armor_001}Hell Knight Armor 001" mesh="sotor_hell_knight_armor_001" weight="16" item_category="heavy_armor" Type="BodyArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="body_armor" value="48000">
     <ItemComponent><Armor body_armor="32" leg_armor="10" arm_armor="6" modifier_group="plate" material_type="Plate" covers_body="true" body_mesh_type="upperbody" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_hell_knight_gauntlet_001" name="Hell Knight Gauntlet 001" mesh="sotor_hell_knight_gauntlet_001" weight="1" appearance="3" item_category="heavy_armor" Type="HandArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="hand_armor" value="20000">
+  <Item id="sotor_hell_knight_gauntlet_001" name="{=sotor_item_sotor_hell_knight_gauntlet_001}Hell Knight Gauntlet 001" mesh="sotor_hell_knight_gauntlet_001" weight="1" appearance="3" item_category="heavy_armor" Type="HandArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="hand_armor" value="20000">
     <ItemComponent><Armor arm_armor="20" modifier_group="plate" material_type="Plate" covers_hands="true" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_hell_knight_boots_001" name="Hell Knight Boots 001" mesh="sotor_hell_knight_boots_001" weight="4.0" item_category="heavy_armor" Type="LegArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="leg_armor" value="40000">
+  <Item id="sotor_hell_knight_boots_001" name="{=sotor_item_sotor_hell_knight_boots_001}Hell Knight Boots 001" mesh="sotor_hell_knight_boots_001" weight="4.0" item_category="heavy_armor" Type="LegArmor" is_merchandise="false" culture="Culture.neutral_culture" subtype="leg_armor" value="40000">
     <ItemComponent><Armor leg_armor="40" modifier_group="plate" material_type="Plate" covers_legs="true" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="sotor_hell_knight_pauldron_001" name="Hell Knight Pauldron 001" mesh="hell_knight_pauldron_001" weight="4" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="26000">
+  <Item id="sotor_hell_knight_pauldron_001" name="{=sotor_item_sotor_hell_knight_pauldron_001}Hell Knight Pauldron 001" mesh="hell_knight_pauldron_001" weight="4" appearance="2" item_category="heavy_armor" Type="Cape" is_merchandise="false" culture="Culture.neutral_culture" value="26000">
     <ItemComponent><Armor body_armor="22" arm_armor="4" modifier_group="plate" material_type="Plate" body_mesh_type="shoulders" /></ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>

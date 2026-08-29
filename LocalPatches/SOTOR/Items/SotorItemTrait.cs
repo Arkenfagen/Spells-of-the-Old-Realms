@@ -14,11 +14,35 @@ namespace SOTOR.Items
         [XmlAttribute]
         public string ItemTraitStringId { get; set; }
 
-        [XmlAttribute]
-        public string ItemTraitName { get; set; } = "Invalid ItemTrait";
+        [XmlAttribute("ItemTraitName")]
+        public string ItemTraitNameRaw
+        {
+            get => _nameRaw;
+            set { _nameRaw = value ?? string.Empty; _nameCache = null; }
+        }
 
-        [XmlElement]
-        public string ItemTraitDescription { get; set; } = "";
+        [XmlIgnore]
+        public string ItemTraitName => SotorText.Marker(_nameRaw, ref _nameCache, ref _nameCacheLang);
+
+        [XmlIgnore]
+        public string ItemTraitNameEnglish => SotorText.StripMarker(_nameRaw);
+
+        [XmlElement("ItemTraitDescription")]
+        public string ItemTraitDescriptionRaw
+        {
+            get => _descRaw;
+            set { _descRaw = value ?? string.Empty; _descCache = null; }
+        }
+
+        [XmlIgnore]
+        public string ItemTraitDescription => SotorText.Marker(_descRaw, ref _descCache, ref _descCacheLang);
+
+        private string _nameRaw = "Invalid ItemTrait";
+        private string _nameCache;
+        private int _nameCacheLang = -2;
+        private string _descRaw = "";
+        private string _descCache;
+        private int _descCacheLang = -2;
 
         [XmlElement]
         public ResistanceTuple ResistanceTuple { get; set; }

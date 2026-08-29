@@ -5,7 +5,7 @@
   <NPCCharacter id="sotor_skeleton_warrior"
                 default_group="Infantry"
                 level="11"
-                name="Skeleton Warrior"
+                name="{=sotor_troop_sotor_skeleton_warrior}Skeleton Warrior"
                 occupation="Soldier"
                 culture="Culture.sotor_skeleton">
     <face>
@@ -72,7 +72,7 @@
   <NPCCharacter id="sotor_grave_guard_warrior"
                 default_group="Infantry"
                 level="21"
-                name="Grave Guard Warrior"
+                name="{=sotor_troop_sotor_grave_guard_warrior}Grave Guard Warrior"
                 occupation="Soldier"
                 culture="Culture.sotor_skeleton">
     <face>

@@ -4,7 +4,7 @@
   <NPCCharacter id="sotor_dryad"
                 default_group="Infantry"
                 level="31"
-                name="Dryad"
+                name="{=sotor_troop_sotor_dryad}Dryad"
                 occupation="Soldier"
                 is_female="true"
                 is_hidden_encyclopedia="true"

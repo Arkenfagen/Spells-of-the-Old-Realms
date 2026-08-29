@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <NPCCharacters>
-  <NPCCharacter id="sotor_skeleton" default_group="Infantry" level="1" name="Skeleton" occupation="Soldier" culture="Culture.sotor_skeleton" is_basic_troop="true">
+  <NPCCharacter id="sotor_skeleton" default_group="Infantry" level="1" name="{=sotor_troop_sotor_skeleton}Skeleton" occupation="Soldier" culture="Culture.sotor_skeleton" is_basic_troop="true">
     <face><face_key_template value="BodyProperty.fighter_empire" /></face>
     <skills>
       <skill id="Athletics" value="20" />
@@ -42,7 +42,7 @@
     </Equipments>
   </NPCCharacter>
 
-  <NPCCharacter id="sotor_skeleton_swordsman" default_group="Infantry" level="6" name="Skeleton Swordsman" occupation="Soldier" culture="Culture.sotor_skeleton">
+  <NPCCharacter id="sotor_skeleton_swordsman" default_group="Infantry" level="6" name="{=sotor_troop_sotor_skeleton_swordsman}Skeleton Swordsman" occupation="Soldier" culture="Culture.sotor_skeleton">
     <face><face_key_template value="BodyProperty.fighter_empire" /></face>
     <skills>
       <skill id="Athletics" value="30" />
@@ -88,7 +88,7 @@
     </Equipments>
   </NPCCharacter>
 
-  <NPCCharacter id="sotor_crypt_warrior" default_group="Infantry" level="16" name="Crypt Warrior" occupation="Soldier" culture="Culture.sotor_skeleton">
+  <NPCCharacter id="sotor_crypt_warrior" default_group="Infantry" level="16" name="{=sotor_troop_sotor_crypt_warrior}Crypt Warrior" occupation="Soldier" culture="Culture.sotor_skeleton">
     <face><face_key_template value="BodyProperty.fighter_empire" /></face>
     <skills>
       <skill id="Athletics" value="90" />
@@ -134,7 +134,7 @@
     </Equipments>
   </NPCCharacter>
 
-  <NPCCharacter id="sotor_grave_guard_seneschal" default_group="Infantry" level="31" name="Grave Guard Seneschal" occupation="Soldier" culture="Culture.sotor_skeleton">
+  <NPCCharacter id="sotor_grave_guard_seneschal" default_group="Infantry" level="31" name="{=sotor_troop_sotor_grave_guard_seneschal}Grave Guard Seneschal" occupation="Soldier" culture="Culture.sotor_skeleton">
     <face><face_key_template value="BodyProperty.fighter_empire" /></face>
     <skills>
       <skill id="Athletics" value="180" />
@@ -180,7 +180,7 @@
     </Equipments>
   </NPCCharacter>
 
-  <NPCCharacter id="sotor_skeleton_spearman" default_group="Infantry" level="6" name="Skeleton Spearman" occupation="Soldier" culture="Culture.sotor_skeleton">
+  <NPCCharacter id="sotor_skeleton_spearman" default_group="Infantry" level="6" name="{=sotor_troop_sotor_skeleton_spearman}Skeleton Spearman" occupation="Soldier" culture="Culture.sotor_skeleton">
     <face><face_key_template value="BodyProperty.fighter_empire" /></face>
     <skills>
       <skill id="Athletics" value="30" />
@@ -226,7 +226,7 @@
     </Equipments>
   </NPCCharacter>
 
-  <NPCCharacter id="sotor_skeleton_guard" default_group="Infantry" level="11" name="Skeleton Guard" occupation="Soldier" culture="Culture.sotor_skeleton">
+  <NPCCharacter id="sotor_skeleton_guard" default_group="Infantry" level="11" name="{=sotor_troop_sotor_skeleton_guard}Skeleton Guard" occupation="Soldier" culture="Culture.sotor_skeleton">
     <face><face_key_template value="BodyProperty.fighter_empire" /></face>
     <skills>
       <skill id="Athletics" value="60" />
@@ -272,7 +272,7 @@
     </Equipments>
   </NPCCharacter>
 
-  <NPCCharacter id="sotor_crypt_guard" default_group="Infantry" level="16" name="Crypt Guard" occupation="Soldier" culture="Culture.sotor_skeleton">
+  <NPCCharacter id="sotor_crypt_guard" default_group="Infantry" level="16" name="{=sotor_troop_sotor_crypt_guard}Crypt Guard" occupation="Soldier" culture="Culture.sotor_skeleton">
     <face><face_key_template value="BodyProperty.fighter_empire" /></face>
     <skills>
       <skill id="Athletics" value="90" />
@@ -319,7 +319,7 @@
     </Equipments>
   </NPCCharacter>
 
-  <NPCCharacter id="sotor_grave_guard_spearman" default_group="Infantry" level="21" name="Grave Guard Spearman" occupation="Soldier" culture="Culture.sotor_skeleton">
+  <NPCCharacter id="sotor_grave_guard_spearman" default_group="Infantry" level="21" name="{=sotor_troop_sotor_grave_guard_spearman}Grave Guard Spearman" occupation="Soldier" culture="Culture.sotor_skeleton">
     <face><face_key_template value="BodyProperty.fighter_empire" /></face>
     <skills>
       <skill id="Athletics" value="120" />
@@ -365,7 +365,7 @@
     </Equipments>
   </NPCCharacter>
 
-  <NPCCharacter id="sotor_grave_guardian" default_group="Infantry" level="31" name="Grave Guardian" occupation="Soldier" culture="Culture.sotor_skeleton">
+  <NPCCharacter id="sotor_grave_guardian" default_group="Infantry" level="31" name="{=sotor_troop_sotor_grave_guardian}Grave Guardian" occupation="Soldier" culture="Culture.sotor_skeleton">
     <face><face_key_template value="BodyProperty.fighter_empire" /></face>
     <skills>
       <skill id="Athletics" value="180" />
@@ -411,7 +411,7 @@
     </Equipments>
   </NPCCharacter>
 
-  <NPCCharacter id="sotor_black_knight" default_group="Cavalry" level="21" name="Black Knight" occupation="Soldier" culture="Culture.sotor_skeleton">
+  <NPCCharacter id="sotor_black_knight" default_group="Cavalry" level="21" name="{=sotor_troop_sotor_black_knight}Black Knight" occupation="Soldier" culture="Culture.sotor_skeleton">
     <face><face_key_template value="BodyProperty.fighter_empire" /></face>
     <skills>
       <skill id="Athletics" value="120" />
@@ -466,7 +466,7 @@
     </Equipments>
   </NPCCharacter>
 
-  <NPCCharacter id="sotor_hell_knight" default_group="Cavalry" level="31" name="Hell Knight" occupation="Soldier" culture="Culture.sotor_skeleton">
+  <NPCCharacter id="sotor_hell_knight" default_group="Cavalry" level="31" name="{=sotor_troop_sotor_hell_knight}Hell Knight" occupation="Soldier" culture="Culture.sotor_skeleton">
     <face><face_key_template value="BodyProperty.fighter_empire" /></face>
     <skills>
       <skill id="Athletics" value="180" />

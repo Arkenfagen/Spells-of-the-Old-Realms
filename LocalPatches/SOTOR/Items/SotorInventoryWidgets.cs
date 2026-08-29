@@ -30,7 +30,7 @@ namespace SOTOR.Items
         private void OnOwnPropertyChanged(PropertyOwnerObject owner, string propertyName, object value)
         {
             if (propertyName != "ImageId") return;
-            _isMagicItem = value is string id && SotorExtendedItemManager.HasTraitsById(id);
+            _isMagicItem = value is string id && SotorExtendedItemManager.HasTraitsByLockId(id);
         }
 
         protected override void OnRender(TwoDimensionContext twoDimensionContext, TwoDimensionDrawContext drawContext)
@@ -69,7 +69,7 @@ namespace SOTOR.Items
         {
             if (_magicBrush != null && MainContainer != null && ItemID != null
                 && !MainContainer.Brush.IsCloneRelated(CharacterCantUseBrush)
-                && SotorExtendedItemManager.HasTraitsById(ItemID))
+                && SotorExtendedItemManager.HasTraitsByLockId(ItemID))
             {
                 MainContainer.Brush = _magicBrush;
             }

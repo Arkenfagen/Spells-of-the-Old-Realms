@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using SOTOR.Items;
 using TaleWorlds.Core;
+using TaleWorlds.ObjectSystem;
 
 namespace SOTOR.Items
 {
@@ -17,6 +18,53 @@ namespace SOTOR.Items
         {
             if (item == null) return false;
             lock (Gate) { return _itemTraits.ContainsKey(item.StringId); }
+        }
+
+        private static readonly Dictionary<string, bool> _lockIdCache =
+            new Dictionary<string, bool>(StringComparer.Ordinal);
+        private static string[] _modifierSuffixes;
+        private static int _cacheStamp;
+
+        public static bool HasTraitsByLockId(string lockId)
+        {
+            if (string.IsNullOrEmpty(lockId)) return false;
+            if (HasTraitsById(lockId)) return true;
+
+            lock (Gate)
+            {
+                if (_cacheStamp != _itemTraits.Count)
+                {
+                    _lockIdCache.Clear();
+                    _cacheStamp = _itemTraits.Count;
+                }
+                if (_lockIdCache.TryGetValue(lockId, out bool cached)) return cached;
+            }
+
+            bool found = false;
+            try
+            {
+                if (_modifierSuffixes == null)
+                {
+                    var list = new List<string>();
+                    foreach (var m in MBObjectManager.Instance.GetObjectTypeList<ItemModifier>())
+                        if (m != null && !string.IsNullOrEmpty(m.StringId)) list.Add(m.StringId);
+                    _modifierSuffixes = list.ToArray();
+                }
+                foreach (var suffix in _modifierSuffixes)
+                {
+                    if (lockId.Length <= suffix.Length) continue;
+                    if (!lockId.EndsWith(suffix, StringComparison.Ordinal)) continue;
+                    if (HasTraitsById(lockId.Substring(0, lockId.Length - suffix.Length)))
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            catch { }
+
+            lock (Gate) { _lockIdCache[lockId] = found; }
+            return found;
         }
 
         public static bool HasTraitsById(string itemId)

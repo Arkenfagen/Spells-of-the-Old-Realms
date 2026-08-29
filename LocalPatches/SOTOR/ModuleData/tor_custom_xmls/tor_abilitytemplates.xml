@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AbilityTemplates>
   <AbilityTemplate StringID="Dart"
-                   Name="Magic Bolt"
+                   Name="{=sotor_spell_Dart}Magic Bolt"
                    SpriteName="dart_icon"
                    CoolDown="10"
                    WindsOfMagicCost="4"
@@ -24,7 +24,7 @@
                       DisableDistance="10" />
   </AbilityTemplate>
   <AbilityTemplate StringID="WardOfArrows"
-                   Name="Ward of Arrows"
+                   Name="{=sotor_spell_WardOfArrows}Ward of Arrows"
                    SpriteName="ward_of_arrows_icon"
                    CoolDown="10"
                    WindsOfMagicCost="3"
@@ -42,7 +42,7 @@
                    AbilityTargetType="Self"
                    TooltipDescription="The caster is immune to ranged damage for 15 seconds." />
   <AbilityTemplate StringID="MinorHeal"
-                   Name="Petty Heal"
+                   Name="{=sotor_spell_MinorHeal}Petty Heal"
                    SpriteName="petty_healing_icon"
                    CoolDown="75"
                    WindsOfMagicCost="10"
@@ -60,7 +60,7 @@
                    AbilityTargetType="Self"
                    TooltipDescription="Heals the caster for 3 health every second for 7 seconds." />
   <AbilityTemplate StringID="FoetidCloud"
-                   Name="Foetid Cloud"
+                   Name="{=sotor_spell_FoetidCloud}Foetid Cloud"
                    SpriteName="foetid_cloud_icon"
                    CoolDown="10"
                    WindsOfMagicCost="4"
@@ -85,7 +85,7 @@
                    TargetCapturingRadius="2"
                    TooltipDescription="A sickly short ranged poisonous gas cloud does 30 magic damage in a 3 meter radius." />
   <AbilityTemplate StringID="EnchantWeapon"
-                   Name="Enchant Weapon"
+                   Name="{=sotor_spell_EnchantWeapon}Enchant Weapon"
                    SpriteName="enchant_weapon_icon"
                    CoolDown="10"
                    WindsOfMagicCost="6"
@@ -105,7 +105,7 @@
                    MaxDistance="20"
                    TooltipDescription="Buff a target ally's weapon to do 10% additional magic damage for 20 seconds." />
   <AbilityTemplate StringID="AuraOfResistance"
-                   Name="Aura of Resistance"
+                   Name="{=sotor_spell_AuraOfResistance}Aura of Resistance"
                    SpriteName="resistanceaura_icon"
                    CoolDown="10"
                    WindsOfMagicCost="6"
@@ -127,7 +127,7 @@
                    TargetCapturingRadius="3"
                    TooltipDescription="Allies in a 3 meter radius gain 20% physical resistance for 15 seconds." />
   <AbilityTemplate StringID="StrengthOfCombat"
-                   Name="Strength Of Combat"
+                   Name="{=sotor_spell_StrengthOfCombat}Strength Of Combat"
                    SpriteName="healingprayer_icon"
                    CoolDown="10"
                    WindsOfMagicCost="3"
@@ -145,7 +145,7 @@
                    AbilityTargetType="Self"
                    TooltipDescription="Adds 20% physical damage bonus for 15 seconds to the caster." />
   <AbilityTemplate StringID="DustStorm"
-                   Name="Dust Storm"
+                   Name="{=sotor_spell_DustStorm}Dust Storm"
                    SpriteName="dust_storm_icon"
                    CoolDown="10"
                    WindsOfMagicCost="6"
@@ -174,7 +174,7 @@
                    TooltipDescription="Dry winds from the desert knock down victims and apply minor damage (5 per second in a 3 meter radius)." />
 
   <AbilityTemplate StringID="Fireball"
-                   Name="Fireball"
+                   Name="{=sotor_spell_Fireball}Fireball"
                    SpriteName="fireball_icon"
                    CoolDown="40"
                    WindsOfMagicCost="16"
@@ -202,7 +202,7 @@
                    TooltipDescription="Hurl a fireball dealing 60 damage in a 4 meter radius and burning foes for 5 seconds." />
 
   <AbilityTemplate StringID="CinderBlast"
-                   Name="Cinder Blast"
+                   Name="{=sotor_spell_CinderBlast}Cinder Blast"
                    SpriteName="cinderblast_icon"
                    CoolDown="15"
                    WindsOfMagicCost="8"
@@ -230,7 +230,7 @@
                    TooltipDescription="Hurl fragments of solidified lava that deal 55 damage on contact in a 3 meter radius." />
 
   <AbilityTemplate StringID="BoltOfAqshy"
-                   Name="Bolt of Aqshy"
+                   Name="{=sotor_spell_BoltOfAqshy}Bolt of Aqshy"
                    SpriteName="boltofashqy_icon"
                    CoolDown="15"
                    WindsOfMagicCost="8"
@@ -258,7 +258,7 @@
                    TooltipDescription="A fast moving flaming bolt that does 60 fire damage on impact in a 2 meter radius." />
 
   <AbilityTemplate StringID="Sear"
-                   Name="Sear"
+                   Name="{=sotor_spell_Sear}Sear"
                    SpriteName="sear_icon"
                    CoolDown="20"
                    WindsOfMagicCost="10"
@@ -285,7 +285,7 @@
                    TooltipDescription="Blast the enemy with a short-ranged searing flame that does 65 fire damage in a 6 meter radius." />
 
   <AbilityTemplate StringID="CascadingFireCloak"
-                   Name="Cascading Fire-Cloak"
+                   Name="{=sotor_spell_CascadingFireCloak}Cascading Fire-Cloak"
                    SpriteName="cascadingfirecloak_icon"
                    CoolDown="75"
                    WindsOfMagicCost="16"
@@ -304,7 +304,7 @@
                    TooltipDescription="Wreath the caster in flame, granting 20% physical and 70% fire resistance for 30 seconds." />
 
   <AbilityTemplate StringID="FlamingSwords"
-                   Name="Flaming Sword of Rhuin"
+                   Name="{=sotor_spell_FlamingSwords}Flaming Sword of Rhuin"
                    SpriteName="swordsofrhuin_icon"
                    CoolDown="90"
                    WindsOfMagicCost="18"
@@ -327,7 +327,7 @@
                    TooltipDescription="Buff the weapons of allies in a 5 meter radius with flame, adding 15% fire damage for 45 seconds." />
 
   <AbilityTemplate StringID="BurningHead"
-                   Name="The Burning Head"
+                   Name="{=sotor_spell_BurningHead}The Burning Head"
                    SpriteName="burninghead_icon"
                    CoolDown="70"
                    WindsOfMagicCost="45"
@@ -357,7 +357,7 @@
                    TooltipDescription="Conjure a large burning skull that moves forward, burning everything in its path (40 fire damage per second)." />
 
   <AbilityTemplate StringID="FlameStorm"
-                   Name="Fire Tornado"
+                   Name="{=sotor_spell_FlameStorm}Fire Tornado"
                    SpriteName="flamingstorm_icon"
                    CoolDown="70"
                    WindsOfMagicCost="35"
@@ -389,7 +389,7 @@
                    TooltipDescription="Summon a randomly moving pillar of searing flame that burns the battlefield (40 fire damage per second)." />
 
   <AbilityTemplate StringID="LightningBolt"
-                   Name="Lightning Bolt"
+                   Name="{=sotor_spell_LightningBolt}Lightning Bolt"
                    SpriteName="lightningbolt_icon"
                    CoolDown="15"
                    WindsOfMagicCost="8"
@@ -418,7 +418,7 @@
                    TooltipDescription="Hurl an electric bolt at the enemy that does 65 lightning damage on impact in a 2.5 meter radius." />
 
   <AbilityTemplate StringID="WindBlast"
-                   Name="Wind Blast"
+                   Name="{=sotor_spell_WindBlast}Wind Blast"
                    SpriteName="wind_blast_icon"
                    CoolDown="30"
                    WindsOfMagicCost="8"
@@ -445,7 +445,7 @@
                    TooltipDescription="A gust of wind knocks down victims and applies 35 physical damage in a 15 meter radius." />
 
   <AbilityTemplate StringID="ChainLightning"
-                   Name="Chain Lightning"
+                   Name="{=sotor_spell_ChainLightning}Chain Lightning"
                    SpriteName="chainlightning_icon"
                    CoolDown="45"
                    WindsOfMagicCost="25"
@@ -477,7 +477,7 @@
                    TooltipDescription="A ball of lightning that drifts across the field, zapping enemies in its area for 45 lightning damage per tick." />
 
   <AbilityTemplate StringID="HarmonicConvergence"
-                   Name="Harmonic Convergence"
+                   Name="{=sotor_spell_HarmonicConvergence}Harmonic Convergence"
                    SpriteName="harmonicconvergence_icon"
                    CoolDown="90"
                    WindsOfMagicCost="24"
@@ -500,7 +500,7 @@
                    TooltipDescription="Divine favourable signs guide your warriors: allies in a 5 meter radius gain 50% physical resistance for 50 seconds." />
 
   <AbilityTemplate StringID="Blizzard"
-                   Name="Iceshard Blizzard"
+                   Name="{=sotor_spell_Blizzard}Iceshard Blizzard"
                    SpriteName="iceshardblizzard_icon"
                    CoolDown="30"
                    WindsOfMagicCost="22"
@@ -528,7 +528,7 @@
                    TooltipDescription="Stormy clouds loom over the area, showering those below with sharp shards of ice (35 damage per tick in a 3 meter radius)." />
 
   <AbilityTemplate StringID="CometOfCasandora"
-                   Name="Comet of Casandora"
+                   Name="{=sotor_spell_CometOfCasandora}Comet of Casandora"
                    SpriteName="comet_icon"
                    CoolDown="90"
                    WindsOfMagicCost="40"
@@ -560,7 +560,7 @@
                    TooltipDescription="A large meteor strikes the area, killing all below in a giant shockwave (225 magic damage in a 15 meter radius)." />
 
   <AbilityTemplate StringID="Thunderbolt"
-                   Name="Urannon's Thunderbolt"
+                   Name="{=sotor_spell_Thunderbolt}Urannon's Thunderbolt"
                    SpriteName="thunderbolt_icon"
                    CoolDown="40"
                    WindsOfMagicCost="22"
@@ -587,7 +587,7 @@
                    TooltipDescription="A single large bolt of lightning crashes down from the skies for 120 lightning damage in a 5 meter radius." />
 
   <AbilityTemplate StringID="CurseOfMidnightWind"
-                   Name="Curse of the Midnight Wind"
+                   Name="{=sotor_spell_CurseOfMidnightWind}Curse of the Midnight Wind"
                    SpriteName="curse_of_the_midnight_wind_icon"
                    CoolDown="60"
                    WindsOfMagicCost="20"
@@ -612,7 +612,7 @@
                    TooltipDescription="An ancient three-word hex curses enemies in a 5 meter radius, imposing a 40% penalty to movement, attack speed, and damage resistance for 30 seconds." />
 
   <AbilityTemplate StringID="ShemGaze"
-                   Name="Shem's Burning Gaze"
+                   Name="{=sotor_spell_ShemGaze}Shem's Burning Gaze"
                    SpriteName="shemsburninggaze_icon"
                    CoolDown="20"
                    WindsOfMagicCost="8"
@@ -640,7 +640,7 @@
                    TooltipDescription="A bolt of cleansing energy flies from the caster's hands, searing evil for 55 holy damage in a 2 meter radius." />
 
   <AbilityTemplate StringID="HealingLight"
-                   Name="Healing Light"
+                   Name="{=sotor_spell_HealingLight}Healing Light"
                    SpriteName="healinglight_icon"
                    CoolDown="60"
                    WindsOfMagicCost="20"
@@ -663,7 +663,7 @@
                    TooltipDescription="Allies in a 3 meter radius regenerate 5 health every second for 9 seconds." />
 
   <AbilityTemplate StringID="PhaProtection"
-                   Name="Pha's Protection"
+                   Name="{=sotor_spell_PhaProtection}Pha's Protection"
                    SpriteName="phasprotection_icon"
                    CoolDown="90"
                    WindsOfMagicCost="20"
@@ -686,7 +686,7 @@
                    TooltipDescription="The Guardian of Light protects your allies: those in a 5 meter radius gain 50% physical resistance for 50 seconds." />
 
   <AbilityTemplate StringID="DeathlyShards"
-                   Name="Deathly Shards"
+                   Name="{=sotor_spell_DeathlyShards}Deathly Shards"
                    SpriteName="deadlyshards_icon"
                    CoolDown="30"
                    WindsOfMagicCost="15"
@@ -714,7 +714,7 @@
                    TooltipDescription="Sharp shards of light fly at the target, piercing the toughest armour for 120 holy damage in a 3 meter radius." />
 
   <AbilityTemplate StringID="RadiancePillar"
-                   Name="Pillar of Radiance"
+                   Name="{=sotor_spell_RadiancePillar}Pillar of Radiance"
                    SpriteName="pillarofradiance_icon"
                    CoolDown="60"
                    WindsOfMagicCost="35"
@@ -741,7 +741,7 @@
                    TooltipDescription="A towering pillar of light scours the area, dealing 40 holy damage per tick in a 3 meter radius." />
 
   <AbilityTemplate StringID="RadiantGaze"
-                   Name="Radiant Gaze"
+                   Name="{=sotor_spell_RadiantGaze}Radiant Gaze"
                    SpriteName="radiantgaze_icon"
                    CoolDown="75"
                    WindsOfMagicCost="45"
@@ -769,7 +769,7 @@
                    TooltipDescription="A Hysh-infused wave of deadly energy rolls forward, dealing 35 holy damage per tick to enemies in its path." />
 
   <AbilityTemplate StringID="NetOfAmyntok"
-                   Name="Net of Amyntok"
+                   Name="{=sotor_spell_NetOfAmyntok}Net of Amyntok"
                    SpriteName="netofamyntok_icon"
                    CoolDown="65"
                    WindsOfMagicCost="20"
@@ -793,7 +793,7 @@
                    TooltipDescription="An arcane net snares foes in a 5 meter radius, halting them in place for 25 seconds." />
 
   <AbilityTemplate StringID="BironasTimewarp"
-                   Name="Birona's Timewarp"
+                   Name="{=sotor_spell_BironasTimewarp}Birona's Timewarp"
                    SpriteName="bironastimewarp_icon"
                    CoolDown="60"
                    WindsOfMagicCost="15"
@@ -814,7 +814,7 @@
                    TooltipDescription="Warps the flow of time around you: you and allies within 15 meters gain 40% movement, attack, and reload speed for 15 seconds." />
 
   <AbilityTemplate StringID="TasteOfDeath"
-                   Name="Taste of Death"
+                   Name="{=sotor_spell_TasteOfDeath}Taste of Death"
                    SpriteName="taste_of_death_icon"
                    CoolDown="10"
                    WindsOfMagicCost="8"
@@ -838,7 +838,7 @@
                    TooltipDescription="A skeletal hand reaches for the target, snuffing out their life in a heartbeat: 101 magic damage in a shockwave." />
 
   <AbilityTemplate StringID="AshesAndDust"
-                   Name="Ashes and Dust"
+                   Name="{=sotor_spell_AshesAndDust}Ashes and Dust"
                    SpriteName="ashes_and_dust_icon"
                    CoolDown="15"
                    WindsOfMagicCost="12"
@@ -866,7 +866,7 @@
                    TooltipDescription="The caster looses potent death magic upon the foe, leaving nothing but dust: 60 magic damage in a 5 meter radius." />
 
   <AbilityTemplate StringID="PurpleSun"
-                   Name="Purple Sun of Xereus"
+                   Name="{=sotor_spell_PurpleSun}Purple Sun of Xereus"
                    SpriteName="purplesun_icon"
                    CoolDown="70"
                    WindsOfMagicCost="35"
@@ -897,7 +897,7 @@
                    TooltipDescription="A vicious whirlwind of pure death drifts across the field, tearing at the life energies of all it touches (75 magic damage per tick)." />
 
   <AbilityTemplate StringID="FateOfBjuna"
-                   Name="Fate of Bjuna"
+                   Name="{=sotor_spell_FateOfBjuna}Fate of Bjuna"
                    SpriteName="fate_of_bjuna_icon"
                    CoolDown="90"
                    WindsOfMagicCost="32"
@@ -923,7 +923,7 @@
                    TooltipDescription="Enemies in a 10 meter radius are cursed with eternal laughter, taking magic damage and moving at half speed for 15 seconds." />
 
   <AbilityTemplate StringID="Amaranth"
-                   Name="Amaranth"
+                   Name="{=sotor_spell_Amaranth}Amaranth"
                    SpriteName="amaranth_icon"
                    CoolDown="100"
                    WindsOfMagicCost="25"
@@ -944,7 +944,7 @@
                    TooltipDescription="The spirits of the damned form a barrier against magic: you and allies within 20 meters lose 50% of incoming spell potency for 20 seconds." />
 
   <AbilityTemplate StringID="SpiritLeech"
-                   Name="Spirit Leech"
+                   Name="{=sotor_spell_SpiritLeech}Spirit Leech"
                    SpriteName="spiritleech_icon"
                    CoolDown="35"
                    WindsOfMagicCost="26"
@@ -968,7 +968,7 @@
                    TooltipDescription="The caster drains the life force from foes in a 7.5 meter radius, withering their flesh with potent magic damage over time." />
 
   <AbilityTemplate StringID="CaressOfLaniph"
-                   Name="Caress of Laniph"
+                   Name="{=sotor_spell_CaressOfLaniph}Caress of Laniph"
                    SpriteName="caresslaniph_icon"
                    CoolDown="35"
                    WindsOfMagicCost="26"
@@ -993,7 +993,7 @@
                    TooltipDescription="A purple mist surrounds enemies in a 7.5 meter radius, gently draining their life (armour-ignoring magic damage over 10 seconds)." />
 
   <AbilityTemplate StringID="DwellersBelow"
-                   Name="Dwellers Below"
+                   Name="{=sotor_spell_DwellersBelow}Dwellers Below"
                    SpriteName="dwellersbelow_icon"
                    CoolDown="70"
                    WindsOfMagicCost="35"
@@ -1026,7 +1026,7 @@
                    TooltipDescription="Tendrils emerge from the ground, reaching out and attacking enemies in the area. Knocks down and slows (80%) enemies while dealing 10 damage per second for 15 seconds." />
 
   <AbilityTemplate StringID="TheGreenEye"
-                   Name="The Green Eye"
+                   Name="{=sotor_spell_TheGreenEye}The Green Eye"
                    SpriteName="greeneye_icon"
                    CoolDown="12"
                    WindsOfMagicCost="5"
@@ -1057,7 +1057,7 @@
                    TooltipDescription="The caster merges their eyes into one, loosing a single fast bolt of pure life-magic that strikes for 50 damage in a 4 meter radius." />
 
   <AbilityTemplate StringID="Barkskin"
-                   Name="Barkskin"
+                   Name="{=sotor_spell_Barkskin}Barkskin"
                    SpriteName="barkskin_icon"
                    CoolDown="100"
                    WindsOfMagicCost="25"
@@ -1083,7 +1083,7 @@
                    TooltipDescription="The caster hardens the skin of nearby allies like ancient bark, granting 50% physical resistance for 80 seconds." />
 
   <AbilityTemplate StringID="SummerHeat"
-                   Name="Summer Heat"
+                   Name="{=sotor_spell_SummerHeat}Summer Heat"
                    SpriteName="summerheat_icon"
                    CoolDown="40"
                    WindsOfMagicCost="12"
@@ -1109,7 +1109,7 @@
                    TooltipDescription="A small area radiates unbearable heat, impairing enemy movement by 50% and leaving them vulnerable to fire for 15 seconds." />
 
   <AbilityTemplate StringID="Regrowth"
-                   Name="Regrowth"
+                   Name="{=sotor_spell_Regrowth}Regrowth"
                    SpriteName="regrowth_icon"
                    CoolDown="25"
                    WindsOfMagicCost="8"
@@ -1135,7 +1135,7 @@
                    TooltipDescription="Invoking the lord of the ancient wildshrines, the caster mends wounds. Allies in a 3 meter radius gain 5 HP per second for 12 seconds." />
 
   <AbilityTemplate StringID="DrainLife"
-                   Name="Drain Life"
+                   Name="{=sotor_spell_DrainLife}Drain Life"
                    SpriteName="drainlife_icon"
                    CoolDown="35"
                    WindsOfMagicCost="18"
@@ -1161,7 +1161,7 @@
                    TooltipDescription="The caster sucks the moisture and fluids from foes in a 3 meter radius, dealing 5 magic damage per second for 10 seconds." />
 
   <AbilityTemplate StringID="StormOfRenewal"
-                   Name="Storm of Renewal"
+                   Name="{=sotor_spell_StormOfRenewal}Storm of Renewal"
                    SpriteName="stormofrenewal_icon"
                    CoolDown="50"
                    WindsOfMagicCost="20"
@@ -1190,7 +1190,7 @@
                    TooltipDescription="Raw energy flows across the battlefield, renewing lost vigour. Heals allies for 30 hitpoints instantly, then 10 HP per second for 12 seconds." />
 
   <AbilityTemplate StringID="ShieldOfThorns"
-                   Name="Shield of Thorns"
+                   Name="{=sotor_spell_ShieldOfThorns}Shield of Thorns"
                    SpriteName="shield_of_thorns_icon"
                    CoolDown="70"
                    WindsOfMagicCost="16"
@@ -1216,7 +1216,7 @@
                    TooltipDescription="Prickly gorse wreathes allies in a 3 meter radius, reflecting 25% of incoming melee damage back at attackers for 80 seconds." />
 
   <AbilityTemplate StringID="AmberSpear"
-                   Name="Amber Spear"
+                   Name="{=sotor_spell_AmberSpear}Amber Spear"
                    SpriteName="amberspear_icon"
                    CoolDown="4"
                    WindsOfMagicCost="3"
@@ -1248,7 +1248,7 @@
                    TooltipDescription="The caster hurls a javelin of hardened amber that flies through everything in its path, dealing 60 damage to each enemy it pierces (double on a headshot) before sticking in the ground." />
 
   <AbilityTemplate StringID="AmberSpearThrown"
-                   Name="Amber Spear"
+                   Name="{=sotor_spell_AmberSpearThrown}Amber Spear"
                    SpriteName="amberspear_icon"
                    CoolDown="4"
                    WindsOfMagicCost="3"
@@ -1268,7 +1268,7 @@
                    TooltipDescription="The caster conjures a real amber javelin and hurls it — piercing shields and enemies, scaling with both Throwing and Spellcraft." />
 
   <AbilityTemplate StringID="TanglingThorn"
-                   Name="Tangling Thorn"
+                   Name="{=sotor_spell_TanglingThorn}Tangling Thorn"
                    SpriteName="tanglingthorn_icon"
                    CoolDown="40"
                    WindsOfMagicCost="12"
@@ -1294,7 +1294,7 @@
                    TooltipDescription="Roots erupt from the ground, entangling and halting all enemies in the area for 10 seconds." />
 
   <AbilityTemplate StringID="PannsImpenetrablePelt"
-                   Name="Pann's Impenetrable Pelt"
+                   Name="{=sotor_spell_PannsImpenetrablePelt}Pann's Impenetrable Pelt"
                    SpriteName="pannsimpenetrablepelt_icon"
                    CoolDown="60"
                    WindsOfMagicCost="16"
@@ -1317,7 +1317,7 @@
                    TooltipDescription="A magical hide wreathes the caster, granting 40% physical resistance for 40 seconds." />
 
   <AbilityTemplate StringID="HailStorm"
-                   Name="Hail Storm"
+                   Name="{=sotor_spell_HailStorm}Hail Storm"
                    SpriteName="hailstorm_icon"
                    CoolDown="45"
                    WindsOfMagicCost="18"
@@ -1351,7 +1351,7 @@
                    TooltipDescription="A storm of jagged stones crashes down on the foe, dealing 35 physical damage per tick in a 3 meter radius." />
 
   <AbilityTemplate StringID="FlockOfDoom"
-                   Name="Flock of Doom"
+                   Name="{=sotor_spell_FlockOfDoom}Flock of Doom"
                    SpriteName="flockofdoom_icon"
                    CoolDown="35"
                    WindsOfMagicCost="26"
@@ -1377,7 +1377,7 @@
                    TooltipDescription="Summons a nightmare of crows over the targeted area. Enemies caught within take damage over time and have their physical resistance reduced by 20% for 10 seconds." />
 
   <AbilityTemplate StringID="TheBeastUnleashed"
-                   Name="The Beast Unleashed"
+                   Name="{=sotor_spell_TheBeastUnleashed}The Beast Unleashed"
                    SpriteName="beastunleashed_icon"
                    CoolDown="60"
                    WindsOfMagicCost="20"
@@ -1403,7 +1403,7 @@
                    TooltipDescription="Unleashes the primal savagery of nearby allies, granting +25% physical damage and attack speed for 60 seconds." />
 
   <AbilityTemplate StringID="CurseOfAnraheir"
-                   Name="Curse of Anraheir"
+                   Name="{=sotor_spell_CurseOfAnraheir}Curse of Anraheir"
                    SpriteName="curseofanraheir_icon"
                    CoolDown="90"
                    WindsOfMagicCost="32"
@@ -1429,7 +1429,7 @@
                    TooltipDescription="Woodland sprites hinder enemies caught in a 10 meter radius for 15 seconds — reducing movement by 35% and attack speed by 50%, and causing 3 magic damage per second." />
 
     <AbilityTemplate StringID="SummonSkeleton"
-                     Name="Raise the Dead"
+                     Name="{=sotor_spell_SummonSkeleton}Raise the Dead"
                      SpriteName="summonskeleton_icon"
                      CoolDown="30"
                      WindsOfMagicCost="12"
@@ -1461,7 +1461,7 @@
                      TooltipDescription="Raises old bones from the ground to fight for you. Summon 15 Skeleton Warriors." />
 
     <AbilityTemplate StringID="GraveCall"
-                     Name="Grave Call"
+                     Name="{=sotor_spell_GraveCall}Grave Call"
                      SpriteName="gravecall_icon"
                      CoolDown="60"
                      WindsOfMagicCost="20"
@@ -1493,7 +1493,7 @@
                      TooltipDescription="Drawing forth dark energy, the necromancer raises long-dead warriors. Summon 20 Grave Guard." />
 
     <AbilityTemplate StringID="NagashGaze"
-                     Name="Gaze of Nagash"
+                     Name="{=sotor_spell_NagashGaze}Gaze of Nagash"
                      SpriteName="gazeofnagash_icon"
                      CoolDown="12"
                      WindsOfMagicCost="7"
@@ -1524,7 +1524,7 @@
                      TooltipDescription="A bolt of Dhar flies from the caster's eyes, blackening and withering the flesh it touches to reveal bleached bone beneath. Deals 55 damage on impact." />
 
     <AbilityTemplate StringID="Shadowblood"
-                     Name="Shadowblood"
+                     Name="{=sotor_spell_Shadowblood}Shadowblood"
                      SpriteName="shadowblood_icon"
                      CoolDown="15"
                      WindsOfMagicCost="8"
@@ -1558,7 +1558,7 @@
     </AbilityTemplate>
 
     <AbilityTemplate StringID="Morkharn"
-                     Name="Morkharn - Breath of Darkness"
+                     Name="{=sotor_spell_Morkharn}Morkharn - Breath of Darkness"
                      SpriteName="breathofdarkness_icon"
                      CoolDown="60"
                      WindsOfMagicCost="12"
@@ -1589,7 +1589,7 @@
                      TooltipDescription="The wizard draws tendrils of the Wind of Death to restore his minions and fill them with unholy vigour. Heals nearby allies over time." />
 
     <AbilityTemplate StringID="VanHelsDanseMacabre"
-                     Name="Vanhel's Danse Macabre"
+                     Name="{=sotor_spell_VanHelsDanseMacabre}Vanhel's Danse Macabre"
                      SpriteName="vanhels_dance_macabre_icon"
                      CoolDown="40"
                      WindsOfMagicCost="20"
@@ -1620,7 +1620,7 @@
                      TooltipDescription="The animated dead are given grace and speed, making them all the more deadly. Grants allies +35% attack speed and +15% movement for 60 seconds." />
 
     <AbilityTemplate StringID="WindOfDeath"
-                     Name="Wind of Death"
+                     Name="{=sotor_spell_WindOfDeath}Wind of Death"
                      SpriteName="windofdeath_icon"
                      CoolDown="65"
                      WindsOfMagicCost="35"
@@ -1652,7 +1652,7 @@
                      TooltipDescription="Invoke the spirits of the dead to consume the souls of the living. Deals medium damage to all in its path as it moves forward." />
 
     <AbilityTemplate StringID="CurseOfYears"
-                     Name="Curse of Years"
+                     Name="{=sotor_spell_CurseOfYears}Curse of Years"
                      SpriteName="curseofyears_icon"
                      CoolDown="60"
                      WindsOfMagicCost="20"
@@ -1683,7 +1683,7 @@
                      TooltipDescription="The necromancer utters an ancient curse, causing foes to age at a horrific rate. Reduces enemy attack and movement speed by 50% for 30 seconds." />
 
   <AbilityTemplate StringID="QuicksilverSwords"
-                   Name="Quicksilver Swords"
+                   Name="{=sotor_spell_QuicksilverSwords}Quicksilver Swords"
                    SpriteName="quicksilversword_icon"
                    CoolDown="70"
                    WindsOfMagicCost="20"
@@ -1709,7 +1709,7 @@
                    TooltipDescription="Infuses the weapons of nearby allies with gleaming energies — even a rusty sword turns deadly. Friendly units deal 20% more damage for 60 seconds." />
 
   <AbilityTemplate StringID="GleamingArrow"
-                   Name="Gleaming Arrow"
+                   Name="{=sotor_spell_GleamingArrow}Gleaming Arrow"
                    SpriteName="gleamingarrow_icon"
                    CoolDown="10"
                    WindsOfMagicCost="4"
@@ -1745,7 +1745,7 @@
   </AbilityTemplate>
 
   <AbilityTemplate StringID="MeteroicIronclad"
-                   Name="Meteoric Ironclad"
+                   Name="{=sotor_spell_MeteroicIronclad}Meteoric Ironclad"
                    SpriteName="meteriorironclad_icon"
                    CoolDown="60"
                    WindsOfMagicCost="20"
@@ -1771,7 +1771,7 @@
                    TooltipDescription="Allies are protected by an enchantment of iron and silver, granting 60% physical resistance for 45 seconds." />
 
   <AbilityTemplate StringID="PlagueOfRust"
-                   Name="Plague of Rust"
+                   Name="{=sotor_spell_PlagueOfRust}Plague of Rust"
                    SpriteName="plagueofrust_icon"
                    CoolDown="90"
                    WindsOfMagicCost="16"
@@ -1797,7 +1797,7 @@
                    TooltipDescription="The armor of foes in the area is consumed by rust, imposing a 50% physical resistance penalty for 120 seconds." />
 
   <AbilityTemplate StringID="GehennasGoldenGlobe"
-                   Name="Gehenna's Golden Globe"
+                   Name="{=sotor_spell_GehennasGoldenGlobe}Gehenna's Golden Globe"
                    SpriteName="gehennasgoldenglobe_icon"
                    CoolDown="20"
                    WindsOfMagicCost="12"
@@ -1831,7 +1831,7 @@
                    TooltipDescription="A glittering globe of golden energy engulfs foes, dealing 75 fire damage in a 5 meter radius. Survivors are slowed by 50% for a short duration." />
 
   <AbilityTemplate StringID="FinalTransmutation"
-                   Name="Final Transmutation"
+                   Name="{=sotor_spell_FinalTransmutation}Final Transmutation"
                    SpriteName="finaltransmutation_icon"
                    CoolDown="100"
                    WindsOfMagicCost="45"
@@ -1859,7 +1859,7 @@
                    TooltipDescription="The wizard attempts to transmute foes in the area into statues of gold, dealing 4 fire damage per second and slowing them by 90% for 35 seconds." />
 
   <AbilityTemplate StringID="GehennasGoldenHounds"
-                   Name="Gehenna's Golden Hounds"
+                   Name="{=sotor_spell_GehennasGoldenHounds}Gehenna's Golden Hounds"
                    SpriteName="gehennasgoldenhounds_icon"
                    CoolDown="60"
                    WindsOfMagicCost="30"
@@ -1897,7 +1897,7 @@
                    TooltipDescription="Calls forth a pair of massive golden hounds that prowl the ground in a circular motion, dealing 40 fire damage per tick in a 3 meter radius for 20 seconds." />
 
   <AbilityTemplate StringID="Apotheosis"
-                   Name="Apotheosis"
+                   Name="{=sotor_spell_Apotheosis}Apotheosis"
                    SpriteName="apoteosis_icon"
                    CoolDown="25"
                    WindsOfMagicCost="8"
@@ -1926,7 +1926,7 @@
                    TooltipDescription="The wizard infuses allies in the area with pure magical energies, healing 7 health per second for 12 seconds." />
 
   <AbilityTemplate StringID="CourageOfAenarion"
-                   Name="Courage of Aenarion"
+                   Name="{=sotor_spell_CourageOfAenarion}Courage of Aenarion"
                    SpriteName="courage_of_aenarion_icon"
                    CoolDown="60"
                    WindsOfMagicCost="18"
@@ -1952,7 +1952,7 @@
                    TooltipDescription="Invoking the name of Aenarion, allies around the wizard strike with +30% attack speed for 40 seconds." />
 
   <AbilityTemplate StringID="SoulQuench"
-                   Name="Soul Quench"
+                   Name="{=sotor_spell_SoulQuench}Soul Quench"
                    SpriteName="soul_quench_icon"
                    CoolDown="30"
                    WindsOfMagicCost="15"
@@ -1986,7 +1986,7 @@
                    TooltipDescription="A brilliant sphere of light streaks from the wizard's fingertips, dealing 50 holy damage in a 5 meter radius." />
 
   <AbilityTemplate StringID="CurseOfArrowAttraction"
-                   Name="Curse of Arrow Attraction"
+                   Name="{=sotor_spell_CurseOfArrowAttraction}Curse of Arrow Attraction"
                    SpriteName="curse_of_arrowattraction_icon"
                    CoolDown="30"
                    WindsOfMagicCost="13"
@@ -2012,7 +2012,7 @@
                    TooltipDescription="The air around enemies in the area distorts, guiding allied projectiles — cursed foes take 60% more ranged damage for 10 seconds." />
 
   <AbilityTemplate StringID="ShieldOfSaphery"
-                   Name="Shield of Saphery"
+                   Name="{=sotor_spell_ShieldOfSaphery}Shield of Saphery"
                    SpriteName="shield_of_saphery_icon"
                    CoolDown="30"
                    WindsOfMagicCost="17"
@@ -2040,7 +2040,7 @@
                    TooltipDescription="The caster summons an ethereal dome that shields allies in the area from ranged fire for 45 seconds." />
 
   <AbilityTemplate StringID="FieryConvocation"
-                   Name="Fiery Convocation"
+                   Name="{=sotor_spell_FieryConvocation}Fiery Convocation"
                    SpriteName="fiery_convocation_icon"
                    CoolDown="70"
                    WindsOfMagicCost="35"
@@ -2068,7 +2068,7 @@
                    TooltipDescription="Utter one secret word and your foes burst with fire — 70 fire damage in an 8 meter radius, plus burning damage over time." />
 
   <AbilityTemplate StringID="Tempest"
-                   Name="Tempest"
+                   Name="{=sotor_spell_Tempest}Tempest"
                    SpriteName="tempest_icon"
                    CoolDown="60"
                    WindsOfMagicCost="35"
@@ -2106,7 +2106,7 @@
                    TooltipDescription="Conjures a brilliant vortex of shimmering light containing all eight Winds of Magic, dealing 75 magic damage per tick in a 4 meter radius for 8 seconds." />
 
   <AbilityTemplate StringID="MindControl"
-                   Name="Mind Control"
+                   Name="{=sotor_spell_MindControl}Mind Control"
                    SpriteName="fellfangcontrol_icon"
                    CoolDown="60"
                    WindsOfMagicCost="30"
@@ -2139,7 +2139,7 @@
                    TooltipDescription="Bend the minds of up to 10 nearby enemies to fight for you. Weaker and wounded foes fall easily while higher level enemies resist. Survivors join your warband after the battle. Success scales off Charm, Leadership, Roguery and Spell Effectiveness." />
 
   <AbilityTemplate StringID="Chillwind"
-                   Name="Chillwind"
+                   Name="{=sotor_spell_Chillwind}Chillwind"
                    SpriteName="chillwind_icon"
                    CoolDown="20"
                    WindsOfMagicCost="12"
@@ -2170,7 +2170,7 @@
                    TooltipDescription="The caster assails the foe with a freezing gale, dealing 45 magic damage in a 5 meter radius." />
 
   <AbilityTemplate StringID="DoomBolt"
-                   Name="Doom Bolt"
+                   Name="{=sotor_spell_DoomBolt}Doom Bolt"
                    SpriteName="doombolt_icon"
                    CoolDown="80"
                    WindsOfMagicCost="40"
@@ -2206,7 +2206,7 @@
                    TooltipDescription="The wizard rips open the sky and calls down a bolt burning with dark flames, dealing 325 magic damage in a 17 meter radius." />
 
   <AbilityTemplate StringID="DeathSpasm"
-                   Name="Death Spasm"
+                   Name="{=sotor_spell_DeathSpasm}Death Spasm"
                    SpriteName="deathspasm_icon"
                    CoolDown="15"
                    WindsOfMagicCost="12"
@@ -2237,7 +2237,7 @@
                    TooltipDescription="A crackling black bolt of energy that explodes in dark fire, dealing 80 magic damage in a 5 meter radius and setting victims ablaze." />
 
   <AbilityTemplate StringID="SoulRain"
-                   Name="Soul Rain"
+                   Name="{=sotor_spell_SoulRain}Soul Rain"
                    SpriteName="soulrain_icon"
                    CoolDown="50"
                    WindsOfMagicCost="22"
@@ -2271,7 +2271,7 @@
                    TooltipDescription="A black cloud looms over the area, striking those below with arcane lightning for 45 magic damage per tick." />
 
   <AbilityTemplate StringID="PowerOfDarkness"
-                   Name="Power of Darkness"
+                   Name="{=sotor_spell_PowerOfDarkness}Power of Darkness"
                    SpriteName="powerofdarkness_icon"
                    CoolDown="70"
                    WindsOfMagicCost="18"
@@ -2297,7 +2297,7 @@
                    TooltipDescription="The caster draws unstable power from the Realm of Chaos to empower nearby allies, granting +20% physical damage for 35 seconds." />
 
   <AbilityTemplate StringID="ScreamingSkull"
-                   Name="Screaming Skull"
+                   Name="{=sotor_spell_ScreamingSkull}Screaming Skull"
                    SpriteName="screamingskull_icon"
                    CoolDown="65"
                    WindsOfMagicCost="30"
@@ -2332,7 +2332,7 @@
                    TooltipDescription="Conjures a screaming skull dripping with acid that flies forward, dealing 60 magic damage per tick to everything in its path." />
 
   <AbilityTemplate StringID="BlackHorror"
-                   Name="Arnzipal's Black Horror"
+                   Name="{=sotor_spell_BlackHorror}Arnzipal's Black Horror"
                    SpriteName="arzipalsblackhorror_icon"
                    CoolDown="70"
                    WindsOfMagicCost="35"
@@ -2370,7 +2370,7 @@
                    TooltipDescription="A black cloud of roiling energy sweeps across the battlefield, tentacles lashing out to deal 75 magic damage per tick in a 4 meter radius for 8 seconds." />
 
   <AbilityTemplate StringID="SoulStealer"
-                   Name="Soul Stealer"
+                   Name="{=sotor_spell_SoulStealer}Soul Stealer"
                    SpriteName="soulstealer_icon"
                    CoolDown="80"
                    WindsOfMagicCost="35"
@@ -2396,7 +2396,7 @@
                    TooltipDescription="Enemies in the area suffer a soul-draining curse, taking 12 magic damage per second for 12 seconds." />
 
   <AbilityTemplate StringID="ArcaneConduit"
-                   Name="Arcane Conduit"
+                   Name="{=sotor_spell_ArcaneConduit}Arcane Conduit"
                    SpriteName="arcaneconduit_icon"
                    CoolDown="90"
                    WindsOfMagicCost="0"
