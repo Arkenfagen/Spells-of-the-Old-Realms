@@ -50,7 +50,9 @@ namespace SOTOR.CampaignBehaviors
 
                 foreach (var settlement in Settlement.All)
                 {
+
                     CollectRoster(settlement.ItemRoster, owned);
+                    CollectRoster(settlement.Stash, owned);
                 }
                 foreach (var party in MobileParty.All)
                 {
@@ -58,20 +60,25 @@ namespace SOTOR.CampaignBehaviors
                 }
                 foreach (var hero in Hero.AllAliveHeroes)
                 {
+
                     CollectEquipment(hero.BattleEquipment, owned);
                     CollectEquipment(hero.CivilianEquipment, owned);
+                    CollectEquipment(hero.StealthEquipment, owned);
                 }
 
                 int removed = 0;
+                int keptCrafted = 0;
                 foreach (var pair in _enchantedItems.ToList())
                 {
                     if (owned.Contains(pair.Key)) continue;
+                    if (pair.Value != null && pair.Value.IsPlayerCrafted) { keptCrafted++; continue; }
                     ForgetEnchantedItem(pair.Key);
                     MBObjectManager.Instance.UnregisterObject(pair.Key);
                     removed++;
                 }
-                if (removed > 0)
-                    SotorLog.Info($"Weekly enchant sweep: unregistered {removed} unowned clone(s); {_enchantedItems.Count} live");
+                if (removed > 0 || keptCrafted > 0)
+                    SotorLog.Info($"Weekly enchant sweep: unregistered {removed} unowned clone(s), "
+                                  + $"kept {keptCrafted} unowned player-crafted; {_enchantedItems.Count} live");
             }
             catch (Exception ex)
             {

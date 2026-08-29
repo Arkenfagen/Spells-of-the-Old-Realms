@@ -18,7 +18,7 @@ namespace SOTOR.CampaignBehaviors
             try
             {
                 if (!ActiveForGraveyardRaise) return;
-                var text = new TextObject("+{COUNT} Skeleton{?PLURAL}s{?}{\\?}");
+                var text = SotorText.GetObject("sotor_graveyard_recruit_count", "+{COUNT} Skeleton{?PLURAL}s{?}{\\?}");
                 text.SetTextVariable("COUNT", recruitmentAmount);
                 text.SetTextVariable("PLURAL", recruitmentAmount > 1 ? 1 : 0);
                 __result = text.ToString();

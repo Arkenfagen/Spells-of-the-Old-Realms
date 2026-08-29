@@ -34,7 +34,8 @@ namespace SOTOR.AbilitySystem.TriggeredScripts
                 if (triggeredByAgent == Agent.Main)
                 {
                     InformationManager.DisplayMessage(new InformationMessage(
-                        "You cannot raise the dead over open water.", Colors.Red));
+                        SotorText.Rendered("sotor_summon_over_water",
+                            "You cannot raise the dead over open water."), Colors.Red));
                 }
                 SotorLog.Info($"Summon '{originSpell}': BLOCKED — cast point {position} is off-navmesh (open water?); no skeletons spawned.");
                 return;

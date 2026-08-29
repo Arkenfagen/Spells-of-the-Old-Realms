@@ -166,8 +166,9 @@ namespace SOTOR.Quests
             if (_spellId == spellIdOrName) return true;
 
             var template = AbilitySystem.AbilityFactory.GetTemplate(_spellId);
-            return template != null && !string.IsNullOrEmpty(template.Name)
-                   && template.Name == spellIdOrName;
+            if (template == null) return false;
+            return (!string.IsNullOrEmpty(template.Name) && template.Name == spellIdOrName)
+                   || (!string.IsNullOrEmpty(template.NameEnglish) && template.NameEnglish == spellIdOrName);
         }
 
         private static System.Collections.Generic.IEnumerable<SotorPracticeQuest> All()
