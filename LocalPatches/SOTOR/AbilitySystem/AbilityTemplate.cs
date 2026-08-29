@@ -13,8 +13,48 @@ namespace SOTOR.AbilitySystem
         [XmlAttribute]
         public string StringID { get; set; } = string.Empty;
 
-        [XmlAttribute]
-        public string Name { get; set; } = string.Empty;
+        [XmlAttribute("Name")]
+        public string NameRaw
+        {
+            get => _nameRaw;
+            set { _nameRaw = value ?? string.Empty; _nameResolved = null; }
+        }
+
+        [XmlIgnore]
+        public string Name
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_nameRaw)) return string.Empty;
+                if (!_nameRaw.StartsWith("{=")) return _nameRaw;
+
+                int lang = -1;
+                try { lang = TaleWorlds.Localization.MBTextManager.GetActiveTextLanguageIndex(); }
+                catch { }
+                if (_nameResolved != null && _nameResolvedLang == lang) return _nameResolved;
+
+                try { _nameResolved = new TaleWorlds.Localization.TextObject(_nameRaw).ToString(); }
+                catch { _nameResolved = NameEnglish; }
+                _nameResolvedLang = lang;
+                return _nameResolved;
+            }
+        }
+
+        [XmlIgnore]
+        public string NameEnglish
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_nameRaw)) return string.Empty;
+                if (!_nameRaw.StartsWith("{=")) return _nameRaw;
+                int close = _nameRaw.IndexOf('}');
+                return close < 0 ? _nameRaw : _nameRaw.Substring(close + 1);
+            }
+        }
+
+        private string _nameRaw = string.Empty;
+        private string _nameResolved;
+        private int _nameResolvedLang = -2;
 
         [XmlAttribute]
         public string SpriteName { get; set; } = string.Empty;
